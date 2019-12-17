@@ -18,40 +18,18 @@ export default function IconLabelButtons() {
 
   return (
     <div>
-      <Button
-        variant="contained"
-        color="secondary"
-        className={classes.button}
-        startIcon={<DeleteIcon />}
-      >
-        Delete
-      </Button>
+
       {/* This Button uses a Font Icon, see the installation instructions in the Icon component docs. */}
-      <Button
-        variant="contained"
-        color="primary"
-        className={classes.button}
-        endIcon={<Icon>send</Icon>}
-      >
-        Send
-      </Button>
+    
       <Button
         variant="contained"
         color="default"
         className={classes.button}
         startIcon={<CloudUploadIcon />}
       >
-        Upload
+        Create a New Template
       </Button>
-      <Button
-        variant="contained"
-        disabled
-        color="secondary"
-        className={classes.button}
-        startIcon={<KeyboardVoiceIcon />}
-      >
-        Talk
-      </Button>
+     
       <Button
         variant="contained"
         color="primary"
@@ -70,6 +48,15 @@ export default function IconLabelButtons() {
         startIcon={<SaveIcon />}
       >
         SaveAs New Template
+      </Button>
+
+      <Button
+        variant="contained"
+        color="primary"
+        className={classes.button}
+        endIcon={<Icon>send</Icon>}
+      >
+        Send
       </Button>
 
     </div>

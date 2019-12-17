@@ -1,9 +1,11 @@
 import React from 'react';
-// import Playground from './Playground.js'; 
+import Playground from './Playground.js'; 
 
 const Search = ()=>{
     return (
-        <div> search Page </div>
+        <div > 
+        <Playground />
+        </div>
     ); 
 }
 

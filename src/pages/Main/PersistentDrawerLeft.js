@@ -175,10 +175,8 @@ export default function PersistentDrawerLeft() {
         <SimpleExpansionPanel />
 
 
-        <Typography paragraph>
-          
-        <IconLabelButtons />
-
+        <Typography paragraph> 
+          <IconLabelButtons />
         </Typography>
 
       </main>

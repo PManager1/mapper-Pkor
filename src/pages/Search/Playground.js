@@ -6,7 +6,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 export default function Playground() {
   const defaultProps = {
     options: top100Films,
-    getOptionLabel: option => option.title,
+    getOptionLabel: option => option.title+' '+option.year,
   };
 
   const flatProps = {
@@ -32,8 +32,8 @@ export default function Playground() {
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
-  { title: 'BlackBaud Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
+  { title: 'BlackBaud', year: 1994 },
+  { title: 'Shawshank Redemption', year: 1972 },
   { title: 'The Godfather: Part II', year: 1974 },
   { title: 'The Dark Knight', year: 2008 },
   { title: '12 Angry Men', year: 1957 },

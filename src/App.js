@@ -7,7 +7,7 @@ import Home from './pages/Home/index.js';
 
 import Main from './pages/Main/Index.js';
 
-import Faq from './pages/Faq/Index.js';
+import Search from './pages/Search/Index.js';
 
 import PageTwo from './pages/PageTwo'; 
 
@@ -25,7 +25,7 @@ const App = () =>{
     return (
         <BrowserRouter>
             <Route path="/" exact component={Main} />
-            <Route path="/Faq" exact component={Faq} />
+            <Route path="/Search" exact component={Search} />
             <Route path="/page2" exact component={PageTwo} />
             <Route path="/Howitworks" exact component={HowItWorks} />
             <Route path="/ContactUs" exact component={ContactUs} />            

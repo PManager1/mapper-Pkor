@@ -10,7 +10,6 @@ const Main = ()=>{
                 MAin Output 
                 <PersistentDrawerLeft />
 
-                <SimpleExpansionPanel />
             </div>
     ); 
 }

@@ -27,13 +27,27 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Expansion Panel 1</Typography>
+          <Typography className={classes.heading}>Account Number Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
             sit amet blandit leo lobortis eget.
           </Typography>
+
+
+          <Typography paragraph>
+              Max chars,
+          </Typography>
+
+          <Typography paragraph>
+            Right Align / Left Align
+          </Typography>
+
+          <Typography paragraph>
+            Left /Right padding 
+          </Typography>
+
         </ExpansionPanelDetails>
       </ExpansionPanel>
       <ExpansionPanel>
@@ -42,8 +56,9 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>Expansion Panel 2</Typography>
+          <Typography className={classes.heading}>Company Name Field</Typography>
         </ExpansionPanelSummary>
+        
         <ExpansionPanelDetails>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
@@ -51,15 +66,47 @@ export default function SimpleExpansionPanel() {
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-      <ExpansionPanel disabled>
+
+
+      <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
+          aria-controls="panel2a-content"
+          id="panel2a-header"
         >
-          <Typography className={classes.heading}>Disabled Expansion Panel</Typography>
+          <Typography className={classes.heading}>Header field 1</Typography>
         </ExpansionPanelSummary>
+        
+        <ExpansionPanelDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
+          </Typography>
+        </ExpansionPanelDetails>
       </ExpansionPanel>
+
+
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography className={classes.heading}>Detail 1 Field</Typography>
+        </ExpansionPanelSummary>
+        
+        <ExpansionPanelDetails>
+          <Typography>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+            sit amet blandit leo lobortis eget.
+          </Typography>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+
+
+
     </div>
   );
 }

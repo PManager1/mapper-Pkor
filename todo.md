@@ -1,3 +1,25 @@
+List tempaltes that are 
+
+List of templates that are already available. 
+? dummy json file. 
+
+Filter from by type, by provider ( blackbaud), Client (), paygroup level, 
+=====================
+Tim mentioned abuot the unit tests. 
+
+create new rules. : trucate after 12 chars. 
+
+Do autocomplete to select which one is selecte and display on the UI. 
+=====================
+click on the selecton and show the Meat/ Template. 
+
+=====================
+Create or CRUD new templates, based on available rules. 
+=====================
+? Get list of rules. 
+
+
+
 ===========================
 Use expression bar to update the rules. 
 

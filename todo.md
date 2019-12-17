@@ -86,8 +86,13 @@ Get input and output files.
 
 Later- 
 ? File version to test out the things
-
 ? Schedule run on schedule for the specific file.
+
+=================
+Search 
+inside the search , pick what category of search you want to do 
+Title/ company name or what ?
+=================
 
 
 

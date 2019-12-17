@@ -3,36 +3,32 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-export default function Playground() {
-  const defaultProps = {
-    options: top100Films,
-    getOptionLabel: option => option.year,
-  };
-
-  const flatProps = {
-    options: top100Films.map(option => option.title),
-  };
-
-  const [value, setValue] = React.useState(null);
+export default function Grouped() {
+  const options = top100Films.map(option => {
+    const firstLetter = option.title[0].toUpperCase();
+    return {
+      firstLetter: /[0-9]/.test(firstLetter) ? '0-9' : firstLetter,
+      ...option,
+    };
+  });
 
   return (
-    <div style={{ width: 800 }}>
-      <Autocomplete
-        {...defaultProps}
-        id="disable-open-on-focus"
-        disableOpenOnFocus
-        renderInput={params => (
-          <TextField {...params} label="Type Mapper/company/provider/Client/paygroup name" margin="normal" fullWidth />
-        )}
-      />
-     
-    </div>
+    <Autocomplete
+      id="grouped-demo"
+      options={options.sort((a, b) => -b.firstLetter.localeCompare(a.firstLetter))}
+      groupBy={option => option.firstLetter}
+      getOptionLabel={option => option.title}
+      style={{ width: 300 }}
+      renderInput={params => (
+        <TextField {...params} label="With categories" variant="outlined" fullWidth />
+      )}
+    />
   );
 }
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
-  { title: 'BlackBaud Shawshank Redemption', year: 1994 },
+  { title: 'The Shawshank Redemption', year: 1994 },
   { title: 'The Godfather', year: 1972 },
   { title: 'The Godfather: Part II', year: 1974 },
   { title: 'The Dark Knight', year: 2008 },

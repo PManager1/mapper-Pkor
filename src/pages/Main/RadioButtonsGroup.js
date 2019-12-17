@@ -24,50 +24,14 @@ export default function RadioButtonsGroup() {
   return (
     <div>
       <FormControl component="fieldset" className={classes.formControl}>
-        <FormLabel component="legend">Gender</FormLabel>
+        <FormLabel component="legend">Left/Right Align</FormLabel>
         <RadioGroup aria-label="gender" name="gender1" value={value} onChange={handleChange}>
-          <FormControlLabel value="female" control={<Radio />} label="Female" />
-          <FormControlLabel value="male" control={<Radio />} label="Male" />
-          <FormControlLabel value="other" control={<Radio />} label="Other" />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="(Disabled option)"
-          />
+          <FormControlLabel value="female" control={<Radio />} label="Left Align" />
+          <FormControlLabel value="male" control={<Radio />} label="Right Align" />
+          <FormControlLabel value="other" control={<Radio />} label="No Align" />
         </RadioGroup>
       </FormControl>
-      <FormControl component="fieldset" className={classes.formControl}>
-        <FormLabel component="legend">Gender</FormLabel>
-        <RadioGroup aria-label="gender" name="gender2" value={value} onChange={handleChange}>
-          <FormControlLabel
-            value="female"
-            control={<Radio color="primary" />}
-            label="Female"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="male"
-            control={<Radio color="primary" />}
-            label="Male"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="other"
-            control={<Radio color="primary" />}
-            label="Other"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="disabled"
-            disabled
-            control={<Radio />}
-            label="(Disabled option)"
-            labelPlacement="start"
-          />
-        </RadioGroup>
-        <FormHelperText>labelPlacement start</FormHelperText>
-      </FormControl>
+     
     </div>
   );
 }

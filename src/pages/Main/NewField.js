@@ -1,20 +1,16 @@
 import React from 'react';
 import Playground from './Playground.js'; 
-import Grouped from './Grouped.js'; 
 import CheckboxLabels from './CheckboxLabels.js';
 
 import InputAdornments from './InputAdornments.js';
 
-const Search = ()=>{
+const NewField = ()=>{
     return (
-        <div > 
-        <Playground />
-
-        <Grouped />
-        <InputAdornments />
+        <div> 
+            New Field Information
 
         </div>
     ); 
 }
 
-export default Search; 
+export default NewField; 

@@ -1,0 +1,99 @@
+.push-down2{
+    margin-top: 30px; 
+}
+.testi-page-p{
+    color: #7a6f71;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.testi-page-p:after {
+display: block;
+content: "";
+height: 6px;
+width: 50px;
+background-color: #f9d507;
+border-radius: 4px;
+margin: 20px 0 80px;
+}
+.testiPage-header-h6{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 5px 0 15px;
+    position: relative;
+    color: #4a4244;
+    text-align: left;
+}
+.testiPage-p{
+    color: #7a6f71;
+    line-height: 20px;
+    margin-top:14px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.testiPage-hr{
+    margin-top: -5px;
+}
+.testiPage-fivestar{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    // margin-bottom: 15px;
+    // margin-top: 40px; 
+}
+
+/*  How It Works  */
+
+.how-it-works-li{
+    font-family: Helvetica,Arial,sans-serif;
+    line-height: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+    // display: inline-block;
+    list-style: none; 
+    /* Give the bullet room on the left hand side */
+    padding: 0;
+    position: relative;
+    color: rgba(74,66,68,.8); 
+}
+
+.left-list{
+    font-family: Helvetica,Arial,sans-serif;
+    margin-left: 140px; 
+}
+
+/*  How It Works  End */
+
+.testi-page-li{
+        line-height: 20px;
+        font-size: 18px;
+        margin-bottom: 10px;
+}
+
+ul li {
+    color: #7a6f71; 
+    // display: inline-block;
+    list-style: none; 
+    margin: 0 0 16px 1.1225em;
+    /* Give the bullet room on the left hand side */
+    padding: 0;
+    position: relative;
+  }
+
+
+.testi-page-li::before {
+    color: red;
+    /* color of bullet or square */
+    content: "\2022"; 
+    /* Unicode of character to precede the list item */
+    display: inline-block;
+    font-size: 1em; 
+    /* use em or % */ 
+    left: -1.1225em; 
+    /* use em, line up bullet flush with left hand side */
+    position: absolute;
+    /* Set the bullet positioned absolutely top left */
+    top: 0em; 
+    /* use em or % */
+  }

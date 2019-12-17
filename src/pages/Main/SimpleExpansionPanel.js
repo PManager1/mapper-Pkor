@@ -5,6 +5,10 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import CheckboxLabels from './CheckboxLabels';
+import InputAdornments from './InputAdornments.js';
+
+import RadioButtonsGroup from './RadioButtonsGroup.js'; 
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -33,7 +37,11 @@ export default function SimpleExpansionPanel() {
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
             sit amet blandit leo lobortis eget.
+
           </Typography>
+
+
+          <CheckboxLabels />
 
 
           <Typography paragraph>
@@ -60,10 +68,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelSummary>
         
         <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
+
+        <Typography style={{display: 'inline-block'}}>
+          <InputAdornments />
+        </Typography>
+        
+        <Typography style={{display: 'inline-block'}}> Rules ---------------Rules 
+          <Typography paragraph>
+     
+            <CheckboxLabels />
+
+            <RadioButtonsGroup />
           </Typography>
+        </Typography>
+
+
         </ExpansionPanelDetails>
       </ExpansionPanel>
 

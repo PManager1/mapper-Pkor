@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function FullWidthGrid() {
+export default function FieldDetails() {
   const classes = useStyles();
 
   return (

@@ -7,7 +7,7 @@ import Home from './pages/Home/index.js';
 
 import Main from './pages/Main/Index.js';
 
-import FullWidthGrid from './pages/Main/FullWidthGrid.js';
+import FieldDetails from './pages/Main/FieldDetails.js';
 
 import FormControlLabelPosition from './pages/Main/RadioBtns.js';
 import Search from './pages/Search/Index.js';
@@ -18,7 +18,7 @@ const App = () =>{
         <BrowserRouter>
             <Route path="/" exact component={Main} />
             <Route path="/Search" exact component={Search} />
-            <Route path="/grid" exact component={FullWidthGrid} />
+            <Route path="/grid" exact component={FieldDetails} />
             <Route path="/radio" exact component={FormControlLabelPosition} />
         </BrowserRouter>
         );

@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import CheckboxLabels from './CheckboxLabels';
 import InputAdornments from './InputAdornments.js';
-
 import RadioButtonsGroup from './RadioButtonsGroup.js'; 
+import FieldDetails from './FieldDetails.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,22 +34,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>Account Number Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
-
-          <Typography paragraph>
-              Max chars,
-          </Typography>
-
-          <Typography paragraph>
-            Right Align / Left Align
-          </Typography>
-
-          <Typography paragraph>
-            Left /Right padding 
-          </Typography>
+            <FieldDetails/>
 
         </ExpansionPanelDetails>
       </ExpansionPanel>

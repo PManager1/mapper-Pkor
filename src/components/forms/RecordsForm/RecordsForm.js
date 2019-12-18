@@ -25,7 +25,8 @@ const validationSchema = Yup.object({
   MaxCharLength: Yup.string("Enter a MaxCharLength").required("MaxCharLength is required"),
   SequenceNumber: Yup.string("Enter a SequenceNumber").required("SequenceNumber is required"),
   RadioValue: Yup.string("Enter a RadioValue").required("RadioValue is required"),
-  
+  LeftPadding: Yup.string("Enter a LeftPadding").required("LeftPadding is required"),
+  RightPadding: Yup.string("Enter a RightPadding").required("RightPadding is required"),
   email: Yup.string("Enter your email")
     .email("Enter a valid email")
     .required("Email is required"),
@@ -49,7 +50,7 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:""   };
+    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", LeftPadding: "", RightPadding: ""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

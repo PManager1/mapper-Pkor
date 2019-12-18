@@ -15,7 +15,7 @@ import FormControl from '@material-ui/core/FormControl';
 
 export const Form = props => {
   const {
-    values: { FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue },
+    values:{ FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
     handleSubmit,
@@ -109,6 +109,36 @@ export const Form = props => {
           />
 
       </RadioGroup>
+
+
+
+      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
+      <TextField
+        name="LeftPadding"
+        helperText={touched.LeftPadding ? errors.LeftPadding : ""}
+        error={Boolean(errors.LeftPadding)}
+        label="LeftPadding"
+        value={LeftPadding}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.LeftPadding) ? errors.LeftPadding : ""}</div>
+   
+      <TextField
+        name="RightPadding"
+        helperText={touched.RightPadding ? errors.RightPadding : ""}
+        error={Boolean(errors.RightPadding)}
+        label="RightPadding"
+        value={RightPadding}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
+   
+
+   
+
+
 
    
       <Button

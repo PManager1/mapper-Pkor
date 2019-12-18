@@ -37,11 +37,9 @@ export const Form = props => {
   //   setValue(event.target.value);
   // };
 
-  
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1> RecordsForm </h1>
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
@@ -64,7 +62,6 @@ export const Form = props => {
       />
       <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
       
-
 
       <TextField
         name="MaxCharLength"
@@ -91,25 +88,25 @@ export const Form = props => {
    
 
       <FormLabel component="legend">Please Select Alignment </FormLabel>
-      <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
-        <FormControlLabel
-          value="LeftAligned"
-          control={<Radio color="primary" />}
-          label="LeftAligned"
-          labelPlacement="start"
-        />
-        <FormControlLabel
-          value="None"
-          control={<Radio color="secondary" />}
-          label="None"
-          labelPlacement="start"
-        />
-        <FormControlLabel
-          value="RightAligned"
-          control={<Radio color="primary" />}
-          label="RightAligned"
-          labelPlacement="start"
-        />
+        <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
+          <FormControlLabel
+            value="LeftAligned"
+            control={<Radio color="primary" />}
+            label="LeftAligned"
+            labelPlacement="start"
+          />
+          <FormControlLabel
+            value="None"
+            control={<Radio color="secondary" />}
+            label="None"
+            labelPlacement="start"
+          />
+          <FormControlLabel
+            value="RightAligned"
+            control={<Radio color="primary" />}
+            label="RightAligned"
+            labelPlacement="start"
+          />
 
       </RadioGroup>
 

@@ -11,6 +11,8 @@ import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 import RadioBtns from './RadioBtns.js';
 
+import SampleInputAdornments from '../../components/SampleInputAdornments.js';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,7 +32,9 @@ export default function FieldDetails() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>fieldId - xs=12 </Paper>
+          <Paper className={classes.paper}>
+              <SampleInputAdornments />
+          </Paper>
         </Grid>
 
 

@@ -44,7 +44,7 @@ export default function SampleInputAdornments() {
       <div>
   
         <FormControl fullWidth className={classes.margin}>
-          <InputLabel htmlFor="standard-adornment-amount">Field Name</InputLabel>
+          <InputLabel htmlFor="standard-adornment-amount">Field Name2</InputLabel>
           <Input
             id="standard-adornment-amount"
             value={values.amount}

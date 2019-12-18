@@ -1,7 +1,7 @@
 import React from 'react';
 import Playground from './Playground.js'; 
 import CheckboxLabels from './CheckboxLabels.js';
-import SampleInputAdornments from './SampleInputAdornments.js';
+import SampleInputAdornments from '../../components/SampleInputAdornments.js';
 
 const Search = ()=>{
     return (

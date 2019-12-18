@@ -9,7 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
-import RadioBtns from './RadioBtns.js';
+import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 
 import SampleInputAdornments from '../../components/SampleInputAdornments.js';
 
@@ -42,8 +42,7 @@ export default function FieldDetails() {
 
 
         <Grid item xs={12}>
-
-          <RadioBtns />
+          <AlignmentRadioBtns />
         </Grid>
 
 

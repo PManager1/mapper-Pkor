@@ -15,7 +15,7 @@ const styles = theme => ({
       .spacing.unit * 5}px`
   },
   container: {
-    maxWidth: "200px"
+    width: '100%'
   }
 });
 
@@ -24,6 +24,8 @@ const validationSchema = Yup.object({
   MappedFieldName: Yup.string("Enter a MappedFieldName").required("MappedFieldName is required"),
   MaxCharLength: Yup.string("Enter a MaxCharLength").required("MaxCharLength is required"),
   SequenceNumber: Yup.string("Enter a SequenceNumber").required("SequenceNumber is required"),
+  RadioValue: Yup.string("Enter a RadioValue").required("RadioValue is required"),
+  
   email: Yup.string("Enter your email")
     .email("Enter a valid email")
     .required("Email is required"),
@@ -47,10 +49,10 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"",   };
+    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:""   };
     return (
       <React.Fragment>
-        <div className={classes.container}>
+        <div className={classes.container} >
           <Paper elevation={1} className={classes.paper}>
             <Formik
               render={props => <Form {...props} />}

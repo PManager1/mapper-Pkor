@@ -11,6 +11,7 @@ import RadioButtonsGroup from './RadioButtonsGroup.js';
 import FieldDetails from './FieldDetails.js';
 
 import BasicForm from '../../components/forms/BasicForm.js';
+import RecordsForm from '../../components/forms/RecordsForm/RecordsForm.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -38,7 +39,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>Account Number Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -83,7 +84,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>2 Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <BasicForm/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 

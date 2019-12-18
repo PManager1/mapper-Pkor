@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function IconLabelButtons() {
+export default function BottomButtons() {
   const classes = useStyles();
 
   return (

@@ -1,12 +1,12 @@
 import React from 'react'; 
 
-import PersistentDrawerLeft from './PersistentDrawerLeft'; 
+import MainWrapper from './MainWrapper'; 
 import SimpleExpansionPanel from './SimpleExpansionPanel'; 
 
 const Main = ()=>{
     return (
             <div>
-                <PersistentDrawerLeft />
+                <MainWrapper />
 
             </div>
     ); 

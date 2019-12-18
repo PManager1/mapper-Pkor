@@ -23,9 +23,9 @@ import EditIcon from '@material-ui/icons/Edit';
 import Fab from '@material-ui/core/Fab';
 
 import SimpleExpansionPanel from './SimpleExpansionPanel'; 
-import IconLabelButtons from './IconLabelButtons'; 
+import BottomButtons from './BottomButtons'; 
 
-import BottomButtons  from '../../components/BottomButtons.js';
+// import BottomButtons  from '../../components/BottomButtons.js';
 
 
 const drawerWidth = 240;
@@ -86,7 +86,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PersistentDrawerLeft() {
+export default function MainWrapper() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -175,11 +175,6 @@ export default function PersistentDrawerLeft() {
 
                
         <SimpleExpansionPanel />
-
-
-        <Typography paragraph> 
-          <IconLabelButtons />
-        </Typography>
 
         <BottomButtons />
 

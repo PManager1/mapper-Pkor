@@ -7,6 +7,7 @@ const Search = ()=>{
     return (
         <div > 
             <Playground />
+            <CheckboxLabels />
             <InputAdornments />
         </div>
     ); 

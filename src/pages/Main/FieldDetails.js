@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-
 import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 
 import SampleInputAdornments from '../../components/SampleInputAdornments.js';

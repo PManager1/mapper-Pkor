@@ -10,7 +10,6 @@ import InputAdornments from './InputAdornments.js';
 import RadioButtonsGroup from './RadioButtonsGroup.js'; 
 import FieldDetails from './FieldDetails.js';
 
-import BasicForm from '../../components/forms/BasicForm.js';
 import RecordsForm from '../../components/forms/RecordsForm/RecordsForm.js';
 
 const useStyles = makeStyles(theme => ({
@@ -53,7 +52,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>Company Name Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -67,7 +66,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}> Header field 1 </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -99,7 +98,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>Detail</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -115,7 +114,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>1 Trail Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -130,7 +129,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>2 Trail Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <RecordsForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 

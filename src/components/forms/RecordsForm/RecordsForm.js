@@ -32,7 +32,7 @@ const validationSchema = Yup.object({
     .oneOf([Yup.ref("password")], "Password does not match")
 });
 
-class InputForm extends Component {
+class RecordsForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -49,7 +49,6 @@ class InputForm extends Component {
       <React.Fragment>
         <div className={classes.container}>
           <Paper elevation={1} className={classes.paper}>
-            <h1>Form</h1>
             <Formik
               render={props => <Form {...props} />}
               initialValues={values}
@@ -63,4 +62,7 @@ class InputForm extends Component {
   }
 }
 
-export default withStyles(styles)(InputForm);
+export default withStyles(styles)(RecordsForm);
+
+//  https://codesandbox.io/s/jzjx2890oy
+

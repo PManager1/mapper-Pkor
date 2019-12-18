@@ -9,6 +9,9 @@ import AlignmentRadioBtns  from './components/Inputs/AlignmentRadioBtns.js';
 import BasicForm from './components/forms/BasicForm.js';
 
 import ExampleForm from './components/forms/example/ExampleForm';
+
+import RecordsForm from './components/forms/RecordsForm/RecordsForm';
+
 import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
 
@@ -22,6 +25,8 @@ const App = () =>{
             <Route path="/New" exact component={NewFields} />
             <Route path="/BasicForm" exact component={BasicForm} />
             <Route path="/ExampleForm" exact component={ExampleForm} />
+
+            <Route path="/RecordsForm" exact component={RecordsForm} />
 
             <Route path="/BasicForm" exact component={BasicForm} />
             

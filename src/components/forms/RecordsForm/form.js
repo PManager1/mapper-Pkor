@@ -33,13 +33,6 @@ export const Form = props => {
         value={name}
         onChange={handleChange}
         fullWidth
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <NameIcon />
-            </InputAdornment>
-          )
-        }}
       />
       <div>{Boolean(errors.name) ? errors.name : ""}</div>
       <TextField
@@ -50,13 +43,6 @@ export const Form = props => {
         fullWidth
         value={email}
         onChange={handleChange}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <EmailIcon />
-            </InputAdornment>
-          )
-        }}
       />
       <div>{Boolean(errors.email) ? errors.email : ""}</div>
       <TextField
@@ -68,13 +54,6 @@ export const Form = props => {
         type="password"
         value={password}
         onChange={handleChange}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <LockIcon />
-            </InputAdornment>
-          )
-        }}
       />
       <div>{errors.password}</div>
       <TextField
@@ -86,13 +65,6 @@ export const Form = props => {
         type="password"
         value={confirmPassword}
         onChange={handleChange}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <LockIcon />
-            </InputAdornment>
-          )
-        }}
       />
       <div>{errors.confirmPassword}</div>
       <Button

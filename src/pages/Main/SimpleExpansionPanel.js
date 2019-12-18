@@ -10,7 +10,7 @@ import InputAdornments from './InputAdornments.js';
 import RadioButtonsGroup from './RadioButtonsGroup.js'; 
 import FieldDetails from './FieldDetails.js';
 
-
+import BasicForm from '../../components/forms/BasicForm.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -83,7 +83,7 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>2 Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <FieldDetails/>
+          <BasicForm/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 

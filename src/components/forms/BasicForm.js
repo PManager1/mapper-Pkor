@@ -8,7 +8,7 @@ const GetCashOfferbtnStyle = {
   color: 'white',
   marginTop: '63px',
   padding: '15px',
-  width: '330px',
+  width: '100%',
   bottom: '50px',
 
 };

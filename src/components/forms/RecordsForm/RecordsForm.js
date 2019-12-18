@@ -52,15 +52,15 @@ class RecordsForm extends Component {
     const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:""   };
     return (
       <React.Fragment>
-        <div className={classes.container} >
-          <Paper elevation={1} className={classes.paper}>
+        <div className={classes.container} style={{width: '100%' }}>
+
             <Formik
               render={props => <Form {...props} />}
               initialValues={values}
               validationSchema={validationSchema}
               onSubmit={this.submit}
             />
-          </Paper>
+
         </div>
       </React.Fragment>
     );

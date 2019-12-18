@@ -9,6 +9,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
+import RadioBtns from './RadioBtns.js';
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,9 +44,9 @@ export default function FullWidthGrid() {
 
 
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
-            Check left
-          </Paper>
+
+            <RadioBtns />
+
           </Grid>
 
           

@@ -25,6 +25,8 @@ import Fab from '@material-ui/core/Fab';
 import SimpleExpansionPanel from './SimpleExpansionPanel'; 
 import IconLabelButtons from './IconLabelButtons'; 
 
+import BottomButtons  from '../../components/BottomButtons.js';
+
 
 const drawerWidth = 240;
 
@@ -178,6 +180,8 @@ export default function PersistentDrawerLeft() {
         <Typography paragraph> 
           <IconLabelButtons />
         </Typography>
+
+        <BottomButtons />
 
       </main>
     </div>

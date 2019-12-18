@@ -10,6 +10,8 @@ import InputAdornments from './InputAdornments.js';
 import RadioButtonsGroup from './RadioButtonsGroup.js'; 
 import FieldDetails from './FieldDetails.js';
 
+
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -99,7 +101,6 @@ export default function SimpleExpansionPanel() {
           <FieldDetails/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
-
 
 
       <Typography variant='h5'  align='left'> Trail </Typography>

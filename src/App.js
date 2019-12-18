@@ -6,8 +6,9 @@ import Main from './pages/Main/Index.js';
 import FieldDetails from './pages/Main/FieldDetails.js';
 import AlignmentRadioBtns  from './components/Inputs/AlignmentRadioBtns.js';
 
-import NewFields from './pages/NewField/Index.js';
+import BasicForm from './components/forms/BasicForm.js';
 
+import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
 
 const App = () =>{
@@ -18,6 +19,7 @@ const App = () =>{
             <Route path="/grid" exact component={FieldDetails} />
             <Route path="/radio" exact component={AlignmentRadioBtns} />
             <Route path="/New" exact component={NewFields} />
+            <Route path="/BasicForm" exact component={BasicForm} />
         </BrowserRouter>
         );
 }; 

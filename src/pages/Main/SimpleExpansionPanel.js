@@ -34,35 +34,21 @@ export default function SimpleExpansionPanel() {
           <Typography className={classes.heading}>Account Number Field</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-            <FieldDetails/>
-
+          <FieldDetails/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
+
+
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
           <Typography className={classes.heading}>Company Name Field</Typography>
         </ExpansionPanelSummary>
-        
         <ExpansionPanelDetails>
-
-        <Typography style={{display: 'inline-block'}}>
-          <InputAdornments />
-        </Typography>
-        
-        <Typography style={{display: 'inline-block'}}> Rules ---------------Rules 
-          <Typography paragraph>
-     
-            <CheckboxLabels />
-
-            <RadioButtonsGroup />
-          </Typography>
-        </Typography>
-
-
+          <FieldDetails/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -70,17 +56,13 @@ export default function SimpleExpansionPanel() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
-          <Typography className={classes.heading}>Header field 1</Typography>
+          <Typography className={classes.heading}> Header field 1 </Typography>
         </ExpansionPanelSummary>
-        
         <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+          <FieldDetails/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
@@ -89,21 +71,30 @@ export default function SimpleExpansionPanel() {
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel2a-content"
-          id="panel2a-header"
+          aria-controls="panel1a-content"
+          id="panel1a-header"
         >
-          <Typography className={classes.heading}>Detail 1 Field</Typography>
+          <Typography className={classes.heading}>2 Field</Typography>
         </ExpansionPanelSummary>
-        
         <ExpansionPanelDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-            sit amet blandit leo lobortis eget.
-          </Typography>
+          <FieldDetails/>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
 
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Detail</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <FieldDetails/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
 
 
     </div>

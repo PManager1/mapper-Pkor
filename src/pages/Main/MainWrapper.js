@@ -140,7 +140,7 @@ export default function MainWrapper() {
         </div>
         <Divider />
         <List>
-          {['Search','Create from Existing-Template', 'Create New', 'Send email', 'Drafts'].map((text, index) => (
+          {['Search','Create from Existing-Template', 'Create New'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
@@ -175,9 +175,8 @@ export default function MainWrapper() {
 
                
         <SimpleExpansionPanel />
-
         <BottomButtons />
-
+        
       </main>
     </div>
   );

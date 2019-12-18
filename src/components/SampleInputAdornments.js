@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
     flexWrap: 'wrap',
-    width: 800,
   },
   margin: {
     margin: theme.spacing(1),
@@ -42,7 +41,6 @@ export default function SampleInputAdornments() {
 
   return (
     <div className={classes.root}>
- 
         <FormControl fullWidth className={classes.margin}>
           <InputLabel htmlFor="standard-adornment-amount">Field Name2</InputLabel>
           <Input

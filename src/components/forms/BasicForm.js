@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 
 
 import { Formik } from 'formik'
-import { Form, Input, PhoneInput, Select, SubmitBtn } from 'react-formik-ui';
+import { Form, Input, Radio, PhoneInput, Select, SubmitBtn } from 'react-formik-ui';
 
 
 const useStyles = makeStyles(theme => ({
@@ -28,8 +28,11 @@ export default function BasicForm() {
       <Formik
         initialValues={{
         textFieldExample3: '',
-        FirstName: '', 
-        LastName: '', 
+        FieldName:'',
+        MappedFieldName:'',
+        MaxCharacterLength:'',
+
+
     }}
   onSubmit={data => (alert(JSON.stringify(data)))}
   render={() => (
@@ -38,29 +41,56 @@ export default function BasicForm() {
 
     <Form mode='themed' style={{ width: '100%'}}>
 
-    <Grid item xs={12}>
-          <Paper className={classes.paper}>
+      <Paper className={classes.paper}>    
+
             <Input
               required={true}
-              name='FirstName'
-              label='First Name'
-              hint='This is a FirstName'
+              name='FieldName'
+              label='Field Name'
+              hint='This is a FieldName'
             />
-        </Paper>
-       </Grid>
- 
+      
+   
 
-    <Input  
-        required={true}    
-        name='Zip+'
-        label='Zip'
-        hint='This is a Zip'
-      />
+    <Grid item xs={12}>
+      <Input
+          required={true}
+          name='MappedFieldName'
+          label='Mapped Field Name'
+          hint='This is a Mapped FieldName'
+        />
+    </Grid>     
+
+
+    <Grid item xs={12}>
+      <Input
+          required={true}
+          name='MaxCharacterLength'
+          label='Max Character Length'
+          hint='This is a MaxCharacterLength'
+        />
+    </Grid>  
+
+    <Grid item xs={12}>
+        <Radio
+          inline
+          name='radioExample2'
+          label='Radio options label'
+          options={[
+            { value: '1', label: 'Option 1' },
+            { value: '2', label: 'Option 2' },
+            { value: '3', label: 'Option 3' }
+          ]}
+        />   
+    </Grid>
+
       <div className="text-center">
-      <button type="submit" className="btn"  >
-            Get Cash Offer Now 
-          </button>
+          <button type="submit" className="btn"  >
+                Save
+              </button>
           </div> 
+          
+        </Paper>
     </Form>
     </Grid>
 

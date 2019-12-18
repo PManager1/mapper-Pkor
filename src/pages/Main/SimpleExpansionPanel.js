@@ -25,6 +25,8 @@ export default function SimpleExpansionPanel() {
 
   return (
     <div className={classes.root}>
+      <Typography variant='h5' align='left'> Header </Typography>
+
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
@@ -68,6 +70,8 @@ export default function SimpleExpansionPanel() {
 
 
 
+      <Typography variant='h5'  align='left'> Details </Typography>
+
       <ExpansionPanel>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
@@ -96,6 +100,37 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
+
+
+      <Typography variant='h5'  align='left'> Trail </Typography>
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>1 Trail Field</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <FieldDetails/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>2 Trail Field</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <FieldDetails/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
 
     </div>
   );

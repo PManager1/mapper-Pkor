@@ -1,5 +1,40 @@
+Srini Dec 18 - 
+
+Login  / logout thing
+
+--------
+configuration what filed properties we wanna show for each client. 
+--------
+Each record will have seperate 
+can have Header,  
+can have Detail 
+can have Trail information.
+
+each field will have its own 
+
+Under records there will be number of fields. 
+Fields > Records. 
+
+Array of Arrays. 
 
 
+There will be the sequience for the Records and for the Fields. We'll be sorting it by sequence Number. 
+
+Records and Fields will have their own Sequence Number. 
+
+
+===================
+Replace all 
+SampleInputAdornments  with their own components. 
+============================
+Ability to create propeties for each client. 
+Like i need padding/ i need right justification etc. 
+
+
+
+
+
+=============================
 List tempaltes that are 
 
 List of templates that are already available. 

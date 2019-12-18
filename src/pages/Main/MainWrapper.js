@@ -120,7 +120,7 @@ export default function MainWrapper() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Paycor Mapper
+            Paycor Data Mapper
           </Typography>
         </Toolbar>
       </AppBar>

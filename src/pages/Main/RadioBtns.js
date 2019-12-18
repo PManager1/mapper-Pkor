@@ -14,7 +14,7 @@ export default function RadioBtns() {
 
   return (
     <FormControl component="fieldset">
-      <FormLabel component="legend">Please Select One </FormLabel>
+      <FormLabel component="legend"> __Please Select Alignment </FormLabel>
       <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
         <FormControlLabel
           value="LeftAligned"

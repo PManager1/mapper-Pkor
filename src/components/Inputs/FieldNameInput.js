@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SampleInputAdornments() {
+export default function FieldNameInput() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     amount: '',

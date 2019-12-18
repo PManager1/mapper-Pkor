@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SampleInputAdornments() {
+export default function MaxCharLength() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
     amount: '',
@@ -42,7 +42,7 @@ export default function SampleInputAdornments() {
   return (
     <div className={classes.root}>
         <FormControl fullWidth className={classes.margin}>
-          <InputLabel htmlFor="standard-adornment-amount">Field Name</InputLabel>
+          <InputLabel htmlFor="standard-adornment-amount">Max Character Length</InputLabel>
           <Input
             id="standard-adornment-amount"
             value={values.amount}

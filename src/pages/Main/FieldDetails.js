@@ -13,6 +13,9 @@ import RadioBtns from './RadioBtns.js';
 
 import SampleInputAdornments from '../../components/SampleInputAdornments.js';
 
+import FieldNameInput from '../../components/Inputs/FieldNameInput.js';
+import FieldNameInputMappedWith from '../../components/Inputs/FieldNameInputMappedWith.js';
+import MaxCharLength from '../../components/Inputs/MaxCharLength.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,26 +35,20 @@ export default function FieldDetails() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>
-           Field InputAdornments 
-          </Paper>
-
-          <SampleInputAdornments/>
+            <FieldNameInput/>
+            <FieldNameInputMappedWith />
+            <MaxCharLength />
         </Grid>
 
 
         <Grid item xs={12}>
-          <Paper className={classes.paper}>Max Character Length</Paper>
-        </Grid>
-
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>Left/ Right Aligned</Paper>
+          <RadioBtns />
         </Grid>
 
 
         <Grid item xs={12}>
 
-            <RadioBtns />
+           
 
           </Grid>
 

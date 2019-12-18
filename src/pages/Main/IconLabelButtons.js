@@ -53,6 +53,7 @@ export default function IconLabelButtons() {
       <Button
         variant="contained"
         color="primary"
+        disabled
         className={classes.button}
         endIcon={<Icon>send</Icon>}
       >

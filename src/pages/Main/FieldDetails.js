@@ -46,26 +46,19 @@ export default function FieldDetails() {
         </Grid>
 
 
-        <Grid item xs={12}>
-
-           
-
-          </Grid>
-
-          
-
+        
 
         <Grid item xs={12}>
           <Paper className={classes.paper}>Left/ Right Padding</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-          <Paper className={classes.paper}>checkbox </Paper>
+          <Paper className={classes.paper}>Left 2</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
           <Paper className={classes.paper}>None</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-          <Paper className={classes.paper}> checkbox</Paper>
+          <Paper className={classes.paper}>Right</Paper>
         </Grid>
 
       </Grid>

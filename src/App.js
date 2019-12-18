@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header'; 
 
-import Home from './pages/Home/index.js';
 
 import Main from './pages/Main/Index.js';
 

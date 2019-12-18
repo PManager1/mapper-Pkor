@@ -148,7 +148,7 @@ export const Form = props => {
         color="primary"
         disabled={!isValid}
       >
-        Submit
+        Save
       </Button>
     </form>
   );

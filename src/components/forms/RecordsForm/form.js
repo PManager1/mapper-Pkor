@@ -8,7 +8,7 @@ import EmailIcon from "@material-ui/icons/Email";
 
 export const Form = props => {
   const {
-    values: { name, email, password, confirmPassword },
+    values: { FieldName, MappedFieldName, MaxCharLength, SequenceNumber  },
     errors,
     touched,
     handleSubmit,
@@ -26,47 +26,54 @@ export const Form = props => {
   return (
     <form onSubmit={handleSubmit}>
       <TextField
-        name="name"
-        helperText={touched.name ? errors.name : ""}
-        error={Boolean(errors.name)}
-        label="Name"
-        value={name}
+        name="FieldName"
+        helperText={touched.FieldName ? errors.FieldName : ""}
+        error={Boolean(errors.FieldName)}
+        label="FieldName"
+        value={FieldName}
         onChange={handleChange}
         fullWidth
       />
       <div>{Boolean(errors.name) ? errors.name : ""}</div>
+
       <TextField
-        name="email"
-        helperText={touched.email ? errors.email : ""}
-        error={Boolean(errors.email)}
-        label="Email"
-        fullWidth
-        value={email}
+        name="MappedFieldName"
+        helperText={touched.MappedFieldName ? errors.MappedFieldName : ""}
+        error={Boolean(errors.MappedFieldName)}
+        label="MappedFieldName"
+        value={MappedFieldName}
         onChange={handleChange}
+        fullWidth
       />
-      <div>{Boolean(errors.email) ? errors.email : ""}</div>
+      <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
+      
+
+
       <TextField
-        name="password"
-        helperText={touched.password ? errors.password : ""}
-        error={Boolean(errors.password)}
-        label="Password"
-        fullWidth
-        type="password"
-        value={password}
+        name="MaxCharLength"
+        helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
+        error={Boolean(errors.MaxCharLength)}
+        label="MaxCharLength"
+        value={MaxCharLength}
         onChange={handleChange}
+        fullWidth
       />
-      <div>{errors.password}</div>
+      <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
+
+
       <TextField
-        name="confirmPassword"
-        helperText={touched.confirmPassword ? errors.confirmPassword : ""}
-        error={Boolean(errors.confirmPassword)}
-        label="Confirm Password"
-        fullWidth
-        type="password"
-        value={confirmPassword}
+        name="SequenceNumber"
+        helperText={touched.SequenceNumber ? errors.SequenceNumber : ""}
+        error={Boolean(errors.SequenceNumber)}
+        label="SequenceNumber"
+        value={SequenceNumber}
         onChange={handleChange}
+        fullWidth
       />
-      <div>{errors.confirmPassword}</div>
+      <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
+   
+
+   
       <Button
         type="submit"
         fullWidth

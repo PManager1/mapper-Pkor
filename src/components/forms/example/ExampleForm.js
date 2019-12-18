@@ -32,7 +32,7 @@ const validationSchema = Yup.object({
     .oneOf([Yup.ref("password")], "Password does not match")
 });
 
-class InputForm extends Component {
+class ExampleForm extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -63,4 +63,4 @@ class InputForm extends Component {
   }
 }
 
-export default withStyles(styles)(InputForm);
+export default withStyles(styles)(ExampleForm);

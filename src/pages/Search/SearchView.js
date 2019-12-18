@@ -3,7 +3,7 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-export default function Playground() {
+export default function SearchView() {
   const defaultProps = {
     options: top100Films,
     getOptionLabel: option => option.provider+' '+option.client+' '+option.year,

@@ -1,12 +1,12 @@
 import React from 'react';
-import Playground from './Playground.js'; 
+import SearchView from './SearchView.js'; 
 import CheckboxLabels from './CheckboxLabels.js';
 import SampleInputAdornments from '../../components/SampleInputAdornments.js';
 
 const Search = ()=>{
     return (
         <div > 
-            <Playground />
+            <SearchView />
             <CheckboxLabels />
             <SampleInputAdornments />
         </div>

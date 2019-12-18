@@ -3,11 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Checkbox from '@material-ui/core/Checkbox';
-import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
-import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
 import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 
@@ -16,6 +11,10 @@ import SampleInputAdornments from '../../components/SampleInputAdornments.js';
 import FieldNameInput from '../../components/Inputs/FieldNameInput.js';
 import FieldNameInputMappedWith from '../../components/Inputs/FieldNameInputMappedWith.js';
 import MaxCharLength from '../../components/Inputs/MaxCharLength.js';
+
+import LeftPaddingInput from '../../components/Inputs/LeftPaddingInput.js';
+import RightPaddingInput from '../../components/Inputs/RightPaddingInput.js';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -46,19 +45,17 @@ export default function FieldDetails() {
         </Grid>
 
 
-        
-
         <Grid item xs={12}>
           <Paper className={classes.paper}>Left/ Right Padding</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-          <Paper className={classes.paper}>Left 2</Paper>
+        <LeftPaddingInput />
         </Grid>
         <Grid item xs={8} sm={4}>
           <Paper className={classes.paper}>None</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-          <Paper className={classes.paper}>Right</Paper>
+         <RightPaddingInput />
         </Grid>
 
       </Grid>

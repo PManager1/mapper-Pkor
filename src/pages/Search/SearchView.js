@@ -16,7 +16,7 @@ export default function SearchView() {
   const [value, setValue] = React.useState(null);
 
   return (
-    <div style={{ width: 800 }}>
+    <div style={{ width: 800, marginLeft: 20,  }}>
       <Autocomplete
         {...defaultProps}
         id="disable-open-on-focus"

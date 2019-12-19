@@ -87,7 +87,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function MainWrapper() {
+export default function MainWrapper(props) {
+
+
+  // const Layout = props => ({
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -164,9 +167,7 @@ export default function MainWrapper() {
         })}
       >
         <div className={classes.drawerHeader} />
-
-
-        
+        {props.children}        
       </main>
     </div>
   );

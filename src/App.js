@@ -20,27 +20,21 @@ import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 const App = () =>{
     return (
+        <MainWrapper >
         <BrowserRouter>
+            <Route path="/" exact component={ExpansionScreen} />
+            <Route path="/search" exact component={Search} />
             
-            <Route path="/Search" exact component={Search} />
-
             {/* <Route path="/newsearch" render={() => <Main someData={someData} />   */}
-
             <Route path="/grid" exact component={FieldDetails} />
             <Route path="/radio" exact component={AlignmentRadioBtns} />
             <Route path="/New" exact component={NewFields} />
             <Route path="/BasicForm" exact component={BasicForm} />
             <Route path="/ExampleForm" exact component={ExampleForm} />
-
             <Route path="/RecordsForm" exact component={RecordsForm} />
             <Route path="/BasicForm" exact component={BasicForm} />
-
-            <MainWrapper />
-            <Route path="/" exact component={ExpansionScreen} />
-            <Route path="/newsearch" exact component={Search} />
-
-            
         </BrowserRouter>
+        </MainWrapper>
         );
 }; 
 

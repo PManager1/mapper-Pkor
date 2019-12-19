@@ -9,6 +9,9 @@ import CheckboxLabels from './CheckboxLabels';
 import InputAdornments from './InputAdornments.js';
 import RadioButtonsGroup from './RadioButtonsGroup.js'; 
 import FieldDetails from './FieldDetails.js';
+import AddIcon from '@material-ui/icons/Add';
+import EditIcon from '@material-ui/icons/Edit';
+import Fab from '@material-ui/core/Fab';
 
 import RecordsForm from '../../components/forms/RecordsForm/RecordsForm.js';
 
@@ -27,6 +30,17 @@ export default function SimpleExpansionPanel() {
 
   return (
     <div className={classes.root}>
+
+        <Typography paragraph align="right">
+          Mapper Id: Balckbaud 123345
+        </Typography>
+
+        <Typography paragraph align="right">
+        <Fab color="primary" aria-label="add">
+              <AddIcon /> 
+            </Fab>
+        </Typography>   
+
       <Typography variant='h5' align='left'> Header </Typography>
 
       <ExpansionPanel>

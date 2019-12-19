@@ -26,7 +26,6 @@ import SimpleExpansionPanel from './SimpleExpansionPanel';
 import BottomButtons from './BottomButtons'; 
 
 // import BottomButtons  from '../../components/BottomButtons.js';
-import ExpansionScreen from './ExpansionScreen.js'; 
 
 
 const drawerWidth = 240;
@@ -164,8 +163,19 @@ export default function MainWrapper() {
         })}
       >
         <div className={classes.drawerHeader} />
+        <Typography paragraph align="right">
+          Mapper Id: Balckbaud 123345
+        </Typography>
 
+        <Typography paragraph align="right">
+        <Fab color="primary" aria-label="add">
+              <AddIcon /> 
+            </Fab>
+        </Typography>            
 
+               
+        <SimpleExpansionPanel />
+        <BottomButtons />
         
       </main>
     </div>

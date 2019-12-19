@@ -150,7 +150,7 @@ export default function MainWrapper() {
         <Divider />
         <List>
           {['List All Rules','Create New Rule','Later3'].map((text, index) => (
-            <ListItem button key={text}>
+            <ListItem button component={Link} to="https://www.google.com"> key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>

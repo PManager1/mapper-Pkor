@@ -20,8 +20,9 @@ import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 const App = () =>{
     return (
-        <MainWrapper >
+        
         <BrowserRouter>
+        <MainWrapper >
             <Route path="/" exact component={ExpansionScreen} />
             <Route path="/search" exact component={Search} />
             
@@ -33,8 +34,8 @@ const App = () =>{
             <Route path="/ExampleForm" exact component={ExampleForm} />
             <Route path="/RecordsForm" exact component={RecordsForm} />
             <Route path="/BasicForm" exact component={BasicForm} />
+            </MainWrapper>
         </BrowserRouter>
-        </MainWrapper>
         );
 }; 
 

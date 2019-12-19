@@ -1,5 +1,7 @@
-
-
+show loading  / notifiction progress. 
+================
+on teh form, provide cancel button. 
+Proide more descriotion on plus sign, like add new field 
 
 ===========
 Dec 19 - 

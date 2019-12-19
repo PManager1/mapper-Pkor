@@ -155,8 +155,8 @@ export default function MainWrapper(props) {
         </List>
         <Divider />
         <List>
-          {['List All Rules','Create New Rule','Later3'].map((text, index) => (
-            <ListItem button key={text}>
+          {['All Rules','Create New Rule','Later3'].map((text, index) => (
+            <ListItem button component={Link} to="/AllRules"  key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>

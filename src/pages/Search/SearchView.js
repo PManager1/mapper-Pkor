@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -22,7 +21,7 @@ export default function SearchView() {
         id="disable-open-on-focus"
         disableOpenOnFocus
         renderInput={params => (
-          <TextField {...params} label="Type Mapper/company/provider/Client/paygroup name" margin="normal" fullWidth />
+          <TextField {...params} label="Search by MapperId/company Name/Provider/Client/paygroup/margin" margin="normal" fullWidth />
         )}
       />
      

@@ -16,6 +16,8 @@ import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Main/MainWrapper'; 
 
+import AllRules from './pages/AllRules/Index'; 
+
 import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 const App = () =>{
@@ -25,11 +27,13 @@ const App = () =>{
         <MainWrapper >
             <Route path="/" exact component={ExpansionScreen} />
             <Route path="/search" exact component={Search} />
+            <Route path="/newField" exact component={NewFields} />
+            <Route path="/AllRules" exact component={AllRules} />
+            
             
             {/* <Route path="/newsearch" render={() => <Main someData={someData} />   */}
             <Route path="/grid" exact component={FieldDetails} />
             <Route path="/radio" exact component={AlignmentRadioBtns} />
-            <Route path="/New" exact component={NewFields} />
             <Route path="/BasicForm" exact component={BasicForm} />
             <Route path="/ExampleForm" exact component={ExampleForm} />
             <Route path="/RecordsForm" exact component={RecordsForm} />

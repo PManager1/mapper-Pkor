@@ -16,7 +16,6 @@ import CreateNewRule from './pages/CreateNewRule/Index';
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
 import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
-
 import Login from './pages/Login/Index.js';
 
 

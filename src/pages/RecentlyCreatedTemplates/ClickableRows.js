@@ -50,9 +50,9 @@ export default function ClickableRows() {
                 src={`/static/images/avatar/${value + 1}.jpg`}
               />
             </ListItemAvatar>
-            <ListItemText id={labelId} primary={`Template ID MappId = ${value + 1}`} />
+            <ListItemText id={labelId} primary={`Template ID MappId = ${value + 1}`  } />
           
-            <ListItemText id={labelId} primary={`Client Id =  ${value + 1}`} />
+            <ListItemText id={labelId} primary={`Thursday 19 January 2010`} />
 
             <Divider variant="inset" component="li" />            
 

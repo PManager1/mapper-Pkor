@@ -40,7 +40,7 @@ export const Form = props => {
 
   return (
     <form onSubmit={handleSubmit}>
-
+      
 
       <TextField
         name="HeaderInfo"
@@ -54,7 +54,6 @@ export const Form = props => {
       <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
 
 
-
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
@@ -64,7 +63,7 @@ export const Form = props => {
         onChange={handleChange}
         fullWidth
       />
-      <div>{Boolean(errors.name) ? errors.name : ""}</div>
+      <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
       <TextField
         name="MappedFieldName"

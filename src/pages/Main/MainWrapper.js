@@ -16,6 +16,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import SearchIcon from '@material-ui/icons/Search';
+import NoteAddIcon from '@material-ui/icons/NoteAdd';
+import RestoreIcon from '@material-ui/icons/Restore';
+import SettingsIcon from '@material-ui/icons/Settings';
+
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
 
@@ -148,21 +153,21 @@ export default function MainWrapper(props) {
         <List>
               <ListItem button component={Link} to="/search" >
                   <ListItemIcon>
-                    <InboxIcon />
+                    <SearchIcon />
                   </ListItemIcon>
                   <ListItemText primary="Search" />
             </ListItem>
 
             <ListItem button component={Link} to="/CreateFromExistingTemplate" >  
                   <ListItemIcon>  
-                    <InboxIcon />
+                    <NoteAddIcon />
                   </ListItemIcon>
                   <ListItemText primary="Create from Existing-Template" />
             </ListItem>
 
             <ListItem button component={Link} to="/RecentlyCreatedTemplates" >  
                   <ListItemIcon>
-                    <MailIcon />
+                    <RestoreIcon />
                   </ListItemIcon>
                   <ListItemText primary="Recently Created Templates" />
             </ListItem>
@@ -175,7 +180,7 @@ export default function MainWrapper(props) {
         <List>
               <ListItem button component={Link} to="/AllRules" >
                   <ListItemIcon>
-                    <InboxIcon />
+                    <SettingsIcon />
                   </ListItemIcon>
                   <ListItemText primary="All Rules" />
             </ListItem>

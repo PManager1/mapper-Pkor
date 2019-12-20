@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
-
+import RecordsForm from './RecordsForm.js'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -21,45 +21,8 @@ export default function NewFields() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs={12}>
-            
-            <p> Sequence number </p>
-        </Grid>
-
-
-        <Grid item xs={12}>
-          <AlignmentRadioBtns />
-        </Grid>
-
-
-        <Grid item xs={12}>
-          <Paper className={classes.paper}>Left/ Right Padding</Paper>
-        </Grid>
-        <Grid item xs={8} sm={4}>
-
-        </Grid>
-        <Grid item xs={8} sm={4}>
-          <Paper className={classes.paper}>None</Paper>
-        </Grid>
-        <Grid item xs={8} sm={4}>
-
-        </Grid>
-
-        <Grid item xs={12}>
-            fieldId
-        </Grid>
-
-        <Grid item xs={12}>
-          Employee DOB 
-        </Grid>
-
-        <Grid item xs={12}>
-          Employee DOB & more 
-        </Grid>
-
-      </Grid>
-    </div>
+      <RecordsForm />
+     </div>
   );
 }
 

@@ -153,10 +153,6 @@ export const Form = props => {
    
 
 
-
-   
-      
-
       <Button  type="submit"
         fullWidth
         variant="contained" 
@@ -164,6 +160,14 @@ export const Form = props => {
         disabled={!isValid}
       >
         Save
+      </Button>
+
+      <Button
+        fullWidth
+        variant="contained"
+        color="default"
+      >
+        Cancel
       </Button>
 
       

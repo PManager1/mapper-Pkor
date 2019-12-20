@@ -23,6 +23,9 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
 
+import  LinearIndeterminate from '../../components/LinearProgress.js'; 
+
+
 
 const drawerWidth = 240;
 
@@ -83,8 +86,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MainWrapper(props) {
-
-
   // const Layout = props => ({
   const classes = useStyles();
   const theme = useTheme();
@@ -199,6 +200,8 @@ export default function MainWrapper(props) {
         })}
       >
         <div className={classes.drawerHeader} />
+        <LinearIndeterminate />
+        
         {props.children}        
       </main>
     </div>

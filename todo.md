@@ -1,3 +1,10 @@
+transformation rules 
+males to M 
+
+Overrides. 
+
+
+
 create profile avatar via :
 https://codesandbox.io/s/0lc5x
 

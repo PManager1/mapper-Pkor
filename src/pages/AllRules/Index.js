@@ -1,10 +1,10 @@
 import React from 'react';
-
+import CheckboxList from './AllRules'; 
 
 const AllRules = ()=>{
     return (
         <div > 
-            All Rules 
+            <CheckboxList />
         </div>
     ); 
 }

@@ -184,7 +184,7 @@ export default function MainWrapper(props) {
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create New Rule 2" />
+                  <ListItemText primary="Create New Rule" />
             </ListItem>
 
             <ListItem button>

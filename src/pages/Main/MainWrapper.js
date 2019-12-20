@@ -127,7 +127,6 @@ export default function MainWrapper(props) {
           </Typography>
         </Toolbar>
 
-        <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
 
 
       </AppBar>

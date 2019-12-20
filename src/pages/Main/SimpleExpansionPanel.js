@@ -32,7 +32,7 @@ export default function SimpleExpansionPanel() {
   return (
     <div className={classes.root}>
 
-        <Typography paragraph align="right">
+        <Typography variant='h6' color="primary" align="left">
           Mapper Id: Balckbaud 123345
         </Typography>
 

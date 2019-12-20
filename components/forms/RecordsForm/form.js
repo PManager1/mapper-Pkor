@@ -39,9 +39,8 @@ export const Form = props => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-
-
+    
+    <form onSubmit={handleSubmit}>   
       <TextField
         name="HeaderInfo"
         helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}

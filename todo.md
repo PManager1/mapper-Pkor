@@ -2,6 +2,8 @@ create profile avatar via :
 https://codesandbox.io/s/0lc5x
 
 ================
+save button not getting clickable when the data is good for validation. 
+================
 show loading  / notifiction progress. 
 ================
 on teh form, provide cancel button. 

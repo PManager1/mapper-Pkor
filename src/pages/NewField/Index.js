@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
+// import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 import RecordsForm from './RecordsForm.js'
 
 const useStyles = makeStyles(theme => ({

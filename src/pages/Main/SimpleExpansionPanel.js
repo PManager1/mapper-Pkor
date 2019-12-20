@@ -12,7 +12,7 @@ import FieldDetails from './FieldDetails.js';
 import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import Fab from '@material-ui/core/Fab';
-import RecordsForm from '../../components/forms/RecordsForm/RecordsForm.js';
+import RecordsForm from './RecordsForm/RecordsForm.js';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 

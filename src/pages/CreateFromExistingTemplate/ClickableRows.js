@@ -7,16 +7,18 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Checkbox from '@material-ui/core/Checkbox';
 import Avatar from '@material-ui/core/Avatar';
+import Divider from '@material-ui/core/Divider';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    maxWidth: 1200,
     backgroundColor: theme.palette.background.paper,
   },
 }));
 
-export default function CheckboxListSecondary() {
+export default function ClickableRows() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
 
@@ -35,6 +37,8 @@ export default function CheckboxListSecondary() {
 
   return (
     <List dense className={classes.root}>
+
+        
       {[0, 1, 2, 3].map(value => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
@@ -45,15 +49,12 @@ export default function CheckboxListSecondary() {
                 src={`/static/images/avatar/${value + 1}.jpg`}
               />
             </ListItemAvatar>
-            <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
-            <ListItemSecondaryAction>
-              <Checkbox
-                edge="end"
-                onChange={handleToggle(value)}
-                checked={checked.indexOf(value) !== -1}
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemSecondaryAction>
+            <ListItemText id={labelId} primary={`Template ID MappId = ${value + 1}`} />
+            
+            <ListItemText id={labelId} primary={`Client Id =  ${value + 1}`} />
+
+            <Divider variant="inset" component="li" />            
+
           </ListItem>
         );
       })}

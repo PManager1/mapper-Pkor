@@ -20,17 +20,9 @@ import SearchIcon from '@material-ui/icons/Search';
 import NoteAddIcon from '@material-ui/icons/NoteAdd';
 import RestoreIcon from '@material-ui/icons/Restore';
 import SettingsIcon from '@material-ui/icons/Settings';
-
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
-
-
-import AddIcon from '@material-ui/icons/Add';
-import EditIcon from '@material-ui/icons/Edit';
-import Fab from '@material-ui/core/Fab';
-
-import SimpleExpansionPanel from './SimpleExpansionPanel'; 
-import BottomButtons from './BottomButtons'; 
+import Avatar from '@material-ui/core/Avatar';
 
 // import BottomButtons  from '../../components/BottomButtons.js';
 import ExpansionScreen from './ExpansionScreen.js'; 
@@ -134,6 +126,10 @@ export default function MainWrapper(props) {
             Paycor Data Mapper
           </Typography>
         </Toolbar>
+
+        <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />
+
+
       </AppBar>
       <Drawer
         className={classes.drawer}

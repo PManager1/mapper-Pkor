@@ -160,7 +160,7 @@ export default function MainWrapper(props) {
                   <ListItemText primary="Create from Existing-Template" />
             </ListItem>
 
-            <ListItem button>
+            <ListItem button component={Link} to="/RecentlyCreatedTemplates" >  
                   <ListItemIcon>
                     <MailIcon />
                   </ListItemIcon>

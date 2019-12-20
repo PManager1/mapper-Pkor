@@ -4,13 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 
-import FieldNameInput from '../../components/Inputs/FieldNameInput.js';
-import FieldNameInputMappedWith from '../../components/Inputs/FieldNameInputMappedWith.js';
-import MaxCharLength from '../../components/Inputs/MaxCharLength.js';
-
-import LeftPaddingInput from '../../components/Inputs/LeftPaddingInput.js';
-import RightPaddingInput from '../../components/Inputs/RightPaddingInput.js';
-
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,9 +23,7 @@ export default function NewFields() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <FieldNameInput/>
-            <FieldNameInputMappedWith />
-            <MaxCharLength />
+            
             <p> Sequence number </p>
         </Grid>
 
@@ -46,13 +37,13 @@ export default function NewFields() {
           <Paper className={classes.paper}>Left/ Right Padding</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-        <LeftPaddingInput />
+
         </Grid>
         <Grid item xs={8} sm={4}>
           <Paper className={classes.paper}>None</Paper>
         </Grid>
         <Grid item xs={8} sm={4}>
-         <RightPaddingInput />
+
         </Grid>
 
         <Grid item xs={12}>

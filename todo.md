@@ -1,3 +1,5 @@
+replace newfield.js with formicks. 
+================
 show loading  / notifiction progress. 
 ================
 on teh form, provide cancel button. 

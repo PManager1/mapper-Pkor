@@ -5,12 +5,6 @@ import Grid from '@material-ui/core/Grid';
 
 import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
 
-import SampleInputAdornments from '../../components/SampleInputAdornments.js';
-
-import FieldNameInput from '../../components/Inputs/FieldNameInput.js';
-import FieldNameInputMappedWith from '../../components/Inputs/FieldNameInputMappedWith.js';
-import MaxCharLength from '../../components/Inputs/MaxCharLength.js';
-
 import LeftPaddingInput from '../../components/Inputs/LeftPaddingInput.js';
 import RightPaddingInput from '../../components/Inputs/RightPaddingInput.js';
 
@@ -33,9 +27,7 @@ export default function FieldDetails() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-            <FieldNameInput/>
-            <FieldNameInputMappedWith />
-            <MaxCharLength />
+        
         </Grid>
 
 

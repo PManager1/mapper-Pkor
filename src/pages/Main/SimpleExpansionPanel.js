@@ -38,7 +38,7 @@ export default function SimpleExpansionPanel() {
 
         <Typography paragraph align="right">
         <Tooltip title="Add New Field" aria-label="add"> 
-          <Fab color="primary" aria-label="add"   component={Link} to="/new" >
+          <Fab color="primary" aria-label="add"   component={Link} to="/newfield" >
               <AddIcon /> 
             </Fab>
           </Tooltip>

@@ -22,8 +22,9 @@ import Login from './pages/Login/Index.js';
 const App = () =>{
     return (
         <BrowserRouter>
+        <Route path="/login" exact component={Login} />
+
         <MainWrapper >
-            <Route path="/login" exact component={Login} />
             <Route path="/" exact component={ExpansionScreen} />
             <Route path="/search" exact component={Search} />
             <Route path="/newField" exact component={NewFields} />

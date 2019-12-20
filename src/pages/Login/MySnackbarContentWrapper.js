@@ -135,9 +135,6 @@ export default function CustomizedSnackbars() {
 
 
 
-
- 
-
       <MySnackbarContentWrapper
         variant="error"
         className={classes.margin}

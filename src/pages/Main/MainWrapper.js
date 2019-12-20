@@ -22,10 +22,7 @@ import RestoreIcon from '@material-ui/icons/Restore';
 import SettingsIcon from '@material-ui/icons/Settings';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
-import Avatar from '@material-ui/core/Avatar';
 
-// import BottomButtons  from '../../components/BottomButtons.js';
-import ExpansionScreen from './ExpansionScreen.js'; 
 
 
 const drawerWidth = 240;

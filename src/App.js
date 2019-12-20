@@ -15,10 +15,16 @@ import RecordsForm from './components/forms/RecordsForm/RecordsForm';
 import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Main/MainWrapper'; 
+import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 import AllRules from './pages/AllRules/Index'; 
+import CreateNewRule from './pages/CreateNewRule/Index'; 
 
-import ExpansionScreen from './pages/Main/ExpansionScreen.js';
+import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
+
+
+
+
 
 const App = () =>{
     return (
@@ -29,6 +35,10 @@ const App = () =>{
             <Route path="/search" exact component={Search} />
             <Route path="/newField" exact component={NewFields} />
             <Route path="/AllRules" exact component={AllRules} />
+            <Route path="/CreateNewRule" exact component={CreateNewRule} />
+            <Route path="/CreateFromExistingTemplate" exact component={CreateFromExistingTemplate} />
+
+
             
             
             {/* <Route path="/newsearch" render={() => <Main someData={someData} />   */}

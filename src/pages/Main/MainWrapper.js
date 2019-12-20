@@ -146,22 +146,56 @@ export default function MainWrapper(props) {
         </div>
         <Divider />
         <List>
-          {['Search','Create from Existing-Template', 'Create New'].map((text, index) => (
-            <ListItem button  component={Link} to="/search"  key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItem button component={Link} to="/search" >
+                  <ListItemIcon>
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Search" />
             </ListItem>
-          ))}
+
+            <ListItem button component={Link} to="/CreateFromExistingTemplate" >  
+                  <ListItemIcon>  
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Create from Existing-Template" />
+            </ListItem>
+
+            <ListItem button>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Create New Rule" />
+            </ListItem>
         </List>
         <Divider />
+
+
+
+        <Divider />
         <List>
-          {['All Rules','Create New Rule','Later3'].map((text, index) => (
-            <ListItem button component={Link} to="/AllRules"  key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+              <ListItem button component={Link} to="/AllRules" >
+                  <ListItemIcon>
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="All Rules" />
             </ListItem>
-          ))}
+
+            <ListItem button component={Link} to="/CreateNewRule" >
+                  <ListItemIcon>
+                    <InboxIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Create New Rule" />
+            </ListItem>
+
+            <ListItem button>
+                  <ListItemIcon>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <ListItemText primary="Later3" />
+            </ListItem>
         </List>
+        <Divider />
+
       </Drawer>
       <main
         className={clsx(classes.content, {

@@ -1,3 +1,7 @@
+create profile avatar via :
+https://codesandbox.io/s/0lc5x
+
+======================
 replace newfield.js with formicks. 
 ================
 show loading  / notifiction progress. 

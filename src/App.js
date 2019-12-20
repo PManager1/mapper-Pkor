@@ -15,16 +15,16 @@ import AllRules from './pages/AllRules/Index';
 import CreateNewRule from './pages/CreateNewRule/Index'; 
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
-
 import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
 
+import Login from './pages/Login/Index.js';
 
 
 const App = () =>{
     return (
-        
         <BrowserRouter>
         <MainWrapper >
+            <Route path="/login" exact component={Login} />
             <Route path="/" exact component={ExpansionScreen} />
             <Route path="/search" exact component={Search} />
             <Route path="/newField" exact component={NewFields} />

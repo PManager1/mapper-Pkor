@@ -22,7 +22,7 @@ import CreateNewRule from './pages/CreateNewRule/Index';
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
 
-
+import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
 
 
 
@@ -37,9 +37,9 @@ const App = () =>{
             <Route path="/AllRules" exact component={AllRules} />
             <Route path="/CreateNewRule" exact component={CreateNewRule} />
             <Route path="/CreateFromExistingTemplate" exact component={CreateFromExistingTemplate} />
+            <Route path="/RecentlyCreatedTemplates" exact component={RecentlyCreatedTemplates} />
 
-
-            
+             
             
             {/* <Route path="/newsearch" render={() => <Main someData={someData} />   */}
             <Route path="/grid" exact component={FieldDetails} />

@@ -13,6 +13,7 @@ import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';
 import Fab from '@material-ui/core/Fab';
 import RecordsForm from '../../components/forms/RecordsForm/RecordsForm.js';
+import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles(theme => ({
@@ -36,9 +37,11 @@ export default function SimpleExpansionPanel() {
         </Typography>
 
         <Typography paragraph align="right">
-        <Fab color="primary" aria-label="add"   component={Link} to="/new" >
+        <Tooltip title="Add New Field" aria-label="add"> 
+          <Fab color="primary" aria-label="add"   component={Link} to="/new" >
               <AddIcon /> 
             </Fab>
+          </Tooltip>
         </Typography>   
 
       <Typography variant='h5' align='left'> Header </Typography>

@@ -164,7 +164,7 @@ export default function MainWrapper(props) {
                   <ListItemIcon>
                     <MailIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create New Rule" />
+                  <ListItemText primary="Recently Created Templates" />
             </ListItem>
         </List>
         <Divider />
@@ -184,7 +184,7 @@ export default function MainWrapper(props) {
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create New Rule" />
+                  <ListItemText primary="Create New Rule 2" />
             </ListItem>
 
             <ListItem button>

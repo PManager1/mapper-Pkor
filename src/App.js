@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'; 
+import { BrowserRouter, Switch, Route, HashRouter, Link } from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Main from './pages/Main/Index.js';
@@ -25,7 +25,7 @@ import TemporaryDrawer from './components/DrawerDemo.js';
 
 const App = () =>{
     return (
-        <BrowserRouter>
+        <HashRouter>
         <Switch>
         <Route path="/drawer" exact component={TemporaryDrawer} />
         <Route path="/login" exact component={Login} />
@@ -41,7 +41,7 @@ const App = () =>{
             </MainWrapper>
             <Route component={NotFound} />
             </Switch>
-        </BrowserRouter>
+        </HashRouter>
         );
 }; 
 

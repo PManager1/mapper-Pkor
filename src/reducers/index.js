@@ -6,10 +6,9 @@ const clientsReducer = () => {
         { clientName: 'yellowBaud1', clientId: '2323'}, 
         { clientName: 'whitebaud', clientId: '98343'}
     ]; 
-}
+}; 
 
-
-const selectedClientReducer = (selectedClient=null, action ) => {
+const selectedClientReducer = (selectedClient=null, action) => {
     if( action.type === 'CLIENT_SELECTED' ){
         return action.payload; 
     }

@@ -19,12 +19,15 @@ import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index';
 import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
 
+import TemporaryDrawer from './components/DrawerDemo.js'; 
+
 
 
 const App = () =>{
     return (
         <BrowserRouter>
         <Switch>
+        <Route path="/drawer" exact component={TemporaryDrawer} />
         <Route path="/login" exact component={Login} />
 
         <MainWrapper >

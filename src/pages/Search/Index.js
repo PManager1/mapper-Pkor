@@ -5,8 +5,10 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
 
 
-const Search = () => {
-// class Search extends React.Component{
+const Search = (props) => {
+
+    console.log( '10 - -- - - ---  props  = ', props ); 
+
   
     const defaultProps = {
       options: top100Films,     
@@ -38,7 +40,7 @@ const Search = () => {
   const mapStateToProps = (state) =>{
     console.log( ' state =', state ); 
     
-    return state; 
+    return state.clients; 
 }; 
 
 export default connect(mapStateToProps)(Search); 

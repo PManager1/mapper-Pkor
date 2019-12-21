@@ -29,12 +29,12 @@ const App = () =>{
 
         <MainWrapper >
             <Route path="/" exact component={ExpansionScreen} />
-            <Route path="/search" exact component={Search} />
-            <Route path="/newField" exact component={NewFields} />
-            <Route path="/AllRules" exact component={AllRules} />
-            <Route path="/CreateNewRule" exact component={CreateNewRule} />
-            <Route path="/CreateFromExistingTemplate" exact component={CreateFromExistingTemplate} />
-            <Route path="/RecentlyCreatedTemplates" exact component={RecentlyCreatedTemplates} />
+            <Route path="/search" component={Search} />
+            <Route path="/newField" component={NewFields} />
+            <Route path="/AllRules" component={AllRules} />
+            <Route path="/CreateNewRule" component={CreateNewRule} />
+            <Route path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
+            <Route path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
             </MainWrapper>
             <Route component={NotFound} />
             </Switch>

@@ -11,8 +11,9 @@ const Search = (props) => {
 
   
     const defaultProps = {
-      options: top100Films,     
-      getOptionLabel: option => option.provider+' '+option.mapId+' '+option.clientName+' '+option.PayGroup,
+      options: props.clients,     
+      getOptionLabel: option => option.clientName+' '+option.clientId+' '+option.PayGroup,
+    // getOptionLabel: props => props.clientName+' '+props.clientId+' '+props.PayGroup,
     };
   
     const flatProps = {
@@ -40,7 +41,7 @@ const Search = (props) => {
   const mapStateToProps = (state) =>{
     console.log( ' state =', state ); 
     
-    return state.clients; 
+    return { clients: state.clients }; 
 }; 
 
 export default connect(mapStateToProps)(Search); 

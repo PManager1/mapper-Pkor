@@ -1,3 +1,6 @@
+import { combineReducers } from 'redux'; 
+
+
 const clientsReducer = () => {
     return [
         { clientName: 'blackbaud1', clientId: '123'}, 
@@ -13,3 +16,8 @@ const selectedClientReducer = (selectedClient=null, action ) => {
     }
     return selectedClient; 
 }
+
+export default combineReducers({
+    clients: clientsReducer, 
+    selectedClient: selectedClientReducer
+});

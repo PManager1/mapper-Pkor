@@ -4,9 +4,12 @@ import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
 
+import { selectClient } from '../../actions'; 
 
 const Search = (props) => {
   
+    console.log( ' this.props ', props  ); 
+
     const defaultProps = {
       options: props.clients,     
       getOptionLabel: option => option.clientName+' '+option.clientId+' '+option.PayGroup,
@@ -18,10 +21,25 @@ const Search = (props) => {
   
     const [value, setValue] = React.useState(null);
   
+
+function updateState(e) {
+        console.log( '25- updateState called    '); 
+        console.log("e.target.textContent ", e.target.textContent );
+
+        console.log("e.target ", e.target );
+        
+
+        // console.log(e.target.getAttribute("data-option-index"));
+        // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
+      }
+
+
     return (
-      <div style={{ width: 800, marginLeft: 20,  }}>
+      <div style={{ width: 950, marginLeft: 20  }}>
         <Autocomplete
           {...defaultProps}
+        //   onClick={ () => props.selectClient() }
+          onChange={updateState}
           id="disable-open-on-focus"
           disableOpenOnFocus
           renderInput={params => (
@@ -40,7 +58,15 @@ const Search = (props) => {
     return { clients: state.clients }; 
 }; 
 
-export default connect(mapStateToProps)(Search); 
+export default connect(mapStateToProps, { selectClient })(Search); 
+
+
+
+
+
+
+
+
 
 
   

@@ -1,11 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, HashRouter, Link } from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import Main from './pages/Main/Index.js';
 import FieldDetails from './pages/Main/FieldDetails.js';
-
-
 import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Main/MainWrapper'; 
@@ -21,6 +18,7 @@ import NotFound from './pages/NotFound/Index.js';
 
 import TemporaryDrawer from './components/DrawerDemo.js'; 
 
+import {selectClient} from 'actions'; 
 
 
 const App = () =>{

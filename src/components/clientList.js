@@ -1,6 +1,7 @@
 import React from 'react'; 
+import { connect } from 'react-redux'; 
 
-export default class clientList extends React.Component{
+ class clientList extends React.Component{
 
 render(){
     return (
@@ -9,5 +10,11 @@ render(){
         </div>
     )
 }
-
 }
+const mapStateToProps = (state) =>{
+    console.log( ' state =', state ); 
+    
+    return state; 
+}; 
+
+export default connect()(clientList); 

@@ -16,9 +16,11 @@ import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index';
 import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
 import TemporaryDrawer from './components/DrawerDemo.js'; 
+
+
 import clientList from './components/clientList.js'; 
 
-// import {selectClient} from 'actions'; 
+import { selectClient } from './actions'; 
 
 
 const App = () =>{

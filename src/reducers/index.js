@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'; 
 
-
 const clientsReducer = () => {
     return [
         { clientName: 'blackbaud1', clientId: '123'}, 
@@ -11,7 +10,7 @@ const clientsReducer = () => {
 
 
 const selectedClientReducer = (selectedClient=null, action ) => {
-    if( action.type==='CLIENT_SELECTED' ){
+    if( action.type === 'CLIENT_SELECTED' ){
         return action.payload; 
     }
     return selectedClient; 

@@ -17,8 +17,7 @@ import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
 import TemporaryDrawer from './components/DrawerDemo.js'; 
 
-
-import clientList from './components/clientList.js'; 
+import ClientList from './components/ClientList.js'; 
 
 import { selectClient } from './actions'; 
 
@@ -27,7 +26,7 @@ const App = () =>{
     return (
         <HashRouter>
         <Switch>
-        <Route path="/clientList" exact component={clientList} />
+        <Route path="/ClientList" exact component={ClientList} />
         
         <Route path="/drawer" exact component={TemporaryDrawer} />
         <Route path="/login" exact component={Login} />

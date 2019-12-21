@@ -1,11 +1,12 @@
 import React from 'react';
 import SearchView from './SearchView.js';
-
+import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
 
 
-export default function Search() {
+const Search = () => {
+// class Search extends React.Component{
   
     const defaultProps = {
       options: top100Films,     
@@ -32,6 +33,17 @@ export default function Search() {
       </div>
     );
   }
+
+
+  const mapStateToProps = (state) =>{
+    console.log( ' state =', state ); 
+    
+    return state; 
+}; 
+
+export default connect(mapStateToProps)(Search); 
+
+
   
   // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
   const top100Films = [

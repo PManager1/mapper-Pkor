@@ -5,16 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
 
 
-// const Search = ()=>{
-//     return (
-//         <div > 
-//             <SearchView />
-//         </div>
-//     ); 
-// }
-
-// export default Search; 
-
 export default function Search() {
   
     const defaultProps = {

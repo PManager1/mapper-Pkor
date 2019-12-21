@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom'; 
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Main from './pages/Main/Index.js';
@@ -17,11 +17,14 @@ import CreateNewRule from './pages/CreateNewRule/Index';
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
 import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
 import Login from './pages/Login/Index.js';
+import NotFound from './pages/NotFound/Index.js'; 
+
 
 
 const App = () =>{
     return (
         <BrowserRouter>
+        <Switch>
         <Route path="/login" exact component={Login} />
 
         <MainWrapper >
@@ -32,15 +35,9 @@ const App = () =>{
             <Route path="/CreateNewRule" exact component={CreateNewRule} />
             <Route path="/CreateFromExistingTemplate" exact component={CreateFromExistingTemplate} />
             <Route path="/RecentlyCreatedTemplates" exact component={RecentlyCreatedTemplates} />
-
-             
-            
-            {/* <Route path="/newsearch" render={() => <Main someData={someData} />   */}
-            <Route path="/grid" exact component={FieldDetails} />
-
-
-
             </MainWrapper>
+            <Route component={NotFound} />
+            </Switch>
         </BrowserRouter>
         );
 }; 

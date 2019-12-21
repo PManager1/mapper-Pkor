@@ -6,14 +6,10 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 
 const Search = (props) => {
-
-    console.log( '10 - -- - - ---  props  = ', props ); 
-
   
     const defaultProps = {
       options: props.clients,     
       getOptionLabel: option => option.clientName+' '+option.clientId+' '+option.PayGroup,
-    // getOptionLabel: props => props.clientName+' '+props.clientId+' '+props.PayGroup,
     };
   
     const flatProps = {

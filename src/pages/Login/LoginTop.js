@@ -187,8 +187,6 @@ export default function LoginTop() {
       </AppBar>
 
 
-
-
       <Drawer
         className={classes.drawer}
         variant="persistent"

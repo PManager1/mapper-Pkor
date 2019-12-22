@@ -30,13 +30,13 @@ function updateState(e) {
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
 
-        // this.props.router.push({
-        //   pathname: '/other-page',
-        //   state: {
-        //     id: 7,
-        //     color: 'green'
-        //   }
-        // })
+        this.props.router.push({
+          pathname: '/other-page',
+          state: {
+            id: 7,
+            color: 'green'
+          }
+        })
 
       }
 

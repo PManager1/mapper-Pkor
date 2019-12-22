@@ -1,10 +1,10 @@
 import React from 'react';
-import SearchView from './SearchView.js';
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
-
 import { selectClient } from '../../actions'; 
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const Search = (props) => {
   
@@ -29,16 +29,8 @@ function updateState(e) {
         props.selectClient(e.target.textContent)
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
+        props.history.push("/clientdetail");
 
-        // this.props.router.push({
-        //   pathname: '/clientdetail',
-        //   state: {
-        //     id: 7,
-        //     color: 'green'
-        //   }
-        // })
-
-        // history.push('/clientdetail', { some: 'state' })
 
       }
 

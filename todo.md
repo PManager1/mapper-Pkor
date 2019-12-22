@@ -1,3 +1,6 @@
+
+on Vid:  15:2 
+==========================
 transformation rules 
 males to M 
 
@@ -45,6 +48,10 @@ Udemy - Modern React with Redux [2019 Update]
 Memoization: 
 
 15-18 
+
+Do Lazy loding. 
+Do SSR. 
+Do Testing. 
 ============================
 
 

@@ -7,18 +7,19 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
 const Search = (props) => {
-  
+
+  console.log( '11 - this.props ', props  ); 
+  console.log( '12 - props.clients.data ', props.clients.data  ); 
+
   useEffect(() => {
     // code to run on component mount
     props.fetchClients(); 
   }, [])
 
-
-    console.log( ' this.props ', props  ); 
-
     const defaultProps = {
-      options: props.clients,     
-      getOptionLabel: option => option.clientName+' '+option.clientId+' '+option.PayGroup,
+      options:  props.clients.data,     
+      // getOptionLabel: option => 'clientId = '+option.clientId+' clientName = '+option.clientName+' mapid= '+option.mapId,
+      getOptionLabel: option => ' '+option.clientId+' '+option.clientName+' '+option.mapId,
     };
   
     const flatProps = {
@@ -36,7 +37,6 @@ function updateState(e) {
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
         props.history.push(`/search/${e.target.textContent}`);
-
 
       }
 
@@ -60,7 +60,7 @@ function updateState(e) {
 
 
   const mapStateToProps = (state) =>{
-    console.log( ' state =', state ); 
+    console.log( '63 -  state =', state ); 
     
     return { clients: state.clients }; 
 }; 

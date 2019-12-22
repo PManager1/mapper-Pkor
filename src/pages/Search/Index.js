@@ -94,3 +94,6 @@ export default connect(mapStateToProps, { selectClient })(Search);
     { provider: 'Seven Samurai', year: 1954, client: 'Gap', PayGroup: 'paygp'  },
   ];
   
+
+//   https://codesandbox.io/s/laughing-mclean-qzi4h
+// https://stackoverflow.com/questions/58686204/cant-get-event-target-value-using-select-item-from-material-ui-autocomplete-with

@@ -17,8 +17,9 @@ import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
 import TemporaryDrawer from './components/DrawerDemo.js'; 
 
-
 import ClientDetail from './pages/Search/ClientDetail.js';
+
+import ModalFormDialog from './components/ModalFormDialog.js'; 
 
 import { selectClient } from './actions'; 
 
@@ -26,6 +27,8 @@ const App = () =>{
     return (
         <HashRouter>
         <Switch>
+
+        <Route path="/ModalFormDialog" exact component={ModalFormDialog} />
         <Route path="/drawer" exact component={TemporaryDrawer} />
         <Route path="/login" exact component={Login} />
 

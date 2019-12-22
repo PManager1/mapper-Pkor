@@ -164,6 +164,7 @@ export const Form = props => {
 
       <Button
         fullWidth
+        disableElevation
         variant="contained"
         color="default"
       >

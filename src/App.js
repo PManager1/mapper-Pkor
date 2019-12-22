@@ -17,22 +17,22 @@ import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
 import TemporaryDrawer from './components/DrawerDemo.js'; 
 
-import ClientList from './components/ClientList.js'; 
+
+import ClientDetail from './pages/Search/ClientDetail.js';
 
 import { selectClient } from './actions'; 
-
 
 const App = () =>{
     return (
         <HashRouter>
         <Switch>
-        <Route path="/ClientList" exact component={ClientList} />
-        
         <Route path="/drawer" exact component={TemporaryDrawer} />
         <Route path="/login" exact component={Login} />
 
         <MainWrapper >
             <Route path="/" exact component={ExpansionScreen} />
+            <Route path="/ClientDetail" exact component={ClientDetail} />
+            
             <Route path="/search" component={Search} />
             <Route path="/newField" component={NewFields} />
             <Route path="/AllRules" component={AllRules} />

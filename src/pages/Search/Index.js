@@ -25,13 +25,19 @@ const Search = (props) => {
 function updateState(e) {
         console.log( '25- updateState called    '); 
         console.log("e.target.textContent ", e.target.textContent );
-
         console.log("e.target =", e.target );
-        
         props.selectClient(e.target.textContent)
-
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
+
+        // this.props.router.push({
+        //   pathname: '/other-page',
+        //   state: {
+        //     id: 7,
+        //     color: 'green'
+        //   }
+        // })
+
       }
 
 

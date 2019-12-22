@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Formik } from "formik";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Form } from "./form";
-import Paper from "@material-ui/core/Paper";
 import * as Yup from "yup";
 
 const styles = theme => ({
@@ -46,12 +45,13 @@ class RecordsForm extends Component {
   }
 
   submit = data => {
+    console.log('48 - calling submit function from Records Form.js =  data=',data ); 
     console.log(data);
   };
 
   render() {
     const classes = this.props;
-    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", LeftPadding:"", RightPadding:""   };
+    const values = { HeaderInfo: "header info", FieldName: "initial FieldName", MappedFieldName:"MappedFieldName", MaxCharLength: "23", SequenceNumber:"", RadioValue:"", LeftPadding:"", RightPadding:""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

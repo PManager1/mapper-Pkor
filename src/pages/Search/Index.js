@@ -29,7 +29,7 @@ function updateState(e) {
         props.selectClient(e.target.textContent)
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
-        props.history.push("/search/clientdetail");
+        props.history.push(`/search/${e.target.textContent}`);
 
 
       }

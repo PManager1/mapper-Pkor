@@ -1,19 +1,18 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import NameIcon from "@material-ui/icons/SupervisorAccount";
-import LockIcon from "@material-ui/icons/Lock";
-import EmailIcon from "@material-ui/icons/Email";
-
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 
+import { connect } from "react-redux";
+import { createClient } from '../../actions';
 
-export const Form = props => {
+
+
+const Form = props => {
   const {
     values:{ HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
@@ -23,7 +22,10 @@ export const Form = props => {
     isValid,
     setFieldTouched
   } = props;
-  console.table(props);
+  // console.table(props);
+
+  console.log('27 -  final props in form.js = ' , props ); 
+     props.createClient(props.values); 
 
 
   const change = (name, e) => {
@@ -36,6 +38,8 @@ export const Form = props => {
   // const handleChange = event => {
   //   setValue(event.target.value);
   // };
+
+
 
 
   return (
@@ -152,12 +156,11 @@ export const Form = props => {
 
    
 
-
+      {/* disabled={!isValid} */}
       <Button  type="submit"
         fullWidth
         variant="contained" 
         color="primary"
-        disabled={!isValid}
       >
         Save
       </Button>
@@ -175,3 +178,14 @@ export const Form = props => {
     </form>
   );
 };
+
+
+const mapStateToProps = (state) =>{
+  console.log( ' state =', state ); 
+}; 
+
+export default connect(mapStateToProps, {
+ createClient
+})(Form); 
+
+// export default Form

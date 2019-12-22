@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Formik } from "formik";
 import withStyles from "@material-ui/core/styles/withStyles";
-import { Form } from "./form";
+import Form from "./form";
 import * as Yup from "yup";
 
 const styles = theme => ({
@@ -47,6 +47,10 @@ class RecordsForm extends Component {
   submit = data => {
     console.log('48 - calling submit function from Records Form.js =  data=',data ); 
     console.log(data);
+  };
+
+  handleSubmit = () => {
+    console.log( ' 53 - called handleSubmit inside RecordsForm '); 
   };
 
   render() {

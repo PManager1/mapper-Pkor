@@ -41,6 +41,11 @@ Add Profile Menu on top right.
 https://material-ui.com/components/menus/
 
 ============================
+Udemy - Modern React with Redux [2019 Update]
+Memoization: 
+
+15-18 
+============================
 
 
 ============================

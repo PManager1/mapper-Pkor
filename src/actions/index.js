@@ -1,5 +1,5 @@
-import jsonPlaceholder from '../apis/jsonPlaceholder'; 
-
+// import jsonPlaceholder from '../apis/jsonPlaceholder'; 
+import jsonPlaceholder from '../apis/jsonPlaceholder';
 
 export const fetchClients =  () =>{
     return async dispatch => {

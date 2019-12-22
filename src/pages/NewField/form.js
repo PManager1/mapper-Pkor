@@ -25,7 +25,13 @@ const Form = props => {
   // console.table(props);
 
   console.log('27 -  final props in form.js = ' , props ); 
-     props.createClient(props.values); 
+
+
+  const handleSaveClick = () =>{
+    console.log('28 -  called handleSaveClick inside form.js ' ); 
+    props.createClient(props.values);  
+  }
+ 
 
 
   const change = (name, e) => {
@@ -154,12 +160,11 @@ const Form = props => {
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
    
 
-   
-
       {/* disabled={!isValid} */}
       <Button  type="submit"
         fullWidth
         variant="contained" 
+        onClick = {handleSaveClick}
         color="primary"
       >
         Save
@@ -173,8 +178,6 @@ const Form = props => {
       >
         Cancel
       </Button>
-
-      
     </form>
   );
 };
@@ -185,7 +188,7 @@ const mapStateToProps = (state) =>{
 }; 
 
 export default connect(mapStateToProps, {
- createClient
+  createClient
 })(Form); 
 
 // export default Form

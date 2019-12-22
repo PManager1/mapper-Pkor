@@ -2,7 +2,7 @@ import clients from '../apis/clients';
 //formValues
 export const createClient =  (formValues) => async dispatch => {
     console.log('4 --- inside  action createClient  formValues = ', formValues); 
-    const response = await clients.post('/clients' ); 
+    const response = await clients.post('/fieldlist' ); 
 
     // console.log('8 ---  action createClient  response = ', response.data ); 
     // dispatch ({  type: 'CREATE_CLIENT',   payload: response.data });

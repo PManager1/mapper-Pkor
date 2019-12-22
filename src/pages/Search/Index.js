@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
-import { selectClient } from '../../actions'; 
+import { selectClient, fetchClients } from '../../actions'; 
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
 const Search = (props) => {
   
+  useEffect(() => {
+    // code to run on component mount
+    props.fetchClients(); 
+  }, [])
+
+
     console.log( ' this.props ', props  ); 
 
     const defaultProps = {
@@ -59,7 +65,7 @@ function updateState(e) {
     return { clients: state.clients }; 
 }; 
 
-export default connect(mapStateToProps, { selectClient })(Search); 
+export default connect(mapStateToProps, { selectClient, fetchClients })(Search); 
 
 
 

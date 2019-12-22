@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete'; 
-import { selectClient, fetchClients } from '../../actions'; 
+import { fetchSingleClient, fetchClients } from '../../actions'; 
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
@@ -19,11 +19,11 @@ const Search = (props) => {
     const defaultProps = {
       options:  props.clients.data,     
       // getOptionLabel: option => 'clientId = '+option.clientId+' clientName = '+option.clientName+' mapid= '+option.mapId,
-      getOptionLabel: option => ' '+option.clientId+' '+option.clientName+' '+option.mapId,
+      getOptionLabel: option => ' '+option.clientId+' '+option.clientName+' '+option.mapId+' '+option._id,
     };
   
     const flatProps = {
-      options: top100Films.map(option => option.provider),
+      options: top100Films.map(option => option._id),
     };
   
     const [value, setValue] = React.useState(null);
@@ -36,8 +36,8 @@ function updateState(e) {
         props.selectClient(e.target.textContent)
         // console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
-        props.history.push(`/search/${e.target.textContent}`);
-
+        let last2 = e.target.textContent.slice(-24);
+        props.history.push(`/search/${last2}`);
       }
 
 
@@ -65,7 +65,7 @@ function updateState(e) {
     return { clients: state.clients }; 
 }; 
 
-export default connect(mapStateToProps, { selectClient, fetchClients })(Search); 
+export default connect(mapStateToProps, { fetchSingleClient, fetchClients })(Search); 
 
 
 

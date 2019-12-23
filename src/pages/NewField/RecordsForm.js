@@ -55,7 +55,7 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { HeaderInfo: "header info", FieldName: "initial FieldName", MappedFieldName:"MappedFieldName", MaxCharLength: "23", SequenceNumber:"", RadioValue:"", LeftPadding:"", RightPadding:""   };
+    const values = { HeaderInfo: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", LeftPadding:"", RightPadding:""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

@@ -20,8 +20,9 @@ import TemporaryDrawer from './components/DrawerDemo.js';
 import ClientDetail from './pages/Search/ClientDetail.js';
 
 import ModalFormDialog from './components/ModalFormDialog.js'; 
-
 import { selectClient } from './actions'; 
+
+import Records from './pages/Records/Index.js';
 
 const App = () =>{
     return (
@@ -33,6 +34,7 @@ const App = () =>{
 
                 <MainWrapper >
                     <Route exact path="/" exact component={ExpansionScreen} />
+                    <Route exact path="/records" exact component={Records} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />

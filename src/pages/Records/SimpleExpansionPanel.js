@@ -44,7 +44,7 @@ export default function SimpleExpansionPanel() {
           </Tooltip>
         </Typography>   
 
-      <Typography variant='h5' align='left'> Header </Typography>
+      <Typography variant='h5' align='left'> Header Record </Typography>
 
       <ExpansionPanel>
         <ExpansionPanelSummary

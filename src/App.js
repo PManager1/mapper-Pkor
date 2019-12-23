@@ -27,23 +27,23 @@ const App = () =>{
     return (
         <HashRouter>
             <Switch>
-                <Route path="/ModalFormDialog" exact component={ModalFormDialog} />
-                <Route path="/drawer" exact component={TemporaryDrawer} />
-                <Route path="/login" exact component={Login} />
+                <Route exact path="/ModalFormDialog" exact component={ModalFormDialog} />
+                <Route exact path="/drawer" exact component={TemporaryDrawer} />
+                <Route exact path="/login" exact component={Login} />
 
                 <MainWrapper >
-                    <Route path="/" exact component={ExpansionScreen} />
-                    <Route path="/clientdetail" exact component={ClientDetail} />
+                    <Route exact path="/" exact component={ExpansionScreen} />
+                    <Route exact path="/clientdetail" exact component={ClientDetail} />
                     
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
                     
-                    <Route path="/newField" component={NewFields} />
-                    <Route path="/AllRules" component={AllRules} />
-                    <Route path="/CreateNewRule" component={CreateNewRule} />
-                    <Route path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
-                    <Route path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
-                    <Route component={NotFound} />
+                    <Route exact path="/newField" component={NewFields} />
+                    <Route exact path="/AllRules" component={AllRules} />
+                    <Route exact path="/CreateNewRule" component={CreateNewRule} />
+                    <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
+                    <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
+                    {/* <Route exact component={NotFound} /> */}
                 </MainWrapper>
             </Switch>
         </HashRouter>

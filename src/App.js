@@ -34,10 +34,8 @@ const App = () =>{
                 <MainWrapper >
                     <Route exact path="/" exact component={ExpansionScreen} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
-                    
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
-                    
                     <Route exact path="/newField" component={NewFields} />
                     <Route exact path="/AllRules" component={AllRules} />
                     <Route exact path="/CreateNewRule" component={CreateNewRule} />

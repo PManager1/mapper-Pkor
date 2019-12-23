@@ -14,7 +14,7 @@ import { createClient } from '../../actions';
 
 const Form = props => {
   const {
-    values:{ HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ HeaderInfo,FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -45,13 +45,9 @@ const Form = props => {
   //   setValue(event.target.value);
   // };
 
-
-
-
   return (
     <form onSubmit={handleSubmit}>
       
-
       <TextField
         name="HeaderInfo"
         helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
@@ -138,26 +134,26 @@ const Form = props => {
 
       <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
       <TextField
-        name="LeftPadding"
-        helperText={touched.LeftPadding ? errors.LeftPadding : ""}
-        error={Boolean(errors.LeftPadding)}
-        label="LeftPadding"
-        value={LeftPadding}
+        name="PaddingLeft"
+        helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
+        error={Boolean(errors.PaddingLeft)}
+        label="PaddingLeft"
+        value={PaddingLeft}
         onChange={handleChange}
         fullWidth
       />
-      <div>{Boolean(errors.LeftPadding) ? errors.LeftPadding : ""}</div>
+      <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
    
       <TextField
-        name="RightPadding"
-        helperText={touched.RightPadding ? errors.RightPadding : ""}
-        error={Boolean(errors.RightPadding)}
-        label="RightPadding"
-        value={RightPadding}
+        name="PaddingRight"
+        helperText={touched.PaddingRight ? errors.PaddingRight : ""}
+        error={Boolean(errors.PaddingRight)}
+        label="PaddingRight"
+        value={PaddingRight}
         onChange={handleChange}
         fullWidth
       />
-      <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
+      <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
    
 
       {/* disabled={!isValid} */}

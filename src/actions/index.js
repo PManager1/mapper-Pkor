@@ -1,6 +1,20 @@
 import clients from '../apis/clients';
 //formValues
 
+export const signIn = () =>{
+    return {
+        type: 'SIGN_IN'
+    }
+}
+
+export const signOut = () =>{
+    return {
+        type: 'SIGN_OUT'
+    }
+}
+
+
+
 export const createClient =  (formValues) => async dispatch => {
     console.log('4 --- inside  action createClient  formValues = ', formValues); 
     const response = await clients.post('/fieldlist', formValues ); 

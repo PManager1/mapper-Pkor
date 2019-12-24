@@ -132,17 +132,7 @@ export default function MainWrapper(props) {
           </Typography>
 
 
-
-          <AccountCircle />
-
-
           <GoogleAuth />
-
-          
-
-   
-
-
 
 
           <Menu

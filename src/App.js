@@ -33,7 +33,8 @@ const App = () =>{
                 <Route exact path="/login" exact component={Login} />
 
                 <MainWrapper >
-                    <Route exact path="/" exact component={ExpansionScreen} />
+                    {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
+                    <Route exact path="/" exact component={Records} />
                     <Route exact path="/records" exact component={Records} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />

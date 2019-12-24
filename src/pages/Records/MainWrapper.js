@@ -27,6 +27,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
 import  LinearIndeterminate from '../../components/LinearProgress.js'; 
+import GoogleAuth from '../../components/GoogleAuth'; 
+
+
 import LoginTop from './LoginTop.js'; 
 import AccountCircle from '@material-ui/icons/AccountCircle';
 
@@ -124,13 +127,23 @@ export default function MainWrapper(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Paycor Data Mapper
+          <Typography variant="h6" noWrap style={{ flex: 1 }} >
+            Paycor Data Mapper 
           </Typography>
 
 
 
           <AccountCircle />
+
+
+          <GoogleAuth />
+
+          
+
+   
+
+
+
 
           <Menu
                 id="menu-appbar"

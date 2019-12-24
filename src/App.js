@@ -5,7 +5,7 @@ import Main from './pages/Main/Index.js';
 import FieldDetails from './pages/Main/FieldDetails.js';
 import NewFields from './pages/NewField/Index.js';
 import Search from './pages/Search/Index.js';
-import MainWrapper from './pages/Main/MainWrapper'; 
+import MainWrapper from './pages/Records/MainWrapper'; 
 import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 import AllRules from './pages/AllRules/Index'; 

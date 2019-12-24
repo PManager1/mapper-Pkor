@@ -57,7 +57,7 @@ export default function BottomButtons() {
         className={classes.button}
         endIcon={<Icon>send</Icon>}
       >
-        Send
+        Generate Output file
       </Button>
 
     </div>

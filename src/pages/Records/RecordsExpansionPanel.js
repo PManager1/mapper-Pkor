@@ -39,12 +39,25 @@ export default function SimpleExpansionPanel() {
         <Typography paragraph align="right">
         <Tooltip title="Add New Field" aria-label="add"> 
           <Fab color="primary" aria-label="add"   component={Link} to="/newfield" >
-              <AddIcon /> 
+              <AddIcon />   
             </Fab>
           </Tooltip>
         </Typography>   
 
-      <Typography variant='h5' align='left'> Header Record </Typography>
+      <Typography variant='h5' align='left'> Header Record 1</Typography>
+
+
+      <Typography paragraph align="right">
+        <Tooltip title="Add New Field" aria-label="add"> 
+          <Fab color="primary" aria-label="add"   component={Link} to="/editRecord" >
+            <EditIcon /> 
+            </Fab>
+          </Tooltip>
+        </Typography>  
+
+      
+
+      
 
       <ExpansionPanel>
         <ExpansionPanelSummary
@@ -52,7 +65,21 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Record_1</Typography>
+          <Typography className={classes.heading}>Record_ID</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+      
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>GL_Client_number</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <RecordsForm/>
@@ -66,7 +93,7 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>Record_2</Typography>
+          <Typography className={classes.heading}>File_Date_MM</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <RecordsForm/>
@@ -80,7 +107,75 @@ export default function SimpleExpansionPanel() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}> Record_3 </Typography>
+          <Typography className={classes.heading}>File_Date_DD</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>File_Date_CC</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>debit_amount</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>credit_amount</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Period_End_Date_MM</Typography>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RecordsForm/>
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
+
+
+      <ExpansionPanel>
+        <ExpansionPanelSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}> Period_End_Date_CC </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
           <RecordsForm/>
@@ -89,7 +184,7 @@ export default function SimpleExpansionPanel() {
 
 
 
-      <Typography variant='h5'  align='left'> Details </Typography>
+      <Typography variant='h5'  align='left'> Detail_Record </Typography>
 
       <ExpansionPanel>
         <ExpansionPanelSummary
@@ -120,7 +215,7 @@ export default function SimpleExpansionPanel() {
       </ExpansionPanel>
 
 
-      <Typography variant='h5'  align='left'> Trail </Typography>
+      <Typography variant='h5'  align='left'> Trail_Record </Typography>
 
       <ExpansionPanel>
         <ExpansionPanelSummary

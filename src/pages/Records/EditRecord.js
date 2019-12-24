@@ -3,7 +3,7 @@ import RecordsExpansionPanel from './RecordsExpansionPanel';
 import BottomButtons from './BottomButtons'; 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
-const Records = ()=>{
+const EditRecord = ()=>{
     return (
             <div >
                 <RecordsExpansionPanel />
@@ -12,7 +12,7 @@ const Records = ()=>{
     ); 
 }
 
-export default Records; 
+export default EditRecord; 
 
 
        

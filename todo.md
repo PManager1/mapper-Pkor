@@ -1,3 +1,4 @@
+Add logic / code - if credit/ debit view: 
 
 ==========================
 Create Crud operatoins for the Fieldslist items. 
@@ -60,4 +61,16 @@ Do Testing.
 
 
 ============================
+
+
+
+Web link : 
+
+https://devops1-jay.azurewebsites.net/#/
+
+google Client id
+652821201113-v1fh4132uukcmsmvdfjirvm1akrkf7k7.apps.googleusercontent.com
+
+Client secret - 
+UA-ZqHForZuXc8t_xgpYBEKv
 

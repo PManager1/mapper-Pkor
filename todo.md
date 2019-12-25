@@ -1,5 +1,7 @@
 Add logic / code - if credit/ debit view: 
 
+================
+show loading  / notifiction progress. 
 ==========================
 Create Crud operatoins for the Fieldslist items. 
 
@@ -16,8 +18,7 @@ https://codesandbox.io/s/0lc5x
 
 ================
 save button not getting clickable when the data is good for validation. 
-================
-show loading  / notifiction progress. 
+
 ================
 on teh form, provide cancel button. 
 Proide more descriotion on plus sign, like add new field 

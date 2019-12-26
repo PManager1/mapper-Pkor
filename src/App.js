@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Main from './pages/Main/Index.js';
 import FieldDetails from './pages/Main/FieldDetails.js';
 import NewFields from './pages/NewField/Index.js';
+import NewRecord from './pages/NewRecord/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Records/MainWrapper'; 
 import ExpansionScreen from './pages/Main/ExpansionScreen.js';
@@ -42,6 +43,8 @@ const App = () =>{
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
                     <Route exact path="/newField" component={NewFields} />
+                    <Route exact path="/newrecord" component={NewRecord} />
+
                     <Route exact path="/AllRules" component={AllRules} />
                     <Route exact path="/CreateNewRule" component={CreateNewRule} />
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />

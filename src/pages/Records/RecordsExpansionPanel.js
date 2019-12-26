@@ -37,25 +37,23 @@ export default function SimpleExpansionPanel() {
         </Typography>
 
         <Typography paragraph align="right">
-        <Tooltip title="Add New Field" aria-label="add"> 
+        <Tooltip title="Add New Record" aria-label="add"> 
           <Fab color="primary" aria-label="add"   component={Link} to="/newfield" >
               <AddIcon />   
             </Fab>
           </Tooltip>
         </Typography>   
 
-      <Typography variant='h5' align='left'> Header Record 1</Typography>
 
+      <Typography variant='h5' align='left'> Header Record 1</Typography>
 
       <Typography paragraph align="right">
         <Tooltip title="Add New Field" aria-label="add"> 
-          <Fab color="primary" aria-label="add"   component={Link} to="/editRecord" >
-            <EditIcon /> 
+          <Fab color="secondary" aria-label="add"   component={Link} to="/newRecord" >
+            <AddIcon /> 
             </Fab>
           </Tooltip>
         </Typography>  
-
-      
 
       
 

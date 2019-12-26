@@ -194,7 +194,6 @@ export default function MainWrapper(props) {
         <Divider />
 
 
-
         <Divider />
         <List>
               <ListItem button component={Link} to="/alllogic" >

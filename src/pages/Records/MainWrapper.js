@@ -197,14 +197,14 @@ export default function MainWrapper(props) {
 
         <Divider />
         <List>
-              <ListItem button component={Link} to="/AllRules" >
+              <ListItem button component={Link} to="/alllogic" >
                   <ListItemIcon>
                     <SettingsIcon />
                   </ListItemIcon>
                   <ListItemText primary="All Logic" />
             </ListItem>
 
-            <ListItem button component={Link} to="/CreateNewRule" >
+            <ListItem button component={Link} to="/createnewlogic" >
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>

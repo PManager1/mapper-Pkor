@@ -9,7 +9,7 @@ import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Records/MainWrapper'; 
 import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
-import AllRules from './pages/AllRules/Index'; 
+import AllLogic from './pages/AllLogic/Index'; 
 import CreateNewRule from './pages/CreateNewRule/Index'; 
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
@@ -45,7 +45,7 @@ const App = () =>{
                     <Route exact path="/newField" component={NewFields} />
                     <Route exact path="/newrecord" component={NewRecord} />
 
-                    <Route exact path="/AllRules" component={AllRules} />
+                    <Route exact path="/AllLogic" component={AllLogic} />
                     <Route exact path="/CreateNewRule" component={CreateNewRule} />
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
                     <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />

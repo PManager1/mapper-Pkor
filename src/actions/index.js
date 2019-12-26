@@ -1,6 +1,22 @@
 import clients from '../apis/clients';
 //formValues
 
+// import { showLoading, hideLoading } from 'actions/index.js';
+
+export const showLoading = () =>{
+    return {
+        type: 'SHOW_LOADING'
+    }
+}
+
+export const hideLoading = () =>{
+    return {
+        type: 'HIDE_LOADING'
+    }
+}
+
+
+
 export const signIn = () =>{
     return {
         type: 'SIGN_IN'

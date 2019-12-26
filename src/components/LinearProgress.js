@@ -17,7 +17,7 @@ export default function LinearIndeterminate() {
   return (
     <div className={classes.root}>
     {/* <LinearProgress color="secondary" /> */}
-      {/* <LinearProgress /> */}
+      <LinearProgress />
       
     </div>
   );

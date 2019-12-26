@@ -1,4 +1,17 @@
+=========================
+
+
+=========================
+Drag Drop the rows i.e the header info: 
+https://gist.github.com/jlroettger/2d6d7ae572f985fa176c27a63cadf292
+
+=========================
+
+
+=========================
+
 Add logic / code - if credit/ debit view: 
+
 
 ================
 show loading  / notifiction progress. 

@@ -23,6 +23,7 @@ import ModalFormDialog from './components/ModalFormDialog.js';
 import { selectClient } from './actions'; 
 
 import Records from './pages/Records/Index.js';
+import  LinearIndeterminate from './components/LinearProgress.js'; 
 
 const App = () =>{
     return (
@@ -31,6 +32,7 @@ const App = () =>{
                 <Route exact path="/ModalFormDialog" exact component={ModalFormDialog} />
                 <Route exact path="/drawer" exact component={TemporaryDrawer} />
                 <Route exact path="/login" exact component={Login} />
+
 
                 <MainWrapper >
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}

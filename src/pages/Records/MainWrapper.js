@@ -30,10 +30,6 @@ import  LinearIndeterminate from '../../components/LinearProgress.js';
 import GoogleAuth from '../../components/GoogleAuth'; 
 
 
-import LoginTop from './LoginTop.js'; 
-import AccountCircle from '@material-ui/icons/AccountCircle';
-
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles(theme => ({
@@ -109,7 +105,6 @@ export default function MainWrapper(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-
       <AppBar
       style={{ background: '#F37321' }}
         position="fixed"
@@ -117,6 +112,10 @@ export default function MainWrapper(props) {
           [classes.appBarShift]: open,
         })}
       >
+
+      <LinearIndeterminate />
+
+
         <Toolbar>
           <IconButton
             color="inherit"
@@ -128,7 +127,7 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
-            Paycor Data Mapper 
+            Paycor Data Mapper 2
           </Typography>
 
 
@@ -202,14 +201,14 @@ export default function MainWrapper(props) {
                   <ListItemIcon>
                     <SettingsIcon />
                   </ListItemIcon>
-                  <ListItemText primary="All Rules" />
+                  <ListItemText primary="All Logic" />
             </ListItem>
 
             <ListItem button component={Link} to="/CreateNewRule" >
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create New Rule" />
+                  <ListItemText primary="Create New Logic" />
             </ListItem>
 
             <ListItem button>
@@ -228,7 +227,6 @@ export default function MainWrapper(props) {
         })}
       >
         <div className={classes.drawerHeader} />
-        <LinearIndeterminate />
         
         {props.children}        
       </main>

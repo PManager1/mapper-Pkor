@@ -175,14 +175,14 @@ export default function CurrentMenu(props) {
                   <ListItemIcon>
                     <SettingsIcon />
                   </ListItemIcon>
-                  <ListItemText primary="All Rules" />
+                  <ListItemText primary="All Logics" />
             </ListItem>
 
             <ListItem button component={Link} to="/CreateNewRule" >
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create New Rule" />
+                  <ListItemText primary="Create New Logic" />
             </ListItem>
 
             <ListItem button>

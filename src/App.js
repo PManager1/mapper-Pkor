@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, HashRouter, Link } from 'react-router-dom'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from './pages/Main/Index.js';
-import FieldDetails from './pages/Main/FieldDetails.js';
 import NewFields from './pages/NewField/Index.js';
 import NewRecord from './pages/NewRecord/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Records/MainWrapper'; 
-import ExpansionScreen from './pages/Main/ExpansionScreen.js';
 
 import AllLogic from './pages/AllLogic/Index'; 
 import CreateNewLogic from './pages/CreateNewLogic/Index'; 
@@ -22,9 +19,11 @@ import ClientDetail from './pages/Search/ClientDetail.js';
 
 import ModalFormDialog from './components/ModalFormDialog.js'; 
 import { selectClient } from './actions'; 
-
 import Records from './pages/Records/Index.js';
 import  LinearIndeterminate from './components/LinearProgress.js'; 
+
+import Later from './pages/Later/Index.js'; 
+
 
 const App = () =>{
     return (
@@ -34,8 +33,8 @@ const App = () =>{
                 <Route exact path="/drawer" exact component={TemporaryDrawer} />
                 <Route exact path="/login" exact component={Login} />
 
-
                 <MainWrapper >
+                <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
                     <Route exact path="/" exact component={Records} />
                     <Route exact path="/records" exact component={Records} />

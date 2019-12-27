@@ -11,9 +11,10 @@ import { connect } from "react-redux";
 import { createClient } from '../../actions';
 
 
-const Form = props => {
+const NewLogic = props => {
+
   const {
-    values:{ HeaderInfo,FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ HeaderInfo,FieldName, MaxCharLength, SequenceNumber, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -23,11 +24,13 @@ const Form = props => {
   } = props;
   // console.table(props);
 
-  console.log('27 -  final props in form.js = ' , props ); 
+  const values = { HeaderInfo: "", FieldName:"", MaxCharLength: "", SequenceNumber:"", PaddingLeft:"", PaddingRight:""  };
+
+  console.log('27 -  final props in NewLogic.js = ' , props ); 
 
 
   const handleSaveClick = () =>{
-    console.log('28 -  called handleSaveClick inside form.js ' ); 
+    console.log('28 -  called handleSaveClick inside NewLogic.js ' ); 
     props.createClient(props.values);  
   }
  
@@ -70,18 +73,7 @@ const Form = props => {
       />
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
-      <TextField
-        name="MappedFieldName"
-        helperText={touched.MappedFieldName ? errors.MappedFieldName : ""}
-        error={Boolean(errors.MappedFieldName)}
-        label="MappedFieldName"
-        value={MappedFieldName}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
       
-
       <TextField
         name="MaxCharLength"
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
@@ -105,29 +97,6 @@ const Form = props => {
       />
       <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
    
-
-      <FormLabel component="legend">Please Select Alignment </FormLabel>
-        <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
-          <FormControlLabel
-            value="LeftAligned"
-            control={<Radio color="primary" />}
-            label="LeftAligned"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="None"
-            control={<Radio color="secondary" />}
-            label="None"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="RightAligned"
-            control={<Radio color="primary" />}
-            label="RightAligned"
-            labelPlacement="start"
-          />
-
-      </RadioGroup>
 
 
 
@@ -184,6 +153,4 @@ const mapStateToProps = (state) =>{
 
 export default connect(mapStateToProps, {
   createClient
-})(Form); 
-
-// export default Form
+})(NewLogic); 

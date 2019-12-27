@@ -1,8 +1,16 @@
-=========================
 
+npm install --save  react-sortablejs-typescript
+
+=========================
+put grid in the page: 
+CreateNewLogic
+i.e  for width. 
 
 =========================
 Drag Drop the rows i.e the header info: 
+
+https://raisezhang.github.io/react-drag-listview/examples/simple.html
+
 https://gist.github.com/jlroettger/2d6d7ae572f985fa176c27a63cadf292
 
 =========================

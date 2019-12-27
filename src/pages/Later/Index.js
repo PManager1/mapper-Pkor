@@ -30,9 +30,15 @@ export default class Later extends Component {
   };
 
   onSortEnd = ({oldIndex, newIndex}) => {
+
+    console.log( ' 34 - oldIndex  = ', oldIndex ); 
+    console.log( ' 35 - newIndex  = ', newIndex ); 
+
     this.setState(({items}) => ({
       items: arrayMove(items, oldIndex, newIndex),
     }));
+
+    console.log( ' 35 - this.state.items  = ', this.state.items ); 
   };
 
   pressDelay = () =>{

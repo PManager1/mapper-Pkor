@@ -18,7 +18,7 @@ const RecordComponent = ()=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading">Record_ID</Typography>
+                    <Typography className="heading">Field-1</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

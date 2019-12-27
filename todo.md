@@ -1,4 +1,7 @@
+<DragHandle />
+    <RecordComponent />
 
+Maybe pass <DragHandle> inside the <RecordComponent> and show that next to it all. 
 
 =========================
 put grid in the page: 

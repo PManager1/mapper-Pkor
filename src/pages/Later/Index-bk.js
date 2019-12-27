@@ -9,6 +9,7 @@ import {
 import arrayMove from 'array-move';
 import { makeStyles } from '@material-ui/core/styles';
 import RecordComponent from './RecordComponent'; 
+
 import styles from './Item.css';
 
 const DragHandle = sortableHandle(() => <span>::</span>);
@@ -17,6 +18,7 @@ const SortableItem = sortableElement(({value}) => (
   <div className="theItem">
     <DragHandle />
     <RecordComponent />
+    {value}
   </div>
 ));
 

@@ -1,3 +1,12 @@
+.root{
+  width: 100%; 
+}
+
+.heading{
+  /* fontSize: theme.typography.pxToRem(15); 
+  fontWeight: theme.typography.fontWeightRegular;  */
+}; 
+
 .theItem{
   display: -webkit-box;
   display: -webkit-flex;
@@ -19,4 +28,4 @@
   color: #333;
   font-weight: 400;
   height: 50px; 
-}
+}; 

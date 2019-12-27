@@ -7,15 +7,17 @@ import {
   sortableHandle,
 } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
+import { makeStyles } from '@material-ui/core/styles';
+import RecordComponent from './RecordComponent'; 
 
 import styles from './Item.css';
-
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 
 const SortableItem = sortableElement(({value}) => (
   <div className="theItem">
     <DragHandle />
+    <RecordComponent />
     {value}
   </div>
 ));
@@ -25,12 +27,14 @@ const SortableContainer = sortableContainer(({children}) => {
 });
 
 export default class Later extends Component {
+
+
   state = {
-    items: ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6'],
+    items: ['Field 1', 'Field 2', 'Field 3', 'Field 4', 'Field 5', 'Field 6'],
   };
 
-  onSortEnd = ({oldIndex, newIndex}) => {
 
+  onSortEnd = ({oldIndex, newIndex}) => {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 
     console.log( ' 35 - newIndex  = ', newIndex ); 
 
@@ -48,12 +52,14 @@ export default class Later extends Component {
   render() {
     const {items} = this.state;
 
-    return (
+    return (<div>
       <SortableContainer onSortEnd={this.onSortEnd} pressDelay useDragHandle>
         {items.map((value, index) => (
           <SortableItem key={`item-${value}`} index={index} value={value} />
         ))}
       </SortableContainer>
+      <RecordComponent />
+        </div>
     );
   }
 }

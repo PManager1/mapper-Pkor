@@ -9,22 +9,9 @@ import { connect } from "react-redux";
 // props.records.data
 const Test = (props) => {
 
-    const [ resources, setResources ] = useState([]);
-
-// usingn state make it cccall 
-
-    console.log('17 - props.records ', props.records  );
-        // ${resource}
-    const fetchResources =  async () => { 
-        const response =  await  axios.get(`http://localhost:3030/records`);
-        // setResources ({ resources: response.data }); 
-        setResources(response.data); 
-        console.log( '22 -   resources ', resources ); 
-    }
+    // const [ resources, setResources ] = useState([]);
 
     useEffect(() => {
-        // fetchResources(); 
-          // code to run on component mount
           props.fetchRecords(); 
     }, [])
 

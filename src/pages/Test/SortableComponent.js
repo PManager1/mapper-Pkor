@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 import RecordComponent from './RecordComponent'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);
+
+
 const SortableItem = sortableElement(({value}) => (
     // console.log('16- SortableComponents props = ', this.props );
   <div className="theItem">
@@ -26,12 +28,16 @@ const SortableContainer = sortableContainer(({children}) => {
 
 export default class SortableComponent extends Component {
 
-  state = {
-    records: ['Header Record 1', 'Details Record', 'Trail Record'],
-    items: ['Field 1', 'Field 2', 'Field 3']
-  };
+    constructor(props) {
+        console.log(' 30 - in constrcutro this.props = ',  props.RecordId ); 
+        super(props);
+        this.state = {
+            records: ['Header Record 1', 'Details Record', 'Trail Record'],
+            items: ['Field 1', 'Field 2', 'Field 3']
+        
+        };
+      }
 
-  
 
   onSortEnd = ({oldIndex, newIndex}) => {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 

@@ -16,7 +16,8 @@ const Child = (props) => {
     return (
       <div>
             <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
-            <SortableComponent RecordId={props.data.RecordId}/>
+            {/* we pass RecordId which has multiple fields in it. Now this one fetches & creates mutiple childs */}
+            <SortableComponent RecordId={props.data.RecordId}/>              
       </div>
     );
   }

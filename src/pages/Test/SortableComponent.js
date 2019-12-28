@@ -40,7 +40,7 @@ export default class SortableComponent extends Component {
       items: arrayMove(items, oldIndex, newIndex),
     }));
 
-    console.log( ' 35 - this.state.items  = ', this.state.items ); 
+    console.log( '43 - this.state.items  = ', this.state.items ); 
   };
 
   pressDelay = () =>{

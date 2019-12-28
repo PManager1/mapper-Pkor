@@ -13,7 +13,7 @@ const Test = (props) => {
 
 // usingn state make it cccall 
 
-    console.log('17 - props.records.data ', props.records.data  );
+    console.log('17 - props.records ', props.records  );
         // ${resource}
     const fetchResources =  async () => { 
         const response =  await  axios.get(`http://localhost:3030/records`);
@@ -29,23 +29,23 @@ const Test = (props) => {
     }, [])
 
 
+    if (!props.records) {
+        console.log(' 39 Data inside it  props.records.data = ', props.records ); 
+        return null;
+      }
+      return ( <div>
+                {props.records.map((item, index) => (
+                <Child data={item} key={index}  />
+                ))}
+      </div>);
 
-//   const listItemsForChild =  [{RecordName: 'Header Record-1', RecordId: 1, RecordOrderNo: 1}, {RecordName: 'Details Record-2', RecordId: 2, RecordOrderNo: 2}, {RecordName: 'Trail Record', RecordId: 3, RecordOrderNo: 3}].map((item) =>
-  const listItemsForChild =  [{RecordName: 'Header Record-1', RecordId: 1, RecordOrderNo: 1}, {RecordName: 'Details Record-2', RecordId: 2, RecordOrderNo: 2}, {RecordName: 'Trail Record', RecordId: 3, RecordOrderNo: 3}].map((item) =>
-      <Child data={item} />
-    );
 
-      return (
-      <div>
-        {listItemsForChild}
-      </div>
-    );
   }; 
 
 
 const mapStateToProps = (state) =>{
-    // console.log( '40 -  state =', state ); 
-    return { records: state.records }; 
+    console.log( '51 -  state.records =', state.records ); 
+    return { records: state.records.data }; 
 }; 
 
 export default connect(mapStateToProps, { fetchRecords })(Test); 

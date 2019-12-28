@@ -16,22 +16,23 @@ import { connect } from "react-redux";
 //       props.fetchRecords(); 
 //     }, [])
 
-    
-class Test extends Component {
-    
 
-  listItemsForChild =  [{RecordName: 'Header Record-1', RecordId: 1, RecordOrderNo: 1}, {RecordName: 'Details Record-2', RecordId: 2, RecordOrderNo: 2}, {RecordName: 'Trail Record', RecordId: 3, RecordOrderNo: 3}].map((item) =>
+const Test = (props) => {
+// class Test extends Component {
+
+
+  const listItemsForChild =  [{RecordName: 'Header Record-1', RecordId: 1, RecordOrderNo: 1}, {RecordName: 'Details Record-2', RecordId: 2, RecordOrderNo: 2}, {RecordName: 'Trail Record', RecordId: 3, RecordOrderNo: 3}].map((item) =>
       <Child data={item} />
     );
 
-    render() {
+    // render() {
       return (
       <div>
-        {this.listItemsForChild}
+        {listItemsForChild}
       </div>
     );
-  }
-};
+  }; 
+// };
 
 
 const mapStateToProps = (state) =>{

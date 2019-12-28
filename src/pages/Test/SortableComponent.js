@@ -13,6 +13,7 @@ import RecordComponent from './RecordComponent';
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 const SortableItem = sortableElement(({value}) => (
+    // console.log('16- SortableComponents props = ', this.props );
   <div className="theItem">
     <DragHandle />
     <RecordComponent />
@@ -44,11 +45,8 @@ export default class SortableComponent extends Component {
   };
 
 
-
   render() {
-
     console.log('51- SortableComponent\'s props = ', this.props ); 
-
     const {items} = this.state;
     const {records} = this.state;
 
@@ -57,8 +55,6 @@ export default class SortableComponent extends Component {
   );
 
     return (<div>
-      {/* <Typography variant='h5' align='left'> {listItems}</Typography> */}
-
       <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
         {items.map((value, index) => (
           <SortableItem key={`item-${value}`} index={index} value={value} />

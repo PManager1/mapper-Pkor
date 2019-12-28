@@ -3,6 +3,10 @@
 
 Maybe pass <DragHandle> inside the <RecordComponent> and show that next to it all. 
 
+Nested Lists : 
+
+https://codesandbox.io/embed/interesting-wave-yw9ht
+
 =========================
 put grid in the page: 
 CreateNewLogic

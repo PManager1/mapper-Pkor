@@ -24,6 +24,8 @@ import  LinearIndeterminate from './components/LinearProgress.js';
 
 import Later from './pages/Later/Index.js'; 
 
+import Test from './pages/Test/Index.js'; 
+
 
 const App = () =>{
     return (
@@ -43,6 +45,8 @@ const App = () =>{
                     <Route exact path="/search/:id" component={ClientDetail} />
                     <Route exact path="/newField" component={NewFields} />
                     <Route exact path="/newrecord" component={NewRecord} />
+
+                    <Route exact path="/test" component={Test} />
 
                     <Route exact path="/AllLogic" component={AllLogic} />
                     <Route exact path="/createnewlogic" component={CreateNewLogic} />

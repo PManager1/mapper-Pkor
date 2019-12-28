@@ -24,14 +24,3 @@ const Child = (props) => {
 
 export default Child; 
 
-
-
-
-
-
-
-//  const listItems =  ['C1', 'C2', 'C3', 'C4', 'C5'].map((number) =>
-//     <Typography variant='h5' align='left'> {number}</Typography>
-// );
-
-// {/* {listItems} */}

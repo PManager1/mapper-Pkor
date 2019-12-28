@@ -31,7 +31,7 @@ const SortableContainer = sortableContainer(({children}) => {
 class SortableComponent extends Component {
 
     constructor(props) {
-        console.log(' 30 - in constrcutro this.props = ',  props.RecordId ); 
+        console.log(' 34 - in SortableComponent constrcutor props.Record = ',  props.Record ); 
         super(props);
         this.state = {
             records: ['Header Record 1', 'Details Record', 'Trail Record'],

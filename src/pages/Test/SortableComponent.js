@@ -18,7 +18,7 @@ const SortableItem = sortableElement(({value}) => (
     // console.log('16- SortableComponents props = ', this.props );
   <div className="theItem">
     <DragHandle />
-    <RecordComponent />
+    <RecordComponent value={value} />
   </div>
 ));
 
@@ -33,7 +33,7 @@ export default class SortableComponent extends Component {
         super(props);
         this.state = {
             records: ['Header Record 1', 'Details Record', 'Trail Record'],
-            items: ['Field 1', 'Field 2', 'Field 3']
+            items: ['Field 98', 'Field 99', 'Field 100']
         
         };
       }

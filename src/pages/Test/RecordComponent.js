@@ -7,7 +7,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RecordsForm from './RecordsForm/RecordsForm.js';
 
 
-const RecordComponent = ()=>{
+const RecordComponent = ({value})=>{
+
+    console.log(' 12  - RecordComponent - value = ', value ); 
 
     return (
         <div className="root" >
@@ -18,7 +20,7 @@ const RecordComponent = ()=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading">Field-1</Typography>
+                    <Typography className="heading">{value}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

@@ -7,12 +7,12 @@ import {
 } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import { makeStyles } from '@material-ui/core/styles';
-import RecordComponent from './RecordComponent'; 
 import styles from './Item.css';
 import Typography from '@material-ui/core/Typography';
 
-const DragHandle = sortableHandle(() => <span>::</span>);
+import RecordComponent from './RecordComponent'; 
 
+const DragHandle = sortableHandle(() => <span>::</span>);
 const SortableItem = sortableElement(({value}) => (
   <div className="theItem">
     <DragHandle />
@@ -31,6 +31,7 @@ export default class SortableComponent extends Component {
     items: ['Field 1', 'Field 2', 'Field 3']
   };
 
+  
 
   onSortEnd = ({oldIndex, newIndex}) => {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 
@@ -43,11 +44,12 @@ export default class SortableComponent extends Component {
     console.log( '43 - this.state.items  = ', this.state.items ); 
   };
 
-  pressDelay = () =>{
 
-  }
 
   render() {
+
+    console.log('51- SortableComponent\'s props = ', this.props ); 
+
     const {items} = this.state;
     const {records} = this.state;
 
@@ -55,11 +57,10 @@ export default class SortableComponent extends Component {
     <p>{number}</p>
   );
 
-
     return (<div>
       {/* <Typography variant='h5' align='left'> {listItems}</Typography> */}
 
-      <SortableContainer onSortEnd={this.onSortEnd} pressDelay useDragHandle>
+      <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
         {items.map((value, index) => (
           <SortableItem key={`item-${value}`} index={index} value={value} />
         ))}

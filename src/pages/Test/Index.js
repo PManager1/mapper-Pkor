@@ -20,7 +20,7 @@ const Test = (props) => {
         console.log(' 39 Data inside it  props.records.data = ', props.records ); 
         return null;
       }
-      return ( <div>
+      return (<div>
                 {props.records.map((item, index) => (
                 <Child data={item} key={index}  />
                 ))}

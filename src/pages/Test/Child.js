@@ -12,12 +12,11 @@ const Child = (props) => {
     // props.fetchClients(); 
   }, [])
 
-  
 
     return (
       <div>
             <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
-            <SortableComponent />
+            <SortableComponent RecordId={props.data.RecordId}/>
       </div>
     );
   }

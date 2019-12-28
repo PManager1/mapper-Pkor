@@ -9,7 +9,6 @@ import arrayMove from 'array-move';
 import { makeStyles } from '@material-ui/core/styles';
 import styles from './Item.css';
 import Typography from '@material-ui/core/Typography';
-
 import RecordComponent from './RecordComponent'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);

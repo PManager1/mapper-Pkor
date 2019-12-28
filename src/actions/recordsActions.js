@@ -5,7 +5,7 @@ export const fetchRecords =  () =>{
     const response = await clients.get('/records'); 
     console.log('4 ---  action fetchRecords  response = ', response.data ); 
 
-    dispatch ({  type: 'FETCH_CLIENTS',   payload: response.data });
+    dispatch ({  type: 'FETCH_RECORDS',   payload: response.data });
     }
 };
 
@@ -17,6 +17,6 @@ return async dispatch => {
                                                  
     console.log('19 ---  action fetchClients  response = ', response.data ); 
 
-    dispatch ({  type: 'FETCH_SINGLE_CLIENT',   payload: response.data });
+    dispatch ({  type: 'FETCH_SINGLE_RECORD',   payload: response.data });
     }
 };

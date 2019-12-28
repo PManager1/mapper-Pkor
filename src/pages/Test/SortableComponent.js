@@ -29,7 +29,6 @@ export default class SortableComponent extends Component {
   state = {
     records: ['Header Record 1', 'Details Record', 'Trail Record'],
     items: ['Field 1', 'Field 2', 'Field 3']
-    
   };
 
 

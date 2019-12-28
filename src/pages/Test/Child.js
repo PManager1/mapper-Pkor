@@ -13,14 +13,9 @@ const Child = (props) => {
   }, [])
 
   
- const listItems =  ['C1', 'C2', 'C3', 'C4', 'C5'].map((number) =>
-    <Typography variant='h5' align='left'> {number}</Typography>
-);
-
 
     return (
       <div>
-            {/* {listItems} */}
             <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
             <SortableComponent />
       </div>
@@ -31,3 +26,18 @@ export default Child;
 
 
 
+
+
+
+
+
+
+
+
+
+
+//  const listItems =  ['C1', 'C2', 'C3', 'C4', 'C5'].map((number) =>
+//     <Typography variant='h5' align='left'> {number}</Typography>
+// );
+
+// {/* {listItems} */}

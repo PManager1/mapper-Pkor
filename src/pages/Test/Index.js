@@ -6,19 +6,14 @@ import { fetchRecords } from '../../actions';
 import { connect } from "react-redux";
 
 
-// const Test = (props) => {
-
-//     console.log( '11 - this.props ', props  ); 
-//     console.log( '12 - props.clients.data ', props.clients.data  ); 
-  
-//     useEffect(() => {
-//       // code to run on component mount
-//       props.fetchRecords(); 
-//     }, [])
-
 
 const Test = (props) => {
-// class Test extends Component {
+
+    console.log(' 12 - props.records.data ', props.records.data  );
+    useEffect(() => {
+        // code to run on component mount
+        props.fetchRecords(); 
+      }, [])
 
 
   const listItemsForChild =  [{RecordName: 'Header Record-1', RecordId: 1, RecordOrderNo: 1}, {RecordName: 'Details Record-2', RecordId: 2, RecordOrderNo: 2}, {RecordName: 'Trail Record', RecordId: 3, RecordOrderNo: 3}].map((item) =>
@@ -36,9 +31,9 @@ const Test = (props) => {
 
 
 const mapStateToProps = (state) =>{
-    console.log( '63 -  state =', state ); 
+    console.log( '34 -  state =', state ); 
     
-    return { clients: state.clients }; 
+    return { records: state.records }; 
 }; 
 
 export default connect(mapStateToProps, { fetchRecords })(Test); 

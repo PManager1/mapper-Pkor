@@ -8,27 +8,23 @@ export default class Test extends Component {
     constructor() {
         super();
         this.state = {
-            records: ['Header Record 1', 'Details Record', 'Trail Record'],
-            jsonData: ['Field 1', 'Field 2', 'Field 3', 'Field 4', 'Field 5', 'Field 6']
+            records: ['Header Record-1', 'Details Record-1', 'Trail Record-1']
           };
       }
 
-listItems =  [1, 2, 3, 4, 5].map((number) =>
-  <li>{number}</li>
-);
 
-  
+  listItemsForChild =  [{name: 'Header Record-1', id: 1}, {name: 'Details Record-1', id: 2}, {name: 'Trail Record', id: 3}  ].map((item) =>
+      <Child data={item} />
+    );
+
     render() {
       return (
       <div>
-        <h4>Nested Lists</h4>
-        <Child />
+        
+      {this.listItemsForChild}
+        <hr/>in passing data via Child <hr/>
+        
 
-        <ul>
-        { 
-            <li>{this.listItems}</li>             
-            }
-        </ul>
       </div>
     );
   }

@@ -1,26 +1,29 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
+import Typography from '@material-ui/core/Typography';
+import Later from '../Later/Temp.js';
 
 
 const Child = (props) => {
 
-  console.log( '11 - this.props ', props  ); 
+  console.log( '7 - this.props  in child component ', props.data  ); 
 
   useEffect(() => {
     // code to run on component mount
     // props.fetchClients(); 
   }, [])
 
-
+  
  const listItems =  ['C1', 'C2', 'C3', 'C4', 'C5'].map((number) =>
-  <li>{number}</li>
+    <Typography variant='h5' align='left'> {number}</Typography>
 );
 
- 
 
     return (
-      <div style={{ width: 950, marginLeft: 20  }}>
-            {listItems}
+      <div>
+            {/* {listItems} */}
+            <Typography variant='h5' align='left'> {props.data.name}  </Typography>
+            <Later />
       </div>
     );
   }

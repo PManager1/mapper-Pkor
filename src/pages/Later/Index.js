@@ -58,14 +58,13 @@ export default class Later extends Component {
 
 
     return (<div>
-      <Typography variant='h5' align='left'> {listItems}</Typography>
+      {/* <Typography variant='h5' align='left'> {listItems}</Typography> */}
 
       <SortableContainer onSortEnd={this.onSortEnd} pressDelay useDragHandle>
         {items.map((value, index) => (
           <SortableItem key={`item-${value}`} index={index} value={value} />
         ))}
       </SortableContainer>
-      <RecordComponent />
         </div>
     );
   }

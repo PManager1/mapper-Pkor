@@ -24,7 +24,7 @@ const SortableContainer = sortableContainer(({children}) => {
   return <ul>{children}</ul>;
 });
 
-export default class Later extends Component {
+export default class SortableComponent extends Component {
 
   state = {
     records: ['Header Record 1', 'Details Record', 'Trail Record'],

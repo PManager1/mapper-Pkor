@@ -10,6 +10,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import styles from './Item.css';
 import Typography from '@material-ui/core/Typography';
 import RecordComponent from './RecordComponent'; 
+import { connect } from "react-redux";
+import { fetchSingleClient } from '../../actions'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 
@@ -26,7 +28,7 @@ const SortableContainer = sortableContainer(({children}) => {
   return <ul>{children}</ul>;
 });
 
-export default class SortableComponent extends Component {
+class SortableComponent extends Component {
 
     constructor(props) {
         console.log(' 30 - in constrcutro this.props = ',  props.RecordId ); 
@@ -70,5 +72,13 @@ export default class SortableComponent extends Component {
     );
   }
 }
+
+
+const mapStateToProps = (state) =>{
+    console.log( '51 -  state.records =', state.records ); 
+    return { records: state.records.data }; 
+}; 
+
+export default connect(mapStateToProps, { fetchSingleClient })(SortableComponent); 
 
 // https://github.com/clauderic/react-sortable-hoc

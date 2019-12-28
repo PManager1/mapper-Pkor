@@ -36,8 +36,9 @@ class SortableComponent extends Component {
         this.state = {
             records: ['Header Record 1', 'Details Record', 'Trail Record'],
             items: ['Field 98', 'Field 99', 'Field 100']
-        
         };
+
+        // this.props.fetchSingleClient(); 
       }
 
 
@@ -54,7 +55,7 @@ class SortableComponent extends Component {
 
 
   render() {
-    console.log('51- SortableComponent\'s props = ', this.props ); 
+    console.log('58- SortableComponent\'s props = ', this.props ); 
     const {items} = this.state;
     const {records} = this.state;
 

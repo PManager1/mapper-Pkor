@@ -59,7 +59,7 @@ function updateState(e) {
   }
 
 
-  const mapStateToProps = (state) =>{
+const mapStateToProps = (state) =>{
     console.log( '63 -  state =', state ); 
     
     return { clients: state.clients }; 

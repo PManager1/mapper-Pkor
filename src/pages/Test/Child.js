@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import Typography from '@material-ui/core/Typography';
 import SortableComponent from './SortableComponent';
 
-
 const Child = (props) => {
 
   console.log( '7 - this.props  in child component ', props.data  ); 

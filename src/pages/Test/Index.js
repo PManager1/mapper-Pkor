@@ -1,7 +1,4 @@
 import React, { Component, useState, useEffect } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
-import Button from "@material-ui/core/Button";
 import Child from './Child'; 
 import { fetchRecords } from '../../actions'; 
 import { connect } from "react-redux";

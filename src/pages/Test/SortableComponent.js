@@ -6,9 +6,6 @@ import {
   sortableHandle,
 } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
-import { makeStyles } from '@material-ui/core/styles';
-import styles from './Item.css';
-import Typography from '@material-ui/core/Typography';
 import RecordComponent from './RecordComponent'; 
 import { connect } from "react-redux";
 import { fetchSingleRecord, fetchFields } from '../../actions'; 

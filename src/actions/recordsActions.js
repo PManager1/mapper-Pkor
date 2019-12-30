@@ -11,9 +11,10 @@ export const fetchRecords =  () =>{
 
 
 export const fetchSingleRecord = (recordID) =>{
-console.log('12 ---  action fetchSingleRecord  recordID = ', recordID ); 
+
+console.log('15 ---  action fetchSingleRecord  recordID = ', recordID ); 
 return async dispatch => {
-    const response = await clients.get(`/records/${recordID}`); 
+    const response = await clients.get(`/fieldlist/${recordID}`); 
                                                  
     console.log('19 ---  action fetchClients  response = ', response.data ); 
 

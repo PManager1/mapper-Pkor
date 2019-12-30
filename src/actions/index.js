@@ -3,6 +3,7 @@ import clients from '../apis/clients';
 
 export * from './recordsActions';
 export * from './authActions';
+export * from './fieldsActions';
 
 // import { showLoading, hideLoading } from 'actions/index.js';
 

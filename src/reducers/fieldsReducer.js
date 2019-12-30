@@ -1,19 +1,23 @@
-export const clientsReducer = ( state = [], action ) => {
+export const fieldsReducer = ( state = [], action ) => {
 
     switch(action.type) {
-        case 'FETCH_CLIENTS': 
+        case 'FETCH_FIELDS': 
             return action.payload; 
         default: 
             return state; 
     } 
 }; 
 
-export const selectedClientReducer = ( state = [], action) => {
+export const singleFieldReducer= ( state = [], action) => {
     switch(action.type) {
-        case 'FETCH_SINGLE_CLIENT': 
+        case 'FETCH_SINGLE_FIELD': 
             return action.payload; 
         default: 
             return state; 
     } 
 }
 
+
+// export default = () =>{
+//     return '123'; 
+// }

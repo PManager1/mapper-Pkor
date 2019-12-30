@@ -11,7 +11,7 @@ import styles from './Item.css';
 import Typography from '@material-ui/core/Typography';
 import RecordComponent from './RecordComponent'; 
 import { connect } from "react-redux";
-import { fetchSingleClient } from '../../actions'; 
+import { fetchSingleRecord, fetchFields } from '../../actions'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 
@@ -31,16 +31,17 @@ const SortableContainer = sortableContainer(({children}) => {
 class SortableComponent extends Component {
 
     constructor(props) {
-        console.log(' 34 - in SortableComponent constrcutor props.Record = ',  props.Record ); 
+        console.log(' 34 - in SortableComponent constrcutor props.Record._id = ',  props.Record._id ); 
         super(props);
         this.state = {
             records: ['Header Record 1', 'Details Record', 'Trail Record'],
-            items: ['Field 98', 'Field 99', 'Field 100']
+            items: ['Field 97', 'Field 98', 'Field 99']
         };
 
-        // this.props.fetchSingleClient(); 
+        // this.props.fetchSingleRecord(props.Record._id); 
+        this.props.fetchSingleRecord('5e000feaaa430e396309a24b'); 
+        // resulting value =  this.props.singleRecord
       }
-
 
   onSortEnd = ({oldIndex, newIndex}) => {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 
@@ -76,10 +77,10 @@ class SortableComponent extends Component {
 
 
 const mapStateToProps = (state) =>{
-    console.log( '51 -  state.records =', state.records ); 
-    return { records: state.records.data }; 
+    console.log( '81 - SortableComponent ->  state.records =', state ); 
+    return { singleRecord: state.singleRecord }; 
 }; 
 
-export default connect(mapStateToProps, { fetchSingleClient })(SortableComponent); 
+export default connect(mapStateToProps, { fetchSingleRecord, fetchFields })(SortableComponent); 
 
 // https://github.com/clauderic/react-sortable-hoc

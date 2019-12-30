@@ -8,7 +8,7 @@ export const recordsReducer = ( state = [], action ) => {
     } 
 }; 
 
-export const selectedRecordReducer = ( state = [], action) => {
+export const singleRecordReducer= ( state = [], action) => {
     switch(action.type) {
         case 'FETCH_SINGLE_RECORD': 
             return action.payload; 

@@ -69,7 +69,6 @@ export const Form = props => {
       <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
 
 
-
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}

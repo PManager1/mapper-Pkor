@@ -62,7 +62,7 @@ class SortableComponent extends Component {
 
     console.log( '43 - onSortEnd - this.state.resources  = ', this.state.resources ); 
 
-    console.log( '43 - onSortEnd - oldIndex', oldIndex);  
+    console.log( '43 - onSortEnd - oldIndex - this is the updated value', oldIndex);  
     console.log( '43 - onSortEnd - oldIndex', this.state.resources[oldIndex]);  
     
     console.log( '43 - onSortEnd - newIndex', newIndex);  
@@ -71,7 +71,7 @@ class SortableComponent extends Component {
     // we can keep a track of the original arr and when some changes, 
     // I'll know which object changed and i can then send the objects to save.
     
-    
+  
 
   };
 

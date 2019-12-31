@@ -3,7 +3,7 @@ import clients from '../apis/clients';
 export const fetchFields =  () =>{
     return async dispatch => {
     const response = await clients.get('/fieldlist'); 
-    console.log('4 ---  action fetchFields  response = ', response.data ); 
+    console.log('6---  action fetchFields action response = ', response.data ); 
 
     dispatch ({  type: 'FETCH_FIELDS',   payload: response.data });
     }

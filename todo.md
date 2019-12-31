@@ -1,3 +1,9 @@
+issue with display list of fieldlists :  
+
+by using the posts  video or 
+by using the old react native app at properties values. 
+
+========================================
 <DragHandle />
     <RecordComponent />
 
@@ -28,6 +34,10 @@ Add logic / code - if credit/ debit view:
 
 ================
 show loading  / notifiction progress. 
+
+https://blog.logrocket.com/data-fetching-in-redux-apps-a-100-correct-approach-4d26e21750fc/
+
+
 ==========================
 Create Crud operatoins for the Fieldslist items. 
 

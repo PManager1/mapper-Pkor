@@ -18,6 +18,3 @@ export const singleFieldReducer= ( state = [], action) => {
 }
 
 
-// export default = () =>{
-//     return '123'; 
-// }

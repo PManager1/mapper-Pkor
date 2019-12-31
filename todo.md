@@ -1,3 +1,9 @@
+=========================
+NExt: when the record is loaded in /text. 
+from there - load the data on the DropDown. 
+
+=========================
+
 issue with display list of fieldlists :  
 
 by using the posts  video or 
@@ -24,7 +30,7 @@ Drag Drop the rows i.e the header info:
 https://github.com/clauderic/react-sortable-hoc
 
 
-=========================
+
 
 
 =========================

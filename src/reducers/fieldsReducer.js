@@ -18,3 +18,17 @@ export const singleFieldReducer= ( state = [], action) => {
 }
 
 
+export const fieldReducer = ( state = {}, action ) => {
+
+    switch(action.type) {
+        case 'EDIT_FIELDS': 
+            // const newState = { ...state }; 
+            // newState[action.payload.id] = action.payload;
+            // return newState; 
+
+            return { ...state, [action.payload.id]: action.payload };
+        default: 
+            return state; 
+    } 
+}; 
+

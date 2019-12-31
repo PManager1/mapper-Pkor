@@ -17,7 +17,3 @@ export const singleRecordReducer= ( state = [], action) => {
     } 
 }
 
-
-// export default = () =>{
-//     return '123'; 
-// }

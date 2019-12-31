@@ -5,18 +5,19 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import NameIcon from "@material-ui/icons/SupervisorAccount";
 import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
-
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
+import { editField } from '../../../actions'; 
+import { connect } from "react-redux";
 
 
 export const Form = props => {
-  console.log(' 17 - form.js -  props. props.fieldInfo =', props.fieldInfo ); 
+  console.log(' 18 - form.js -  props. props =', props.values ); 
   const {
-    values:{ HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
@@ -34,8 +35,10 @@ export const Form = props => {
     setFieldTouched(name, true, false);
   };
 
-  const handleSubmit = () =>{
-    console.log( '38 -   handleSubmit called in form.js  ',  props.values ); 
+  const handleSubmit = (e) =>{
+    e.persist();
+    console.log( '38-handleSubmit called in form.js  ',  props.values ); 
+    props.editField(props.values._id, props.values); 
   }
 
   const [value, setValue] = React.useState('female');
@@ -182,3 +185,6 @@ export const Form = props => {
     </form>
   );
 };
+
+
+// export default connect(mapStateToProps, { editField })(Test); 

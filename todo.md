@@ -1,6 +1,18 @@
 =========================
+on updated up and down ->  Save the sequence number in the backend 
+on loading -> sort the items by sequence number. 
+-----
+finish CREATE_FIELD
+-------
+show a laoding UI until data is displayed on the 
+Fields place. 
+=========================
+
 NExt: when the record is loaded in /text. 
 from there - load the data on the DropDown. 
+
+
+
 
 =========================
 

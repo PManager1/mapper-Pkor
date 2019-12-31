@@ -60,7 +60,7 @@ class SortableComponent extends Component {
       resources: arrayMove(resources, oldIndex, newIndex),
     }));
 
-    console.log( '43 - onSortEnd - this.state.items  = ', this.state.items ); 
+    console.log( '43 - onSortEnd - this.state.resources  = ', this.state.resources ); 
   };
 
 

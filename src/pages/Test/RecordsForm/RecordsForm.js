@@ -47,8 +47,12 @@ class RecordsForm extends Component {
   }
 
   submit = data => {
-    // console.log(data);
+    console.log('50-inside submit function of RecordsForm ', data);
   };
+
+  handleSubmit =() => {
+    console.log('54-inside handleSubmit function of RecordsForm ');
+  }
 
   render() {
     const classes = this.props;

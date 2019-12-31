@@ -12,10 +12,11 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { editField } from '../../../actions'; 
 import { connect } from "react-redux";
+import {useSelector, useDispatch} from 'react-redux'
 
 
 export const Form = props => {
-  console.log(' 18 - form.js -  props. props =', props.values ); 
+  console.log(' 18- form.js -  props =', props ); 
   const {
     values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
@@ -29,17 +30,23 @@ export const Form = props => {
   // console.table(props);
 
 
+  const dispatch = useDispatch()
+  
   const change = (name, e) => {
     e.persist();
     handleChange(e);
     setFieldTouched(name, true, false);
   };
 
+  
   const handleSubmit = (e) =>{
     e.persist();
     console.log( '38-handleSubmit called in form.js  ',  props.values ); 
-    props.editField(props.values._id, props.values); 
+    // props.editField(props.values._id, props.values); 
+    // props.editField(); 
+    dispatch(editField(props.values._id, props.values));
   }
+  
 
   const [value, setValue] = React.useState('female');
   // const handleChange = event => {
@@ -186,5 +193,26 @@ export const Form = props => {
   );
 };
 
+const mapStateToProps = (state) =>{
+  console.log( '51 -  state.records =', state.records ); 
+  return { records: state.records.data }; 
+}; 
 
-// export default connect(mapStateToProps, { editField })(Test); 
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     onTodoClick: id => {
+//       dispatch(toggleTodo(id))
+//     }
+//   }
+// }
+
+export default connect(null, { editField })(Form);
+ 
+// const Form = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(TodoList)
+// export default Form
+
+
+// https://levelup.gitconnected.com/react-redux-hooks-useselector-and-usedispatch-f7d8c7f75cdd

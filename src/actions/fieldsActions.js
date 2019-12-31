@@ -33,7 +33,7 @@ return async dispatch => {
 };
 
 export const editField = (fieldID, formValues) =>{
-    console.log('36 ---  action editField   fieldID = ', fieldID ); 
+    console.log('36-editField-action ---  fieldID = ', fieldID ); 
     console.log('37 ---  action editField   formValues = ', formValues ); 
     return async dispatch => {
         const response = await clients.put(`/fieldlist/${fieldID}`, formValues); 

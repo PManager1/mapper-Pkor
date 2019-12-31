@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 
 // props.records.data
 const Test = (props) => {
-
     // const [ resources, setResources ] = useState([]);
 
     useEffect(() => {
@@ -22,7 +21,6 @@ const Test = (props) => {
                 <Child data={item} key={index}  />
                 ))}
       </div>);
-
 
   }; 
 

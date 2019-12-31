@@ -1,0 +1,7 @@
+// export const SIGN_IN = 'SIGN_IN'
+// export const SIGN_OUT = 'SIGN_OUT'
+export const CREATE_FIELD = 'CREATE_FIELD'
+export const FETCH_FIELDS = 'FETCH_FIELDS'
+export const FETCH_FIELD = 'FETCH_FIELD'
+export const DELETE_FIELD = 'DELETE_FIELD'
+export const EDIT_FIELD = 'EDIT_FIELD'

@@ -22,14 +22,9 @@ export const hideLoading = () =>{
 
 
 
-
-
 export const createClient =  (formValues) => async dispatch => {
-    // console.log('4 --- inside  action createClient  formValues = ', formValues); 
     const response = await clients.post('/fieldlist', formValues ); 
-
-    // console.log('7 ---  action createClient  response = ', response ); 
-    // console.log('8 ---  action createClient  response.data = ', response.data ); 
+ 
     dispatch ({  type: 'CREATE_CLIENT',   payload: response.data });
     };
 
@@ -38,8 +33,6 @@ export const editClient =  (formValues, clientID) => async dispatch => {
     // console.log('4 --- inside  action createClient  formValues = ', formValues); 
     const response = await clients.put(`/clients/${clientID}`, formValues); 
 
-    // console.log('7 ---  action createClient  response = ', response ); 
-    // console.log('8 ---  action createClient  response.data = ', response.data ); 
     dispatch ({  type: 'EDIT_CLIENT',   payload: response.data });
     };
 

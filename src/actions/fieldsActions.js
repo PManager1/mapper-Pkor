@@ -1,11 +1,22 @@
 import clients from '../apis/clients';
 
+import {
+    CREATE_FIELD,
+    FETCH_FIELDS,
+    FETCH_FIELD,
+    EDIT_FIELD,
+    DELETE_FIELD
+  } from '../actions/types'
+  
+
+  
+
 export const fetchFields =  () =>{
     return async dispatch => {
     const response = await clients.get('/fieldlist'); 
     console.log('6---  action fetchFields action response = ', response.data ); 
 
-    dispatch ({  type: 'FETCH_FIELDS',   payload: response.data });
+    dispatch ({  type: FETCH_FIELDS,   payload: response.data });
     }
 };
 
@@ -17,7 +28,7 @@ return async dispatch => {
                                                  
     console.log('19 ---  action fetchSingleField  response = ', response.data ); 
 
-    dispatch ({  type: 'FETCH_SINGLE_FIELD',   payload: response.data });
+    dispatch ({  type: FETCH_FIELD,   payload: response.data });
     }
 };
 

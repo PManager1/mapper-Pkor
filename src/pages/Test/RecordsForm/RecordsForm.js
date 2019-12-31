@@ -52,14 +52,15 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { FieldName: this.props.fieldInfo.FieldName, MappedFieldName: this.props.fieldInfo.MappedFieldName, MaxCharLength: this.props.fieldInfo.MaxCharLength, SequenceNumber: this.props.fieldInfo.SequenceNumber, RadioValue:"", LeftPadding: this.props.fieldInfo.PaddingLeft, RightPadding: this.props.fieldInfo.PaddingRight  };
+    // const values = { FieldName: this.props.fieldInfo.FieldName, MappedFieldName: this.props.fieldInfo.MappedFieldName, MaxCharLength: this.props.fieldInfo.MaxCharLength, SequenceNumber: this.props.fieldInfo.SequenceNumber, RadioValue:"", LeftPadding: this.props.fieldInfo.PaddingLeft, RightPadding: this.props.fieldInfo.PaddingRight  };
+    // const values = props.fieldInfo;
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>
 
             <Formik
               render={props => <Form {...props} />}
-              initialValues={values}
+              initialValues={this.props.fieldInfo}
               validationSchema={validationSchema}
               onSubmit={this.submit}
             />

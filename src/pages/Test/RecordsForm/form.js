@@ -14,11 +14,13 @@ import FormControl from '@material-ui/core/FormControl';
 
 
 export const Form = props => {
+  console.log(' 17 - form.js -  props. props.fieldInfo =', props.fieldInfo ); 
   const {
     values:{ HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
-    handleSubmit,
+    // handleSubmit,
     handleChange,
     isValid,
     setFieldTouched
@@ -31,6 +33,10 @@ export const Form = props => {
     handleChange(e);
     setFieldTouched(name, true, false);
   };
+
+  const handleSubmit = () =>{
+    console.log( '38 -   handleSubmit called in form.js  ',  props.values ); 
+  }
 
   const [value, setValue] = React.useState('female');
   // const handleChange = event => {
@@ -160,7 +166,6 @@ export const Form = props => {
         fullWidth
         variant="raised"
         color="primary"
-        disabled={!isValid}
       >
         Save
       </Button>

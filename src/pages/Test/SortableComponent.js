@@ -71,7 +71,7 @@ class SortableComponent extends Component {
     return (<div>
       <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
         {resources.map((value, index) => (
-          <SortableItem key={`item-${value.fieldName}`} index={index} value={value.FieldName} />
+          <SortableItem key={`item-${value.fieldName}`} index={index} value={value} />
         ))}
       </SortableContainer>
         </div>

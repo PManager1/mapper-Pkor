@@ -41,6 +41,7 @@ const validationSchema = Yup.object({
 
 class RecordsForm extends Component {
   constructor(props) {
+    console.log(' 44 - in RecordsForm props.fieldInfo  = ', props.fieldInfo ); 
     super(props);
     this.state = {};
   }
@@ -51,7 +52,7 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", LeftPadding:"", RightPadding:""   };
+    const values = { FieldName: this.props.fieldInfo.FieldName, MappedFieldName: this.props.fieldInfo.MappedFieldName, MaxCharLength: this.props.fieldInfo.MaxCharLength, SequenceNumber: this.props.fieldInfo.SequenceNumber, RadioValue:"", LeftPadding: this.props.fieldInfo.PaddingLeft, RightPadding: this.props.fieldInfo.PaddingRight  };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

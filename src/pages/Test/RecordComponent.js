@@ -19,11 +19,11 @@ const RecordComponent = ({value})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading">{value}</Typography>
+                    <Typography className="heading">{value.FieldName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>
-                        <RecordsForm/>
+                        <RecordsForm  fieldInfo={value} />
                     </ExpansionPanelDetails>
                 </ExpansionPanel>
         </div>

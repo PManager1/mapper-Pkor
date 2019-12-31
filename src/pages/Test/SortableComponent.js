@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'; 
-
+import _ from 'lodash';
 import {render} from 'react-dom';
 import {
   sortableContainer,
@@ -61,6 +61,18 @@ class SortableComponent extends Component {
     }));
 
     console.log( '43 - onSortEnd - this.state.resources  = ', this.state.resources ); 
+
+    console.log( '43 - onSortEnd - oldIndex', oldIndex);  
+    console.log( '43 - onSortEnd - oldIndex', this.state.resources[oldIndex]);  
+    
+    console.log( '43 - onSortEnd - newIndex', newIndex);  
+    console.log( '43 - onSortEnd - oldIndex', this.state.resources[newIndex]);  
+    // maybe send all the objects to save. 
+    // we can keep a track of the original arr and when some changes, 
+    // I'll know which object changed and i can then send the objects to save.
+    
+    
+
   };
 
 

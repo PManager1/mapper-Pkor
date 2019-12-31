@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import _ from 'lodash';
 import {
   CREATE_FIELD,
   FETCH_FIELDS,

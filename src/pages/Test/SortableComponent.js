@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import axios from 'axios'; 
+
 import {render} from 'react-dom';
 import {
   sortableContainer,
@@ -31,6 +33,7 @@ class SortableComponent extends Component {
         console.log(' 34 - in SortableComponent constrcutor props.Record._id = ',  props.Record._id ); 
         super(props);
         this.state = {
+            resources: [],
             records: ['Header Record 1', 'Details Record', 'Trail Record'],
             items: ['Field 97', 'Field 98', 'Field 99']
         };
@@ -38,6 +41,11 @@ class SortableComponent extends Component {
         // this.props.fetchSingleRecord(props.Record._id); 
         this.props.fetchSingleRecord('5e000feaaa430e396309a24b'); 
         // resulting value =  this.props.singleRecord
+      }
+
+      async componentDidMount(){
+        const response = await axios.get(`http://localhost:3030/fieldlist`)
+        this.setState({ resources: response.data.data }); 
       }
 
   onSortEnd = ({oldIndex, newIndex}) => {
@@ -48,7 +56,7 @@ class SortableComponent extends Component {
       items: arrayMove(items, oldIndex, newIndex),
     }));
 
-    console.log( '43 - this.state.items  = ', this.state.items ); 
+    console.log( '43 - onSortEnd - this.state.items  = ', this.state.items ); 
   };
 
 
@@ -56,15 +64,14 @@ class SortableComponent extends Component {
     console.log('58- SortableComponent\'s props = ', this.props ); 
     const {items} = this.state;
     const {records} = this.state;
+    const { resources } = this.state; 
 
-    const listItems = records.map((number) =>
-    <p>{number}</p>
-  );
+    console.log('68- SortableComponent\'s resources  = ', resources ); 
 
     return (<div>
       <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
-        {items.map((value, index) => (
-          <SortableItem key={`item-${value}`} index={index} value={value} />
+        {resources.map((value, index) => (
+          <SortableItem key={`item-${value.fieldName}`} index={index} value={value.FieldName} />
         ))}
       </SortableContainer>
         </div>

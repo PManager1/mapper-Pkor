@@ -47,7 +47,7 @@ class RecordsForm extends Component {
   }
 
   submit = data => {
-    console.log(data);
+    // console.log(data);
   };
 
   render() {

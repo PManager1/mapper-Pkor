@@ -52,8 +52,12 @@ class SortableComponent extends Component {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 
     console.log( ' 35 - newIndex  = ', newIndex ); 
 
-    this.setState(({items}) => ({
-      items: arrayMove(items, oldIndex, newIndex),
+    // this.setState(({items}) => ({
+    //   items: arrayMove(items, oldIndex, newIndex),
+    // }));
+
+    this.setState(({resources}) => ({
+      resources: arrayMove(resources, oldIndex, newIndex),
     }));
 
     console.log( '43 - onSortEnd - this.state.items  = ', this.state.items ); 

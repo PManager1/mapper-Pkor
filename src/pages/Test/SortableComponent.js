@@ -10,7 +10,7 @@ import {
 import arrayMove from 'array-move';
 import RecordComponent from './RecordComponent'; 
 import { connect } from "react-redux";
-import { fetchSingleRecord, fetchFields } from '../../actions'; 
+import { fetchSingleRecord, fetchFields, editField } from '../../actions'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 
@@ -45,7 +45,9 @@ class SortableComponent extends Component {
 
       async componentDidMount(){
         const response = await axios.get(`http://localhost:3030/fieldlist`)
-        this.setState({ resources: response.data.data }); 
+        let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+        console.log('49-sortedResources=', sortedResources ); 
+        this.setState({ resources: sortedResources }); 
       }
 
   onSortEnd = ({oldIndex, newIndex}) => {
@@ -63,15 +65,26 @@ class SortableComponent extends Component {
     console.log( '43 - onSortEnd - this.state.resources  = ', this.state.resources ); 
 
     console.log( '43 - onSortEnd - oldIndex - this is the updated value', oldIndex);  
-    console.log( '43 - onSortEnd - oldIndex', this.state.resources[oldIndex]);  
+    console.log( '43 - onSortEnd - oldIndex', this.state.resources[oldIndex]);
     
-    console.log( '43 - onSortEnd - newIndex', newIndex);  
-    console.log( '43 - onSortEnd - oldIndex', this.state.resources[newIndex]);  
+    this.state.resources[oldIndex].SequenceNumber = oldIndex;
+    console.log( '69 - onSortEnd - this.state.resources[oldIndex].SequenceNumber =', this.state.resources[oldIndex].SequenceNumber );
+    console.log( '70 - onSortEnd - oldIndex', this.state.resources[oldIndex]);
+
+
+    this.props.editField(this.state.resources[oldIndex]._id,  this.state.resources[oldIndex] ); 
+
+    // SECOND 
+    console.log( '73 - onSortEnd - newIndex', newIndex);  
+    console.log( '74 - onSortEnd - oldIndex', this.state.resources[newIndex]);  
+    // this.props.editField(this.state.resources[newIndex]._id,  this.state.resources[newIndex] ); 
+    this.props.editField(this.state.resources[newIndex]._id,  this.state.resources[newIndex] ); 
+
+
     // maybe send all the objects to save. 
     // we can keep a track of the original arr and when some changes, 
     // I'll know which object changed and i can then send the objects to save.
     
-  
 
   };
 
@@ -101,6 +114,6 @@ const mapStateToProps = (state) =>{
     return { singleRecord: state.singleRecord }; 
 }; 
 
-export default connect(mapStateToProps, { fetchSingleRecord, fetchFields })(SortableComponent); 
+export default connect(mapStateToProps, { fetchSingleRecord, fetchFields, editField })(SortableComponent); 
 
 // https://github.com/clauderic/react-sortable-hoc

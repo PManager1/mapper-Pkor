@@ -25,7 +25,8 @@ const SortableItem = sortableElement(({value}) => (
 ));
 
 const SortableContainer = sortableContainer(({children}) => {
-  return <ul>{children}</ul>;
+  return <span>{children}</span>;
+  // return <ul>{children}</ul>;
 });
 
 class SortableComponent extends Component {
@@ -72,34 +73,6 @@ class SortableComponent extends Component {
       this.props.editField(this.state.resources[index]._id,  this.state.resources[index] ); 
 
     }); 
-
-/*    
-    console.log( '64==========onSortEnd - resources', this.state.resources); 
-
-    console.log( '65==========onSortEnd - oldIndex', oldIndex); 
-    console.log( '66- onSortEnd - oldIndex', this.state.resources[oldIndex]);
-
-    // console.log( '43 - onSortEnd - this.state.resources  = ', this.state.resources ); 
-
-    // console.log( '43 - onSortEnd - oldIndex - this is the updated value', oldIndex);  
-    
-    
-    this.state.resources[oldIndex].SequenceNumber = newIndex;
-    // console.log( '69 - onSortEnd - this.state.resources[oldIndex].SequenceNumber =', this.state.resources[oldIndex].SequenceNumber );
-    // console.log( '70 - onSortEnd - oldIndex', this.state.resources[oldIndex]);
-    this.props.editField(this.state.resources[oldIndex]._id,  this.state.resources[oldIndex] ); 
-
-    // SECOND 
-    console.log( '73==========onSortEnd - newIndex', newIndex);  
-    console.log( '74 - onSortEnd - oldIndex', this.state.resources[newIndex]);  
-    // this.props.editField(this.state.resources[newIndex]._id,  this.state.resources[newIndex] ); 
-    this.props.editField(this.state.resources[newIndex]._id,  this.state.resources[newIndex] ); 
-
-    // maybe send all the objects to save. 
-    // we can keep a track of the original arr and when some changes, 
-    // I'll know which object changed and i can then send the objects to save.
-    */
-
   };
 
 

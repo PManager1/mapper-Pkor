@@ -16,7 +16,6 @@ const DragHandle = sortableHandle(() => <span>::</span>);
 
 
 const SortableItem = sortableElement(({value}) => (
-    // console.log('16- SortableComponents props = ', this.props );
   <div className="theItem">
     <DragHandle />
     <RecordComponent value={value} />

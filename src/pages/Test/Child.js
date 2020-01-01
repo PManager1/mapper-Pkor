@@ -20,6 +20,7 @@ const sectionRecordName = {
   paddingTop: 5,
   marginTop: 70,
   height: 50,
+  marginBottom: -10,
 };
 
 const sectionPlusBtn = {

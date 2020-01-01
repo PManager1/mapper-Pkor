@@ -203,7 +203,7 @@ export default function MainWrapper(props) {
                   <ListItemText primary="All Logic" />
             </ListItem>
 
-            <ListItem button component={Link} to="/createnewlogic" >
+            <ListItem button component={Link} to="/createlogic" >
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>

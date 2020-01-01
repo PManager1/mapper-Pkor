@@ -5,11 +5,25 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RecordsForm from './RecordsForm/RecordsForm.js';
+import { makeStyles } from '@material-ui/core/styles';
 
-
-const RecordComponent = ({value})=>{
+const RecordComponent = ({value, DragHandle})=>{
     
-    // console.log(' 12  - RecordComponent - value = ', value ); 
+    const useStyles = makeStyles(theme => ({
+        root: {
+          flexGrow: 1,
+          backGround: 'red',
+        },
+        paper: {
+          padding: theme.spacing(2),
+          textAlign: 'center',
+          color: theme.palette.text.secondary,
+        },
+      }));
+
+
+    console.log(' 12  - RecordComponent - value = ', value ); 
+    console.log(' 13  - DragHandle = ', DragHandle ); 
     return (
         <div className="root" >
 
@@ -19,7 +33,7 @@ const RecordComponent = ({value})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading"> {value.FieldName}</Typography>
+                    <Typography className="heading"> <DragHandle /> {value.FieldName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

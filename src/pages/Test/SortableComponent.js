@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import axios from 'axios'; 
 import _ from 'lodash';
 import {render} from 'react-dom';
+
+import './Item.css'; 
+
 import {
   sortableContainer,
   sortableElement,
@@ -17,8 +20,7 @@ const DragHandle = sortableHandle(() => <span>::</span>);
 
 const SortableItem = sortableElement(({value}) => (
   <div className="theItem">
-    <DragHandle />
-    <RecordComponent value={value} />
+    <RecordComponent DragHandle={DragHandle} value={value} />
   </div>
 ));
 

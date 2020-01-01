@@ -31,7 +31,7 @@ export const createLogic =  (formValues) =>{
 };
 
 
-export const fetchFields =  () =>{
+export const fetchLogics =  () =>{
     return async dispatch => {
     const response = await clients.get('/logics'); 
     console.log('6---  action fetchFields action response = ', response.data ); 

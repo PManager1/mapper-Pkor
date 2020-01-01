@@ -47,9 +47,7 @@ function CreateLogic (){
           logicName: '', 
         }}
         onSubmit={  data =>   {
-          
-          (alert(JSON.stringify(data))) 
-        
+          // (alert(JSON.stringify(data))) 
           dispatch(createLogic (data));
         }
         }
@@ -69,7 +67,7 @@ function CreateLogic (){
               />
 
             <div className="text-center">
-            <button type="submit" className="btn"  >
+            <button type="submit" className="btn primary"  >
                   Save Logic
                 </button>
                 </div> 

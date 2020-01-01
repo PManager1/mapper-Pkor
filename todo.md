@@ -7,7 +7,9 @@ finish CREATE_FIELD
 show a laoding UI until data is displayed on the 
 Fields place. 
 =========================
+privde option to delete logics.
 
+=========================
 NExt: when the record is loaded in /text. 
 from there - load the data on the DropDown. 
 

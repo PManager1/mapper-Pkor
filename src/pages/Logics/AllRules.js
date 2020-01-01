@@ -9,6 +9,10 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import CommentIcon from '@material-ui/icons/Comment';
 
+import { connect } from "react-redux";
+import { fetchLogics } from '../../actions';
+import {useSelector, useDispatch} from 'react-redux';
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -17,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CheckboxList() {
+function LogicList() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([0]);
 
@@ -62,3 +66,11 @@ export default function CheckboxList() {
     </List>
   );
 }
+
+
+const mapStateToProps = (state) =>{
+  console.log( '72 - AllRules  state =', state ); 
+  // return { records: state.records.data }; 
+}; 
+
+export default connect(null, { fetchLogics })(LogicList);

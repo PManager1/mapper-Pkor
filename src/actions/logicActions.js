@@ -8,12 +8,23 @@ import {
   EDIT_LOGIC,
   DELETE_LOGIC
 } from './types'; 
+
+
+// export const createStream = formValues => async (dispatch, getState) => {
+//     const { userId } = getState().auth
+//     const response = await streams.post('/streams', { ...formValues, userId })
   
-export const createLogic =  () =>{
-    console.log('13 -  createLogic  called'); 
+//     dispatch({ type: CREATE_STREAM, payload: response.data })
+//     history.push('/')
+//   }
+
+
+export const createLogic =  (formValues) =>{
+    console.log('23--- createLogic action= ', formValues ); 
+    
     return async dispatch => {
-    const response = await clients.get('/logics'); 
-    console.log('6---  action fetchFields action response = ', response.data ); 
+    const response = await clients.post('/logics', { ...formValues} ); 
+    console.log('6---  action createLogic action response = ', response.data ); 
 
     dispatch ({  type: CREATE_LOGIC,   payload: response.data });
     }

@@ -2,7 +2,6 @@ import React, { Component, useState, useEffect } from 'react';
 import Child from './Child'; 
 import { fetchRecords } from '../../actions'; 
 import { connect } from "react-redux";
-
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
 import EditIcon from '@material-ui/icons/Edit';

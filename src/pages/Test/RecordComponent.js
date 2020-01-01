@@ -7,31 +7,39 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import RecordsForm from './RecordsForm/RecordsForm.js';
 import { makeStyles } from '@material-ui/core/styles';
 
+
+const useStyles = makeStyles(theme => ({
+    root: {
+      flexGrow: 1,
+      backGround: 'red',
+    },
+    paper: {
+      padding: theme.spacing(2),
+      textAlign: 'center',
+      color: theme.palette.text.secondary,
+    },
+    eachRow: {
+        marginBottom: '1px', 
+      },
+  }));
+
+
 const RecordComponent = ({value, DragHandle})=>{
+
+
+      const classes = useStyles();
     
-    const useStyles = makeStyles(theme => ({
-        root: {
-          flexGrow: 1,
-          backGround: 'red',
-        },
-        paper: {
-          padding: theme.spacing(2),
-          textAlign: 'center',
-          color: theme.palette.text.secondary,
-        },
-      }));
-
-
     console.log(' 12  - RecordComponent - value = ', value ); 
     console.log(' 13  - DragHandle = ', DragHandle ); 
     return (
         <div className="root" >
 
-                <ExpansionPanel>
+                <ExpansionPanel  className={classes.eachRow}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
+                        className={classes.eachRow}
                         >
                     <Typography className="heading"> <DragHandle /> {value.FieldName}</Typography>
 

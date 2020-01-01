@@ -11,7 +11,6 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
-      backGround: 'red',
     },
     paper: {
       padding: theme.spacing(2),
@@ -19,7 +18,9 @@ const useStyles = makeStyles(theme => ({
       color: theme.palette.text.secondary,
     },
     eachRow: {
+        // backgroundColor: 'red',
         marginBottom: '1px', 
+        padding: '0 24px 0 24px',
       },
   }));
 
@@ -33,7 +34,6 @@ const RecordComponent = ({value, DragHandle})=>{
     console.log(' 13  - DragHandle = ', DragHandle ); 
     return (
         <div className="root" >
-
                 <ExpansionPanel  className={classes.eachRow}>
                     <ExpansionPanelSummary
                         expandIcon={<ExpandMoreIcon />}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -21,7 +21,13 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function LogicList() {
+function LogicList(props) {
+
+  useEffect(() => {
+    props.fetchLogics(); 
+}, []); 
+
+
   const classes = useStyles();
   const [checked, setChecked] = React.useState([0]);
 
@@ -73,4 +79,4 @@ const mapStateToProps = (state) =>{
   // return { records: state.records.data }; 
 }; 
 
-export default connect(null, { fetchLogics })(LogicList);
+export default connect(mapStateToProps, { fetchLogics })(LogicList);

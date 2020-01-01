@@ -28,6 +28,7 @@ import Test from './pages/Test/Index.js';
 import EditRecords from './pages/EditRecords/Index.js'; 
 
 
+import FullWidthGrid from './pages/Example/Grid.js'; 
 
 
 const App = () =>{
@@ -50,7 +51,7 @@ const App = () =>{
                     <Route exact path="/newrecord" component={NewRecord} />
                     <Route exact path="/editrecords" component={EditRecords} />
 
-
+                    <Route exact path="/grid" exact component={FullWidthGrid} />
                     <Route exact path="/test" component={Test} />
 
                     <Route exact path="/AllLogic" component={AllLogic} />

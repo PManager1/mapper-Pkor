@@ -79,9 +79,5 @@ function CreateLogic (){
       
 // export default CreateLogic; 
 
-const mapStateToProps = (state) =>{
-  // console.log( '51 -  state.records =', state.records ); 
-  return { records: state.records.data }; 
-}; 
 
 export default connect(null, { createLogic })(CreateLogic);

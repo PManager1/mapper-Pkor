@@ -4,7 +4,8 @@ import authReducer from './authReducer';
 import { clientsReducer, selectedClientReducer } from './clientsReducer'; 
 import { recordsReducer, singleRecordReducer } from './recordsReducer'; 
 // import { fieldsReducer, singleFieldReducer } from './fieldsReducer'; 
-import fieldsReducer from './fieldsReducer'
+import fieldsReducer from './fieldsReducer'; 
+import logicReducer from './logicReducer'; 
 
 export default combineReducers({
     clients: clientsReducer, 
@@ -12,7 +13,8 @@ export default combineReducers({
     auth: authReducer, 
     records: recordsReducer,
     singleRecord:singleRecordReducer, 
-    fields: fieldsReducer
+    fields: fieldsReducer, 
+    logics: logicReducer
     // singleField:singleFieldReducer
 });
 

@@ -1,0 +1,17 @@
+{
+	"data": [{
+			"_id": "5e0c34a9ad6c28dd1c129694",
+			"RecordId": "234432",
+			"RecordName": "Rec Name 1"
+		},
+		{
+			"_id": "5e0c34ce8622c7dd518907f8",
+			"RecordId": "4534",
+			"RecordName": "Rec Name 2"
+		}
+	],
+	"message": {
+		"SuccessMessage": "Success",
+		"FailureMessage": "Failure retrieving Data"
+	}
+}

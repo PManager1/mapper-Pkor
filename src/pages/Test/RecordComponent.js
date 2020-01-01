@@ -21,7 +21,9 @@ const useStyles = makeStyles(theme => ({
     eachRow: {
         // backgroundColor: 'red',
         marginBottom: '1px', 
-        // padding: '0 24px 0 24px',
+        padding: '0 0 0 7px',
+        // paddingLeft: '0px',
+        // marginLeft: '0px',
       },
   }));
 
@@ -40,7 +42,7 @@ const RecordComponent = ({value, DragHandle})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading"> <DragHandle /> {value.FieldName}</Typography>
+                    <Typography className="heading"> <DragHandle />   &nbsp;&nbsp;     {value.FieldName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

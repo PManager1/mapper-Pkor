@@ -8,7 +8,7 @@ import RecordsForm from './RecordsForm/RecordsForm.js';
 
 
 const RecordComponent = ({value})=>{
-
+    
     // console.log(' 12  - RecordComponent - value = ', value ); 
     return (
         <div className="root" >
@@ -19,7 +19,7 @@ const RecordComponent = ({value})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading">{value.SequenceNumber} - {value.FieldName}</Typography>
+                    <Typography className="heading"> {value.FieldName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

@@ -1,5 +1,5 @@
 import React from 'react';
-import LogicList from './AllRules'; 
+import LogicList from './LogicList'; 
 
 
 const AllRules = ()=>{

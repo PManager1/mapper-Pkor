@@ -9,17 +9,9 @@ import NewLogic from './NewLogic.js';
 import { Formik } from 'formik';
 import { Form, Input, PhoneInput, Select, SubmitBtn } from 'react-formik-ui';
 
+import { connect } from "react-redux";
+import { createLogic } from '../../actions';
 
-
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     flexGrow: 1,
-//   },
-//   textArea: {
-//     width: 900, 
-//     minHeight: 200,
-//   },
-// }));
 
 const textArea = {
   width: '900', 
@@ -39,9 +31,9 @@ const useStyles = makeStyles(theme => ({
   
   // const classes = useStyles();
 
-  export default function CreateNewRule() {
-    const classes = useStyles();  
-
+function CreateLogic (){ 
+  
+  const classes = useStyles();
 
       return (
       <Formik
@@ -70,7 +62,6 @@ const useStyles = makeStyles(theme => ({
                       defaultValue=""
             />
           
-
             <div className="text-center">
             <button type="submit" className="btn"  >
                   Save Logic
@@ -82,4 +73,11 @@ const useStyles = makeStyles(theme => ({
       ); 
 };
       
-// export default CreateNewRule; 
+// export default CreateLogic; 
+
+const mapStateToProps = (state) =>{
+  // console.log( '51 -  state.records =', state.records ); 
+  return { records: state.records.data }; 
+}; 
+
+export default connect(null, { createLogic })(CreateLogic);

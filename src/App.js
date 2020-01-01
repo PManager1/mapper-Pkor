@@ -7,7 +7,7 @@ import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Records/MainWrapper'; 
 
 import AllLogic from './pages/Logics/Index'; 
-import CreateNewLogic from './pages/CreateNewLogic/Index'; 
+import CreateLogic from './pages/CreateNewLogic/Index'; 
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
 import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
@@ -54,7 +54,7 @@ const App = () =>{
                     <Route exact path="/test" component={Test} />
 
                     <Route exact path="/AllLogic" component={AllLogic} />
-                    <Route exact path="/createnewlogic" component={CreateNewLogic} />
+                    <Route exact path="/createlogic" component={CreateLogic} />
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
                     <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
                     {/* <Route exact component={NotFound} /> */}

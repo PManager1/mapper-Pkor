@@ -197,21 +197,8 @@ const mapStateToProps = (state) =>{
   return { records: state.records.data }; 
 }; 
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     onTodoClick: id => {
-//       dispatch(toggleTodo(id))
-//     }
-//   }
-// }
-
 export default connect(null, { editField })(Form);
- 
-// const Form = connect(
-//   mapStateToProps,
-//   mapDispatchToProps
-// )(TodoList)
-// export default Form
+
 
 
 // https://levelup.gitconnected.com/react-redux-hooks-useselector-and-usedispatch-f7d8c7f75cdd

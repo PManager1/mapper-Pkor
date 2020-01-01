@@ -5,3 +5,10 @@ export const FETCH_FIELDS = 'FETCH_FIELDS'
 export const FETCH_FIELD = 'FETCH_FIELD'
 export const DELETE_FIELD = 'DELETE_FIELD'
 export const EDIT_FIELD = 'EDIT_FIELD'
+
+
+export const CREATE_LOGIC = 'CREATE_LOGIC'
+export const FETCH_LOGICS = 'FETCH_LOGICS'
+export const FETCH_LOGIC = 'FETCH_LOGIC'
+export const DELETE_LOGIC = 'DELETE_LOGIC'
+export const EDIT_LOGIC = 'EDIT_LOGIC'

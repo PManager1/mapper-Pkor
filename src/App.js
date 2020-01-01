@@ -6,7 +6,7 @@ import NewRecord from './pages/NewRecord/Index.js';
 import Search from './pages/Search/Index.js';
 import MainWrapper from './pages/Records/MainWrapper'; 
 
-import AllLogic from './pages/AllLogic/Index'; 
+import AllLogic from './pages/Logics/Index'; 
 import CreateNewLogic from './pages/CreateNewLogic/Index'; 
 
 import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 

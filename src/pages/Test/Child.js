@@ -19,9 +19,6 @@ const Child = (props) => {
 
     return (
       <div>
-
-            <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
-
             <Typography paragraph align="right">
               <Tooltip title="Add New Field" aria-label="add"> 
                 <Fab color="secondary" aria-label="add"   component={Link} to="/newfield" >
@@ -29,7 +26,9 @@ const Child = (props) => {
                   </Fab>
                 </Tooltip>
             </Typography>  
+            <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
 
+           
             {/* we pass RecordId which has multiple fields in it. Now this one fetches & creates mutiple childs */}
             <SortableComponent Record={props.data}/>              
       </div>

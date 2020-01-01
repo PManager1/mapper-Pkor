@@ -25,7 +25,7 @@ const Test = (props) => {
       }
       return (<div>
                 <Typography variant='h6' color="primary" align="left">
-                Mapper Id: Balckbaud 123345
+                Mapper Id: Balckbaud 123345 - Edit Records
                 </Typography>
 
 

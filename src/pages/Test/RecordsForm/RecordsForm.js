@@ -41,17 +41,17 @@ const validationSchema = Yup.object({
 
 class RecordsForm extends Component {
   constructor(props) {
-    console.log(' 44 - in RecordsForm props.fieldInfo  = ', props.fieldInfo ); 
+    // console.log(' 44 - in RecordsForm props.fieldInfo  = ', props.fieldInfo ); 
     super(props);
     this.state = {};
   }
 
   submit = data => {
-    console.log('50-inside submit function of RecordsForm ', data);
+    // console.log('50-inside submit function of RecordsForm ', data);
   };
 
   handleSubmit =() => {
-    console.log('54-inside handleSubmit function of RecordsForm ');
+    // console.log('54-inside handleSubmit function of RecordsForm ');
   }
 
   render() {

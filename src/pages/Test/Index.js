@@ -13,7 +13,7 @@ const Test = (props) => {
 
 
     if (!props.records) {
-        console.log(' 39 Data inside it  props.records.data = ', props.records ); 
+        // console.log(' 39 Data inside it  props.records.data = ', props.records ); 
         return null;
       }
       return (<div>
@@ -26,7 +26,7 @@ const Test = (props) => {
 
 
 const mapStateToProps = (state) =>{
-    console.log( '51 -  state.records =', state.records ); 
+    // console.log( '51 -  state.records =', state.records ); 
     return { records: state.records.data }; 
 }; 
 

@@ -16,7 +16,7 @@ import {useSelector, useDispatch} from 'react-redux'
 
 
 export const Form = props => {
-  console.log(' 18- form.js -  props =', props ); 
+  // console.log(' 18- form.js -  props =', props ); 
   const {
     values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
@@ -41,7 +41,7 @@ export const Form = props => {
   
   const handleSubmit = (e) =>{
     e.persist();
-    console.log( '38-handleSubmit called in form.js  ',  props.values ); 
+    // console.log( '38-handleSubmit called in form.js  ',  props.values ); 
     // props.editField(props.values._id, props.values); 
     // props.editField(); 
     dispatch(editField(props.values._id, props.values));
@@ -193,7 +193,7 @@ export const Form = props => {
 };
 
 const mapStateToProps = (state) =>{
-  console.log( '51 -  state.records =', state.records ); 
+  // console.log( '51 -  state.records =', state.records ); 
   return { records: state.records.data }; 
 }; 
 

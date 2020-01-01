@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
 
 const RecordComponent = ({value, DragHandle})=>{
         const classes = useStyles();  
-    // console.log(' 12  - RecordComponent - value = ', value ); 
+
     return (
         <div className="root" >
 
@@ -42,7 +42,7 @@ const RecordComponent = ({value, DragHandle})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading"> <DragHandle />   &nbsp;&nbsp;     {value.FieldName}</Typography>
+                    <Typography className="heading"> <DragHandle />  &nbsp;&nbsp;     {value.FieldName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

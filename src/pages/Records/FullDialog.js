@@ -13,6 +13,7 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import RulePicker from './RulePicker'; 
+import Switch from '@material-ui/core/Switch';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -43,10 +44,8 @@ export default function FullDialog() {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Open full-screen dialog
+        More 
       </Button>
-
-
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
         <AppBar className={classes.appBar}>

@@ -18,9 +18,8 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 // export default function RulePicker = ( props ) => {
 
 const RulePicker = ( props ) => {
-
+    
     console.log( '22 -  RulePirkcer props=', props); 
-
     useEffect(() => {
         // code to run on component mount
         // props.fetchLogics(props.match.params.id);

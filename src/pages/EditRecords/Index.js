@@ -76,7 +76,7 @@ const Test = (props) => {
 
 const mapStateToProps = (state) =>{
     // console.log( '51 -  state.records =', state.records ); 
-    return { records: state.records.data }; 
+    return { records: state.records }; 
 }; 
 
 export default connect(mapStateToProps, { fetchRecords })(Test); 

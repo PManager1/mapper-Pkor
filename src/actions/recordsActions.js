@@ -9,13 +9,21 @@ DELETE_RECORD
   } from './types'
 
 
-  
+const sortArr = (arr) =>{
+
+    return arr.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+}
+
 export const fetchRecords =  () =>{
     return async dispatch => {
     const response = await clients.get('/records'); 
-    console.log('4 ---  action fetchRecords  response = ', response.data ); 
+    console.log('16 ---  action fetchRecords  response = ', response.data ); 
 
-    dispatch ({  type: 'FETCH_RECORDS',   payload: response.data });
+    const sortedArray = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+    //   let arrr =   sortArr(response.data)
+    console.log('24 ---  action fetchRecords  sortedArray = ', sortedArray ); 
+
+    dispatch ({  type: 'FETCH_RECORDS',   payload: sortedArray });
     }
 };
 

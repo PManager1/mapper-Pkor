@@ -19,6 +19,17 @@ import {
 //   }
 
 
+export const fetchLogics =  () =>{
+    console.log('35---  action fetchLogics action response'); 
+
+    return async dispatch => {
+    const response = await clients.get('/logics'); 
+    console.log('6---  action fetchFields action response = ', response.data ); 
+    dispatch ({  type: FETCH_LOGICS,   payload: response.data.data });
+    }
+};
+
+
 export const createLogic =  (formValues) =>{
     console.log('23--- createLogic action= ', formValues ); 
     
@@ -31,15 +42,6 @@ export const createLogic =  (formValues) =>{
 };
 
 
-export const fetchLogics =  () =>{
-    console.log('35---  action fetchLogics action response'); 
-
-    return async dispatch => {
-    const response = await clients.get('/logics'); 
-    console.log('6---  action fetchFields action response = ', response.data ); 
-    dispatch ({  type: FETCH_LOGICS,   payload: response.data });
-    }
-};
 
 
 export const fetchSingleField = (fieldID) =>{

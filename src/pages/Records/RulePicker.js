@@ -1,16 +1,32 @@
 /* eslint-disable no-use-before-define */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 
+import { connect } from "react-redux";
+import { fetchLogics } from '../../actions';
+
+
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
 
-export default function RulePicker() {
+// export default function RulePicker() {
+// export default function RulePicker = ( props ) => {
+
+const RulePicker = ( props ) => {
+
+    console.log( '22 -  RulePirkcer props=', props); 
+
+    useEffect(() => {
+        // code to run on component mount
+        // props.fetchLogics(props.match.params.id);
+        props.fetchLogics();
+        }, [])
+
   return (
     <Autocomplete
       multiple
@@ -34,14 +50,29 @@ export default function RulePicker() {
         <TextField
           {...params}
           variant="outlined"
-          label="Checkboxes"
-          placeholder="Favorites"
+          label="Rules/Logics"
+          placeholder="Pick Rules"
           fullWidth
         />
       )}
     />
   );
 }
+
+const mapStateToProps = (state) =>{
+    console.log( ' state =', state ); 
+    // return { client: state.selectedClient }; 
+
+    return {
+        logics: Object.values(state.logics),
+        }
+    // console.log( ' 68- logics =', logics ); 
+}; 
+
+export default connect(mapStateToProps, {
+    fetchLogics
+})(RulePicker); 
+
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [

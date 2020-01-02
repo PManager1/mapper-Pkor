@@ -71,11 +71,6 @@ export default connect(mapStateToProps, { fetchSingleClient, fetchClients })(Sea
 
 
 
-
-
-
-
-
   
   // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
   const top100Films = [

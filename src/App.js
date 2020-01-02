@@ -31,7 +31,6 @@ import EditRecords from './pages/EditRecords/Index.js';
 import FullWidthGrid from './pages/Example/Grid.js'; 
 import styledgrid from './pages/Example/styledgrid.js'; 
 import LoadingSpiner from './pages/Example/Loading.js'; 
-
 import RulePicker from './pages/Records/RulePicker.js'; 
 
 const App = () =>{

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NewFields from './pages/NewField/Index.js';
 import NewRecord from './pages/NewRecord/Index.js';
 import Search from './pages/Search/Index.js';
-import MainWrapper from './pages/Records/MainWrapper'; 
+import MainWrapper from './pages/OldRecords/MainWrapper'; 
 
 import AllLogic from './pages/Logics/Index'; 
 import CreateLogic from './pages/CreateNewLogic/Index'; 
@@ -19,12 +19,12 @@ import ClientDetail from './pages/Search/ClientDetail.js';
 
 import ModalFormDialog from './components/ModalFormDialog.js'; 
 import { selectClient } from './actions'; 
-import Records from './pages/Records/Index.js';
+import OldRecords from './pages/OldRecords/Index.js';
 import  LinearIndeterminate from './components/LinearProgress.js'; 
 
 import Later from './pages/Later/Index.js'; 
 
-import Test from './pages/Test/Index.js'; 
+import Records from './pages/Records/Index.js'; 
 import EditRecords from './pages/EditRecords/Index.js'; 
 
 
@@ -43,7 +43,7 @@ const App = () =>{
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
                     <Route exact path="/" exact component={Records} />
-                    <Route exact path="/records" exact component={Records} />
+                    <Route exact path="/oldrecords" exact component={OldRecords} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
@@ -54,8 +54,6 @@ const App = () =>{
                     <Route exact path="/grid" exact component={FullWidthGrid} />
                     <Route exact path="/styledgrid" exact component={styledgrid} />
                     
-                    <Route exact path="/test" component={Test} />
-
                     <Route exact path="/AllLogic" component={AllLogic} />
                     <Route exact path="/createlogic" component={CreateLogic} />
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />

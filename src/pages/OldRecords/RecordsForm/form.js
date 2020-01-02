@@ -5,48 +5,32 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import NameIcon from "@material-ui/icons/SupervisorAccount";
 import LockIcon from "@material-ui/icons/Lock";
 import EmailIcon from "@material-ui/icons/Email";
+
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
-import { editField } from '../../../actions'; 
-import { connect } from "react-redux";
-import {useSelector, useDispatch} from 'react-redux'
 
 
 export const Form = props => {
-  // console.log(' 18- form.js -  props =', props ); 
   const {
-    values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
-    // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
-    // handleSubmit,
+    handleSubmit,
     handleChange,
     isValid,
     setFieldTouched
   } = props;
-  // console.table(props);
+  console.table(props);
 
 
-  const dispatch = useDispatch()
-  
   const change = (name, e) => {
     e.persist();
     handleChange(e);
     setFieldTouched(name, true, false);
   };
-
-  
-  const handleSubmit = (e) =>{
-    e.persist();
-    // console.log( '38-handleSubmit called in form.js  ',  props.values ); 
-    // props.editField(props.values._id, props.values); 
-    // props.editField(); 
-    dispatch(editField(props.values._id, props.values));
-  }
-  
 
   const [value, setValue] = React.useState('female');
   // const handleChange = event => {
@@ -67,6 +51,7 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
+
 
 
       <TextField
@@ -175,6 +160,7 @@ export const Form = props => {
         fullWidth
         variant="raised"
         color="primary"
+        disabled={!isValid}
       >
         Save
       </Button>
@@ -191,14 +177,3 @@ export const Form = props => {
     </form>
   );
 };
-
-const mapStateToProps = (state) =>{
-  // console.log( '51 -  state.records =', state.records ); 
-  return { records: state.records.data }; 
-}; 
-
-export default connect(null, { editField })(Form);
-
-
-
-// https://levelup.gitconnected.com/react-redux-hooks-useselector-and-usedispatch-f7d8c7f75cdd

@@ -1,4 +1,8 @@
 =========================
+MAKE SURE WE MAKE A FRESH REQUEST TO GET THE FRESH DATA WHEN WE EXPAND THE DATA 
+SO THAT WE ALWAYS GET A FRESH DATA EVERYTIME WE OPEN THE EXPANDER. 
+
+=========================
 on updated up and down ->  Save the sequence number in the backend 
 on loading -> sort the items by sequence number. 
 -----

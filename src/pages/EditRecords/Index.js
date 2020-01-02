@@ -66,9 +66,9 @@ const Test = (props) => {
                 </Grid>
       </Grid>
 
-                {props.records.map((item, index) => (
-                <Child data={item} key={index}  />
-                ))}
+                {/* {props.records.map((item, index) => ( */}
+                <Child data={props.records}   />
+                {/* ))} */}
       </div>);
 
   }; 

@@ -61,7 +61,7 @@ const Child = (props) => {
                 </Grid>
       </Grid>
 
-           
+
             {/* we pass RecordId which has multiple fields in it. Now this one fetches & creates mutiple childs */}
             <SortableComponent Record={props.data}/>              
       </div>

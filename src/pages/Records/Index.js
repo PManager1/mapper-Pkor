@@ -9,6 +9,7 @@ import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
+import NavigationIcon from '@material-ui/icons/Navigation';
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -39,7 +40,7 @@ const Test = (props) => {
       }
       return (<div>
                 <Typography variant='h6' color="primary" align="left">
-                MMapper Id: Balckbaud 123345
+                    Mapper Id: Balckbaud 123345
                 </Typography>
 
       <Grid container spacing={3}>
@@ -48,10 +49,12 @@ const Test = (props) => {
                 <Grid item xs={6} sm={4}>
                 </Grid>
                 <Grid item xs={6} sm={2}>
+           
                 <Tooltip title="Edit Records" aria-label="add"> 
-                    <Fab color="secondary" aria-label="edit"  component={Link} to="/editrecords" >
-                        <EditIcon />
-                        </Fab>
+                    <Fab variant="extended" component={Link} to="/editrecords" >
+                        <EditIcon className={classes.extendedIcon} />
+                        Edit Records
+                    </Fab>
                 </Tooltip>
 
                 </Grid>

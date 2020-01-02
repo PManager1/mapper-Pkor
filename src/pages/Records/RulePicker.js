@@ -31,9 +31,9 @@ const RulePicker = ( props ) => {
     <Autocomplete
       multiple
       id="checkboxes-tags-demo"
-      options={top100Films}
+      options={props.logics}
       disableCloseOnSelect
-      getOptionLabel={option => option.title}
+      getOptionLabel={option => option.logicName}
       renderOption={(option, { selected }) => (
         <React.Fragment>
           <Checkbox
@@ -42,7 +42,7 @@ const RulePicker = ( props ) => {
             style={{ marginRight: 8 }}
             checked={selected}
           />
-          {option.title}
+          {option.logicName}
         </React.Fragment>
       )}
       style={{ width: 500 }}

@@ -36,13 +36,10 @@ class SortableComponent extends Component {
         super(props);
         this.state = {
             resources: [],
-            records: ['Header Record 1', 'Details Record', 'Trail Record'],
+            // records: ['Header Record 1', 'Details Record', 'Trail Record'],
             items: ['Field 97', 'Field 98', 'Field 99']
         };
 
-        // this.props.fetchSingleRecord(props.Record._id); 
-        // this.props.fetchSingleRecord('5e000feaaa430e396309a24b'); 
-        // resulting value =  this.props.singleRecord
       }
 
       async componentDidMount(){

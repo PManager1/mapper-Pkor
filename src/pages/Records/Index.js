@@ -12,6 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import NavigationIcon from '@material-ui/icons/Navigation';
 import { makeStyles } from '@material-ui/core/styles';
 
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
@@ -36,11 +38,11 @@ const Test = (props) => {
 
     if (!props.records) {
         // console.log(' 39 Data inside it  props.records.data = ', props.records ); 
-        return null;
+        return (<div> <CircularProgress /> </div>);
       }
       return (<div>
                 <Typography variant='h6' color="primary" align="left">
-                    Mapper Id: Balckbaud 123345
+                    Mapper Id: Blackbaud 123345
                 </Typography>
 
       <Grid container spacing={3}>

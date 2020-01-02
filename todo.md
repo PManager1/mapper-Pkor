@@ -112,6 +112,9 @@ SampleInputAdornments  with their own components.
 ============================
 
 LATER -> 
+Replace all return <div>s with Fragment. 
+
+==================
 Add Profile Menu on top right. 
 https://material-ui.com/components/menus/
 

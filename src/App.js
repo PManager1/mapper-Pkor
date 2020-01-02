@@ -30,6 +30,7 @@ import EditRecords from './pages/EditRecords/Index.js';
 
 import FullWidthGrid from './pages/Example/Grid.js'; 
 import styledgrid from './pages/Example/styledgrid.js'; 
+import LoadingSpiner from './pages/Example/Loading.js'; 
 
 const App = () =>{
     return (
@@ -43,6 +44,8 @@ const App = () =>{
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
                     <Route exact path="/" exact component={Records} />
+                    <Route exact path="/loading" exact component={LoadingSpiner} />                    
+                    
                     <Route exact path="/oldrecords" exact component={OldRecords} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />

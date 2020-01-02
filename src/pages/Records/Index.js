@@ -11,7 +11,6 @@ import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 
-import TempFile from './TempFile'; 
 
 import { Spinner } from '../../components/common/components/spinner/spinner.js';
 

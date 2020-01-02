@@ -5,6 +5,11 @@ SO THAT WE ALWAYS GET A FRESH DATA EVERYTIME WE OPEN THE EXPANDER.
 =========================
 show  loading indicator 
 
+
+show a laoding UI until data is displayed on the 
+Fields place. 
+
+
 Beat loader 
 http://www.davidhu.io/react-spinners/
 
@@ -12,15 +17,12 @@ https://github.com/Lemoncode/react-promise-tracker
 
 https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-calls
 
+https://auth0.com/blog/creating-a-splash-screen-for-your-react-apps/
 
-==========================
-on updated up and down ->  Save the sequence number in the backend 
-on loading -> sort the items by sequence number. 
+========================== 
 -----
 finish CREATE_FIELD
 -------
-show a laoding UI until data is displayed on the 
-Fields place. 
 =========================
 privde option to delete logics.
 
@@ -35,8 +37,6 @@ https://github.com/TeamWertarbyte/material-ui-snackbar-provider
 
 https://browntreelabs.com/snackbars-in-react-redux-and-material-ui/
 
-
-
 =========================
 
 issue with display list of fieldlists :  
@@ -45,19 +45,12 @@ by using the posts  video or
 by using the old react native app at properties values. 
 
 ========================================
-<DragHandle />
-    <RecordComponent />
 
-Maybe pass <DragHandle> inside the <RecordComponent> and show that next to it all. 
-
-Nested Lists : 
 
 https://codesandbox.io/embed/interesting-wave-yw9ht
 
 =========================
-put grid in the page: 
-CreateNewLogic
-i.e  for width. 
+
 
 =========================
 Drag Drop the rows i.e the header info: 
@@ -65,13 +58,9 @@ Drag Drop the rows i.e the header info:
 https://github.com/clauderic/react-sortable-hoc
 
 
-
-
-
 =========================
 
 Add logic / code - if credit/ debit view: 
-
 
 ================
 show loading  / notifiction progress. 

@@ -48,11 +48,7 @@ const Test = (props) => {
                 <Grid item xs={6} sm={4}>
                 </Grid>
                 <Grid item xs={6} sm={2}>
-                <Tooltip title="Edit Records" aria-label="add"> 
-                    <Fab color="secondary" aria-label="edit"  component={Link} to="/editrecords" >
-                        <EditIcon />
-                        </Fab>
-                </Tooltip>
+            
 
                 </Grid>
                 <Grid item xs={6} sm={2}>

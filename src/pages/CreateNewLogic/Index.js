@@ -67,9 +67,19 @@ function CreateLogic (){
               />
 
             <div className="text-center">
-            <button type="submit" className="btn primary"  >
-                  Save Logic
-                </button>
+         
+             <Button type="submit" fullWidth variant="contained" color="primary">
+                Save Logic
+              </Button>
+
+              <Button
+                fullWidth
+                variant="contained"
+                color="default"
+              >
+                Cancel
+              </Button>
+
                 </div> 
           </Form>
         )}

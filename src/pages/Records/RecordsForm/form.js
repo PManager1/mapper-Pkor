@@ -165,12 +165,6 @@ export const Form = props => {
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
    
 
-   
-
-
-
-   
-  
 
       <Button type="submit" fullWidth variant="contained" color="primary">
         Save

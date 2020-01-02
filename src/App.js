@@ -33,6 +33,8 @@ import styledgrid from './pages/Example/styledgrid.js';
 import LoadingSpiner from './pages/Example/Loading.js'; 
 import RulePicker from './pages/Records/RulePicker.js'; 
 
+import FullDialog from './pages/Records/FullDialog.js'; 
+
 const App = () =>{
     return (
         <HashRouter>
@@ -41,15 +43,15 @@ const App = () =>{
                 <Route exact path="/drawer" exact component={TemporaryDrawer} />
                 <Route exact path="/login" exact component={Login} />
 
+                
+
                 <MainWrapper >
                 
                 <Route exact path="/rulepicker" exact component={RulePicker} />
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
                     <Route exact path="/" exact component={Records} />
-                    <Route exact path="/loading" exact component={LoadingSpiner} />                    
                     
-                    <Route exact path="/oldrecords" exact component={OldRecords} />
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
@@ -65,6 +67,11 @@ const App = () =>{
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
                     <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
                     {/* <Route exact component={NotFound} /> */}
+
+                    <Route exact path="/fd" exact component={FullDialog} />
+                    <Route exact path="/loading" exact component={LoadingSpiner} />                    
+                    <Route exact path="/oldrecords" exact component={OldRecords} />
+
                 </MainWrapper>
             </Switch>
         </HashRouter>

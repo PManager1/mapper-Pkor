@@ -3,6 +3,17 @@ MAKE SURE WE MAKE A FRESH REQUEST TO GET THE FRESH DATA WHEN WE EXPAND THE DATA
 SO THAT WE ALWAYS GET A FRESH DATA EVERYTIME WE OPEN THE EXPANDER. 
 
 =========================
+show  loading indicator 
+
+Beat loader 
+http://www.davidhu.io/react-spinners/
+
+https://github.com/Lemoncode/react-promise-tracker
+
+https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-calls
+
+
+==========================
 on updated up and down ->  Save the sequence number in the backend 
 on loading -> sort the items by sequence number. 
 -----

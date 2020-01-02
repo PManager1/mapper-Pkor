@@ -16,7 +16,13 @@ privde option to delete logics.
 =========================
 NExt: when the record is loaded in /text. 
 from there - load the data on the DropDown. 
+==============
+snackBar -
 
+
+https://github.com/TeamWertarbyte/material-ui-snackbar-provider
+
+https://browntreelabs.com/snackbars-in-react-redux-and-material-ui/
 
 
 

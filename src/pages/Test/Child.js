@@ -30,7 +30,7 @@ const sectionPlusBtn = {
 
 const Child = (props) => {
 
-  console.log( '7 - this.props  in child component ', props.data  ); 
+  console.log( '33 - in child component  this.props', props.data  ); 
   useEffect(() => {
     // code to run on component mount
     // props.fetchClients(); 
@@ -61,8 +61,6 @@ const Child = (props) => {
                 </section>
                 </Grid>
       </Grid>
-
-
 
 
            

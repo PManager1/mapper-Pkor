@@ -13,7 +13,7 @@ import {
 import arrayMove from 'array-move';
 import RecordComponent from './RecordComponent'; 
 import { connect } from "react-redux";
-import { fetchSingleRecord, fetchFields, editField } from '../../actions'; 
+import { fetchFields, editRecord } from '../../actions'; 
 
 const DragHandle = sortableHandle(() => <span>::</span>);
 
@@ -67,7 +67,8 @@ class SortableComponent extends Component {
       console.log(' obj = ', obj ); 
       this.state.resources[index].SequenceNumber = index;
 
-      this.props.editField(this.state.resources[index]._id,  this.state.resources[index] ); 
+      this.props.editRecord(this.state.resources[index]._id,  this.state.resources[index] ); 
+      console.log('71 - this.state.resources  = ', this.state.resources ); 
 
     }); 
   };
@@ -98,6 +99,6 @@ const mapStateToProps = (state) =>{
     return { singleRecord: state.singleRecord }; 
 }; 
 
-export default connect(mapStateToProps, { fetchSingleRecord, fetchFields, editField })(SortableComponent); 
+export default connect(mapStateToProps, { fetchFields, editRecord })(SortableComponent); 
 
 // https://github.com/clauderic/react-sortable-hoc

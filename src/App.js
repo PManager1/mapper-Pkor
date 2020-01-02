@@ -32,6 +32,8 @@ import FullWidthGrid from './pages/Example/Grid.js';
 import styledgrid from './pages/Example/styledgrid.js'; 
 import LoadingSpiner from './pages/Example/Loading.js'; 
 
+import RulePicker from './pages/Records/RulePicker.js'; 
+
 const App = () =>{
     return (
         <HashRouter>
@@ -41,6 +43,8 @@ const App = () =>{
                 <Route exact path="/login" exact component={Login} />
 
                 <MainWrapper >
+                
+                <Route exact path="/rulepicker" exact component={RulePicker} />
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
                     <Route exact path="/" exact component={Records} />

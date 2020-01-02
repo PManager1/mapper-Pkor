@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, {Fragment, Component, useState, useEffect, useLayoutEffect,  lazy, Suspense } from 'react';
 import Child from './Child'; 
 import { fetchRecords } from '../../actions'; 
 import { connect } from "react-redux";
@@ -9,10 +9,16 @@ import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
-import NavigationIcon from '@material-ui/icons/Navigation';
 import { makeStyles } from '@material-ui/core/styles';
 
+import TempFile from './TempFile'; 
+
+import { Spinner } from '../../components/common/components/spinner/spinner.js';
+
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+const renderLoader = () => <p>Loading</p>;
+
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -30,20 +36,45 @@ const useStyles = makeStyles(theme => ({
 const Test = (props) => {
     // const [ resources, setResources ] = useState([]);
 
-    useEffect(() => {
-          props.fetchRecords(); 
+
+    const [Loading, setLoading] = useState(true);
+
+    useLayoutEffect(() =>{
+        console.log('useLayoutEffect');
     }, [])
 
-    const classes = useStyles();
+    useEffect(() => {
+        console.log('mounted');
+          props.fetchRecords(); 
+          setTimeout(function(){ setLoading(!Loading); }, 500);
+          
+    }, [])
 
-    if (!props.records) {
-        // console.log(' 39 Data inside it  props.records.data = ', props.records ); 
-        return (<div> <CircularProgress /> </div>);
-      }
+    const renderDescription = () =>{
+        return(<div>
+            rederning descrioption
+        </div>
+        )
+    }
+  
+    const classes = useStyles();      
+    // if (!props.records) {
+    //     console.log(' 42 Data inside it  props.records.data = ', props.records ); 
+    //     return (<div> <Spinner />  </div>);
+    //   }
+
       return (<div>
-                <Typography variant='h6' color="primary" align="left">
-                    Mapper Id: Blackbaud 123345
-                </Typography>
+        
+        
+
+        {Loading ?
+      <Spinner /> :
+      <React.Fragment>
+
+        <Typography variant='h6' color="primary" align="left">
+            Mapper Id: Blackbaud 123345
+        </Typography>
+
 
       <Grid container spacing={3}>
             <Grid item xs={6} sm={4}>
@@ -76,7 +107,11 @@ const Test = (props) => {
                 <Child data={item} key={index}  />
                 ))}
 
-      </div>);
+
+      </React.Fragment>}
+
+        
+        </div>);
 
   }; 
 

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { usePromiseTracker } from "react-promise-tracker";
  
-import { Spinner } from './common/components/spinner/spinner.js';
+import { Spinner } from '../../components/common/components/spinner/spinner.js';
 
 const LoadingSpiner = (props) => {
-const { promiseInProgress } = usePromiseTracker();
  
   return (
     <div>

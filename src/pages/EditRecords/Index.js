@@ -1,6 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
 import Child from './Child'; 
-import { fetchRecords } from '../../actions'; 
 import { connect } from "react-redux";
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
@@ -10,6 +9,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import { fetchRecords } from '../../actions'; 
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -65,8 +65,6 @@ const Test = (props) => {
                     </Typography>   
                 </Grid>
       </Grid>
-
-
 
                 {props.records.map((item, index) => (
                 <Child data={item} key={index}  />

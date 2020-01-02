@@ -42,7 +42,7 @@ const RecordComponent = ({value, DragHandle})=>{
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         >
-                    <Typography className="heading"> <DragHandle />  &nbsp;&nbsp;     {value.FieldName}</Typography>
+                    <Typography className="heading"> <DragHandle />  &nbsp;&nbsp;     {value.RecordName}</Typography>
 
                      </ExpansionPanelSummary>
                         <ExpansionPanelDetails>

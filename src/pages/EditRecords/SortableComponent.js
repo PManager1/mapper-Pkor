@@ -41,14 +41,14 @@ class SortableComponent extends Component {
         };
 
         // this.props.fetchSingleRecord(props.Record._id); 
-        this.props.fetchSingleRecord('5e000feaaa430e396309a24b'); 
+        // this.props.fetchSingleRecord('5e000feaaa430e396309a24b'); 
         // resulting value =  this.props.singleRecord
       }
 
       async componentDidMount(){
-        const response = await axios.get(`http://localhost:3030/fieldlist`)
+        const response = await axios.get(`http://localhost:3030/records`)
         let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
-        // console.log('49-sortedResources=', sortedResources ); 
+        console.log('49-sortedResources=', sortedResources ); 
         this.setState({ resources: sortedResources }); 
       }
 

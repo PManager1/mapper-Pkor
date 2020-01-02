@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 
 
-
 const summary = {
   height: "50%",
   paddingTop: 5,
@@ -41,9 +40,9 @@ const Child = (props) => {
       <div>
            <Grid container spacing={3} style={summary}>
             <Grid item xs={6} sm={4}>
-              <section style={sectionRecordName}>  
+              {/* <section style={sectionRecordName}>  
                 <Typography variant='h5' align='left'> {props.data.RecordName}  </Typography>
-              </section>
+              </section> */}
              </Grid>
               <Grid item xs={6} sm={4}>
               </Grid>
@@ -61,9 +60,6 @@ const Child = (props) => {
                 </section>
                 </Grid>
       </Grid>
-
-
-
 
            
             {/* we pass RecordId which has multiple fields in it. Now this one fetches & creates mutiple childs */}

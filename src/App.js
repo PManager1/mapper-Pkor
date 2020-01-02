@@ -33,6 +33,9 @@ import styledgrid from './pages/Example/styledgrid.js';
 import LoadingSpiner from './pages/Example/Loading.js'; 
 import RulePicker from './pages/Records/RulePicker.js'; 
 
+import SuccessSnackbar from './pages/Example/SnackbarDemo.js'; 
+
+
 import FullDialog from './pages/Records/FullDialog.js'; 
 
 const App = () =>{
@@ -44,7 +47,7 @@ const App = () =>{
                 <Route exact path="/login" exact component={Login} />
 
                 
-
+                
                 <MainWrapper >
                 
                 <Route exact path="/rulepicker" exact component={RulePicker} />
@@ -71,6 +74,8 @@ const App = () =>{
                     <Route exact path="/fd" exact component={FullDialog} />
                     <Route exact path="/loading" exact component={LoadingSpiner} />                    
                     <Route exact path="/oldrecords" exact component={OldRecords} />
+                    <Route exact path="/snack" exact component={SuccessSnackbar} />
+                    
 
                 </MainWrapper>
             </Switch>

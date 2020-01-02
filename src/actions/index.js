@@ -5,6 +5,8 @@ export * from './recordsActions';
 export * from './authActions';
 export * from './fieldsActions';
 export * from './logicActions';
+export * from './snackbarActions';
+
 
 // import { showLoading, hideLoading } from 'actions/index.js';
 

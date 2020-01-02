@@ -35,6 +35,9 @@ import RulePicker from './pages/Records/RulePicker.js';
 
 import FullDialog from './pages/Records/FullDialog.js'; 
 
+import ShowSnackbar from './pages/Example/ShowSnackbar.js'; 
+import SnackProvider from './pages/Example/SnackProvider.js'; 
+
 const App = () =>{
     return (
         <HashRouter>
@@ -43,10 +46,8 @@ const App = () =>{
                 <Route exact path="/drawer" exact component={TemporaryDrawer} />
                 <Route exact path="/login" exact component={Login} />
 
-                
-
+            
                 <MainWrapper >
-                
                 <Route exact path="/rulepicker" exact component={RulePicker} />
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
@@ -71,7 +72,8 @@ const App = () =>{
                     <Route exact path="/fd" exact component={FullDialog} />
                     <Route exact path="/loading" exact component={LoadingSpiner} />                    
                     <Route exact path="/oldrecords" exact component={OldRecords} />
-
+                    <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
+                    <Route exact path="/snackprovider" exact component={SnackProvider} />                    
                 </MainWrapper>
             </Switch>
         </HashRouter>

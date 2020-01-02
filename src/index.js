@@ -8,9 +8,13 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers'; 
 import thunk from 'redux-thunk'; 
 
+import { SnackbarProvider } from 'material-ui-snackbar-provider'
+
 ReactDOM.render(
     <Provider store={createStore(reducers, applyMiddleware(thunk))}>
+      <SnackbarProvider SnackbarProps={{ autoHideDuration: 4000 }}>
       <App />
+      </SnackbarProvider>
     </Provider>, 
         document.getElementById('root')
     );

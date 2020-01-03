@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NewFields from './pages/NewField/Index.js';
 import NewRecord from './pages/NewRecord/Index.js';
 import Search from './pages/Search/Index.js';
-import MainWrapper from './pages/OldRecords/MainWrapper'; 
+import MainWrapper from './pages/Records/MainWrapper'; 
 
 import AllLogic from './pages/Logics/Index'; 
 import CreateLogic from './pages/CreateNewLogic/Index'; 

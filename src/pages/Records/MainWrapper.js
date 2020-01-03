@@ -23,8 +23,11 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
 
-import  LinearIndeterminate from '../../components/LinearProgress.js'; 
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
 
+import  LinearIndeterminate from '../../components/LinearProgress.js'; 
+import GoogleAuth from '../../components/GoogleAuth'; 
 
 
 const drawerWidth = 240;
@@ -85,7 +88,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function CurrentMenu(props) {
+export default function MainWrapper(props) {
   // const Layout = props => ({
   const classes = useStyles();
   const theme = useTheme();
@@ -109,6 +112,10 @@ export default function CurrentMenu(props) {
           [classes.appBarShift]: open,
         })}
       >
+
+      <LinearIndeterminate />
+
+
         <Toolbar>
           <IconButton
             color="inherit"
@@ -119,15 +126,34 @@ export default function CurrentMenu(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Current Paycor Data Mapper
+          <Typography variant="h6" noWrap style={{ flex: 1 }} >
+            Paycor Data Mapper
           </Typography>
+
+
+          <GoogleAuth />
+
+
+          <Menu
+                id="menu-appbar"
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+
+              >
+                <MenuItem >Profile</MenuItem>
+                <MenuItem >My account</MenuItem>
+              </Menu>
+
+
         </Toolbar>
-
-
-
       </AppBar>
-      
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -168,17 +194,16 @@ export default function CurrentMenu(props) {
         <Divider />
 
 
-
         <Divider />
         <List>
-              <ListItem button component={Link} to="/AllRules" >
+              <ListItem button component={Link} to="/alllogic" >
                   <ListItemIcon>
                     <SettingsIcon />
                   </ListItemIcon>
-                  <ListItemText primary="All Logics" />
+                  <ListItemText primary="All Logic" />
             </ListItem>
 
-            <ListItem button component={Link} to="/CreateNewRule" >
+            <ListItem button component={Link} to="/createlogic" >
                   <ListItemIcon>
                     <InboxIcon />
                   </ListItemIcon>
@@ -201,8 +226,7 @@ export default function CurrentMenu(props) {
         })}
       >
         <div className={classes.drawerHeader} />
-        <LinearIndeterminate />
-
+        
         {props.children}        
       </main>
     </div>

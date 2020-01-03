@@ -38,7 +38,7 @@ export const Form = props => {
   const handleClickVariant = variant => () => {
     // variant could be success, error, warning, info, or default
     console.log('  40 -  handleClickVariant called');
-    enqueueSnackbar('This is a success message!', { variant });
+    enqueueSnackbar('Save Successful!', { variant });
   };
 
   const handleSubmit = (e) =>{

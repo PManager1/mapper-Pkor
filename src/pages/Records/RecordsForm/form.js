@@ -8,9 +8,10 @@ import FormLabel from '@material-ui/core/FormLabel';
 import { editField } from '../../../actions'; 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux'
-
+import { useSnackbar } from 'notistack';
 
 export const Form = props => {
+  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   // console.log(' 18- form.js -  props =', props ); 
   const {
     values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
@@ -34,11 +35,19 @@ export const Form = props => {
     setFieldTouched(name, true, false);
   };
 
-  
+  const handleClickVariant = variant => () => {
+    // variant could be success, error, warning, info, or default
+    console.log('  40 -  handleClickVariant called');
+    enqueueSnackbar('This is a success message!', { variant });
+  };
+
   const handleSubmit = (e) =>{
     e.preventDefault(); 
     e.persist();
     dispatch(editField(props.values._id, props.values));
+    // // enqueueSnackbar('I love hooks');
+    // enqueueSnackbar('This is a success message!', 'success');
+    handleClickVariant('success'); 
   }
   
 
@@ -48,6 +57,7 @@ export const Form = props => {
   return (
     
     <form onSubmit={handleSubmit}>   
+
       <TextField
         name="HeaderInfo"
         helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
@@ -157,7 +167,7 @@ export const Form = props => {
    
 
 
-      <Button type="submit" fullWidth variant="contained" color="primary">
+      <Button onClick={handleClickVariant('success')} type="submit" fullWidth variant="contained" color="primary">
         Save
       </Button>
 

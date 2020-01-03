@@ -1,3 +1,8 @@
+==============
+implement the snack reducer the right way from here: 
+
+https://codesandbox.io/s/notistack-redux-example-vk9ik
+
 =========================
 on save of the Logic - redirect it back to 
 

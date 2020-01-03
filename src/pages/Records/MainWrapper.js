@@ -113,8 +113,7 @@ export default function MainWrapper(props) {
         })}
       >
 
-      <LinearIndeterminate />
-
+      {/* <LinearIndeterminate /> */}
 
         <Toolbar>
           <IconButton

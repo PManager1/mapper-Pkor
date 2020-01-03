@@ -39,7 +39,12 @@ import ShowSnackbar from './pages/Example/ShowSnackbar.js';
 import SnackProvider from './pages/Example/SnackProvider.js';
 
 import WithNotistack from './pages/Example/WithNotistack.js';
-import HorizontalLabelPositionBelowStepper from './pages/CreateFromExistingTemplate/Stepper.js';
+import StepperOne from './pages/CreateFromExistingTemplate/StepperOne.js';
+import StepperTwo from './pages/CreateFromExistingTemplate/StepperTwo.js';
+import StepperThree from './pages/CreateFromExistingTemplate/StepperThree.js';
+import StepperFour from './pages/CreateFromExistingTemplate/StepperFour.js';
+
+
  
 
 const App = () =>{
@@ -79,9 +84,12 @@ const App = () =>{
                     <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
                     <Route exact path="/snackprovider" exact component={SnackProvider} />                    
                     <Route exact path="/withnoti" exact component={WithNotistack} />                    
-                    <Route exact path="/stepper" exact component={HorizontalLabelPositionBelowStepper} />                                        
-                     
-
+                    <Route exact path="/stepper" exact component={StepperOne} />                                        
+                    <Route exact path="/Steppertwo" exact component={StepperTwo} />  
+                    <Route exact path="/Stepperthree" exact component={StepperThree} />                                        
+                    <Route exact path="/Stepperfour" exact component={StepperFour} />                                                             
+                    
+                    
                 </MainWrapper>
             </Switch>
         </HashRouter>

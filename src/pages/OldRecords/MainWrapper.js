@@ -177,7 +177,7 @@ export default function MainWrapper(props) {
                   <ListItemText primary="Search" />
             </ListItem>
 
-            <ListItem button component={Link} to="/CreateFromExistingTemplate" >  
+            <ListItem button component={Link} to="/stepperone" >  
                   <ListItemIcon>  
                     <NoteAddIcon />
                   </ListItemIcon>

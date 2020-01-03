@@ -10,6 +10,11 @@ Stepper from create from existing
 https://material-ui.com/components/steppers/#stepper
 https://codesandbox.io/s/yxll4
 
+
+
+==============
+start saving the data to Azure. 
+
 ==============
 
 implement the snack reducer the right way from here: 

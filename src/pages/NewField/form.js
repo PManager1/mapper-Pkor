@@ -34,6 +34,7 @@ const Form = props => {
 
 
   const change = (name, e) => {
+    e.preventDefault();
     e.persist();
     handleChange(e);
     setFieldTouched(name, true, false);

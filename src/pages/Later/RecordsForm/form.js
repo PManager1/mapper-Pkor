@@ -28,6 +28,7 @@ export const Form = props => {
 
   const change = (name, e) => {
     e.persist();
+    //     e.preventDefault();
     handleChange(e);
     setFieldTouched(name, true, false);
   };

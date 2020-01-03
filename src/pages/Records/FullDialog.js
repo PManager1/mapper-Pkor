@@ -23,6 +23,10 @@ const useStyles = makeStyles(theme => ({
     marginLeft: theme.spacing(2),
     flex: 1,
   },
+  sectionRulePicker:{
+    marginLeft:20,
+    marginTop:20,
+  },
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -61,9 +65,10 @@ export default function FullDialog() {
             </Button>
           </Toolbar>
         </AppBar>
-       
-                <br /><br /><br />
-            <RulePicker />
+      
+            <div className={classes.sectionRulePicker}>
+              <RulePicker />
+            </div>
 
 
       </Dialog>

@@ -50,10 +50,10 @@ export default function FullWidthGrid() {
           xs=12
         </Grid>
         <Grid item xs={12} sm={6}>
-          xs=12 sm=6
+          xs=12 sm=6 -53
         </Grid>
         <Grid item xs={12} sm={6}>
-          xs=12 sm=6
+          xs=12 sm=6  -56
         </Grid>
         <Grid item xs={6} sm={3}>
           xs=6 sm=3

@@ -9,6 +9,14 @@ import {
   } from '../actions/types'
   
 
+  export const deleteField =  (fieldID) => async dispatch => {
+    console.log('13- - deleteField-action ---  fieldID = ', fieldID ); 
+    const response = await clients.delete(`/fieldlist/${fieldID}`); 
+
+    dispatch ({  type: 'DELETE_FIELD',   payload: fieldID });
+    };
+
+
   export const editField = (fieldID, formValues) =>{
     console.log('36-editField-action ---  fieldID = ', fieldID ); 
     console.log('37 ---  action editField   formValues = ', formValues ); 

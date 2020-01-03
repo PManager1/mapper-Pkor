@@ -12,7 +12,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { editRecord } from '../../../actions'; 
 import { connect } from "react-redux";
-import {useSelector, useDispatch} from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'; 
 
 
 export const Form = props => {

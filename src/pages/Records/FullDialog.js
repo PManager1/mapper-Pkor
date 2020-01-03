@@ -13,7 +13,8 @@ import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import RulePicker from './RulePicker'; 
-import Switch from '@material-ui/core/Switch';
+
+import DeleteBtn from './common/DeleteBtn.js'; 
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -33,7 +34,9 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullDialog() {
+export default function FullDialog(props) {
+  // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id ); 
+
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -68,6 +71,12 @@ export default function FullDialog() {
       
             <div className={classes.sectionRulePicker}>
               <RulePicker />
+            </div>
+            <br />
+            <Divider />
+
+            <div className={classes.sectionRulePicker}>
+                <DeleteBtn {...props} />
             </div>
 
 

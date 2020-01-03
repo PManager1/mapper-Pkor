@@ -66,7 +66,7 @@ class RecordsForm extends Component {
               onSubmit={this.submit}
             />
             
-        <FullDialog />
+        <FullDialog {...this.props} />
         </div>
       </React.Fragment>
     );

@@ -8,13 +8,13 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { connect } from "react-redux";
-import { createClient } from '../../actions';
+import { createRecord } from '../../actions';
 
 
 
 const Form = props => {
   const {
-    values:{ HeaderInfo,FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ RecordName, HeaderInfo, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -29,7 +29,7 @@ const Form = props => {
 
   const handleSaveClick = () =>{
     console.log('28 -  called handleSaveClick inside form.js ' ); 
-    props.createClient(props.values);  
+    props.createRecord(props.values);  
   }
  
 
@@ -47,6 +47,17 @@ const Form = props => {
 
   return (
     <form onSubmit={handleSubmit}>
+
+      <TextField
+        name="RecordName"
+        helperText={touched.RecordName ? errors.RecordName : ""}
+        error={Boolean(errors.RecordName)}
+        label="RecordName"
+        value={RecordName}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
       
       <TextField
         name="HeaderInfo"
@@ -184,7 +195,7 @@ const mapStateToProps = (state) =>{
 }; 
 
 export default connect(mapStateToProps, {
-  createClient
+  createRecord
 })(Form); 
 
 // export default Form

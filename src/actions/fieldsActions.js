@@ -9,6 +9,18 @@ import {
   } from '../actions/types'
   
 
+  export const editField = (fieldID, formValues) =>{
+    console.log('36-editField-action ---  fieldID = ', fieldID ); 
+    console.log('37 ---  action editField   formValues = ', formValues ); 
+    return async dispatch => {
+        const response = await clients.put(`/fieldlist/${fieldID}`, formValues); 
+                                                     
+        console.log('19 ---  action fetchSingleField  response = ', response.data ); 
+    
+        dispatch ({  type: EDIT_FIELD,   payload: response.data });
+        }
+    };
+
   
 
 export const fetchFields =  () =>{
@@ -32,14 +44,3 @@ return async dispatch => {
     }
 };
 
-export const editField = (fieldID, formValues) =>{
-    console.log('36-editField-action ---  fieldID = ', fieldID ); 
-    console.log('37 ---  action editField   formValues = ', formValues ); 
-    return async dispatch => {
-        const response = await clients.put(`/fieldlist/${fieldID}`, formValues); 
-                                                     
-        console.log('19 ---  action fetchSingleField  response = ', response.data ); 
-    
-        dispatch ({  type: EDIT_FIELD,   payload: response.data });
-        }
-    };

@@ -5,6 +5,9 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import MapSelection from './MapSelection.js'; 
+import Divider from '@material-ui/core/Divider';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,8 +66,8 @@ export default function StepperOne() {
         ))}
       </Stepper>
       
-      <div> container  </div>
-            <br /><br /><br /><br /><br />
+      <Divider />
+      <MapSelection />
 
       <div>
         {activeStep === steps.length ? (

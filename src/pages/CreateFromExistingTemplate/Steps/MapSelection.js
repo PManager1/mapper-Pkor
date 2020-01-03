@@ -61,7 +61,7 @@ function MapSelection(props) {
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`Logic ${value + 1}`} />
+            <ListItemText id={labelId} primary={`Map Id ${value + 1}`} />
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />

@@ -5,6 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import NameInput from './NameInput.js'; 
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,8 +64,7 @@ export default function StepperTwo() {
         ))}
       </Stepper>
       
-      <div> container  </div>
-            <br /><br /><br /><br /><br />
+      <NameInput />
 
       <div>
         {activeStep === steps.length ? (

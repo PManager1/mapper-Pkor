@@ -5,7 +5,6 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
-import FormControl from '@material-ui/core/FormControl';
 import { editField } from '../../../actions'; 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux'
@@ -37,17 +36,11 @@ export const Form = props => {
   
   const handleSubmit = (e) =>{
     e.persist();
-    // console.log( '38-handleSubmit called in form.js  ',  props.values ); 
-    // props.editField(props.values._id, props.values); 
-    // props.editField(); 
     dispatch(editField(props.values._id, props.values));
   }
   
 
   const [value, setValue] = React.useState('female');
-  // const handleChange = event => {
-  //   setValue(event.target.value);
-  // };
 
 
   return (

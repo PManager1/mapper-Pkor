@@ -33,8 +33,8 @@ export const Form = props => {
   const dispatch = useDispatch()
   
   const change = (name, e) => {
-    e.persist();
     e.preventDefault();
+    e.persist();
     handleChange(e);
     setFieldTouched(name, true, false);
   };

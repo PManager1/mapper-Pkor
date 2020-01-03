@@ -6,6 +6,9 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import NameInput from './NameInput.js'; 
+import Divider from '@material-ui/core/Divider';
+import { Link } from 'react-router-dom';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -64,8 +67,10 @@ export default function StepperTwo() {
         ))}
       </Stepper>
       
+      <Divider />
+      <br/> <br/>  <br/>
       <NameInput />
-
+      <br/> 
       <div>
         {activeStep === steps.length ? (
           <div>

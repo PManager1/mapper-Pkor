@@ -38,13 +38,14 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperFour() {
+export default function StepperFour(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(3);
   const steps = getSteps();
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
+    // setActiveStep(prevActiveStep => prevActiveStep + 1);
+    props.history.push(`/`);
   };
 
   const handleBack = () => {

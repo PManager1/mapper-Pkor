@@ -6,6 +6,7 @@ import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import Divider from '@material-ui/core/Divider';
 
 
 const useStyles = makeStyles(theme => ({
@@ -19,6 +20,9 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  sectioncenter:{
+    textAlign: 'center',
+  }
 }));
 
 function getSteps() {
@@ -38,17 +42,19 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperThree() {
+export default function StepperThree(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(2);
   const steps = getSteps();
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
+    props.history.push(`/`);
+    // setActiveStep(prevActiveStep => prevActiveStep + 1);
   };
 
   const handleBack = () => {
-    setActiveStep(prevActiveStep => prevActiveStep - 1);
+    props.history.push(`/steppertwo`);
+    // setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
   const handleReset = () => {
@@ -64,9 +70,13 @@ export default function StepperThree() {
           </Step>
         ))}
       </Stepper>
-      
-      <div> container  </div>
-            <br /><br /><br /><br /><br />
+      <Divider />
+      <br /><br /><br /><br /><br />
+      <div className={classes.sectioncenter}>
+        <Typography variant='h4'>  You're going to create a new map called: ABC map </Typography>
+        <Typography variant='h4'>  based on existing map: MapXYZ </Typography>
+      </div>
+      <br />
 
       <div>
         {activeStep === steps.length ? (

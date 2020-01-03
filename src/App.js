@@ -85,10 +85,10 @@ const App = () =>{
                     <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
                     <Route exact path="/snackprovider" exact component={SnackProvider} />                    
                     <Route exact path="/withnoti" exact component={WithNotistack} />                    
-                    <Route exact path="/stepper" exact component={StepperOne} />                                        
-                    <Route exact path="/Steppertwo" exact component={StepperTwo} />  
-                    <Route exact path="/Stepperthree" exact component={StepperThree} />                                        
-                    <Route exact path="/Stepperfour" exact component={StepperFour} />                                                             
+                    <Route exact path="/stepperone" exact component={StepperOne} />                                        
+                    <Route exact path="/steppertwo" exact component={StepperTwo} />  
+                    <Route exact path="/stepperthree" exact component={StepperThree} />                                        
+                    <Route exact path="/stepperfour" exact component={StepperFour} />                                                             
                     
                     
                 </MainWrapper>

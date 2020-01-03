@@ -36,7 +36,10 @@ import RulePicker from './pages/Records/RulePicker.js';
 import FullDialog from './pages/Records/FullDialog.js'; 
 
 import ShowSnackbar from './pages/Example/ShowSnackbar.js'; 
-import SnackProvider from './pages/Example/SnackProvider.js'; 
+import SnackProvider from './pages/Example/SnackProvider.js';
+
+import WithNotistack from './pages/Example/WithNotistack.js';
+ 
 
 const App = () =>{
     return (
@@ -74,6 +77,9 @@ const App = () =>{
                     <Route exact path="/oldrecords" exact component={OldRecords} />
                     <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
                     <Route exact path="/snackprovider" exact component={SnackProvider} />                    
+                    <Route exact path="/withnoti" exact component={WithNotistack} />                    
+                    
+
                 </MainWrapper>
             </Switch>
         </HashRouter>

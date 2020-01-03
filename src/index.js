@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-
 import App from './App';
 import { Provider } from 'react-redux'; 
 import { createStore, applyMiddleware } from 'redux'; 
 import reducers from './reducers'; 
 import thunk from 'redux-thunk'; 
 
-import { SnackbarProvider } from 'material-ui-snackbar-provider'
+import { SnackbarProvider } from 'notistack';
 
 ReactDOM.render(
     <Provider store={createStore(reducers, applyMiddleware(thunk))}>
-      <SnackbarProvider SnackbarProps={{ autoHideDuration: 4000 }}>
+      <SnackbarProvider maxSnack={3} SnackbarProps={{ autoHideDuration: 2000 }}>
       <App />
       </SnackbarProvider>
     </Provider>, 

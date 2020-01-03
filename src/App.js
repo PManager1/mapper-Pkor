@@ -39,10 +39,11 @@ import ShowSnackbar from './pages/Example/ShowSnackbar.js';
 import SnackProvider from './pages/Example/SnackProvider.js';
 
 import WithNotistack from './pages/Example/WithNotistack.js';
-import StepperOne from './pages/CreateFromExistingTemplate/StepperOne.js';
-import StepperTwo from './pages/CreateFromExistingTemplate/StepperTwo.js';
-import StepperThree from './pages/CreateFromExistingTemplate/StepperThree.js';
-import StepperFour from './pages/CreateFromExistingTemplate/StepperFour.js';
+
+import StepperOne from './pages/CreateFromExistingTemplate/Steps/StepperOne.js';
+import StepperTwo from './pages/CreateFromExistingTemplate/Steps/StepperTwo.js';
+import StepperThree from './pages/CreateFromExistingTemplate/Steps/StepperThree.js';
+import StepperFour from './pages/CreateFromExistingTemplate/Steps/StepperFour.js';
 
 
  

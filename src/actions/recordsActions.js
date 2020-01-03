@@ -28,12 +28,12 @@ export const fetchRecords =  () =>{
 };
 
 export const editRecord = (fieldID, formValues) =>{
-        console.log('36-editField-action ---  fieldID = ', fieldID ); 
-        console.log('37 ---  action editField   formValues = ', formValues ); 
+        console.log('31-editRecord-action ---  fieldID = ', fieldID ); 
+        console.log('32 ---  action editRecord   formValues = ', formValues ); 
         return async dispatch => {
             const response = await clients.put(`/records/${fieldID}`, formValues); 
             
-            console.log('19 ---  action fetchSingleField  response = ', response.data ); 
+            console.log('36 ---  action editRecord  response = ', response.data ); 
             dispatch ({  type: EDIT_RECORD,   payload: response.data });
             }
         };

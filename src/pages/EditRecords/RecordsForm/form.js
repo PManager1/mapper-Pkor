@@ -10,7 +10,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
-import { editField } from '../../../actions'; 
+import { editRecord } from '../../../actions'; 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux'
 
@@ -18,8 +18,8 @@ import {useSelector, useDispatch} from 'react-redux'
 export const Form = props => {
   // console.log(' 18- form.js -  props =', props ); 
   const {
-    values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
-    // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ RecordName, HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
     // handleSubmit,
@@ -43,9 +43,9 @@ export const Form = props => {
   const handleSubmit = (e) =>{
     e.persist();
     // console.log( '38-handleSubmit called in form.js  ',  props.values ); 
-    // props.editField(props.values._id, props.values); 
-    // props.editField(); 
-    dispatch(editField(props.values._id, props.values));
+    // props.editRecord(props.values._id, props.values); 
+    // props.editRecord(); 
+    dispatch(editRecord(props.values._id, props.values));
   }
   
 
@@ -58,6 +58,18 @@ export const Form = props => {
   return (
     
     <form onSubmit={handleSubmit}>   
+
+    <TextField
+        name="RecordName"
+        helperText={touched.RecordName ? errors.RecordName : ""}
+        error={Boolean(errors.RecordName)}
+        label="RecordName"
+        value={RecordName}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
+
       <TextField
         name="HeaderInfo"
         helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
@@ -189,7 +201,7 @@ const mapStateToProps = (state) =>{
   return { records: state.records.data }; 
 }; 
 
-export default connect(null, { editField })(Form);
+export default connect(null, { editRecord })(Form);
 
 
 

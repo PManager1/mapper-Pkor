@@ -39,6 +39,7 @@ import ShowSnackbar from './pages/Example/ShowSnackbar.js';
 import SnackProvider from './pages/Example/SnackProvider.js';
 
 import WithNotistack from './pages/Example/WithNotistack.js';
+import HorizontalLabelPositionBelowStepper from './pages/CreateFromExistingTemplate/Stepper.js';
  
 
 const App = () =>{
@@ -78,7 +79,8 @@ const App = () =>{
                     <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
                     <Route exact path="/snackprovider" exact component={SnackProvider} />                    
                     <Route exact path="/withnoti" exact component={WithNotistack} />                    
-                    
+                    <Route exact path="/stepper" exact component={HorizontalLabelPositionBelowStepper} />                                        
+                     
 
                 </MainWrapper>
             </Switch>

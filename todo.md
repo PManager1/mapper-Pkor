@@ -1,6 +1,18 @@
-==============
-implement the snack reducer the right way from here: 
+grid system  :
+https://github.com/rebassjs/rebass
 
+
+USE THIS TO FIX THE TOP BUTTONS ON ROUTE /
+https://rebassjs.org/recipes/flexbox-grid
+==============
+Stepper from create from existing 
+
+https://material-ui.com/components/steppers/#stepper
+https://codesandbox.io/s/yxll4
+
+==============
+
+implement the snack reducer the right way from here: 
 https://codesandbox.io/s/notistack-redux-example-vk9ik
 
 =========================

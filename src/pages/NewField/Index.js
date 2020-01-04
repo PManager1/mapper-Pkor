@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 // import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
@@ -14,6 +15,10 @@ const useStyles = makeStyles(theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  title: {
+    flexGrow: 1,
+    color: theme.palette.text.secondary,
+  },
 }));
 
 export default function NewFields() {
@@ -21,6 +26,9 @@ export default function NewFields() {
 
   return (
     <div className={classes.root}>
+      <Typography variant="h5" component="h4" className={classes.title}>
+          Create New Field
+          </Typography>
       <RecordsForm />
      </div>
   );

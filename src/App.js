@@ -45,6 +45,7 @@ import StepperTwo from './pages/CreateFromExistingTemplate/Steps/StepperTwo.js';
 import StepperThree from './pages/CreateFromExistingTemplate/Steps/StepperThree.js';
 import StepperFour from './pages/CreateFromExistingTemplate/Steps/StepperFour.js';
 
+import Rebass from './pages/Example/Rebass.js'; 
 
  
 
@@ -89,8 +90,8 @@ const App = () =>{
                     <Route exact path="/steppertwo" exact component={StepperTwo} />  
                     <Route exact path="/stepperthree" exact component={StepperThree} />                                        
                     <Route exact path="/stepperfour" exact component={StepperFour} />                                                             
-                    
-                    
+                        
+                    <Route exact path="/rebass" exact component={Rebass} />                                                             
                 </MainWrapper>
             </Switch>
         </HashRouter>

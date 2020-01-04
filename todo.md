@@ -1,3 +1,8 @@
+==============
+Make a Blank map option where user can input the information by itself. 
+
+==============
+
 grid system  :
 https://github.com/rebassjs/rebass
 

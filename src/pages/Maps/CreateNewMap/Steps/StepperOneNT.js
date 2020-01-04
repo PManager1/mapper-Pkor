@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import MapSelection from './MapSelection.js'; 
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-
+import NameInput from './NameInput.js'; 
 
 
 const useStyles = makeStyles(theme => ({
@@ -25,16 +25,14 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return ['Select from exiting maps', 'Give a Name', 'Create a map'];
+  return ['Give a Map Name', 'Create a map'];
 }
 
 function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
-      return 'Select map settings...';
-    case 1:
       return 'What is an map name?';
-    case 2:
+    case 1:
       return 'This is the bit I really care about!';
     default:
       return 'Unknown stepIndex';
@@ -72,7 +70,7 @@ export default function StepperOneNT(props) {
       </Stepper>
       
       <Divider />
-      <MapSelection />
+      <NameInput />
       <br/> 
 
       <div>

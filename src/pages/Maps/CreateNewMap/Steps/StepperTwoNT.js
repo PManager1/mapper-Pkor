@@ -10,6 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 
 
+
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
@@ -21,10 +22,13 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
   },
+  sectioncenter:{
+    textAlign: 'center',
+  }
 }));
 
 function getSteps() {
-  return ['Select from exiting maps', 'Give a Name', 'Create a map'];
+  return ['Give a Name', 'Create a map'];
 }
 
 function getStepContent(stepIndex) {
@@ -32,7 +36,7 @@ function getStepContent(stepIndex) {
     case 0:
       return 'Select map settings...';
     case 1:
-      return 'What is an map name?';
+      return 'This is the bit I really care about!';
     case 2:
       return 'This is the bit I really care about!';
     default:
@@ -47,7 +51,7 @@ export default function StepperTwoNT(props) {
 
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
-    props.history.push(`/stepperthreeNT`);
+    props.history.push(`/`);
   };
 
   const handleBack = () => {
@@ -70,8 +74,12 @@ export default function StepperTwoNT(props) {
       </Stepper>
       
       <Divider />
+
       <br/> <br/>  <br/>
-      <NameInput />
+      <div className={classes.sectioncenter}>
+        <Typography variant='h4'>  You're going to create a Brand new map called: ABC map </Typography>
+      </div>
+      <br />
       <br/> 
       <div>
         {activeStep === steps.length ? (

@@ -11,7 +11,7 @@ import CommentIcon from '@material-ui/icons/Comment';
 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux';
-import { fetchLogics } from '../../../actions';
+import { fetchLogics } from '../../../../actions';
 
 const useStyles = makeStyles(theme => ({
   root: {

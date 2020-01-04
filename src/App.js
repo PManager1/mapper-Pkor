@@ -48,6 +48,12 @@ import StepperTwoET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperT
 import StepperThreeET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperThreeET.js';
 import StepperFourET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperFourET.js';
 
+
+import StepperOneNT from './pages/Maps/CreateNewMap/Steps/StepperOneNT.js';
+import StepperTwoNT from './pages/Maps/CreateNewMap/Steps/StepperTwoNT.js';
+import StepperThreeNT from './pages/Maps/CreateNewMap/Steps/StepperThreeNT.js';
+import StepperFourNT from './pages/Maps/CreateNewMap/Steps/StepperFourNT.js';
+
 import Rebass from './pages/Example/Rebass.js'; 
 
  

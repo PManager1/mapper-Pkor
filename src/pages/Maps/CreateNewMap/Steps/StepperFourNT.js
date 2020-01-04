@@ -5,10 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import MapSelection from './MapSelection.js'; 
-import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-
 
 
 const useStyles = makeStyles(theme => ({
@@ -41,19 +38,17 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperOneET(props) {
+export default function StepperFour(props) {
   const classes = useStyles();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = React.useState(3);
   const steps = getSteps();
 
   const handleNext = () => {
-    setActiveStep(prevActiveStep => prevActiveStep + 1);
-
-    props.history.push(`/steppertwoET`);
+    // setActiveStep(prevActiveStep => prevActiveStep + 1);
+    props.history.push(`/`);
   };
 
   const handleBack = () => {
-    props.history.pop(); 
     setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 
@@ -71,9 +66,8 @@ export default function StepperOneET(props) {
         ))}
       </Stepper>
       
-      <Divider />
-      <MapSelection />
-      <br/> 
+      <div> container  </div>
+            <br /><br /><br /><br /><br />
 
       <div>
         {activeStep === steps.length ? (

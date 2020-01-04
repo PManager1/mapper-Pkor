@@ -47,11 +47,11 @@ export default function StepperTwoET(props) {
 
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
-    props.history.push(`/stepperthree`);
+    props.history.push(`/stepperthreeET`);
   };
 
   const handleBack = () => {
-    props.history.push(`/stepperone`);
+    props.history.push(`/stepperoneET`);
     // setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 

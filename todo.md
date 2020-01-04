@@ -1,3 +1,10 @@
+
+===========================
+implement this chips :
+
+Maybe provide with an input where user can type in Meta Info. 
+
+
 ==============
 Make a Blank map option where user can input the information by itself. 
 

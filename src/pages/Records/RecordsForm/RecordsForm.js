@@ -4,8 +4,7 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Form } from "./form";
 import Paper from "@material-ui/core/Paper";
 import * as Yup from "yup";
-
-import FullDialog from '../FullDialog.js'; 
+import FullDialogInForm from '../FullDialogInForm.js'; 
 import Switch from '@material-ui/core/Switch';
 
 const styles = theme => ({
@@ -65,8 +64,6 @@ class RecordsForm extends Component {
               validationSchema={validationSchema}
               onSubmit={this.submit}
             />
-            
-        <FullDialog {...this.props} />
         </div>
       </React.Fragment>
     );

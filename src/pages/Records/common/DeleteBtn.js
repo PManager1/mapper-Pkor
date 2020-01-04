@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function DeleteBtn(props) {
-    console.log( '  18 -  DeleteBtn props = ', props.fieldInfo._id );
+    // console.log( '  18 -  DeleteBtn props = ', props.fieldInfo._id );
 
   const classes = useStyles();
 

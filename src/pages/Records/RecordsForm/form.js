@@ -7,8 +7,9 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import { editField } from '../../../actions'; 
 import { connect } from "react-redux";
-import {useSelector, useDispatch} from 'react-redux'
+import { useSelector, useDispatch} from 'react-redux'
 import { useSnackbar } from 'notistack';
+import FullDialogInForm from '../FullDialogInForm.js'; 
 
 export const Form = props => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
@@ -92,6 +93,8 @@ export const Form = props => {
       />
       <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
       
+      <FullDialogInForm />
+
 
       <TextField
         name="MaxCharLength"
@@ -178,7 +181,7 @@ export const Form = props => {
       >
         Cancel
       </Button>
-      
+
     </form>
   );
 };

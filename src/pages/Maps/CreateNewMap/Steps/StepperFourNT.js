@@ -38,7 +38,7 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperFour(props) {
+export default function StepperFourNT(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(3);
   const steps = getSteps();

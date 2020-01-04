@@ -40,18 +40,18 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperTwo(props) {
+export default function StepperTwoNT(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(1);
   const steps = getSteps();
 
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
-    props.history.push(`/stepperthree`);
+    props.history.push(`/stepperthreeNT`);
   };
 
   const handleBack = () => {
-    props.history.push(`/stepperone`);
+    props.history.push(`/stepperoneNT`);
     // setActiveStep(prevActiveStep => prevActiveStep - 1);
   };
 

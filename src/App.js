@@ -54,6 +54,8 @@ import StepperTwoNT from './pages/Maps/CreateNewMap/Steps/StepperTwoNT.js';
 import StepperThreeNT from './pages/Maps/CreateNewMap/Steps/StepperThreeNT.js';
 import StepperFourNT from './pages/Maps/CreateNewMap/Steps/StepperFourNT.js';
 
+
+
 import Rebass from './pages/Example/Rebass.js'; 
 
  
@@ -99,7 +101,13 @@ const App = () =>{
                     <Route exact path="/steppertwoET" exact component={StepperTwoET} />  
                     <Route exact path="/stepperthreeET" exact component={StepperThreeET} />                                        
                     <Route exact path="/stepperfourET" exact component={StepperFourET} />                                                             
-                        
+
+                    <Route exact path="/stepperoneNT" exact component={StepperOneNT} />                                        
+                    <Route exact path="/steppertwoNT" exact component={StepperTwoNT} />  
+                    <Route exact path="/stepperthreeNT" exact component={StepperThreeNT} />                                        
+                    <Route exact path="/stepperfourNT" exact component={StepperFourNT} />                                                             
+
+
                     <Route exact path="/rebass" exact component={Rebass} />                                                             
                 </MainWrapper>
             </Switch>

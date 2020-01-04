@@ -9,7 +9,10 @@ import MainWrapper from './pages/Records/MainWrapper';
 import AllLogic from './pages/Logics/Index'; 
 import CreateLogic from './pages/CreateNewLogic/Index'; 
 
-import CreateFromExistingTemplate from './pages/CreateFromExistingTemplate/Index'; 
+import CreateFromExistingTemplate from './pages/Maps/CreateFromExistingTemplate/Index'; 
+import CreateNewMap from './pages/Maps/CreateNewMap/Index'; 
+
+
 import RecentlyCreatedTemplates from './pages/RecentlyCreatedTemplates/Index'; 
 import Login from './pages/Login/Index.js';
 import NotFound from './pages/NotFound/Index.js'; 
@@ -40,10 +43,10 @@ import SnackProvider from './pages/Example/SnackProvider.js';
 
 import WithNotistack from './pages/Example/WithNotistack.js';
 
-import StepperOne from './pages/CreateFromExistingTemplate/Steps/StepperOne.js';
-import StepperTwo from './pages/CreateFromExistingTemplate/Steps/StepperTwo.js';
-import StepperThree from './pages/CreateFromExistingTemplate/Steps/StepperThree.js';
-import StepperFour from './pages/CreateFromExistingTemplate/Steps/StepperFour.js';
+import StepperOneET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperOneET.js';
+import StepperTwoET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperTwoET.js';
+import StepperThreeET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperThreeET.js';
+import StepperFourET from './pages/Maps/CreateFromExistingTemplate/Steps/StepperFourET.js';
 
 import Rebass from './pages/Example/Rebass.js'; 
 
@@ -86,10 +89,10 @@ const App = () =>{
                     <Route exact path="/showsnack" exact component={ShowSnackbar} />                    
                     <Route exact path="/snackprovider" exact component={SnackProvider} />                    
                     <Route exact path="/withnoti" exact component={WithNotistack} />                    
-                    <Route exact path="/stepperone" exact component={StepperOne} />                                        
-                    <Route exact path="/steppertwo" exact component={StepperTwo} />  
-                    <Route exact path="/stepperthree" exact component={StepperThree} />                                        
-                    <Route exact path="/stepperfour" exact component={StepperFour} />                                                             
+                    <Route exact path="/stepperoneET" exact component={StepperOneET} />                                        
+                    <Route exact path="/steppertwoET" exact component={StepperTwoET} />  
+                    <Route exact path="/stepperthreeET" exact component={StepperThreeET} />                                        
+                    <Route exact path="/stepperfourET" exact component={StepperFourET} />                                                             
                         
                     <Route exact path="/rebass" exact component={Rebass} />                                                             
                 </MainWrapper>

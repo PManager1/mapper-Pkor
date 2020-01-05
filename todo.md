@@ -5,6 +5,8 @@ implement this chips :
 https://material-ui.com/components/autocomplete/
 
 freeSolo 
+================
+whatever maps that user is using, show that on the top. so that he/she can see that at all times. 
 
 ==============
 Make a Blank map option where user can input the information by itself. 

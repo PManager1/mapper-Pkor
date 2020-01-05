@@ -69,14 +69,18 @@ export default function FullDialogInForm(props) {
           </Toolbar>
         </AppBar>
       
-        <div className={classes.sectionRulePicker}>
+        {/* <div className={classes.sectionRulePicker}>
               <MetaDataPicker />
-            </div>
+            </div> */}
             <br />
 
             <Divider />
-            <FreeSolo />
+
+            <div className={classes.sectionRulePicker}>
+              <FreeSolo />
+            </div>
             
+
             <div className={classes.sectionRulePicker}>
               {/* <RulePicker /> */}
             </div>

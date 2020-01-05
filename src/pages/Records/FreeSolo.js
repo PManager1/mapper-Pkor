@@ -19,43 +19,10 @@ export default function Tags() {
 
   return (
     <div className={classes.root}>
-        <p> first </p>
-      <Autocomplete
-        multiple
-        id="tags-standard"
-        options={top100Films}
-        getOptionLabel={option => option.title}
-        defaultValue={[top100Films[13]]}
-        renderInput={params => (
-          <TextField
-            {...params}
-            variant="standard"
-            label="Multiple values"
-            placeholder="Favorites"
-            fullWidth
-          />
-        )}
-      />
-      <p> second </p>
-      <Autocomplete
-        multiple
-        id="tags-outlined"
-        options={top100Films}
-        getOptionLabel={option => option.title}
-        defaultValue={[top100Films[13]]}
-        filterSelectedOptions
-        renderInput={params => (
-          <TextField
-            {...params}
-            variant="outlined"
-            label="filterSelectedOptions"
-            placeholder="Favorites"
-            fullWidth
-          />
-        )}
-      />
+
       <p> third </p>
       <Autocomplete
+      fullWidth
         multiple
         id="tags-filled"
         options={top100Films.map(option => option.title)}
@@ -68,6 +35,7 @@ export default function Tags() {
         }
         renderInput={params => (
           <TextField
+          fullWidth
             {...params}
             variant="outlined"
             label="freeSolo"

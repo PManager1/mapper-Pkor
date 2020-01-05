@@ -2,8 +2,9 @@
 ===========================
 implement this chips :
 
-Maybe provide with an input where user can type in Meta Info. 
+https://material-ui.com/components/autocomplete/
 
+freeSolo 
 
 ==============
 Make a Blank map option where user can input the information by itself. 
@@ -21,8 +22,6 @@ Stepper from create from existing
 
 https://material-ui.com/components/steppers/#stepper
 https://codesandbox.io/s/yxll4
-
-
 
 ==============
 start saving the data to Azure. 

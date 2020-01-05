@@ -19,6 +19,7 @@ export default function Tags() {
 
   return (
     <div className={classes.root}>
+        <p> first </p>
       <Autocomplete
         multiple
         id="tags-standard"
@@ -35,6 +36,7 @@ export default function Tags() {
           />
         )}
       />
+      <p> second </p>
       <Autocomplete
         multiple
         id="tags-outlined"
@@ -52,6 +54,7 @@ export default function Tags() {
           />
         )}
       />
+      <p> third </p>
       <Autocomplete
         multiple
         id="tags-filled"
@@ -66,7 +69,7 @@ export default function Tags() {
         renderInput={params => (
           <TextField
             {...params}
-            variant="filled"
+            variant="outlined"
             label="freeSolo"
             placeholder="Favorites"
             fullWidth

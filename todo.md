@@ -1,5 +1,8 @@
 
 ===========================
+implmenet local storage like this : 
+https://www.robinwieruch.de/local-storage-react
+https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
 
 ================
 whatever maps that user is using, show that on the top. so that he/she can see that at all times. 

@@ -6,6 +6,7 @@ export * from './authActions';
 export * from './fieldsActions';
 export * from './logicActions';
 export * from './clientsActions'; 
+export * from './mapsActions'; 
 
 
 // import { showLoading, hideLoading } from 'actions/index.js';

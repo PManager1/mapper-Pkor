@@ -8,7 +8,9 @@ import Typography from '@material-ui/core/Typography';
 import NameInput from './NameInput.js'; 
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
-
+import ls from 'local-storage';
+import { connect } from "react-redux";
+import { createMap } from '../../../../actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -44,13 +46,20 @@ function getStepContent(stepIndex) {
   }
 }
 
-export default function StepperTwoNT(props) {
+// export default 
+function StepperTwoNT(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(1);
   const steps = getSteps();
 
+  // const [value, setValue] = React.useState('');
+  // setValue('Aman');
+
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
+    let mapValue = ls.get('MapNameInputted')
+    props.createMap (mapValue);
+
     props.history.push(`/`);
   };
 
@@ -77,7 +86,7 @@ export default function StepperTwoNT(props) {
 
       <br/> <br/>  <br/>
       <div className={classes.sectioncenter}>
-        <Typography variant='h4'>  You're going to create a Brand new map called: ABC map </Typography>
+        <Typography variant='h4'>  You're going to create a Brand new map </Typography>
       </div>
       <br />
       <br/> 
@@ -108,3 +117,14 @@ export default function StepperTwoNT(props) {
     </div>
   );
 }
+
+
+const mapStateToProps = (state) =>{
+  // console.log( ' state =', state );   ls.set('MapNameInputted', event.target.value);  
+  console.log( '121-   ls get value ',  ls.get('MapNameInputted')); 
+}; 
+
+export default connect(mapStateToProps, {
+  createMap
+})(StepperTwoNT); 
+

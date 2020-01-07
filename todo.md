@@ -5,6 +5,18 @@ https://www.robinwieruch.de/local-storage-react
 https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
 
 ================
+
+in the  file - it shoudl say the name : 
+
+"You're going to create a Brand new map :  the name "
+================
+
+theres an api that fetchClients, shoudl be fetchMaps
+================
+mapActions is wrong, it should be map maps not clients. 
+
+================
+
 whatever maps that user is using, show that on the top. so that he/she can see that at all times. 
 
 At the end of the map creation, save that info in the key value and show it 

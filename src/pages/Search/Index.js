@@ -19,7 +19,7 @@ const Search = (props) => {
     const defaultProps = {
       options:  props.clients.data,     
       // getOptionLabel: option => 'clientId = '+option.clientId+' clientName = '+option.clientName+' mapid= '+option.mapId,
-      getOptionLabel: option => ' '+option.clientId+' '+option.clientName+' '+option.mapId+' '+option._id,
+      getOptionLabel: option => ' '+option.mapName+' '+option.clientName+' '+option.mapId+' '+option._id,
     };
   
     const flatProps = {

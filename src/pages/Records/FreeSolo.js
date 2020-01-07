@@ -20,13 +20,14 @@ export default function Tags() {
   return (
     <div className={classes.root}>
 
+      <p> third </p>
       <Autocomplete
       fullWidth
         multiple
         id="tags-filled"
         options={top100Films.map(option => option.title)}
         defaultValue={[top100Films[13].title]}
-        metaData
+        freeSolo
         renderTags={(value, getTagProps) =>
           value.map((option, index) => (
             <Chip variant="outlined" label={option} {...getTagProps({ index })} />
@@ -37,7 +38,7 @@ export default function Tags() {
           fullWidth
             {...params}
             variant="outlined"
-            label="metaData"
+            label="freeSolo"
             placeholder="Favorites"
             fullWidth
           />
@@ -51,7 +52,7 @@ export default function Tags() {
 const top100Films = [
   { title: 'Credit', year: 1994 },
   { title: 'Debit', year: 1972 },
-  { title: 'Average', year: 1974 },
+  { title: 'The Godfather: Part II', year: 1974 },
   { title: 'The Dark Knight', year: 2008 },
   { title: '12 Angry Men', year: 1957 },
   { title: "Schindler's List", year: 1993 },

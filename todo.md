@@ -1,15 +1,13 @@
 
 ===========================
-implement this chips :
 
-https://material-ui.com/components/autocomplete/
-
-freeSolo 
 ================
 whatever maps that user is using, show that on the top. so that he/she can see that at all times. 
 
+At the end of the map creation, save that info in the key value and show it 
+at all times. 
 ==============
-Make a Blank map option where user can input the information by itself. 
+
 
 ==============
 
@@ -26,6 +24,7 @@ https://material-ui.com/components/steppers/#stepper
 https://codesandbox.io/s/yxll4
 
 ==============
+
 start saving the data to Azure. 
 
 ==============
@@ -45,7 +44,6 @@ replace the settimeout in records/index to reducer thingy.
 
 show  loading indicator 
 
-
 show a laoding UI until data is displayed on the 
 Fields place. 
 
@@ -63,9 +61,7 @@ https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-cal
 https://auth0.com/blog/creating-a-splash-screen-for-your-react-apps/
 
 ========================== 
------
-finish CREATE_FIELD
--------
+
 =========================
 privde option to delete logics.
 
@@ -74,7 +70,6 @@ NExt: when the record is loaded in /text.
 from there - load the data on the DropDown. 
 ==============
 snackBar -
-
 
 https://github.com/TeamWertarbyte/material-ui-snackbar-provider
 
@@ -96,9 +91,7 @@ https://codesandbox.io/embed/interesting-wave-yw9ht
 
 
 =========================
-Drag Drop the rows i.e the header info: 
 
-https://github.com/clauderic/react-sortable-hoc
 
 
 =========================
@@ -140,18 +133,10 @@ Ability to create multiple heaers and stuff under neath it.
 For search on selection pass   - mapID & clientId  to get the details of the MappDetails. 
 
 ==============
-How to extract the replaceable component from MainWrapper ?
-
-> the drawer and its main content like menu has to be seperated from the 
-child/ filler content. 
-==========
-how to render partial in react router ?
-
-You can do that exactly how we were putting <Header> on top of other components.  This will have header and then we can have rest of the child compnent in it. 
 
 ==========
-Replace all 
-SampleInputAdornments  with their own components. 
+
+==========
 ============================
 
 LATER -> 
@@ -175,8 +160,6 @@ Do Testing.
 
 ============================
 
-
-
 Web link : 
 
 https://devops1-jay.azurewebsites.net/#/
@@ -186,4 +169,6 @@ google Client id
 
 Client secret - 
 UA-ZqHForZuXc8t_xgpYBEKv
+
+============================
 

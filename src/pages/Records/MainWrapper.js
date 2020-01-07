@@ -126,7 +126,7 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
-            Paycor Data Mapper
+            Paycor Data Mapper - Blackbaud 123456
           </Typography>
 
 

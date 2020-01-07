@@ -33,10 +33,14 @@ function updateState(e) {
         console.log( '25- updateState called    '); 
         console.log("e.target.textContent ", e.target.textContent );
         console.log("e.target =", e.target );
+        
         // props.selectClient(e.target.textContent)
-        // console.log(e.target.getAttribute("data-option-index"));
+        console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
+
         let last2 = e.target.textContent.slice(-24);
+        console.log('42 -  last2= ', last2 );
+        
         props.history.push(`/search/${last2}`);
       }
 

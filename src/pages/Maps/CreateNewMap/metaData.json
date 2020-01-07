@@ -1,0 +1,40 @@
+{
+	"0": {
+		"TYPE_CODE": "Debit",
+		"ACCOUNT_NUMBER": "01-1000-00",
+		"POST_DATE": 1530489600000,
+		"ENCUMBRANCE": "Regular",
+		"JOURNAL": "Journal Entry",
+		"REFERENCE": "Debit reference",
+		"AMOUNT": 10,
+		"NOTES": "New Note",
+		"D_UI_PROJECT_ID": "1100",
+		"D_ACCOUNT_CLASS": "Unrestricted Net Assets",
+		"D_AMOUNT": 10,
+		"D_PERCENT": 100,
+		"TC_VALUE": "none",
+		"TC_ID": 0,
+		"CF_FIELD_NAME": null,
+		"CF_VALUE": null,
+		"CF_COMMENTS": null
+	},
+	"1": {
+		"TYPE_CODE": "Credit",
+		"ACCOUNT_NUMBER": "01-1000-00",
+		"POST_DATE": 1530489600000,
+		"ENCUMBRANCE": "Regular",
+		"JOURNAL": "Journal Entry",
+		"REFERENCE": "Credit reference",
+		"AMOUNT": 15,
+		"NOTES": "Credit Note",
+		"D_UI_PROJECT_ID": "1100",
+		"D_ACCOUNT_CLASS": "Unrestricted Net Assets",
+		"D_AMOUNT": 14,
+		"D_PERCENT": 90,
+		"TC_VALUE": "none",
+		"TC_ID": 0,
+		"CF_FIELD_NAME": "Unique Auth Text",
+		"CF_VALUE": "My Text",
+		"CF_COMMENTS": "My comment One"
+	}
+}

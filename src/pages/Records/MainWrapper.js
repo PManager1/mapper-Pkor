@@ -180,7 +180,7 @@ export default function MainWrapper(props) {
                   <ListItemIcon>  
                     <NoteAddIcon />
                   </ListItemIcon>
-                  <ListItemText primary="Create from Existing-Template" />
+                  <ListItemText primary="Create from Favorite Templates" />
             </ListItem>
 
 

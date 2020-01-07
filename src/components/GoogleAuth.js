@@ -8,17 +8,17 @@ import { signIn, signOut } from '../actions';
 class GoogleAuth extends React.Component {
    
     componentDidMount(){
-        window.gapi.load('client:auth2', () =>{
-            window.gapi.client.init({
-                clientId: '652821201113-v1fh4132uukcmsmvdfjirvm1akrkf7k7.apps.googleusercontent.com',
-                scope: 'email'
-            }).then(() =>{
-                this.auth = window.gapi.auth2.getAuthInstance();
+        // window.gapi.load('client:auth2', () =>{
+        //     window.gapi.client.init({
+        //         clientId: '652821201113-v1fh4132uukcmsmvdfjirvm1akrkf7k7.apps.googleusercontent.com',
+        //         scope: 'email'
+        //     }).then(() =>{
+        //         this.auth = window.gapi.auth2.getAuthInstance();
 
-                this.onAuthChange(this.auth.isSignedIn.get())
-                this.auth.isSignedIn.listen (this.onAuthChange);
-            }); 
-        }); 
+        //         this.onAuthChange(this.auth.isSignedIn.get())
+        //         this.auth.isSignedIn.listen (this.onAuthChange);
+        //     }); 
+        // }); 
     }
 
 

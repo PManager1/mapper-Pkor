@@ -20,7 +20,7 @@ export default function Tags() {
   return (
     <div className={classes.root}>
 
-      <p> third </p>
+
       <Autocomplete
       fullWidth
         multiple

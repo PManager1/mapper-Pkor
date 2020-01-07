@@ -1,9 +1,15 @@
+===========================
 
+NOW TODO = -  on search it goes to records along with the ID passed. 
 ===========================
 implmenet local storage like this : 
 https://www.robinwieruch.de/local-storage-react
 https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
 
+===========================
+do following for MainWrapper.js under records. 
+
+localStorage.getItem('myValueInLocalStorage') || ''
 ================
 
 in the  file - it shoudl say the name : 

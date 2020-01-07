@@ -38,8 +38,8 @@ export default function Tags() {
           fullWidth
             {...params}
             variant="outlined"
-            label="freeSolo"
-            placeholder="Favorites"
+            label="meta data"
+            placeholder="Meta Data"
             fullWidth
           />
         )}

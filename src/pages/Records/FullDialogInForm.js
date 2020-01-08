@@ -15,6 +15,7 @@ import FreeSolo from './FreeSolo';
 
 
 import DeleteBtn from './common/DeleteBtn.js'; 
+// import PickSingleMapped from './common/PickSingleMapped';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -78,6 +79,10 @@ export default function FullDialogInForm(props) {
 
             <div className={classes.sectionRulePicker}>
               <FreeSolo />
+            
+            {/* <PickSingleMapped /> */}
+
+
             </div>
             
 

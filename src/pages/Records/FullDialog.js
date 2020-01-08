@@ -14,6 +14,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import RulePicker from './RulePicker';
 import MetaDataPicker from './MetaDataPicker';
+import PickSingleMapped from './common/PickSingleMapped'; 
 
 
 import DeleteBtn from './common/DeleteBtn.js'; 
@@ -72,7 +73,8 @@ export default function FullDialog(props) {
         </AppBar>
       
         <div className={classes.sectionRulePicker}>
-              <MetaDataPicker />
+              {/* <MetaDataPicker /> */}
+              {/* <PickSingleMapped /> */}
             </div>
             <br />
 

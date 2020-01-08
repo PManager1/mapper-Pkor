@@ -36,7 +36,7 @@ import styledgrid from './pages/Example/styledgrid.js';
 import LoadingSpiner from './pages/Example/Loading.js'; 
 import RulePicker from './pages/Records/RulePicker.js'; 
 
-import FullDialog from './pages/Records/FullDialog.js'; 
+import FullDialog from './pages/Records/FullDialogInForm.js'; 
 
 import ShowSnackbar from './pages/Example/ShowSnackbar.js'; 
 import SnackProvider from './pages/Example/SnackProvider.js';
@@ -54,6 +54,8 @@ import StepperTwoNT from './pages/Maps/CreateNewMap/Steps/StepperTwoNT.js';
 import StepperThreeNT from './pages/Maps/CreateNewMap/Steps/StepperThreeNT.js';
 import StepperFourNT from './pages/Maps/CreateNewMap/Steps/StepperFourNT.js';
 
+
+// import PickMapped from './pages/Records/PickMapped'; 
 
 
 import Rebass from './pages/Example/Rebass.js'; 
@@ -109,6 +111,8 @@ const App = () =>{
 
 
                     <Route exact path="/rebass" exact component={Rebass} />                                                             
+
+                    {/* <Route exact path="/pickmapped" exact component={PickMapped} />                                                              */}
                 </MainWrapper>
             </Switch>
         </HashRouter>

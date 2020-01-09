@@ -37,7 +37,7 @@ const Form = props => {
 
 
   const {
-    values:{ RecordName, HeaderInfo, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ RecordName, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -88,17 +88,6 @@ const Form = props => {
       />
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
       
-      <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
-
 
       <TextField
         name="FieldName"

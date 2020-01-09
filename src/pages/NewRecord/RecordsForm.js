@@ -19,7 +19,6 @@ const styles = theme => ({
 });
 
 const validationSchema = Yup.object({
-  HeaderInfo: Yup.string("Enter a HeaderInfo").required("HeaderInfo is required"),
   FieldName: Yup.string("Enter a FieldName").required("FieldName is required"),
   MappedFieldName: Yup.string("Enter a MappedFieldName").required("MappedFieldName is required"),
   MaxCharLength: Yup.string("Enter a MaxCharLength").required("MaxCharLength is required"),
@@ -55,7 +54,7 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { HeaderInfo: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
+    const values = { RecordName: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

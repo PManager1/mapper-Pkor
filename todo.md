@@ -1,13 +1,12 @@
 ===========================
 
-on New record creation 
-and on New field cretion 
-
-show the toaster. 
+Edit records should go to that specific mapId & show the records of that specific map id. 
 ===========================
+check that specific records are showing for specific map id. 
 
+check the whole flow from Blank. 
+===========================
 http://localhost:3000/#/records/5e1445d5f6082f8375a04411
-
 ===========================
 copy paste the pick data set name created in new record into the 
 //#/editRecords link. 

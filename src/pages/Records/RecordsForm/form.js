@@ -74,8 +74,6 @@ export const Form = props => {
     e.preventDefault(); 
     e.persist();
     dispatch(editField(props.values._id, props.values));
-    // // enqueueSnackbar('I love hooks');
-    // enqueueSnackbar('This is a success message!', 'success');
     handleClickVariant('success'); 
   }
   

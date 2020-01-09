@@ -126,14 +126,11 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
-            P
             {/* Paycor Data Mapper - Blackbaud 123456 */}
             
           </Typography>
 
-
           <GoogleAuth />
-
 
           <Menu
                 id="menu-appbar"
@@ -151,7 +148,6 @@ export default function MainWrapper(props) {
                 <MenuItem >Profile</MenuItem>
                 <MenuItem >My account</MenuItem>
               </Menu>
-
 
         </Toolbar>
       </AppBar>

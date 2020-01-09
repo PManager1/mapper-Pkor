@@ -66,16 +66,9 @@ const App = () =>{
     return (
         <HashRouter>
             <Switch>
-                <Route exact path="/ModalFormDialog" exact component={ModalFormDialog} />
-                <Route exact path="/drawer" exact component={TemporaryDrawer} />
-                <Route exact path="/login" exact component={Login} />
 
-            
                 <MainWrapper >
-                <Route exact path="/rulepicker" exact component={RulePicker} />
-                <Route exact path="/later" exact component={Later} />
-                    {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
-                    
+
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
@@ -98,8 +91,8 @@ const App = () =>{
                     <Route exact path="/createlogic" component={CreateLogic} />
                     <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate} />
                     <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates} />
+                    
                     {/* <Route exact component={NotFound} /> */}
-
                     <Route exact path="/fd" exact component={FullDialog} />
                     <Route exact path="/loading" exact component={LoadingSpiner} />                    
                     <Route exact path="/oldrecords" exact component={OldRecords} />
@@ -115,11 +108,13 @@ const App = () =>{
                     <Route exact path="/steppertwoNT" exact component={StepperTwoNT} />  
                     <Route exact path="/stepperthreeNT" exact component={StepperThreeNT} />                                        
                     <Route exact path="/stepperfourNT" exact component={StepperFourNT} />                                                             
-
-
                     <Route exact path="/rebass" exact component={Rebass} />                                                             
+                    <Route exact path="/pickmapselect" exact component={PickMapSelect} />                                               
 
-                    <Route exact path="/pickmapselect" exact component={PickMapSelect} />                                                             
+                    <Route exact path="/ModalFormDialog" exact component={ModalFormDialog} />
+                    <Route exact path="/drawer" exact component={TemporaryDrawer} />
+                    <Route exact path="/login" exact component={Login} />              
+
                 </MainWrapper>
             </Switch>
         </HashRouter>

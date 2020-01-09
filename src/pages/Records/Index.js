@@ -55,7 +55,6 @@ const Test = (props) => {
           props.fetchRecords(props.match.params.id); 
           setTimeout(function(){ setLoading(!Loading); }, 200);
         console.log('58 - fetching records finished  see records =', props.records ); 
-          
     }, [records])
 
     const renderDescription = () =>{

@@ -226,12 +226,8 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
-   
-
-     
+        
       <FullDialogInForm />
-
-
 
       <Button onClick={handleClickVariant('success')} type="submit" fullWidth variant="contained" color="primary">
         Save

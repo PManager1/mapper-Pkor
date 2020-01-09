@@ -1,4 +1,7 @@
+===========================
+Give your select the options. 
 
+https://stackoverflow.com/questions/31413053/how-to-use-an-array-as-option-for-react-select-component
 ===========================
 
 Get the meta data from the react field info.  not from the static content. 

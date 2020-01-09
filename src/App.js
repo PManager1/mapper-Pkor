@@ -32,6 +32,7 @@ import EditRecords from './pages/EditRecords/Index.js';
 
 
 import FullWidthGrid from './pages/Example/Grid.js'; 
+
 import styledgrid from './pages/Example/styledgrid.js'; 
 import LoadingSpiner from './pages/Example/Loading.js'; 
 import RulePicker from './pages/Records/RulePicker.js'; 
@@ -56,9 +57,8 @@ import StepperFourNT from './pages/Maps/CreateNewMap/Steps/StepperFourNT.js';
 
 
 // import PickMapped from './pages/Records/PickMapped'; 
-
-
 import Rebass from './pages/Example/Rebass.js'; 
+import PickMapSelect from './pages/Records/RecordsForm/PickMapSelect.js'; 
 
  
 
@@ -112,7 +112,7 @@ const App = () =>{
 
                     <Route exact path="/rebass" exact component={Rebass} />                                                             
 
-                    {/* <Route exact path="/pickmapped" exact component={PickMapped} />                                                              */}
+                    <Route exact path="/pickmapselect" exact component={PickMapSelect} />                                                             
                 </MainWrapper>
             </Switch>
         </HashRouter>

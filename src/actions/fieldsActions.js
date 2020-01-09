@@ -7,7 +7,21 @@ import {
     EDIT_FIELD,
     DELETE_FIELD
   } from '../actions/types'
-  
+
+  export const createField =  (formValues) =>{
+    console.log('12--- createField action= ', formValues ); 
+    
+    return async dispatch => {
+    const response = await clients.post('/fieldlist', { ...formValues} ); 
+    
+    console.log('22---  action createField action response = ', response.data ); 
+
+    dispatch ({  type: CREATE_FIELD,   payload: response.data });
+    }
+};
+
+
+
 
   export const deleteField =  (fieldID) => async dispatch => {
     console.log('13- - deleteField-action ---  fieldID = ', fieldID ); 

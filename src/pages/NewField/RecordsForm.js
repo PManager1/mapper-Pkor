@@ -19,7 +19,7 @@ const styles = theme => ({
 });
 
 const validationSchema = Yup.object({
-  HeaderInfo: Yup.string("Enter a HeaderInfo").required("HeaderInfo is required"),
+  MapId: Yup.string("Enter a MapId").required("MapId is required"),
   FieldName: Yup.string("Enter a FieldName").required("FieldName is required"),
   MappedFieldName: Yup.string("Enter a MappedFieldName").required("MappedFieldName is required"),
   MaxCharLength: Yup.string("Enter a MaxCharLength").required("MaxCharLength is required"),
@@ -58,7 +58,7 @@ class RecordsForm extends Component {
     const { id } = this.props; 
     console.log( ' 59 - called RecordsForm in New Field ', id); 
 
-    const values = { MapId: id, HeaderInfo: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
+    const values = { MapId: id, FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

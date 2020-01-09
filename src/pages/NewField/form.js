@@ -8,7 +8,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { connect } from "react-redux";
-import { createClient } from '../../actions';
+import { createField } from '../../actions';
 
 
 const Form = props => {
@@ -28,7 +28,7 @@ const Form = props => {
 
   const handleSaveClick = () =>{
     console.log('28 -  called handleSaveClick inside form.js ' ); 
-    props.createClient(props.values);  
+    props.createField(props.values);  
   }
 
 
@@ -184,7 +184,7 @@ const mapStateToProps = (state) =>{
 }; 
 
 export default connect(mapStateToProps, {
-  createClient
+  createField
 })(Form); 
 
 // export default Form

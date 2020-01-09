@@ -10,29 +10,15 @@ DELETE_RECORD
   } from './types'
 
 
-const sortArr = (arr) =>{
 
-    return arr.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
-}
-
-export const createRecord =  (formValues) =>{
-    // console.log('18--- createRecord action= ', formValues ); 
-    
-    return async dispatch => {
-    const response = await clients.post('/records', { ...formValues} ); 
-    // console.log('22---  action createLogic action response = ', response.data ); 
-
-    dispatch ({  type: CREATE_RECORD,   payload: response.data });
-    }
-};
 
 export const fetchRecords =  (id) =>{
     console.log('29---fetch records for ID = ', id ); 
     return async dispatch => {
     const response = await clients.get('/records'); 
     // console.log('16 ---  action fetchRecords  response = ', response.data ); 
-
-    const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId === "5e1445d5f6082f8375a04411" });
+                                    // "5e1445d5f6082f8375a04411"
+    const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId === id });
     console.log('36 ---  action recordsWithId = ', recordsWithId );     
 
 
@@ -44,6 +30,18 @@ export const fetchRecords =  (id) =>{
     dispatch ({  type: 'FETCH_RECORDS',   payload: sortedArray });
     }
 };
+export const createRecord =  (formValues) =>{
+    // console.log('18--- createRecord action= ', formValues ); 
+    
+    return async dispatch => {
+    const response = await clients.post('/records', { ...formValues} ); 
+    // console.log('22---  action createLogic action response = ', response.data ); 
+
+    dispatch ({  type: CREATE_RECORD,   payload: response.data });
+    }
+};
+
+
 
 export const editRecord = (fieldID, formValues) =>{
         // console.log('31-editRecord-action ---  fieldID = ', fieldID ); 

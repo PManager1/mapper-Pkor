@@ -1,3 +1,10 @@
+===========================
+Show field with the selected mapID. 
+in the fields
+Look where am i calling the fetchFields show that we only show the fields for that specific mapid. 
+
+===========================
+
 Header containing the nameMap : 
 check if the ls has the name, if yes put that in the header. 
 

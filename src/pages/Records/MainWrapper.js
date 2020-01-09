@@ -92,6 +92,22 @@ export default function MainWrapper(props) {
   // const Layout = props => ({
   const classes = useStyles();
   const theme = useTheme();
+
+  const [value, setValue] = React.useState('');
+
+  React.useEffect(() => {
+    console.log( '  99 -useEffect  Called ');
+    // localStorage.setItem('myValueInLocalStorage', value);
+    // const localVal =  localStorage.getItem('MapNameInputted') || ''
+    const localName =  localStorage.getItem('MapNameInputted') || ''
+    console.log( ' 102 ----   localObj =', localName);  
+
+    setValue(localName);
+ 
+  }, [value]);
+
+
+
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
@@ -126,8 +142,8 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
-            one
             {/* Paycor Data Mapper - Blackbaud 123456 */}
+            D M -  {value}
             
           </Typography>
 

@@ -15,6 +15,9 @@ import { useHistory } from "react-router-dom";
 
 
 const Form = props => {
+
+  let history = useHistory();
+
   const {
     values:{ FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
@@ -33,9 +36,10 @@ const Form = props => {
     console.log('28 -  called handleSaveClick inside form.js ' ); 
     props.createClient(props.values);  
     console.log('33 -  this.props ', props ); 
-    // history.push("/");
-    // props.push('/'); 
+    
     // history.push(`/steppertwoET`);
+    history.goBack();
+
   }
  
 

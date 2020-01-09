@@ -45,7 +45,7 @@ const Test = (props) => {
     useEffect(() => {
         console.log('mounted');
           props.fetchRecords(); 
-          setTimeout(function(){ setLoading(!Loading); }, 500);
+          setTimeout(function(){ setLoading(!Loading); }, 200);
           
     }, [])
 
@@ -106,10 +106,7 @@ const Test = (props) => {
                 <Child data={item} key={index}  />
                 ))}
 
-
-      </React.Fragment>}
-
-        
+              </React.Fragment>}
         </div>);
 
   }; 

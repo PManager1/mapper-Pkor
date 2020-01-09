@@ -36,6 +36,10 @@ export const fetchFields =  () =>{
     const response = await clients.get('/fieldlist'); 
     console.log('6---  action fetchFields action response = ', response.data ); 
 
+
+    // const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId === "5e1445d5f6082f8375a04411" });
+    // console.log('36 ---  action fieldsWithId = ', recordsWithId );     
+
     dispatch ({  type: FETCH_FIELDS,   payload: response.data });
     }
 };

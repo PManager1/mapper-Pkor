@@ -10,6 +10,9 @@ import FormControl from '@material-ui/core/FormControl';
 import { connect } from "react-redux";
 import { createClient } from '../../actions';
 
+import PickMapSelect from '../../components/Records/PickMapSelect.js'; 
+import { useHistory } from "react-router-dom";
+
 
 const Form = props => {
   const {
@@ -29,6 +32,10 @@ const Form = props => {
   const handleSaveClick = () =>{
     console.log('28 -  called handleSaveClick inside form.js ' ); 
     props.createClient(props.values);  
+    console.log('33 -  this.props ', props ); 
+    // history.push("/");
+    // props.push('/'); 
+    // history.push(`/steppertwoET`);
   }
  
 
@@ -59,93 +66,8 @@ const Form = props => {
       />
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
-      <TextField
-        name="MappedFieldName"
-        helperText={touched.MappedFieldName ? errors.MappedFieldName : ""}
-        error={Boolean(errors.MappedFieldName)}
-        label="MappedFieldName"
-        value={MappedFieldName}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
+      <PickMapSelect />
 
-
-
-      <TextField
-        name="MaxCharLength"
-        helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
-        error={Boolean(errors.MaxCharLength)}
-        label="MaxCharLength"
-        value={MaxCharLength}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
-
-
-      <TextField
-        name="SequenceNumber"
-        helperText={touched.SequenceNumber ? errors.SequenceNumber : ""}
-        error={Boolean(errors.SequenceNumber)}
-        label="SequenceNumber"
-        value={SequenceNumber}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
-   
-
-      <FormLabel component="legend">Please Select Alignment </FormLabel>
-        <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
-          <FormControlLabel
-            value="LeftAligned"
-            control={<Radio color="primary" />}
-            label="LeftAligned"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="None"
-            control={<Radio color="secondary" />}
-            label="None"
-            labelPlacement="start"
-          />
-          <FormControlLabel
-            value="RightAligned"
-            control={<Radio color="primary" />}
-            label="RightAligned"
-            labelPlacement="start"
-          />
-
-      </RadioGroup>
-
-
-
-      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
-      <TextField
-        name="PaddingLeft"
-        helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
-        error={Boolean(errors.PaddingLeft)}
-        label="PaddingLeft"
-        value={PaddingLeft}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
-   
-      <TextField
-        name="PaddingRight"
-        helperText={touched.PaddingRight ? errors.PaddingRight : ""}
-        error={Boolean(errors.PaddingRight)}
-        label="PaddingRight"
-        value={PaddingRight}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
-   
-
-      {/* disabled={!isValid} */}
       <Button  type="submit"
         fullWidth
         variant="contained" 

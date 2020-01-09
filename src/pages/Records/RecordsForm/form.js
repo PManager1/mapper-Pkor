@@ -21,7 +21,6 @@ import Select from '@material-ui/core/Select';
 // import PickMapSelect from './PickMapSelect.js';
 import PickMapSelect from '../../../components/Records/PickMapSelect.js'; 
 
-
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),

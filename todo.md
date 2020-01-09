@@ -1,5 +1,7 @@
 ===========================
+when creating new field on there show bredacrumbs. 
 
+mapId> Record > Field
 
 ===========================
 copy paste the pick data set name created in new record into the 

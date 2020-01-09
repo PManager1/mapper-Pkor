@@ -1,6 +1,5 @@
 import React, {Fragment, Component, useState, useEffect, useLayoutEffect,  lazy, Suspense } from 'react';
 import Child from './Child'; 
-import { fetchRecords } from '../../actions'; 
 import { connect } from "react-redux";
 import Typography from '@material-ui/core/Typography';
 import AddIcon from '@material-ui/icons/Add';
@@ -10,15 +9,16 @@ import Tooltip from '@material-ui/core/Tooltip';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
-
-
 import { Spinner } from '../../components/common/components/spinner/spinner.js';
 
 import CircularProgress from '@material-ui/core/CircularProgress';
+import ls from 'local-storage';
+
+import { fetchRecords, fetchSingleClient } from '../../actions'; 
+
+
 
 const renderLoader = () => <p>Loading</p>;
-
-
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
@@ -33,21 +33,32 @@ const useStyles = makeStyles(theme => ({
 
 // props.records.data
 const Test = (props) => {
+
+  console.log( '37- props.match.params.id =', props.match.params.id); 
+
+    // we dont need this at this time because 
+    props.fetchSingleClient(props.match.params.id); 
+
     // const [ resources, setResources ] = useState([]);
-
-
     const [Loading, setLoading] = useState(true);
+
+    const [records, setRovies] = useState([]);
 
     useLayoutEffect(() =>{
         console.log('useLayoutEffect');
     }, [])
 
+        //   useEffect(() => {
+        //     // action on update of movies
+        // }, [movies]);
+
     useEffect(() => {
         console.log('mounted');
-          props.fetchRecords(); 
+          props.fetchRecords(props.match.params.id); 
           setTimeout(function(){ setLoading(!Loading); }, 200);
+        console.log('58 - fetching records finished  see records =', props.records ); 
           
-    }, [])
+    }, [records])
 
     const renderDescription = () =>{
         return(<div>
@@ -63,8 +74,6 @@ const Test = (props) => {
     //   }
 
       return (<div>
-        
-        
 
         {Loading ?
       <Spinner /> :
@@ -117,6 +126,6 @@ const mapStateToProps = (state) =>{
     return { records: state.records }; 
 }; 
 
-export default connect(mapStateToProps, { fetchRecords })(Test); 
+export default connect(mapStateToProps, { fetchRecords, fetchSingleClient })(Test); 
 
 

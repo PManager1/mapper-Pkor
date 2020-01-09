@@ -1,3 +1,6 @@
+Header containing the nameMap : 
+check if the ls has the name, if yes put that in the header. 
+
 ===========================
 
 NOW TODO = -  on search it goes to records along with the ID passed. 

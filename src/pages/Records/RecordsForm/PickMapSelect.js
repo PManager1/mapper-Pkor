@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-const colors = ['TYPE_CODE', 'ACCOUNT_NUMBER', 'POST_DATE', 'ENCUMBRANCE', 'JOURNAL', 'AMOUNT', 'D_UI_PROJECT_ID', 'D_AMOUNT', 'D_PERCENT'];
+const dataSets = ['TYPE_CODE', 'ACCOUNT_NUMBER', 'POST_DATE', 'ENCUMBRANCE', 'JOURNAL', 'AMOUNT', 'D_UI_PROJECT_ID', 'D_AMOUNT', 'D_PERCENT'];
   
 const PickMapSelect = ()=>{
 
@@ -44,11 +44,9 @@ const PickMapSelect = ()=>{
            <em>None</em>
           </MenuItem>
           
-          {colors.map((color, index) =>
-            <MenuItem key={index} value={index}> {color} </MenuItem>
+          {dataSets.map((item, index) =>
+            <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
-
-        <MenuItem value={10}>TYPE_CODE</MenuItem>
 
         </Select>
       </FormControl>

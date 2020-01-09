@@ -22,16 +22,17 @@ const useStyles = makeStyles(theme => ({
 export default function NewRecord(props) {
   const classes = useStyles();
 
-  console.log( '25- props.match.params.id =', props.match.params.id); 
-  // const { handle } = this.props.match.params   props.match.params.id);
-  // console.log( ' new Record props.match.params =', props.match.params)
+  const { id } = props.match.params; 
 
+  // const { id } = this.props.match.params; 
+  console.log ( '28 - RecordsForm in NEw RECORD  = ',  id ); 
+  
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>
           Create New Record
           </Typography>
-      <RecordsForm />
+      <RecordsForm id={id} />
      </div>
   );
 }

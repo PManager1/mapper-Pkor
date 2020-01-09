@@ -14,7 +14,7 @@ import { createRecord } from '../../actions';
 
 const Form = props => {
   const {
-    values:{ RecordName, HeaderInfo, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ MapId, RecordName, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -48,6 +48,19 @@ const Form = props => {
   return (
     <form onSubmit={handleSubmit}>
 
+
+    <TextField
+        name="MapId"
+        helperText={touched.MapId ? errors.MapId : ""}
+        error={Boolean(errors.MapId)}
+        label="MapId"
+        value={MapId}
+        disabled
+        onChange={handleChange}
+        fullWidth
+      />
+    <div>{Boolean(errors.MapId) ? errors.MapId : ""}</div>
+
       <TextField
         name="RecordName"
         helperText={touched.RecordName ? errors.RecordName : ""}
@@ -59,17 +72,6 @@ const Form = props => {
       />
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
       
-      <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
-
 
       <TextField
         name="FieldName"

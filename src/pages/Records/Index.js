@@ -36,7 +36,6 @@ const Test = (props) => {
 
   const { id } = props.match.params; 
 
-    // we dont need this at this time because 
     props.fetchSingleClient(id); 
 
     // const [ resources, setResources ] = useState([]);

@@ -17,7 +17,6 @@ import ls from 'local-storage';
 import { fetchRecords, fetchSingleClient } from '../../actions'; 
 
 
-
 const renderLoader = () => <p>Loading</p>;
 const useStyles = makeStyles(theme => ({
     root: {
@@ -67,7 +66,7 @@ const Test = (props) => {
     }
   
     const goToNewRecord = () =>{
-      console.log( ' clicked goToNewRecord'); 
+      console.log( '69 - goToNewRecord clicked goToNewRecord props=', props ); 
       props.history.push(`/newrecord/${props.match.params.id}`); 
     }
 
@@ -116,7 +115,7 @@ const Test = (props) => {
 
 
                 {props.records.map((item, index) => (
-                <Child data={item} key={index}  />
+                <Child id="someid" data={item} key={index}  />
                 ))}
 
               </React.Fragment>}

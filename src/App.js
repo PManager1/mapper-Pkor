@@ -81,11 +81,12 @@ const App = () =>{
                     <Route exact path="/records" exact component={Records} />
                     <Route exact path="/records/:id" component={Records} />
                     
-                    
-                    <Route exact path="/newField" component={NewFields} />
                     <Route exact path="/newrecord" component={NewRecord} />
                     <Route exact path="/newrecord/:id" component={NewRecord} />
                     
+                    <Route exact path="/newField" component={NewFields} />
+                    <Route exact path="/newfield/:id" component={NewFields} />
+
                     <Route exact path="/editrecords" component={EditRecords} />
 
                     <Route exact path="/grid" exact component={FullWidthGrid} />

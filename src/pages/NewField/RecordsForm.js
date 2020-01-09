@@ -55,7 +55,10 @@ class RecordsForm extends Component {
 
   render() {
     const classes = this.props;
-    const values = { HeaderInfo: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
+    const { id } = this.props; 
+    console.log( ' 59 - called RecordsForm in New Field ', id); 
+
+    const values = { MapId: id, HeaderInfo: "", FieldName: "", MappedFieldName:"", MaxCharLength: "", SequenceNumber:"", RadioValue:"", PaddingLeft:"", PaddingRight:""   };
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>

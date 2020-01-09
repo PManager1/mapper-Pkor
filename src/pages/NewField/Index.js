@@ -19,15 +19,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function NewFields() {
+export default function NewFields(props) {
   const classes = useStyles();
+  const { id } = props.match.params; 
 
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>
           Create New Field
           </Typography>
-      <RecordsForm />
+      <RecordsForm id={id} />
      </div>
   );
 }

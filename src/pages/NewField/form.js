@@ -13,7 +13,7 @@ import { createClient } from '../../actions';
 
 const Form = props => {
   const {
-    values:{ HeaderInfo,FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ MapId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -30,7 +30,6 @@ const Form = props => {
     console.log('28 -  called handleSaveClick inside form.js ' ); 
     props.createClient(props.values);  
   }
- 
 
 
   const change = (name, e) => {
@@ -49,15 +48,16 @@ const Form = props => {
     <form onSubmit={handleSubmit}>
       
       <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
+        name="MapId"
+        helperText={touched.MapId ? errors.MapId : ""}
+        error={Boolean(errors.MapId)}
+        label="MapId"
+        value={MapId}
         onChange={handleChange}
+        disabled
         fullWidth
       />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
+      <div>{Boolean(errors.MapId) ? errors.MapId : ""}</div>
 
 
       <TextField

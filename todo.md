@@ -14,15 +14,14 @@ copy paste the pick data set name created in new record into the
 //#/editRecords link. 
 
 ===========================
-Give your select the options. 
-
-https://stackoverflow.com/questions/31413053/how-to-use-an-array-as-option-for-react-select-component
+===========================
+hook up map fields options to get from the backend. 
 ===========================
 
+
+
 ===========================
-delete spitting error. 
-===========================
-Get the meta data from the react field info.  not from the static content. 
+
 =======
 Show field with the selected mapID. 
 in the fields

@@ -82,6 +82,44 @@ const Form = props => {
 
       <PickMapSelect />
 
+      <TextField
+        name="FieldName"
+        helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
+        error={Boolean(errors.MaxCharLength)}
+        label="MaxCharLength"
+        value={MaxCharLength}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
+
+
+
+      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
+      <TextField
+        name="PaddingLeft"
+        helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
+        error={Boolean(errors.PaddingLeft)}
+        label="PaddingLeft"
+        value={PaddingLeft}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
+   
+      <TextField
+        name="PaddingRight"
+        helperText={touched.PaddingRight ? errors.PaddingRight : ""}
+        error={Boolean(errors.PaddingRight)}
+        label="PaddingRight"
+        value={PaddingRight}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
+
+
+
       <Button  type="submit"
         fullWidth
         variant="contained" 

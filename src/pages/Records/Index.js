@@ -37,7 +37,7 @@ const Test = (props) => {
   const { id } = props.match.params; 
 
     // we dont need this at this time because 
-    props.fetchSingleClient(props.match.params.id); 
+    props.fetchSingleClient(id); 
 
     // const [ resources, setResources ] = useState([]);
     const [Loading, setLoading] = useState(true);

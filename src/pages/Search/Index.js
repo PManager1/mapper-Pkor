@@ -41,7 +41,10 @@ function updateState(e) {
         let last2 = e.target.textContent.slice(-24);
         console.log('42 -  last2= ', last2 );
         
-        props.history.push(`/search/${last2}`);
+        // props.history.push(`/search/${last2}`);
+
+        props.history.push(`/records/${last2}`);
+
       }
 
 

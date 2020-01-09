@@ -1,4 +1,5 @@
 ===========================
+<<<<<<< HEAD
 when creating new field on there show bredacrumbs. 
 
 mapId> Record > Field
@@ -17,6 +18,16 @@ https://stackoverflow.com/questions/31413053/how-to-use-an-array-as-option-for-r
 delete spitting error. 
 ===========================
 Get the meta data from the react field info.  not from the static content. 
+=======
+Show field with the selected mapID. 
+in the fields
+Look where am i calling the fetchFields show that we only show the fields for that specific mapid. 
+
+===========================
+
+Header containing the nameMap : 
+check if the ls has the name, if yes put that in the header. 
+>>>>>>> reroute
 
 ===========================
 

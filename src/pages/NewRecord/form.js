@@ -37,7 +37,7 @@ const Form = props => {
 
 
   const {
-    values:{ RecordName, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ MapId, RecordName, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -76,6 +76,19 @@ const Form = props => {
 
   return (
     <form onSubmit={handleSubmit}>
+
+
+    <TextField
+        name="MapId"
+        helperText={touched.MapId ? errors.MapId : ""}
+        error={Boolean(errors.MapId)}
+        label="MapId"
+        value={MapId}
+        disabled
+        onChange={handleChange}
+        fullWidth
+      />
+    <div>{Boolean(errors.MapId) ? errors.MapId : ""}</div>
 
       <TextField
         name="RecordName"

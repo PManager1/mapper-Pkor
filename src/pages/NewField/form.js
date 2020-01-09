@@ -8,7 +8,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 import { connect } from "react-redux";
-import { createClient } from '../../actions';
+import { createField } from '../../actions';
 
 import PickMapSelect from '../../components/Records/PickMapSelect.js'; 
 import { useHistory } from "react-router-dom";
@@ -19,7 +19,7 @@ const Form = props => {
   let history = useHistory();
 
   const {
-    values:{ FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ MapId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -34,14 +34,11 @@ const Form = props => {
 
   const handleSaveClick = () =>{
     console.log('28 -  called handleSaveClick inside form.js ' ); 
-    props.createClient(props.values);  
+    // props.createClient(props.values);  
     console.log('33 -  this.props ', props ); 
-    
-    // history.push(`/steppertwoET`);
+    props.createField(props.values);  
     history.goBack();
-
   }
- 
 
 
   const change = (name, e) => {
@@ -59,6 +56,19 @@ const Form = props => {
   return (
     <form onSubmit={handleSubmit}>
       
+      <TextField
+        name="MapId"
+        helperText={touched.MapId ? errors.MapId : ""}
+        error={Boolean(errors.MapId)}
+        label="MapId"
+        value={MapId}
+        onChange={handleChange}
+        disabled
+        fullWidth
+      />
+      <div>{Boolean(errors.MapId) ? errors.MapId : ""}</div>
+
+
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
@@ -99,7 +109,7 @@ const mapStateToProps = (state) =>{
 }; 
 
 export default connect(mapStateToProps, {
-  createClient
+  createField
 })(Form); 
 
 // export default Form

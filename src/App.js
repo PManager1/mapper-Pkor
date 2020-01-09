@@ -75,13 +75,20 @@ const App = () =>{
                 <Route exact path="/rulepicker" exact component={RulePicker} />
                 <Route exact path="/later" exact component={Later} />
                     {/* <Route exact path="/" exact component={ExpansionScreen} /> */}
-                    <Route exact path="/" exact component={Records} />
                     
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
-                    <Route exact path="/newField" component={NewFields} />
+
+                    <Route exact path="/records" exact component={Records} />
+                    <Route exact path="/records/:id" component={Records} />
+                    
                     <Route exact path="/newrecord" component={NewRecord} />
+                    <Route exact path="/newrecord/:id" component={NewRecord} />
+                    
+                    <Route exact path="/newField" component={NewFields} />
+                    <Route exact path="/newfield/:id" component={NewFields} />
+
                     <Route exact path="/editrecords" component={EditRecords} />
 
                     <Route exact path="/grid" exact component={FullWidthGrid} />

@@ -1,4 +1,5 @@
 import clients from '../apis/clients';
+import _ from 'lodash';
 
 import {
     CREATE_FIELD,
@@ -7,7 +8,21 @@ import {
     EDIT_FIELD,
     DELETE_FIELD
   } from '../actions/types'
-  
+
+  export const createField =  (formValues) =>{
+    console.log('12--- createField action= ', formValues ); 
+    
+    return async dispatch => {
+    const response = await clients.post('/fieldlist', { ...formValues} ); 
+
+    console.log('22---  action createField action response = ', response.data ); 
+
+    dispatch ({  type: CREATE_FIELD,   payload: response.data });
+    }
+};
+
+
+
 
   export const deleteField =  (fieldID) => async dispatch => {
     console.log('13- - deleteField-action ---  fieldID = ', fieldID ); 
@@ -31,12 +46,22 @@ import {
 
   
 
-export const fetchFields =  () =>{
+export const fetchFields =  (id) =>{
     return async dispatch => {
     const response = await clients.get('/fieldlist'); 
     console.log('6---  action fetchFields action response = ', response.data ); 
 
-    dispatch ({  type: FETCH_FIELDS,   payload: response.data });
+
+    // const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId === "5e1445d5f6082f8375a04411" });
+    // console.log('36 ---  action fieldsWithId = ', recordsWithId );     
+
+    const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId ===  id });
+    console.log('36 ---  action recordsWithId = ', recordsWithId );     
+
+    // const sortedArray = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+    const sortedArray = recordsWithId.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+
+    dispatch ({  type: FETCH_FIELDS,   payload: sortedArray });
     }
 };
 

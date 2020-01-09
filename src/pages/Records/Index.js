@@ -34,8 +34,7 @@ const useStyles = makeStyles(theme => ({
 // props.records.data
 const Test = (props) => {
 
-  console.log( '37- props.match.params.id =', props.match.params.id); 
-  const { id } = props.match.params.id; 
+  const { id } = props.match.params; 
 
     // we dont need this at this time because 
     props.fetchSingleClient(props.match.params.id); 

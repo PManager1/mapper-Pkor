@@ -40,8 +40,8 @@ export const Form = props => {
   const { enqueueSnackbar, closeSnackbar } = useSnackbar();
   // console.log(' 18- form.js -  props =', props ); 
   const {
-    values:{ HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
-    // values:{ HeaderInfo: props.fieldInfo.HeaderInfo, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ RecordName, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
     // handleSubmit,
@@ -82,22 +82,20 @@ export const Form = props => {
 
   const [value, setValue] = React.useState('female');
 
-
-  return (
-    
+  return (    
     <form onSubmit={handleSubmit}>   
 
-      
+
       <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
+        name="RecordName"
+        helperText={touched.RecordName ? errors.RecordName : ""}
+        error={Boolean(errors.RecordName)}
+        label="RecordName"
+        value={RecordName}
         onChange={handleChange}
         fullWidth
       />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
+      <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
 
       <TextField
@@ -124,8 +122,6 @@ export const Form = props => {
       
 
 
-
-
       <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-filled-label">Pick Mapp</InputLabel>
         <Select
@@ -135,7 +131,7 @@ export const Form = props => {
           onChange={handleSelectChange}
         >
           <MenuItem value="">
-            <em>None</em>
+           <em>None</em>
           </MenuItem>
           <MenuItem value={10}>TYPE_CODE</MenuItem>
           <MenuItem value={20}>ACCOUNT_NUMBER</MenuItem>
@@ -147,13 +143,9 @@ export const Form = props => {
           <MenuItem value={80}>D_ACCOUNT_CLASS</MenuItem>
           <MenuItem value={100}>D_AMOUNT</MenuItem>
           <MenuItem value={100}>D_PERCENT</MenuItem>
-
         </Select>
       </FormControl>
 
-
-
-    
 
       <TextField
         name="MaxCharLength"

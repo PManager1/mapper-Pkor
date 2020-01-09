@@ -22,7 +22,7 @@ const styles = theme => ({
 });
 
 const validationSchema = Yup.object({
-  HeaderInfo: Yup.string("Enter a HeaderInfo").required("HeaderInfo is required"),
+  RecordName: Yup.string("Enter a RecordName").required("RecordName is required"),
   FieldName: Yup.string("Enter a FieldName").required("FieldName is required"),
   MappedFieldName: Yup.string("Enter a MappedFieldName").required("MappedFieldName is required"),
   MaxCharLength: Yup.string("Enter a MaxCharLength").required("MaxCharLength is required"),

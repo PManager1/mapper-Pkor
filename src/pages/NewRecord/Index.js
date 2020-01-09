@@ -19,8 +19,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function NewRecord() {
+export default function NewRecord(props) {
   const classes = useStyles();
+
+  console.log( '25- props.match.params.id =', props.match.params.id); 
+  // const { handle } = this.props.match.params   props.match.params.id);
+  // console.log( ' new Record props.match.params =', props.match.params)
 
   return (
     <div className={classes.root}>

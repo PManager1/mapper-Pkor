@@ -35,6 +35,7 @@ const useStyles = makeStyles(theme => ({
 const Test = (props) => {
 
   console.log( '37- props.match.params.id =', props.match.params.id); 
+  const { id } = props.match.params.id; 
 
     // we dont need this at this time because 
     props.fetchSingleClient(props.match.params.id); 
@@ -67,6 +68,11 @@ const Test = (props) => {
         )
     }
   
+    const goToNewRecord = () =>{
+      console.log( ' clicked goToNewRecord'); 
+      props.history.push(`/newrecord/${props.match.params.id}`); 
+    }
+
     const classes = useStyles();      
     // if (!props.records) {
     //     console.log(' 42 Data inside it  props.records.data = ', props.records ); 
@@ -102,7 +108,7 @@ const Test = (props) => {
                 <Grid item xs={6} sm={2}>
                     <Typography paragraph align="right">
                         <Tooltip title="Add New Record" aria-label="add"> 
-                            <Fab color="primary" aria-label="add"   component={Link} to="/newrecord" >
+                            <Fab color="primary" aria-label="add"  onClick={goToNewRecord}  >
                                 <AddIcon />   
                             </Fab>
                         </Tooltip>

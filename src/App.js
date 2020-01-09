@@ -84,6 +84,8 @@ const App = () =>{
                     
                     <Route exact path="/newField" component={NewFields} />
                     <Route exact path="/newrecord" component={NewRecord} />
+                    <Route exact path="/newrecord/:id" component={NewRecord} />
+                    
                     <Route exact path="/editrecords" component={EditRecords} />
 
                     <Route exact path="/grid" exact component={FullWidthGrid} />

@@ -1,8 +1,13 @@
 ===========================
-<<<<<<< HEAD
-when creating new field on there show bredacrumbs. 
 
-mapId> Record > Field
+
+on New record creation 
+and on New field cretion 
+
+show the toaster. 
+===========================
+
+http://localhost:3000/#/records/5e1445d5f6082f8375a04411
 
 ===========================
 copy paste the pick data set name created in new record into the 
@@ -27,7 +32,6 @@ Look where am i calling the fetchFields show that we only show the fields for th
 
 Header containing the nameMap : 
 check if the ls has the name, if yes put that in the header. 
->>>>>>> reroute
 
 ===========================
 

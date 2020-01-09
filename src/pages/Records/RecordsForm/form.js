@@ -63,12 +63,14 @@ export const Form = props => {
   };
 
   const handleClickVariant = variant => () => {
+    console.log( ' 66 - handleClickVariant  called ');
     // variant could be success, error, warning, info, or default
     console.log('  40 -  handleClickVariant called');
     enqueueSnackbar('Save Successful!', { variant });
   };
 
   const handleSubmit = (e) =>{
+    console.log( ' 73 -  handleSubmit  in side  RECORDS/ RECORDS FORM')
     e.preventDefault(); 
     e.persist();
     dispatch(editField(props.values._id, props.values));

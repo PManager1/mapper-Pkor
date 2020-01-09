@@ -16,7 +16,6 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-import { useHistory } from "react-router-dom";
 // new end 
 // Pick the data set list. 
 const useStyles = makeStyles(theme => ({
@@ -32,8 +31,6 @@ const useStyles = makeStyles(theme => ({
 
 
 const Form = props => {
-
-  let history = useHistory();
 
   const classes = useStyles();
   const [age, setAge] = React.useState('');
@@ -56,7 +53,6 @@ const Form = props => {
   const handleSaveClick = () =>{
     console.log('28 -  called handleSaveClick inside form.js ' ); 
     props.createRecord(props.values);  
-    history.goBack();
   }
  
 
@@ -125,7 +121,35 @@ const Form = props => {
         <MenuItem value={30}>DataSet BB-3</MenuItem>
       </Select>
     </FormControl>
-     
+
+
+
+
+      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
+      <TextField
+        name="PaddingLeft"
+        helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
+        error={Boolean(errors.PaddingLeft)}
+        label="PaddingLeft"
+        value={PaddingLeft}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
+   
+      <TextField
+        name="PaddingRight"
+        helperText={touched.PaddingRight ? errors.PaddingRight : ""}
+        error={Boolean(errors.PaddingRight)}
+        label="PaddingRight"
+        value={PaddingRight}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
+   
+
+      {/* disabled={!isValid} */}
       <Button  type="submit"
         fullWidth
         variant="contained" 

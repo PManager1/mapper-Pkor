@@ -5,14 +5,37 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
-import FormControl from '@material-ui/core/FormControl';
-
 import { connect } from "react-redux";
 import { createRecord } from '../../actions';
+
+// new 
+// new 
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import { makeStyles } from '@material-ui/core/styles';
+// new end 
+// Pick the data set list. 
+const useStyles = makeStyles(theme => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 
 
 const Form = props => {
+
+  const classes = useStyles();
+  const [age, setAge] = React.useState('');
+
+
   const {
     values:{ RecordName, HeaderInfo, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
@@ -44,6 +67,12 @@ const Form = props => {
   // const handleChange = event => {
   //   setValue(event.target.value);
   // };
+
+    
+  const handleSelectChange = event => {
+    setAge(event.target.value);
+  };
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -93,6 +122,25 @@ const Form = props => {
       />
       <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
       
+
+
+    <FormControl className={classes.formControl}>
+      <InputLabel id="demo-simple-select-filled-label">Pick DataSet</InputLabel>
+      <Select
+        labelId="demo-simple-select-filled-label"
+        id="demo-simple-select-filled"
+        value={age}
+        onChange={handleSelectChange}
+      >
+        <MenuItem value="">
+          <em>None</em>
+        </MenuItem>
+        <MenuItem value={10}>DataSet 1 </MenuItem>
+        <MenuItem value={20}>DataSet 2</MenuItem>
+        <MenuItem value={30}>DataSet 3</MenuItem>
+      </Select>
+    </FormControl>
+
 
       <TextField
         name="MaxCharLength"

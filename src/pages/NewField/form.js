@@ -13,7 +13,7 @@ import { createClient } from '../../actions';
 
 const Form = props => {
   const {
-    values:{ HeaderInfo,FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -48,18 +48,6 @@ const Form = props => {
   return (
     <form onSubmit={handleSubmit}>
       
-      <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
-
-
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}

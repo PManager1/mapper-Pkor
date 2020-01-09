@@ -1,3 +1,8 @@
+
+===========================
+
+Get the meta data from the react field info.  not from the static content. 
+
 ===========================
 
 NOW TODO = -  on search it goes to records along with the ID passed. 

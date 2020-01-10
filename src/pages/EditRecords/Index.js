@@ -26,10 +26,25 @@ const useStyles = makeStyles(theme => ({
 // props.records.data
 const Test = (props) => {
     // const [ resources, setResources ] = useState([]);
+    // console.log('29 - EditRecords props = ', props ); 
+    const { id } = props.match.params; 
+    // console.log('31 - EditRecords id = ', id ); 
+
+    const [Loading, setLoading] = useState(true);
+
+  
+    // useEffect(() => {
+    //       // props.fetchRecords(); 
+    //       props.fetchRecords(id);
+    // }, [])
 
     useEffect(() => {
-          props.fetchRecords(); 
-    }, [])
+      console.log('mounted');
+        props.fetchRecords(id); 
+        setTimeout(function(){ setLoading(!Loading); }, 200);
+      console.log('58 - fetching records finished  see records =', props.records ); 
+  }, [])
+
 
     const classes = useStyles();
 

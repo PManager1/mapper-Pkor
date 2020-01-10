@@ -9,21 +9,19 @@ EDIT_RECORD,
 DELETE_RECORD
   } from './types'
 
-
 export const fetchRecords =  (id) =>{
-    console.log('29---fetchRecords action fetching records for ID = ', id ); 
+    console.log('13---fetchRecords action fetching records for ID = ', id ); 
     return async dispatch => {
     const response = await clients.get('/records'); 
     // console.log('16 ---  action fetchRecords  response = ', response.data ); 
-                                    // "5e1445d5f6082f8375a04411"
     const recordsWithId = _.filter(response.data.data, function(o) { return o.MapId === id });
-    console.log('36 ---  action recordsWithId = ', recordsWithId );     
+    console.log('18 ---  action recordsWithId = ', recordsWithId );     
 
 
     // const sortedArray = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
     const sortedArray = recordsWithId.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
     //   let arrr =   sortArr(response.data)
-    // console.log('24 ---  action fetchRecords  sortedArray = ', sortedArray ); 
+    console.log('24 ---  action fetchRecords  sortedArray = ', sortedArray ); 
 
     dispatch ({  type: 'FETCH_RECORDS',   payload: sortedArray });
     }

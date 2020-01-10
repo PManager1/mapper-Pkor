@@ -17,15 +17,17 @@ const useStyles = makeStyles(theme => ({
 
 
 export default function DeleteBtn(props) {
-    // console.log( '  18 -  DeleteBtn props = ', props.fieldInfo._id );
+    console.log( '  18 -  DeleteBtn props = ', props.values._id );
+  
+    const { _id } = props.values;
 
   const classes = useStyles();
 
 
   const dispatch = useDispatch();
   const handleDelete = () =>{
-    console.log(' handleDelete called '); 
-    dispatch(deleteField(props.fieldInfo._id));
+    console.log('29- handleDelete called with props.fieldInfo =', props ); 
+    dispatch(deleteField(_id));
   } 
 
   return (

@@ -37,6 +37,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 export default function FullDialogInForm(props) {
   // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id ); 
+  console.log('40- FullDialogInForm  props =', props );
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -52,7 +53,7 @@ export default function FullDialogInForm(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More FDIF
+        More FDIF -56
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
@@ -89,7 +90,7 @@ export default function FullDialogInForm(props) {
             <Divider />
 
             <div className={classes.sectionRulePicker}>
-                <DeleteBtn />
+                <DeleteBtn {...props} />
             </div>
 
 

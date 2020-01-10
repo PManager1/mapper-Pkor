@@ -52,7 +52,7 @@ export default function FullDialogInForm(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More
+        More FDIF
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>

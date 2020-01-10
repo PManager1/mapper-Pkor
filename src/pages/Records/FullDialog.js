@@ -54,7 +54,7 @@ export default function FullDialog(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More 
+        More FD
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>

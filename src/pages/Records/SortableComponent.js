@@ -36,7 +36,6 @@ class SortableComponent extends Component {
         super(props);
         this.state = {
             resources: [],
-            records: ['Header Record 1', 'Details Record', 'Trail Record'],
             items: ['Field 97', 'Field 98', 'Field 99']
         };
 
@@ -45,7 +44,10 @@ class SortableComponent extends Component {
         // resulting value =  this.props.singleRecord
       }
 
+      
       async componentDidMount(){
+        console.log('50 - Records > SortableComponent this.props =', this.props ); 
+
         const response = await axios.get(`http://localhost:3030/fieldlist`)
         let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
         // console.log('49-sortedResources=', sortedResources ); 
@@ -79,7 +81,6 @@ class SortableComponent extends Component {
   render() {
     // console.log('58- SortableComponent\'s props = ', this.props ); 
     const {items} = this.state;
-    const {records} = this.state;
     const { resources } = this.state; 
 
     // console.log('68- SortableComponent\'s resources  = ', resources ); 

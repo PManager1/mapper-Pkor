@@ -50,7 +50,7 @@ const Child = (props) => {
 
 
   const goToNewField = () => {
-    console.log (' 47 - goToNewField clicked  - props =' , props );
+    console.log ('53 - goToNewField clicked  - props.data._id =' , props.data._id );
     // console.log( '32 - goToNewField(MapID) clicked props.match.params =', props.match.params ); 
     // console.log( '34 - goToNewField(MapID) clicked props =', MapId ); 
     history.push(`/newfield/${props.data.MapId}`)
@@ -73,8 +73,8 @@ const Child = (props) => {
               <Grid item xs={6} sm={2}>
               <section style={sectionPlusBtn}>  
                   <Typography paragraph align="right">
-                    <Tooltip title="Add New Field2" aria-label="add"> 
-                      <Fab color="secondary" aria-label="add" onClick={goToNewField}   >
+                    <Tooltip title="Add New Field3" aria-label="add"> 
+                      <Fab color="secondary" aria-label="add" onClick={goToNewField} >
                         <AddIcon /> 
                         </Fab>
                       </Tooltip>

@@ -1,10 +1,13 @@
-===========================
+======================================================               
+on the search screen - we have to send the _id but not show it on the 
+search results. 
+======================================================               
 DO => now we see values of the specific records and fields associated with that mapid. 
 ===========================
 check that specific records are showing for specific map id. 
 
 check the whole flow from Blank. 
-===========================
+================================                
 Field DELETE NOT WORKING 
 ===========================
 

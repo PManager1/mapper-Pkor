@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import Typography from '@material-ui/core/Typography';
 import SortableComponent from './SortableComponent';
-
 import AddIcon from '@material-ui/icons/Add';
 import Fab from '@material-ui/core/Fab';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -34,8 +33,8 @@ const Child = (props) => {
   let history = useHistory();
 
   const { MapId } = props.data; 
-  console.log( '40 - in child component MapId', MapId  ); 
-  console.log( '41 - in child component  this.props', props  ); 
+  // console.log( '40 - in child component MapId', MapId  ); 
+  // console.log( '41 - in child component  this.props', props  ); 
 
   // const { id } = props.match.params; 
 
@@ -83,7 +82,6 @@ const Child = (props) => {
       </Grid>
 
 
-           
             {/* we pass RecordId which has multiple fields in it. Now this one fetches & creates mutiple childs */}
             <SortableComponent Record={props.data}/>              
       </div>

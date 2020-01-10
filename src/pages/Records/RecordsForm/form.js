@@ -172,12 +172,12 @@ export const Form = props => {
 
 
 
-      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
+      <FormLabel component="legend">Select Left/ Right Padding Value </FormLabel>
       <TextField
         name="LeftPadding"
         helperText={touched.LeftPadding ? errors.LeftPadding : ""}
         error={Boolean(errors.LeftPadding)}
-        label="LeftPadding"
+        label="PaddingLeft Value"
         value={LeftPadding}
         onChange={handleChange}
         fullWidth
@@ -188,7 +188,7 @@ export const Form = props => {
         name="RightPadding"
         helperText={touched.RightPadding ? errors.RightPadding : ""}
         error={Boolean(errors.RightPadding)}
-        label="RightPadding"
+        label="PaddingRight Value"
         value={RightPadding}
         onChange={handleChange}
         fullWidth

@@ -83,7 +83,7 @@ const Form = props => {
       <PickMapSelect />
 
       <TextField
-        name="FieldName"
+        name="MaxCharLength"
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
         error={Boolean(errors.MaxCharLength)}
         label="MaxCharLength"
@@ -94,13 +94,37 @@ const Form = props => {
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
 
+      <FormLabel component="legend">Please Select Alignment Value</FormLabel>
+        <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
+          <FormControlLabel
+            value="LeftAligned"
+            control={<Radio color="primary" />}
+            label="LeftAligned"
+            labelPlacement="start"
+          />
+          <FormControlLabel
+            value="None"
+            control={<Radio color="secondary" />}
+            label="None"
+            labelPlacement="start"
+          />
+          <FormControlLabel
+            value="RightAligned"
+            control={<Radio color="primary" />}
+            label="RightAligned"
+            labelPlacement="start"
+          />
+
+      </RadioGroup>
+
+
 
       <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
       <TextField
         name="PaddingLeft"
         helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
         error={Boolean(errors.PaddingLeft)}
-        label="PaddingLeft"
+        label="Padding Left Value"
         value={PaddingLeft}
         onChange={handleChange}
         fullWidth
@@ -111,7 +135,7 @@ const Form = props => {
         name="PaddingRight"
         helperText={touched.PaddingRight ? errors.PaddingRight : ""}
         error={Boolean(errors.PaddingRight)}
-        label="PaddingRight"
+        label="Padding Right  Value"
         value={PaddingRight}
         onChange={handleChange}
         fullWidth

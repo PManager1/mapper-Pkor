@@ -52,7 +52,7 @@ export default function FullDialogInForm(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Pick Mapped Field Names
+        More
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>

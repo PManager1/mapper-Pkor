@@ -18,7 +18,7 @@ import {useSelector, useDispatch} from 'react-redux';
 export const Form = props => {
   // console.log(' 18- form.js -  props =', props ); 
   const {
-    values:{ RecordName, HeaderInfo, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ RecordName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
@@ -70,28 +70,6 @@ export const Form = props => {
       />
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
-      <TextField
-        name="HeaderInfo"
-        helperText={touched.HeaderInfo ? errors.HeaderInfo : ""}
-        error={Boolean(errors.HeaderInfo)}
-        label="HeaderInfo"
-        value={HeaderInfo}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.HeaderInfo) ? errors.HeaderInfo : ""}</div>
-
-
-      <TextField
-        name="FieldName"
-        helperText={touched.FieldName ? errors.FieldName : ""}
-        error={Boolean(errors.FieldName)}
-        label="FieldName"
-        value={FieldName}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.name) ? errors.name : ""}</div>
 
       <TextField
         name="MappedFieldName"
@@ -159,7 +137,7 @@ export const Form = props => {
         name="LeftPadding"
         helperText={touched.LeftPadding ? errors.LeftPadding : ""}
         error={Boolean(errors.LeftPadding)}
-        label="LeftPadding"
+        label="Left Padding Value"
         value={LeftPadding}
         onChange={handleChange}
         fullWidth
@@ -170,7 +148,7 @@ export const Form = props => {
         name="RightPadding"
         helperText={touched.RightPadding ? errors.RightPadding : ""}
         error={Boolean(errors.RightPadding)}
-        label="RightPadding"
+        label="Right Padding Value"
         value={RightPadding}
         onChange={handleChange}
         fullWidth

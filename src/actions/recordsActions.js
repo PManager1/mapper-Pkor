@@ -26,6 +26,15 @@ export const fetchRecords =  (id) =>{
     dispatch ({  type: 'FETCH_RECORDS',   payload: sortedArray });
     }
 };
+
+export const deleteRecord =  (recID) => async dispatch => {
+    console.log('13- - deleteField-action ---  recID = ', recID ); 
+    const response = await clients.delete(`/records/${recID}`); 
+
+    dispatch ({  type: 'DELETE_FIELD',   payload: recID });
+    };
+
+
 export const createRecord =  (formValues) =>{
     console.log('30--- createRecord action= ', formValues ); 
     

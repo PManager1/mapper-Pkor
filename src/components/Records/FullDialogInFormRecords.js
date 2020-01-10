@@ -13,8 +13,8 @@ import RulePicker from './RulePicker';
 import MetaDataPicker from './MetaDataPicker';
 // import FreeSolo from './FreeSolo'; 
 
-
-import DeleteBtn from './common/DeleteBtn.js'; 
+// DeleteBtnRecord
+import DeleteBtnRecord from './common/DeleteBtnRecord.js'; 
 // import PickSingleMapped from './common/PickSingleMapped';
 
 const useStyles = makeStyles(theme => ({
@@ -35,7 +35,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullDialogInForm(props) {
+export default function FullDialogInFormRecords(props) {
   // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id ); 
   console.log('40- FullDialogInForm  props =', props );
 
@@ -53,7 +53,7 @@ export default function FullDialogInForm(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More FDIF -56
+        More Info - 5555 Edit screen
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
@@ -63,7 +63,7 @@ export default function FullDialogInForm(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              More Information
+              More Information (Records)
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
               save
@@ -90,7 +90,7 @@ export default function FullDialogInForm(props) {
             <Divider />
 
             <div className={classes.sectionRulePicker}>
-                <DeleteBtn {...props} />
+                <DeleteBtnRecord {...props} />
             </div>
 
 

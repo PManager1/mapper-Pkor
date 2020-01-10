@@ -13,7 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { editRecord } from '../../../actions'; 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux'; 
-import FullDialogInForm from '../../../components/Records/FullDialogInFormRecords.js'; 
+import FullDialogInFormRecords from '../../../components/Records/FullDialogInFormRecords.js'; 
 
 
 export const Form = props => {
@@ -156,7 +156,7 @@ export const Form = props => {
       />
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
    
-      <FullDialogInForm {...props}/>
+      <FullDialogInFormRecords {...props}/>
    
       <Button type="submit" fullWidth variant="contained" color="primary">
         Save

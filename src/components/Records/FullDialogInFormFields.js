@@ -63,7 +63,7 @@ export default function FullDialogInFormFields(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              More Information
+              More Information (Fields)
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
               save

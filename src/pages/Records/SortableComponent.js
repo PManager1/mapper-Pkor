@@ -35,7 +35,7 @@ class SortableComponent extends Component {
         // console.log(' 34 - in SortableComponent constrcutor props.Record._id = ',  props.Record._id ); 
         super(props);
         this.state = {
-            resources: [],
+            fields: [],
             items: ['Field 97', 'Field 98', 'Field 99']
         };
 
@@ -47,11 +47,16 @@ class SortableComponent extends Component {
       
       async componentDidMount(){
         console.log('50 - Records > SortableComponent this.props =', this.props ); 
+        const { _id } = this.props.Record; 
+        console.log('51 - Records > SortableComponent this.props RecordID=', _id ); 
 
-        const response = await axios.get(`http://localhost:3030/fieldlist`)
-        let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+        const response = await axios.get(`http://localhost:3030/fieldlist`); 
+
+        const recordsWithId = _.filter(response.data.data, function(o) { return o.RecordId === _id });
+
+        let sortedfields = recordsWithId.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
         // console.log('49-sortedResources=', sortedResources ); 
-        this.setState({ resources: sortedResources }); 
+        this.setState({ fields: sortedfields }); 
       }
 
   onSortEnd = ({oldIndex, newIndex}) => {
@@ -62,17 +67,17 @@ class SortableComponent extends Component {
     //   items: arrayMove(items, oldIndex, newIndex),
     // }));
 
-    this.setState(({resources}) => ({
-      resources: arrayMove(resources, oldIndex, newIndex),
+    this.setState(({fields}) => ({
+      fields: arrayMove(fields, oldIndex, newIndex),
     }));
 
-    this.state.resources.forEach((obj, index) =>{
+    this.state.fields.forEach((obj, index) =>{
       
       console.log(' index = ', index ); 
       console.log(' obj = ', obj ); 
-      this.state.resources[index].SequenceNumber = index;
+      this.state.fields[index].SequenceNumber = index;
 
-      this.props.editField(this.state.resources[index]._id,  this.state.resources[index] ); 
+      this.props.editField(this.state.fields[index]._id,  this.state.fields[index] ); 
 
     }); 
   };
@@ -81,13 +86,13 @@ class SortableComponent extends Component {
   render() {
     // console.log('58- SortableComponent\'s props = ', this.props ); 
     const {items} = this.state;
-    const { resources } = this.state; 
+    const { fields } = this.state; 
 
-    // console.log('68- SortableComponent\'s resources  = ', resources ); 
+    // console.log('68- SortableComponent\'s fields  = ', fields ); 
 
     return (<div>
       <SortableContainer onSortEnd={this.onSortEnd} useDragHandle>
-        {resources.map((value, index) => (
+        {fields.map((value, index) => (
           <SortableItem key={`item-${value.fieldName}`} index={index} value={value} />
         ))}
       </SortableContainer>

@@ -48,7 +48,8 @@ export default function StepperThreeNT(props) {
   const steps = getSteps();
 
   const handleNext = () => {
-    props.history.push(`/`);
+    
+    props.history.push(`/records`);
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
   };
 

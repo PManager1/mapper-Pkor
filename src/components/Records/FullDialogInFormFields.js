@@ -35,7 +35,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullDialogInForm(props) {
+export default function FullDialogInFormFields(props) {
   // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id ); 
   console.log('40- FullDialogInForm  props =', props );
 

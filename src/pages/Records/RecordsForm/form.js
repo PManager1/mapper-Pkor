@@ -20,7 +20,7 @@ import Select from '@material-ui/core/Select';
 import PickMapSelect from '../../../components/Records/PickMapSelect.js'; 
 
 // import FullDialogInForm from '../FullDialogInForm.js'; 
-import FullDialogInForm from '../../../components/Records/FullDialogInForm.js'; 
+import FullDialogInFormFields from '../../../components/Records/FullDialogInFormFields.js'; 
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -196,7 +196,7 @@ export const Form = props => {
       />
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
         
-      <FullDialogInForm {...props}/>
+      <FullDialogInFormFields {...props}/>
 
       <Button onClick={handleClickVariant('success')} type="submit" fullWidth variant="contained" color="primary">
         Save

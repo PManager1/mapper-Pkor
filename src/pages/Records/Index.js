@@ -85,8 +85,8 @@ const Test = (props) => {
       <Spinner /> :
       <React.Fragment>
 
-        <Typography variant='h6' color="primary" align="left">
-            Mapper Id: Blackbaud 123345
+        <Typography variant='h4' color="primary" align="left">
+              All Records 
         </Typography>
 
 

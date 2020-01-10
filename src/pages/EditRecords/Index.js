@@ -53,8 +53,8 @@ const Test = (props) => {
         return null;
       }
       return (<div>
-                <Typography variant='h6' color="primary" align="left">
-                  Mapper Id: Balckbaud 123345
+                <Typography variant='h4' color="primary" align="left">
+                  Edit Records 
                 </Typography>
 
       <Grid container spacing={3}>

@@ -1,5 +1,5 @@
 ===========================
-Edit records should go to that specific mapId & show the records of that specific map id. 
+DO => now we see values of the specific records and fields associated with that mapid. 
 ===========================
 check that specific records are showing for specific map id. 
 

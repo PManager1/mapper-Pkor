@@ -18,7 +18,15 @@ const useStyles = makeStyles(theme => ({
   }));
 
 const dataSets = ['TYPE_CODE', 'ACCOUNT_NUMBER', 'POST_DATE', 'ENCUMBRANCE', 'JOURNAL', 'AMOUNT', 'D_UI_PROJECT_ID', 'D_AMOUNT', 'D_PERCENT'];
-  
+
+// const dataSets = [{ "name": 'TYPE_CODE', "picked": false },
+//   { "name": 'ACCOUNT_NUMBER', "picked": true },
+//   { "name": 'POST_DATE', "picked": true },
+//   { "name": 'ENCUMBRANCE', "picked": true },
+//   { "name": 'JOURNAL', "picked": true },
+//   { "name": 'D_UI_PROJECT_ID', "picked": true }]; 
+
+
 const PickMapSelect = ()=>{
 
     const handleSelectChange = event => {

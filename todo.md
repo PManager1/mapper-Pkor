@@ -1,6 +1,8 @@
 ======================================================               
 When i create a new record under the Green map it doesnt show up there. 
 
+====================================================== 
+upon creating a new record under the map , i dont see the field coming there.
 ======================================================               
 on the search screen - we have to send the _id but not show it on the 
 search results. 

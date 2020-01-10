@@ -27,12 +27,13 @@ export const fetchRecords =  (id) =>{
     }
 };
 export const createRecord =  (formValues) =>{
-    // console.log('18--- createRecord action= ', formValues ); 
+    console.log('30--- createRecord action= ', formValues ); 
     
     return async dispatch => {
     const response = await clients.post('/records', { ...formValues} ); 
-    // console.log('22---  action createLogic action response = ', response.data ); 
-
+    
+    console.log('34---  action createLogic action response = ', response.data ); 
+    
     dispatch ({  type: CREATE_RECORD,   payload: response.data });
     }
 };

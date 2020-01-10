@@ -37,17 +37,36 @@ class SortableComponent extends Component {
         this.state = {
             resources: [],
             // records: ['Header Record 1', 'Details Record', 'Trail Record'],
-            items: ['Field 97', 'Field 98', 'Field 99']
+            items: ['Field 97', 'Field 98', 'Field 99'] 
+
         };
+
+        console.log('44 inside  EditRecords SortableCompoennt  this.props = ', this.props); 
+
+        // console.log(' 43 - inside EditREcords  SortableComponent - constrcutor = this.props= ', this.props); Records 
+        // console.log(' 44 - inside EditREcords  SortableComponent - constrcutor = this.props.Records= ', this.props.Records );
 
       }
 
       async componentDidMount(){
-        const response = await axios.get(`http://localhost:3030/records`)
-        let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
-        console.log('49-sortedResources=', sortedResources ); 
-        this.setState({ resources: sortedResources }); 
+        console.log('52-   compnent Did Mounted '); 
+
+        console.log('44 inside  EditRecords SortableCompoennt  this.props = ', this.props); 
+        // const response = await axios.get(`http://localhost:3030/records`)
+        // let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+        // console.log('49-sortedResources=', sortedResources ); 
+        // this.setState({ resources: sortedResources }); 
       }
+
+      componentDidUpdate(prevProps) {
+        // console.log('62 inside componentDidUpdate  EditRecords SortableCompoennt  this.props = ', this.props); 
+        if (prevProps.Records !== this.props.Records) {
+          // this.updateAndNotify();
+          console.log('62 inside componentDidUpdate  EditRecords SortableCompoennt  this.props = ', this.props); 
+          this.setState({ resources: this.props.Records });
+        }
+      }
+
 
   onSortEnd = ({oldIndex, newIndex}) => {
     console.log( ' 34 - oldIndex  = ', oldIndex ); 

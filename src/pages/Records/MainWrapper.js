@@ -143,7 +143,7 @@ export default function MainWrapper(props) {
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
             {/* Paycor Data Mapper - Blackbaud 123456 */}
-            D M -  {value}
+            Paycor Data Mapper - {value}
             
           </Typography>
 

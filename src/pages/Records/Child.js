@@ -33,8 +33,10 @@ const Child = (props) => {
   let history = useHistory();
 
   const { MapId } = props.data; 
-  // console.log( '40 - in child component MapId', MapId  ); 
-  // console.log( '41 - in child component  this.props', props  ); 
+
+  console.log( '37 - in child component  props.data', props.data  ); 
+  console.log( '38 - in child component MapId', MapId  ); 
+  
 
   // const { id } = props.match.params; 
 

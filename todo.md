@@ -2,6 +2,11 @@
 on the search screen - we have to send the _id but not show it on the 
 search results. 
 ======================================================               
+Sort the fieldnames based on the Records. 
+> sort by mapid and 
+> sort by record id. ( send the record id to the child)
+
+======================================================               
 DO => now we see values of the specific records and fields associated with that mapid. 
 ===========================
 check that specific records are showing for specific map id. 

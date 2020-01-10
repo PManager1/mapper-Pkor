@@ -13,7 +13,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { editRecord } from '../../../actions'; 
 import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux'; 
-import FullDialogInForm from '../../../components/Records/FullDialogInForm.js'; 
+import FullDialogInForm from '../../../components/Records/FullDialogInFormRecords.js'; 
 
 
 export const Form = props => {

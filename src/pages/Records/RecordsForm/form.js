@@ -19,7 +19,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import PickMapSelect from '../../../components/Records/PickMapSelect.js'; 
 
-import FullDialogInForm from '../FullDialogInForm.js'; 
+// import FullDialogInForm from '../FullDialogInForm.js'; 
+import FullDialogInForm from '../../../components/Records/FullDialogInForm.js'; 
 
 const useStyles = makeStyles(theme => ({
   formControl: {

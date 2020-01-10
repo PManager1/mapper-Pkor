@@ -83,6 +83,7 @@ const App = () =>{
                     <Route exact path="/newfield/:id" component={NewFields} />
 
                     <Route exact path="/editrecords" component={EditRecords} />
+                    <Route exact path="/editrecords/:id" component={EditRecords} />
 
                     <Route exact path="/grid" exact component={FullWidthGrid} />
                     <Route exact path="/styledgrid" exact component={styledgrid} />

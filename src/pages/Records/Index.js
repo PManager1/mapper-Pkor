@@ -68,6 +68,10 @@ const Test = (props) => {
       console.log( '69 - goToNewRecord clicked goToNewRecord props=', props ); 
       props.history.push(`/newrecord/${props.match.params.id}`); 
     }
+    const handleEditRecordsBtn = () => {
+      console.log('72 -  handleEditRecordsBtn clicked '); 
+      props.history.push(`/editrecords/${id}`); 
+    }
 
     const classes = useStyles();      
     // if (!props.records) {
@@ -94,7 +98,8 @@ const Test = (props) => {
                 <Grid item xs={6} sm={2}>
            
                 <Tooltip title="Edit Records" aria-label="add"> 
-                    <Fab variant="extended" component={Link} to="/editrecords" >
+                    <Fab variant="extended" onClick={handleEditRecordsBtn}  >
+
                         <EditIcon className={classes.extendedIcon} />
                         Edit Records
                     </Fab>

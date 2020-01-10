@@ -12,3 +12,7 @@ show the toaster.
 on search shows so much data undefined , remove that. 
 ===============================================
 ===============================================
+display loading until data is loaded on the /records/892374897329  url 
+
+===============================================
+

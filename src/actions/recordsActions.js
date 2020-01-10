@@ -10,10 +10,8 @@ DELETE_RECORD
   } from './types'
 
 
-
-
 export const fetchRecords =  (id) =>{
-    console.log('29---fetch records for ID = ', id ); 
+    console.log('29---fetchRecords action fetching records for ID = ', id ); 
     return async dispatch => {
     const response = await clients.get('/records'); 
     // console.log('16 ---  action fetchRecords  response = ', response.data ); 

@@ -4,8 +4,9 @@ import withStyles from "@material-ui/core/styles/withStyles";
 import { Form } from "./form";
 import Paper from "@material-ui/core/Paper";
 import * as Yup from "yup";
-import FullDialogInForm from '../FullDialogInForm.js'; 
 import Switch from '@material-ui/core/Switch';
+
+import FullDialogInForm from '../FullDialogInForm.js'; 
 
 const styles = theme => ({
   paper: {

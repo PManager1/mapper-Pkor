@@ -53,7 +53,9 @@ const Child = (props) => {
     console.log ('53 - goToNewField clicked  - props.data._id =' , props.data._id );
     // console.log( '32 - goToNewField(MapID) clicked props.match.params =', props.match.params ); 
     // console.log( '34 - goToNewField(MapID) clicked props =', MapId ); 
-    history.push(`/newfield/${props.data.MapId}`)
+    
+    // history.push(`/newfield/${props.data.MapId}`)
+    history.push(`/newfield/${props.data.MapId}/${props.data._id}`)
     // history.push(`/newfield`)
   }
   

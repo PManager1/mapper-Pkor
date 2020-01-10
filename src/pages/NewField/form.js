@@ -19,7 +19,7 @@ const Form = props => {
   let history = useHistory();
 
   const {
-    values:{ MapId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values:{ MapId, RecordId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -68,7 +68,21 @@ const Form = props => {
       />
       <div>{Boolean(errors.MapId) ? errors.MapId : ""}</div> */}
 
+{/* RecordId */}
 
+<TextField
+        name="RecordId"
+        helperText={touched.RecordId ? errors.RecordId : ""}
+        error={Boolean(errors.RecordId)}
+        label="RecordId"
+        value={RecordId}
+        onChange={handleChange}
+        disabled
+        fullWidth
+      />
+      <div>{Boolean(errors.RecordId) ? errors.RecordId : ""}</div>
+
+      
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}

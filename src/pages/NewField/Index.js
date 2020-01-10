@@ -21,14 +21,20 @@ const useStyles = makeStyles(theme => ({
 
 export default function NewFields(props) {
   const classes = useStyles();
+  // const { id } = props.match.params; 
+  console.log ( '25 - NewField -  props.match.params= ',  props.match.params ); 
   const { id } = props.match.params; 
+  const { recordId } = props.match.params; 
+
+  console.log ( '28 - NewField -  recordId= ',  recordId ); 
+  console.log ( '31 - NewField - id= ',  id ); 
 
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>
           Create New Field
           </Typography>
-      <RecordsForm id={id} />
+      <RecordsForm recordId={recordId} id={id} />
      </div>
   );
 }

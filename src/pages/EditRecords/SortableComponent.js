@@ -48,20 +48,19 @@ class SortableComponent extends Component {
 
       }
 
-      async componentDidMount(){
-        console.log('52-   compnent Did Mounted '); 
+      // async componentDidMount(){
+      //   console.log('52-   compnent Did Mounted '); 
 
-        console.log('44 inside  EditRecords SortableCompoennt  this.props = ', this.props); 
-        // const response = await axios.get(`http://localhost:3030/records`)
-        // let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
-        // console.log('49-sortedResources=', sortedResources ); 
-        // this.setState({ resources: sortedResources }); 
-      }
+      //   console.log('44 inside  EditRecords SortableCompoennt  this.props = ', this.props); 
+      //   // const response = await axios.get(`http://localhost:3030/records`)
+      //   // let sortedResources = response.data.data.sort((a, b) => (a.SequenceNumber > b.SequenceNumber) ? 1 : -1)
+      //   // console.log('49-sortedResources=', sortedResources ); 
+      //   // this.setState({ resources: sortedResources }); 
+      // }
 
       componentDidUpdate(prevProps) {
         // console.log('62 inside componentDidUpdate  EditRecords SortableCompoennt  this.props = ', this.props); 
         if (prevProps.Records !== this.props.Records) {
-          // this.updateAndNotify();
           console.log('62 inside componentDidUpdate  EditRecords SortableCompoennt  this.props = ', this.props); 
           this.setState({ resources: this.props.Records });
         }
@@ -69,8 +68,8 @@ class SortableComponent extends Component {
 
 
   onSortEnd = ({oldIndex, newIndex}) => {
-    console.log( ' 34 - oldIndex  = ', oldIndex ); 
-    console.log( ' 35 - newIndex  = ', newIndex ); 
+    // console.log( ' 34 - oldIndex  = ', oldIndex ); 
+    // console.log( ' 35 - newIndex  = ', newIndex ); 
 
     // this.setState(({items}) => ({
     //   items: arrayMove(items, oldIndex, newIndex),
@@ -82,12 +81,12 @@ class SortableComponent extends Component {
 
     this.state.resources.forEach((obj, index) =>{
       
-      console.log(' index = ', index ); 
-      console.log(' obj = ', obj ); 
+      // console.log(' index = ', index ); 
+      // console.log(' obj = ', obj ); 
       this.state.resources[index].SequenceNumber = index;
 
       this.props.editRecord(this.state.resources[index]._id,  this.state.resources[index] ); 
-      console.log('71 - this.state.resources  = ', this.state.resources ); 
+      // console.log('71 - this.state.resources  = ', this.state.resources ); 
 
     }); 
   };

@@ -70,6 +70,8 @@ const App = () =>{
                 <MainWrapper >
 
                     <Route exact path="/clientdetail" exact component={ClientDetail} />
+                    <Route exact path="/" component={Search} />
+
                     <Route exact path="/search" component={Search} />
                     <Route exact path="/search/:id" component={ClientDetail} />
 

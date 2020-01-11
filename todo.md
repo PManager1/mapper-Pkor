@@ -1,15 +1,11 @@
 ======================================================               
 
-
-
+hook up map fields options to get from the backend. 
 
 ======================================================               
-When i create a new record under the Green map it doesnt show up there. 
-====================================================== 
-record deletion isn't working 
+
 ====================================================== 
 
-upon creating a new record under the map , i dont see the field coming there.
 ======================================================               
 on the search screen - we have to send the _id but not show it on the 
 search results. 
@@ -19,7 +15,9 @@ Sort the fieldnames based on the Records.
 > sort by record id. ( send the record id to the child)
 
 ======================================================               
+
 DO => now we see values of the specific records and fields associated with that mapid. 
+
 ===========================
 check that specific records are showing for specific map id. 
 
@@ -35,7 +33,7 @@ copy paste the pick data set name created in new record into the
 
 ===========================
 ===========================
-hook up map fields options to get from the backend. 
+
 ===========================
 
 
@@ -226,7 +224,6 @@ Udemy - Modern React with Redux [2019 Update]
 Memoization: 
 
 15-18 
-
 Do Lazy loding. 
 Do SSR. 
 Do Testing. 
@@ -235,15 +232,6 @@ Do Testing.
 
 ============================
 
-Web link : 
-
-https://devops1-jay.azurewebsites.net/#/
-
-google Client id
-652821201113-v1fh4132uukcmsmvdfjirvm1akrkf7k7.apps.googleusercontent.com
-
-Client secret - 
-UA-ZqHForZuXc8t_xgpYBEKv
 
 ============================
 

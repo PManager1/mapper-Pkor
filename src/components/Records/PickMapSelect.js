@@ -1,5 +1,5 @@
 import React from 'react';
-// new 
+// new
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -17,19 +17,29 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  
+const dataSets = ['TYPE_CODE', 'ACCOUNT_NUMBER', 'POST_DATE', 'ENCUMBRANCE', 'JOURNAL', 'AMOUNT', 'D_UI_PROJECT_ID', 'D_AMOUNT', 'D_PERCENT'];
+
+const selectedOption = 'D_PERCENT';
+
+let itemIndex = dataSets.findIndex(x => x === selectedOption);
+console.log( '  25  index  = ', itemIndex );
+
+
 const PickMapSelect = ()=>{
 
     const handleSelectChange = event => {
+      console.log('28 -  handleSelectChange =', event.target.value);
         setAge(event.target.value);
+        // setAge(4);
       };
 
-      
     const classes = useStyles();
-    const [age, setAge] = React.useState('');
+    const [age, setAge] = React.useState(itemIndex);
 
-    
-    return ( 
+    // setAge(itemIndex);
+
+
+    return (
         <React.Fragment>
               <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-filled-label">Pick Mapp</InputLabel>
@@ -42,21 +52,16 @@ const PickMapSelect = ()=>{
           <MenuItem value="">
            <em>None</em>
           </MenuItem>
-          <MenuItem value={10}>TYPE_CODE</MenuItem>
-          <MenuItem value={20}>ACCOUNT_NUMBER</MenuItem>
-          <MenuItem value={30}>POST_DATE</MenuItem>
-          <MenuItem value={40}>ENCUMBRANCE</MenuItem>
-          <MenuItem value={50}>JOURNAL</MenuItem>
-          <MenuItem value={60}>AMOUNT</MenuItem>
-          <MenuItem value={70}>D_UI_PROJECT_ID</MenuItem>
-          <MenuItem value={80}>D_ACCOUNT_CLASS</MenuItem>
-          <MenuItem value={100}>D_AMOUNT</MenuItem>
-          <MenuItem value={100}>D_PERCENT</MenuItem>
+
+          {dataSets.map((item, index) =>
+            <MenuItem key={index} value={index}> {item} </MenuItem>
+          )}
+
         </Select>
       </FormControl>
 
 
         </React.Fragment>
-    ); 
+    );
 }
-export default PickMapSelect; 
+export default PickMapSelect;

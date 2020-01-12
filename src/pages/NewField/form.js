@@ -10,7 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { connect } from "react-redux";
 import { createField } from '../../actions';
 
-import PickMapSelect from '../../components/Records/PickMapSelect.js'; 
+import PickMapSelect from '../../components/Records/PickMapSelect.js';
 import { useHistory } from "react-router-dom";
 
 
@@ -29,14 +29,14 @@ const Form = props => {
   } = props;
   // console.table(props);
 
-  console.log('27 -  final props in form.js = ' , props ); 
+  console.log('27 -  final props in form.js = ' , props );
 
 
   const handleSaveClick = () =>{
-    console.log('28 -  called handleSaveClick inside form.js ' ); 
-    // props.createClient(props.values);  
-    console.log('33 -  this.props ', props ); 
-    props.createField(props.values);  
+    console.log('28 -  called handleSaveClick inside form.js ' );
+    // props.createClient(props.values);
+    console.log('33 -  this.props ', props );
+    props.createField(props.values);
     history.goBack();
   }
 
@@ -55,7 +55,7 @@ const Form = props => {
 
   return (
     <form onSubmit={handleSubmit}>
-      
+
       {/* <TextField
         name="MapId"
         helperText={touched.MapId ? errors.MapId : ""}
@@ -70,7 +70,7 @@ const Form = props => {
 
 {/* RecordId */}
 
-<TextField
+{/* <TextField
         name="RecordId"
         helperText={touched.RecordId ? errors.RecordId : ""}
         error={Boolean(errors.RecordId)}
@@ -80,9 +80,9 @@ const Form = props => {
         disabled
         fullWidth
       />
-      <div>{Boolean(errors.RecordId) ? errors.RecordId : ""}</div>
+      <div>{Boolean(errors.RecordId) ? errors.RecordId : ""}</div> */}
 
-      
+
       <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
@@ -144,7 +144,7 @@ const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
-   
+
       <TextField
         name="PaddingRight"
         helperText={touched.PaddingRight ? errors.PaddingRight : ""}
@@ -160,7 +160,7 @@ const Form = props => {
 
       <Button  type="submit"
         fullWidth
-        variant="contained" 
+        variant="contained"
         onClick = {handleSaveClick}
         color="primary"
       >
@@ -181,11 +181,11 @@ const Form = props => {
 
 
 const mapStateToProps = (state) =>{
-  console.log( ' state =', state ); 
-}; 
+  console.log( ' state =', state );
+};
 
 export default connect(mapStateToProps, {
   createField
-})(Form); 
+})(Form);
 
 // export default Form

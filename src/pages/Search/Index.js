@@ -1,49 +1,61 @@
 import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
-import Autocomplete from '@material-ui/lab/Autocomplete'; 
-import { fetchSingleClient, fetchClients } from '../../actions'; 
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { fetchSingleMap, fetchMaps } from '../../actions';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
+import ls from 'local-storage';
+
+
 const Search = (props) => {
 
-  console.log( '11 - this.props ', props  ); 
-  console.log( '12 - props.clients.data ', props.clients.data  ); 
+  console.log( '11 - this.props ', props  );
+  console.log( '12 - props.maps.data ', props.maps.data  );
 
   useEffect(() => {
     // code to run on component mount
-    props.fetchClients(); 
+    props.fetchMaps();
   }, [])
 
     const defaultProps = {
-      options:  props.clients.data,     
+      options:  props.maps.data,
       // getOptionLabel: option => 'clientId = '+option.clientId+' clientName = '+option.clientName+' mapid= '+option.mapId,
-      getOptionLabel: option => ' '+option.mapName+' '+' '+option._id,
+      // getOptionLabel: option => ' '+option.mapName+' '+' '+option._id,
+      getOptionLabel: option => option.mapName + ' ' + ' ' + option._id,
     };
-  
+
     const flatProps = {
       options: top100Films.map(option => option._id),
     };
-  
+
     const [value, setValue] = React.useState(null);
-  
+
 
 function updateState(e) {
-        console.log( '25- updateState called    '); 
-        console.log("e.target.textContent ", e.target.textContent );
-        console.log("e.target =", e.target );
-        
+        console.log( '25- updateState called    ');
+        console.log("37-e.target.textContent =", e.target.textContent );
+
         // props.selectClient(e.target.textContent)
         console.log(e.target.getAttribute("data-option-index"));
         // this.setState({ selectedOption: e.target.textContent, itemSelected: true });
 
-        let last2 = e.target.textContent.slice(-24);
-        console.log('42 -  last2= ', last2 );
-        
-        // props.history.push(`/search/${last2}`);
+        let str = e.target.textContent;
+        let mapId = e.target.textContent.slice(-24);
+        console.log('42 -  mapId= ', mapId );
 
-        props.history.push(`/records/${last2}`);
+        // let mapName = e.target.textContent.slice(-34);
+
+          let mapName = str.substr(0, str.indexOf(' '));
+        console.log('48 -  mapName= ', mapName);
+
+  ls.clear();
+  ls.set('current_MapId', mapId);
+  ls.set('current_MapName', mapName);
+
+
+        props.history.push(`/records/${mapId}`);
 
       }
 
@@ -60,25 +72,25 @@ function updateState(e) {
             <TextField {...params} label="Search by MapperId/company Name/Provider/Client/paygroup/margin" margin="normal" fullWidth />
           )}
         />
-       
+
       </div>
     );
   }
 
 
 const mapStateToProps = (state) =>{
-    console.log( '63 -  state =', state ); 
-    
-    return { clients: state.clients }; 
-}; 
+    console.log( '63 -  state =', state );
 
-export default connect(mapStateToProps, { fetchSingleClient, fetchClients })(Search); 
+    return { maps: state.clients };
+};
 
-
+export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(Search);
 
 
 
-  
+
+
+
   // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
   const top100Films = [
     { provider: 'BlackBaud', mapId: 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID'  },
@@ -101,7 +113,7 @@ export default connect(mapStateToProps, { fetchSingleClient, fetchClients })(Sea
     { provider: 'The Matrix', year: 1999, client: 'Banana', PayGroup: 'paygp'  },
     { provider: 'Seven Samurai', year: 1954, client: 'Gap', PayGroup: 'paygp'  },
   ];
-  
+
 
 //   https://codesandbox.io/s/laughing-mclean-qzi4h
 // https://stackoverflow.com/questions/58686204/cant-get-event-target-value-using-select-item-from-material-ui-autocomplete-with

@@ -11,10 +11,10 @@ import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import RulePicker from './RulePicker';
 import MetaDataPicker from './MetaDataPicker';
-// import FreeSolo from './FreeSolo'; 
+// import FreeSolo from './FreeSolo';
 
 // DeleteBtnRecord
-import DeleteBtnRecord from './common/DeleteBtnRecord.js'; 
+import DeleteBtnRecord from './common/DeleteBtnRecord.js';
 // import PickSingleMapped from './common/PickSingleMapped';
 
 const useStyles = makeStyles(theme => ({
@@ -36,7 +36,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function FullDialogInFormRecords(props) {
-  // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id ); 
+  // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id );
   console.log('40- FullDialogInForm  props =', props );
 
   const classes = useStyles();
@@ -53,7 +53,7 @@ export default function FullDialogInFormRecords(props) {
   return (
     <div>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More Info - 5555 Edit screen
+        More Info
       </Button>
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
@@ -63,14 +63,14 @@ export default function FullDialogInFormRecords(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              More Information (Records)
+              More Information : {props.values.RecordName} (Records)
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
               save
             </Button>
           </Toolbar>
         </AppBar>
-      
+
         {/* <div className={classes.sectionRulePicker}>
               <MetaDataPicker />
             </div> */}
@@ -81,7 +81,7 @@ export default function FullDialogInFormRecords(props) {
             <div className={classes.sectionRulePicker}>
               {/* <FreeSolo /> */}
             </div>
-            
+
 
             <div className={classes.sectionRulePicker}>
               {/* <RulePicker /> */}

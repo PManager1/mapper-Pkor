@@ -5,7 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import NameInput from './NameInput.js'; 
+import NameInput from './NameInput.js';
 import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import ls from 'local-storage';
@@ -46,7 +46,7 @@ function getStepContent(stepIndex) {
   }
 }
 
-// export default 
+// export default
 function StepperTwoNT(props) {
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(1);
@@ -81,7 +81,7 @@ function StepperTwoNT(props) {
           </Step>
         ))}
       </Stepper>
-      
+
       <Divider />
 
       <br/> <br/>  <br/>
@@ -89,7 +89,7 @@ function StepperTwoNT(props) {
         <Typography variant='h4'>  You're going to create a Brand new map </Typography>
       </div>
       <br />
-      <br/> 
+      <br/>
       <div>
         {activeStep === steps.length ? (
           <div>
@@ -120,11 +120,11 @@ function StepperTwoNT(props) {
 
 
 const mapStateToProps = (state) =>{
-  // console.log( ' state =', state );   ls.set('MapNameInputted', event.target.value);  
-  console.log( '121-   ls get value ',  ls.get('MapNameInputted')); 
-}; 
+  // console.log( ' state =', state );   ls.set('MapNameInputted', event.target.value);
+  console.log( '121-   ls get value ',  ls.get('MapNameInputted'));
+};
 
 export default connect(mapStateToProps, {
   createMap
-})(StepperTwoNT); 
+})(StepperTwoNT);
 

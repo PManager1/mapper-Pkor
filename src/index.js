@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
-import { Provider } from 'react-redux'; 
-import { createStore, applyMiddleware } from 'redux'; 
-import reducers from './reducers'; 
-import thunk from 'redux-thunk'; 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+import thunk from 'redux-thunk';
+import StickyFooter from "./components/common/StickyFooter.js";
+
+
 
 import { SnackbarProvider } from 'notistack';
 
@@ -13,8 +16,9 @@ ReactDOM.render(
     <Provider store={createStore(reducers, applyMiddleware(thunk))}>
       <SnackbarProvider maxSnack={3} SnackbarProps={{ autoHideDuration: 500 }}>
       <App />
+      <StickyFooter />
       </SnackbarProvider>
-    </Provider>, 
+    </Provider>,
         document.getElementById('root')
     );
 

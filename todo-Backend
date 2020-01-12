@@ -1,0 +1,1 @@
+Upon deletion of a map, it should remove/ delete its consequencet  records and fields too.

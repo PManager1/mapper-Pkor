@@ -1,130 +1,118 @@
-======================================================               
+========================================
+Load the data for picker from the backend.
+========================================
+Dispatch the snackbar from action.
+or from the copmennot itself.
 
-hook up map fields options to get from the backend. 
+try calling the action from the actions itself.
 
-======================================================               
+======================================================
+upon cancel click in the expander, reload the page.
 
-====================================================== 
+======================================================
 
-======================================================               
-on the search screen - we have to send the _id but not show it on the 
-search results. 
-======================================================               
-Sort the fieldnames based on the Records. 
-> sort by mapid and 
-> sort by record id. ( send the record id to the child)
+get video files for observables :
+http://ultramir.net/download/1897536-pluralsight_getting_started_with_reactive_programming_using_rxjs_2016_eng.html
 
-======================================================               
+======================================================
+on saving the editrecords, it createa weird url,
+have to eliminate it.
+======================================================
+implement loading ui using this:
 
-DO => now we see values of the specific records and fields associated with that mapid. 
+https://codesandbox.io/s/black-wind-byilt
 
-===========================
-check that specific records are showing for specific map id. 
+======================================================
+hook up map fields options to get from the backend.
+======================================================
 
-check the whole flow from Blank. 
-================================                
-Field DELETE NOT WORKING 
-===========================
+======================================================
 
-http://localhost:3000/#/records/5e1445d5f6082f8375a04411
-===========================
-copy paste the pick data set name created in new record into the 
-//#/editRecords link. 
+======================================================
+on the search screen - we have to send the \_id but not show it on the
+search results.
+======================================
 
-===========================
-===========================
-
-===========================
-
-
+======================================================
 
 ===========================
 
-=======
-Show field with the selected mapID. 
-in the fields
-Look where am i calling the fetchFields show that we only show the fields for that specific mapid. 
+================================
 
 ===========================
 
-Header containing the nameMap : 
-check if the ls has the name, if yes put that in the header. 
+===========================
+
+# ===========================
+
+# when deleting the record / field , it shoudl dispaly its name on the top.
+
+force update the MainWrapper with the map name change :
+
+https://stackoverflow.com/questions/46240647/react-how-can-i-force-render-a-function-component
 
 ===========================
 
-NOW TODO = -  on search it goes to records along with the ID passed. 
 ===========================
-implmenet local storage like this : 
+
+Header containing the nameMap :
+check if the ls has the name, if yes put that in the header.
+
+===========================
+
+# NOW TODO = - on search it goes to records along with the ID passed.
+
+implmenet local storage like this :
 https://www.robinwieruch.de/local-storage-react
 https://rangle.io/blog/simplifying-controlled-inputs-with-hooks/
 
 ===========================
-do following for MainWrapper.js under records. 
-
-localStorage.getItem('myValueInLocalStorage') || ''
+mapActions is wrong, it should be map maps not clients.
 ================
-
-in the  file - it shoudl say the name : 
-
-"You're going to create a Brand new map :  the name "
-================
-
-theres an api that fetchClients, shoudl be fetchMaps
-================
-mapActions is wrong, it should be map maps not clients. 
-
-================
-
-whatever maps that user is using, show that on the top. so that he/she can see that at all times. 
-
-At the end of the map creation, save that info in the key value and show it 
-at all times. 
-==============
-
 
 ==============
 
-grid system  :
+==============
+
+grid system :
 https://github.com/rebassjs/rebass
-
 
 USE THIS TO FIX THE TOP BUTTONS ON ROUTE /
 https://rebassjs.org/recipes/flexbox-grid
 ==============
-Stepper from create from existing 
+Stepper from create from existing
 
 https://material-ui.com/components/steppers/#stepper
 https://codesandbox.io/s/yxll4
 
 ==============
 
-start saving the data to Azure. 
+start saving the data to Azure.
 
 ==============
 
-implement the snack reducer the right way from here: 
+implement the snack reducer the right way from here:
 https://codesandbox.io/s/notistack-redux-example-vk9ik
 
 =========================
-on save of the Logic - redirect it back to 
+on save of the Logic - redirect it back to
 
 =========================
-MAKE SURE WE MAKE A FRESH REQUEST TO GET THE FRESH DATA WHEN WE EXPAND THE DATA 
-SO THAT WE ALWAYS GET A FRESH DATA EVERYTIME WE OPEN THE EXPANDER. 
+MAKE SURE WE MAKE A FRESH REQUEST TO GET THE FRESH DATA WHEN WE EXPAND THE DATA
+SO THAT WE ALWAYS GET A FRESH DATA EVERYTIME WE OPEN THE EXPANDER.
 
 =========================
-replace the settimeout in records/index to reducer thingy. 
+replace the settimeout in records/index to reducer thingy.
 
-show  loading indicator 
+show loading indicator
 
-show a laoding UI until data is displayed on the 
-Fields place. 
+show a laoding UI until data is displayed on the
+Fields place.
 
-Lazy load other components and 
+Lazy load other components and
 https://web.dev/code-splitting-suspense/
 
-
-Beat loader 
+Beat loader
 http://www.davidhu.io/react-spinners/
 
 https://github.com/Lemoncode/react-promise-tracker
@@ -133,14 +121,14 @@ https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-cal
 
 https://auth0.com/blog/creating-a-splash-screen-for-your-react-apps/
 
-========================== 
+==========================
 
 =========================
 privde option to delete logics.
 
 =========================
-NExt: when the record is loaded in /text. 
-from there - load the data on the DropDown. 
+NExt: when the record is loaded in /text.
+from there - load the data on the DropDown.
 ==============
 snackBar -
 
@@ -150,88 +138,83 @@ https://browntreelabs.com/snackbars-in-react-redux-and-material-ui/
 
 =========================
 
-issue with display list of fieldlists :  
+issue with display list of fieldlists :
 
-by using the posts  video or 
-by using the old react native app at properties values. 
+by using the posts video or
+by using the old react native app at properties values.
 
 ========================================
-
 
 https://codesandbox.io/embed/interesting-wave-yw9ht
 
 =========================
 
+=========================
 
 =========================
 
-
-
-=========================
-
-Add logic / code - if credit/ debit view: 
+Add logic / code - if credit/ debit view:
 
 ================
-show loading  / notifiction progress. 
+show loading / notifiction progress.
 
 https://blog.logrocket.com/data-fetching-in-redux-apps-a-100-correct-approach-4d26e21750fc/
 
-
 ==========================
-Create Crud operatoins for the Fieldslist items. 
+Create Crud operatoins for the Fieldslist items.
 
 ===================================
-on Vid:  15:2 
+on Vid: 15:2
 ==========================
-transformation rules 
-males to M 
+transformation rules
+males to M
 
-Overrides. 
+Overrides.
 
 create profile avatar via :
 https://codesandbox.io/s/0lc5x
 
 ================
-save button not getting clickable when the data is good for validation. 
+save button not getting clickable when the data is good for validation.
 
 ================
-on teh form, provide cancel button. 
-Proide more descriotion on plus sign, like add new field 
+on teh form, provide cancel button.
+Proide more descriotion on plus sign, like add new field
 
 ===========
-Dec 19 - 
-Ability to create multiple heaers and stuff under neath it. 
+Dec 19 -
+Ability to create multiple heaers and stuff under neath it.
 ===========
 
-For search on selection pass   - mapID & clientId  to get the details of the MappDetails. 
+For search on selection pass - mapID & clientId to get the details of the MappDetails.
 
 ==============
 
 ==========
 
-==========
-============================
+# ==========
 
-LATER -> 
-Replace all return <div>s with Fragment. 
+LATER ->
+Replace all return <div>s with Fragment.
 
 ==================
-Add Profile Menu on top right. 
+Add Profile Menu on top right.
 https://material-ui.com/components/menus/
 
 ============================
 Udemy - Modern React with Redux [2019 Update]
-Memoization: 
+Memoization:
 
-15-18 
-Do Lazy loding. 
-Do SSR. 
-Do Testing. 
+15-18
+Do Lazy loding.
+Do SSR.
+Do Testing.
 ============================
-
-
-============================
-
 
 ============================
 
+============================
+BEAUTIFY -
+
+1.  select the code.
+2.  alt + shift + f

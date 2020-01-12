@@ -10,14 +10,16 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
-import { editRecord } from '../../../actions'; 
+import { editRecord } from '../../../actions';
 import { connect } from "react-redux";
-import {useSelector, useDispatch} from 'react-redux'; 
-import FullDialogInFormRecords from '../../../components/Records/FullDialogInFormRecords.js'; 
+import {useSelector, useDispatch} from 'react-redux';
+import FullDialogInFormRecords from '../../../components/Records/FullDialogInFormRecords.js';
+
+import PickMapSelect from "../../../components/Records/PickMapSelect.js";
 
 
 export const Form = props => {
-  // console.log(' 18- form.js -  props =', props ); 
+  // console.log(' 18- form.js -  props =', props );
   const {
     values:{ RecordName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
@@ -32,7 +34,7 @@ export const Form = props => {
 
 
   const dispatch = useDispatch()
-  
+
   const change = (name, e) => {
     e.preventDefault();
     e.persist();
@@ -40,15 +42,15 @@ export const Form = props => {
     setFieldTouched(name, true, false);
   };
 
-  
+
   const handleSubmit = (e) =>{
     e.persist();
-    // console.log( '38-handleSubmit called in form.js  ',  props.values ); 
-    // props.editRecord(props.values._id, props.values); 
-    // props.editRecord(); 
+    // console.log( '38-handleSubmit called in form.js  ',  props.values );
+    // props.editRecord(props.values._id, props.values);
+    // props.editRecord();
     dispatch(editRecord(props.values._id, props.values));
   }
-  
+
 
   const [value, setValue] = React.useState('female');
   // const handleChange = event => {
@@ -57,8 +59,8 @@ export const Form = props => {
 
 
   return (
-    
-    <form onSubmit={handleSubmit}>   
+
+    <form onSubmit={handleSubmit}>
 
     <TextField
         name="RecordName"
@@ -72,17 +74,8 @@ export const Form = props => {
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
 
-      <TextField
-        name="MappedFieldName"
-        helperText={touched.MappedFieldName ? errors.MappedFieldName : ""}
-        error={Boolean(errors.MappedFieldName)}
-        label="MappedFieldName"
-        value={MappedFieldName}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div>
-      
+      <PickMapSelect />
+
 
       <TextField
         name="MaxCharLength"
@@ -106,7 +99,7 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
-   
+
 
       <FormLabel component="legend">Please Select Alignment </FormLabel>
         <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
@@ -144,7 +137,7 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.LeftPadding) ? errors.LeftPadding : ""}</div>
-   
+
       <TextField
         name="RightPadding"
         helperText={touched.RightPadding ? errors.RightPadding : ""}
@@ -155,9 +148,9 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
-   
+
       <FullDialogInFormRecords {...props}/>
-   
+
       <Button type="submit" fullWidth variant="contained" color="primary">
         Save
       </Button>
@@ -169,16 +162,16 @@ export const Form = props => {
       >
         Cancel
       </Button>
-     
+
 
     </form>
   );
 };
 
 const mapStateToProps = (state) =>{
-  // console.log( '51 -  state.records =', state.records ); 
-  return { records: state.records.data }; 
-}; 
+  // console.log( '51 -  state.records =', state.records );
+  return { records: state.records.data };
+};
 
 export default connect(null, { editRecord })(Form);
 

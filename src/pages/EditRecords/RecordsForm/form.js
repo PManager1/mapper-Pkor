@@ -15,13 +15,13 @@ import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux';
 import FullDialogInFormRecords from '../../../components/Records/FullDialogInFormRecords.js';
 
-import PickMapSelect from "../../../components/Records/PickMapSelectRecords.js";
+import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
 
 
 export const Form = props => {
-  // console.log(' 18- form.js -  props =', props );
+  console.log('22 - form.js - EditRecords Form props =', props );
   const {
-    values:{ RecordName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    values:{ RecordName, MappingRecordOptions, MappedRecordName, MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
@@ -74,8 +74,7 @@ export const Form = props => {
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
 
-      <PickMapSelect />
-
+      <PickMapSelectRecords />
 
       <TextField
         name="MaxCharLength"

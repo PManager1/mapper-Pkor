@@ -23,9 +23,9 @@ const useStyles = makeStyles(theme => ({
   const PickMapSelectRecords = (props)=>{
 
     const dispatch = useDispatch();
-    console.log( '26 - PickMapSelectRecords -FOR - RECORDS   props.values =', props.values);
+    console.log( '26-PickMapSelectRecords-RECORDS   props.values =', props.values);
 
-    // console.log( '30 PickMapSelectRecords MappingRecordOptions =', props.values.MappingRecordOptions);
+    // console.log( '30 PickMapSelectRecords RecordName =', props.values.RecordName);
 
     // const { MappingRecordOptions, MappedRecordName } = props.values;
 

@@ -24,6 +24,7 @@ const useStyles = makeStyles(theme => ({
 const PickMapSelect = (props)=>{
 
 const dispatch = useDispatch();
+console.log( '30 PickMapSelect Values =', props.values);
 
 console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
@@ -41,10 +42,16 @@ console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
       console.log('28 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
         // setMap(4);
-              //MappedFieldName
-              // props.values._id
 
-          // dispatch(editField(props.values._id, props.values));
+      // find the name at that index
+      let fieldValue = MappingFieldOptions[event.target.value];
+      console.log(' 48 - selected  fieldValue=', fieldValue);
+
+      //and then save it by following
+        props.values.MappedFieldName = fieldValue;
+
+
+          dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();

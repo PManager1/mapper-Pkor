@@ -20,38 +20,40 @@ const useStyles = makeStyles(theme => ({
   }));
 
 
-const PickMapSelect = (props)=>{
+  const PickMapSelectRecords = (props)=>{
 
-const dispatch = useDispatch();
-console.log( '26 - PickMapSelect -FOR - RECORDS   props.values =', props.values);
+    const dispatch = useDispatch();
+    console.log( '26 - PickMapSelectRecords -FOR - RECORDS   props.values =', props.values);
 
-// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+    // console.log( '30 PickMapSelectRecords MappingRecordOptions =', props.values.MappingRecordOptions);
 
-// const { MappingFieldOptions, MappedFieldName } = props.values;
-// // const { MappingFieldOptions, MappedFieldName } = props.values;
+    // const { MappingRecordOptions, MappedRecordName } = props.values;
 
-// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
 
-  // const selectedOption = props.values.MappedFieldName;
+    // console.log( '34 PickMapSelectRecords MappingRecordOptions =', MappingRecordOptions);
+    // console.log( '35 PickMapSelectRecords MappedRecordName =', MappedRecordName);
 
-  // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  // console.log( '  37  index  = ', itemIndex );
+
+    // console.log( '27 PickMapSelectRecords MappedRecordName =', MappedRecordName);
+
+      // const selectedOption = props.values.MappedRecordName;
+
+     let itemIndex = 0 ; //MappingRecordOptions.findIndex(x => x === MappedRecordName);
+
+    // console.log( '  37  index  = ', itemIndex );
 
 
     const handleSelectChange = event => {
-      // console.log('28 -  handleSelectChange =', event.target.value);
-        // setMap(event.target.value);
+      console.log('28 -  handleSelectChange =', event.target.value);
+        setMap(event.target.value);
 
-        // props.values.MappedFieldName = MappingFieldOptions[event.target.value]
-        // props.values.MappedFieldName = MappingFieldOptions[event.target.value]        ;
+        // props.values.MappedRecordName = MappingRecordOptions[event.target.value];
+
         // dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();
-    // const [Map, setMap] = React.useState(itemIndex);
+    const [Map, setMap] = React.useState(itemIndex);
 
     // setMap(itemIndex);
 
@@ -69,7 +71,7 @@ console.log( '26 - PickMapSelect -FOR - RECORDS   props.values =', props.values)
            <em>None</em>
           </MenuItem>
 
-          {/* {MappingFieldOptions.map((item, index) => */}
+          {/* {MappingRecordOptions.map((item, index) => */}
           {  ["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
@@ -83,4 +85,4 @@ console.log( '26 - PickMapSelect -FOR - RECORDS   props.values =', props.values)
 }
 // export default PickMapSelect;
 
-export default connect(null, { editField })(PickMapSelect);
+export default connect(null, { editField })(PickMapSelectRecords);

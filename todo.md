@@ -6,6 +6,14 @@ or from the copmennot itself.
 try calling the action from the actions itself.
 
 ======================================================
+
+update the API for the backend,  i.e
+
+for creting new record.
+for updating the recodw with its values.
+
+
+======================================================
 upon cancel click in the expander, reload the page.
 
 ======================================================

@@ -12,7 +12,7 @@ import { useSnackbar } from "notistack";
 import { useHistory } from "react-router-dom";
 // new
 import { makeStyles } from "@material-ui/core/styles";
-import PickMapSelect from "../../../components/Records/PickMapSelectRecords.js";
+import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
 
 import FullDialogInFormFields from "../../../components/Records/FullDialogInFormFields.js";
 
@@ -132,7 +132,7 @@ export const Form = props => {
       />
       <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div> */}
 
-      <PickMapSelect  {...props} />
+      <PickMapSelectRecords  {...props} />
 
       <TextField
         name="MaxCharLength"

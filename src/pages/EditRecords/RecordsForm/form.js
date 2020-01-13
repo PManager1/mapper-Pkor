@@ -74,7 +74,7 @@ export const Form = props => {
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
 
-      <PickMapSelectRecords />
+      <PickMapSelectRecords {...props} />
 
       <TextField
         name="MaxCharLength"

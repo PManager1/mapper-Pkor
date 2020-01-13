@@ -28,18 +28,18 @@ const useStyles = makeStyles(theme => ({
 
     // console.log( '30 PickMapSelectRecords RecordName =', props.values.RecordName);
 
-    // const { MappingRecordOptions, MappedRecordName } = props.values;
+    const { MappingRecordOptions, MappedRecordName } = props.values;
 
 
-    // console.log( '34 PickMapSelectRecords MappingRecordOptions =', MappingRecordOptions);
-    // console.log( '35 PickMapSelectRecords MappedRecordName =', MappedRecordName);
+    console.log( '34 PickMapSelectRecords MappingRecordOptions =', MappingRecordOptions);
+    console.log( '35 PickMapSelectRecords MappedRecordName =', MappedRecordName);
 
 
     // console.log( '27 PickMapSelectRecords MappedRecordName =', MappedRecordName);
 
       // const selectedOption = props.values.MappedRecordName;
 
-     let itemIndex = 0 ; //MappingRecordOptions.findIndex(x => x === MappedRecordName);
+     let itemIndex = MappingRecordOptions.findIndex(x => x === MappedRecordName);
 
     // console.log( '  37  index  = ', itemIndex );
 
@@ -48,9 +48,9 @@ const useStyles = makeStyles(theme => ({
       console.log('28 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
 
-        // props.values.MappedRecordName = MappingRecordOptions[event.target.value];
+        props.values.MappedRecordName = MappingRecordOptions[event.target.value];
 
-        // dispatch(editField(props.values._id, props.values));
+        dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();

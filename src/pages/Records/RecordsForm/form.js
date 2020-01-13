@@ -12,9 +12,9 @@ import { useSnackbar } from "notistack";
 import { useHistory } from "react-router-dom";
 // new
 import { makeStyles } from "@material-ui/core/styles";
-import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
-
 import FullDialogInFormFields from "../../../components/Records/FullDialogInFormFields.js";
+
+import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
 
 const useStyles = makeStyles(theme => ({
   formControl: {

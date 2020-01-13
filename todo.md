@@ -1,3 +1,4 @@
+not receiving props inside the components/records/ pickmapselectRecords.js
 
 ========================================
 Dispatch the snackbar from action.

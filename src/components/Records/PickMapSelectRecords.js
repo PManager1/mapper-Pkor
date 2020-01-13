@@ -23,30 +23,35 @@ const useStyles = makeStyles(theme => ({
 const PickMapSelect = (props)=>{
 
 const dispatch = useDispatch();
-console.log( '30 PickMapSelect Values =', props.values);
+console.log( '26 - PickMapSelect -FOR - RECORDS   props.values =', props.values);
 
-console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
-const { MappingFieldOptions, MappedFieldName } = props.values;
-console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
+// const { MappingFieldOptions, MappedFieldName } = props.values;
+// // const { MappingFieldOptions, MappedFieldName } = props.values;
 
-  const selectedOption = props.values.MappedFieldName;
+// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
+// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
+// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
 
-  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  console.log( '  37  index  = ', itemIndex );
+  // const selectedOption = props.values.MappedFieldName;
+
+  // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  // console.log( '  37  index  = ', itemIndex );
 
 
     const handleSelectChange = event => {
-      console.log('28 -  handleSelectChange =', event.target.value);
-        setMap(event.target.value);
+      // console.log('28 -  handleSelectChange =', event.target.value);
+        // setMap(event.target.value);
 
-        props.values.MappedFieldName = MappingFieldOptions[event.target.value];
-        dispatch(editField(props.values._id, props.values));
+        // props.values.MappedFieldName = MappingFieldOptions[event.target.value]
+        // props.values.MappedFieldName = MappingFieldOptions[event.target.value]        ;
+        // dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();
-    const [Map, setMap] = React.useState(itemIndex);
+    // const [Map, setMap] = React.useState(itemIndex);
 
     // setMap(itemIndex);
 
@@ -64,7 +69,8 @@ console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
            <em>None</em>
           </MenuItem>
 
-          {MappingFieldOptions.map((item, index) =>
+          {/* {MappingFieldOptions.map((item, index) => */}
+          {  ["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

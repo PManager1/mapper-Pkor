@@ -12,7 +12,7 @@ import { useSnackbar } from "notistack";
 import { useHistory } from "react-router-dom";
 // new
 import { makeStyles } from "@material-ui/core/styles";
-import PickMapSelect from "../../../components/Records/PickMapSelect.js";
+import PickMapSelect from "../../../components/Records/PickMapSelectRecords.js";
 
 import FullDialogInFormFields from "../../../components/Records/FullDialogInFormFields.js";
 

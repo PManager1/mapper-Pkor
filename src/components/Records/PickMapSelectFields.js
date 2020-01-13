@@ -23,22 +23,22 @@ const useStyles = makeStyles(theme => ({
 const PickMapSelect = (props)=>{
 
 const dispatch = useDispatch();
-console.log( '30 PickMapSelect Values =', props.values);
+// console.log( '30 PickMapSelect Values =', props.values);
 
-console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
 const { MappingFieldOptions, MappedFieldName } = props.values;
-console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
+// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
+// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
 
   const selectedOption = props.values.MappedFieldName;
 
   let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  console.log( '  37  index  = ', itemIndex );
+  // console.log( '  37  index  = ', itemIndex );
 
 
     const handleSelectChange = event => {
-      console.log('28 -  handleSelectChange =', event.target.value);
+      // console.log('28 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
 
         props.values.MappedFieldName = MappingFieldOptions[event.target.value];

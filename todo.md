@@ -1,7 +1,4 @@
-send the save info
 
-========================================
-Load the data for picker from the backend.
 ========================================
 Dispatch the snackbar from action.
 or from the copmennot itself.

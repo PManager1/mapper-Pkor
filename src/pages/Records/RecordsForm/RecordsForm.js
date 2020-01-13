@@ -2,11 +2,7 @@ import React, { Component } from "react";
 import { Formik } from "formik";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Form } from "./form";
-import Paper from "@material-ui/core/Paper";
 import * as Yup from "yup";
-import Switch from '@material-ui/core/Switch';
-
-import FullDialogInForm from '../FullDialogInForm.js'; 
 
 const styles = theme => ({
   paper: {
@@ -44,7 +40,7 @@ const validationSchema = Yup.object({
 
 class RecordsForm extends Component {
   constructor(props) {
-    // console.log(' 44 - in RecordsForm props.fieldInfo  = ', props.fieldInfo ); 
+    // console.log(' 44 - in RecordsForm props.fieldInfo  = ', props.fieldInfo );
     super(props);
     this.state = {};
   }

@@ -15,7 +15,7 @@ import { connect } from "react-redux";
 import {useSelector, useDispatch} from 'react-redux';
 import FullDialogInFormRecords from '../../../components/Records/FullDialogInFormRecords.js';
 
-import PickMapSelect from "../../../components/Records/PickMapSelect.js";
+import PickMapSelect from "../../../components/Records/PickMapSelectRecords.js";
 
 
 export const Form = props => {

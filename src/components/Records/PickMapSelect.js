@@ -17,15 +17,20 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-const dataSets = ['TYPE_CODE', 'ACCOUNT_NUMBER', 'POST_DATE', 'ENCUMBRANCE', 'JOURNAL', 'AMOUNT', 'D_UI_PROJECT_ID', 'D_AMOUNT', 'D_PERCENT'];
 
-const selectedOption = 'D_PERCENT';
+const PickMapSelect = (props)=>{
 
-let itemIndex = dataSets.findIndex(x => x === selectedOption);
-console.log( '  25  index  = ', itemIndex );
+console.log( '30 PickMapSelect MappedFieldPicked =', props.values.MappedFieldPicked);
 
+const { MappingFieldOptions, MappedFieldPicked } = props.values;
+console.log( '26 PickMapSelect MappedFieldPicked =', MappingFieldOptions);
+console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
 
-const PickMapSelect = ()=>{
+  const selectedOption = props.values.MappedFieldPicked;
+
+  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldPicked);
+  // console.log( '  25  index  = ', itemIndex );
+
 
     const handleSelectChange = event => {
       console.log('28 -  handleSelectChange =', event.target.value);
@@ -37,7 +42,6 @@ const PickMapSelect = ()=>{
     const [age, setAge] = React.useState(itemIndex);
 
     // setAge(itemIndex);
-
 
     return (
         <React.Fragment>
@@ -53,7 +57,7 @@ const PickMapSelect = ()=>{
            <em>None</em>
           </MenuItem>
 
-          {dataSets.map((item, index) =>
+          {MappingFieldOptions.map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

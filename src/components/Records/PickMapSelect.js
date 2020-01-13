@@ -25,15 +25,15 @@ const PickMapSelect = (props)=>{
 
 const dispatch = useDispatch();
 
-console.log( '30 PickMapSelect MappedFieldPicked =', props.values.MappedFieldPicked);
+console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
-const { MappingFieldOptions, MappedFieldPicked } = props.values;
-console.log( '26 PickMapSelect MappedFieldPicked =', MappingFieldOptions);
-console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
+const { MappingFieldOptions, MappedFieldName } = props.values;
+console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
+console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
 
-  const selectedOption = props.values.MappedFieldPicked;
+  const selectedOption = props.values.MappedFieldName;
 
-  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldPicked);
+  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
   console.log( '  37  index  = ', itemIndex );
 
 
@@ -41,8 +41,10 @@ console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
       console.log('28 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
         // setMap(4);
-              //MappedFieldPicked
-          // dispatch(editField(props.values._id, MappedFieldPicked:MappedFieldPicked));
+              //MappedFieldName
+              // props.values._id
+
+          // dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();

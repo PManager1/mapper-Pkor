@@ -47,7 +47,7 @@ export const Form = props => {
       LeftPadding,
       RightPadding
     },
-    // values:{ RecordName: props.fieldInfo.RecordName, FieldName,MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
+    // values:{ RecordName: props.fieldInfo.RecordName, FieldName, MappedFieldName,MaxCharLength,SequenceNumber,RadioValue,LeftPadding,RightPadding},
     errors,
     touched,
     // handleSubmit,

@@ -6,6 +6,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { useSelector, useDispatch } from "react-redux";
+import { connect } from "react-redux";
+import { editField } from "../../actions";
 
 const useStyles = makeStyles(theme => ({
     formControl: {
@@ -20,6 +23,8 @@ const useStyles = makeStyles(theme => ({
 
 const PickMapSelect = (props)=>{
 
+const dispatch = useDispatch();
+
 console.log( '30 PickMapSelect MappedFieldPicked =', props.values.MappedFieldPicked);
 
 const { MappingFieldOptions, MappedFieldPicked } = props.values;
@@ -29,19 +34,21 @@ console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
   const selectedOption = props.values.MappedFieldPicked;
 
   let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldPicked);
-  // console.log( '  25  index  = ', itemIndex );
+  console.log( '  37  index  = ', itemIndex );
 
 
     const handleSelectChange = event => {
       console.log('28 -  handleSelectChange =', event.target.value);
-        setAge(event.target.value);
-        // setAge(4);
+        setMap(event.target.value);
+        // setMap(4);
+              //MappedFieldPicked
+          // dispatch(editField(props.values._id, MappedFieldPicked:MappedFieldPicked));
       };
 
     const classes = useStyles();
-    const [age, setAge] = React.useState(itemIndex);
+    const [Map, setMap] = React.useState(itemIndex);
 
-    // setAge(itemIndex);
+    // setMap(itemIndex);
 
     return (
         <React.Fragment>
@@ -50,7 +57,7 @@ console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
-          value={age}
+          value={Map}
           onChange={handleSelectChange}
         >
           <MenuItem value="">
@@ -68,4 +75,6 @@ console.log( '27 PickMapSelect MappedFieldPicked =', MappedFieldPicked);
         </React.Fragment>
     );
 }
-export default PickMapSelect;
+// export default PickMapSelect;
+
+export default connect(null, { editField })(PickMapSelect);

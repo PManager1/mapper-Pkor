@@ -39,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
       // const selectedOption = props.values.MappedRecordName;
 
-     let itemIndex = MappingRecordOptions.findIndex(x => x === MappedRecordName);
+    let itemIndex = 0 // MappingRecordOptions.findIndex(x => x === MappedRecordName);
 
     // console.log( '  37  index  = ', itemIndex );
 

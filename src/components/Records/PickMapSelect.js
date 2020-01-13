@@ -25,24 +25,23 @@ const PickMapSelect = (props)=>{
 const dispatch = useDispatch();
 console.log( '30 PickMapSelect Values =', props.values);
 
-console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
-const { MappingFieldOptions, MappedFieldName } = props.values;
-console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
+// const { MappingFieldOptions, MappedFieldName } = props.values;
+// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
+// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
 
-  const selectedOption = props.values.MappedFieldName;
+  // const selectedOption = props.values.MappedFieldName;
 
-  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  let itemIndex = 0; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
   console.log( '  37  index  = ', itemIndex );
-
 
     const handleSelectChange = event => {
       console.log('28 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
 
-        props.values.MappedFieldName = MappingFieldOptions[event.target.value];
-        dispatch(editField(props.values._id, props.values));
+        // props.values.MappedFieldName = MappingFieldOptions[event.target.value];
+        // dispatch(editField(props.values._id, props.values));
       };
 
     const classes = useStyles();
@@ -64,7 +63,8 @@ console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
            <em>None</em>
           </MenuItem>
 
-          {MappingFieldOptions.map((item, index) =>
+          {/* {MappingFieldOptions.map((item, index) => */}
+          {["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

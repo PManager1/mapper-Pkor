@@ -46,8 +46,8 @@ export default function NewFields(props) {
       <h2 onClick={toggle}>
         <p>Do you feel good today?</p>  </h2>
         <div className="toggle">
-          {state ? <span>Yes! 👍</span> : <span>No! 👎</span>}
-          {/* {state ? <RecordsFormOne /> : <RecordsFormTwo />} */}
+          {/* {state ? <span>Yes! 👍</span> : <span>No! 👎</span>} */}
+          {state ? <RecordsFormOne /> : <RecordsFormTwo />}
 
         </div>
     </div>

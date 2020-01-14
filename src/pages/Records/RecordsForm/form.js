@@ -14,7 +14,9 @@ import { useHistory } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import FullDialogInFormFields from "../../../components/Records/FullDialogInFormFields.js";
 
-import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
+// import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
+
+import PickMapSelectFields from "../../../components/Records/PickMapSelectFields.js";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -132,7 +134,7 @@ export const Form = props => {
       />
       <div>{Boolean(errors.MappedFieldName) ? errors.MappedFieldName : ""}</div> */}
 
-      <PickMapSelectRecords  {...props} />
+      <PickMapSelectFields  {...props} />
 
       <TextField
         name="MaxCharLength"

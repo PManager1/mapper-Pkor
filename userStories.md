@@ -1,8 +1,10 @@
 
----------
 
 ========================================
 i had a limit on my api, but i was debugging why the data/ new fields aren't  showing up ?
+
+=============
+for fields and for records we dont need to show the sequence numbers.
 ========================================
 
 configuration what filed properties we wanna show for each client.

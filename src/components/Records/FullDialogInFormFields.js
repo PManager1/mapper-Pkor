@@ -11,7 +11,6 @@ import CloseIcon from "@material-ui/icons/Close";
 import Slide from "@material-ui/core/Slide";
 import RulePicker from "./RulePicker";
 import MetaDataPicker from "./MetaDataPicker";
-// import FreeSolo from './FreeSolo';
 
 import DeleteBtn from "./common/DeleteBtn.js";
 // import PickSingleMapped from './common/PickSingleMapped';

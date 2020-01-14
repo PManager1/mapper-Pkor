@@ -23,17 +23,19 @@ const useStyles = makeStyles(theme => ({
 const PickMapSelect = (props)=>{
 
 const dispatch = useDispatch();
-// console.log( '30 PickMapSelect Values =', props.values);
+console.log( '26-PickMapSelect Values =', props.values);
 
-// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+console.log( '28-PickMapSelect MappedFieldName =', props.values.MappedFieldName);
 
 const { MappingFieldOptions, MappedFieldName } = props.values;
-// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
+
+console.log( '32-PickMapSelect MappedFieldName =', MappingFieldOptions);
+
+console.log( '34-PickMapSelect MappedFieldName =', MappedFieldName);
 
   const selectedOption = props.values.MappedFieldName;
 
-  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  let itemIndex = 0 //MappingFieldOptions.findIndex(x => x === MappedFieldName);
   // console.log( '  37  index  = ', itemIndex );
 
 
@@ -64,7 +66,8 @@ const { MappingFieldOptions, MappedFieldName } = props.values;
            <em>None</em>
           </MenuItem>
 
-          {MappingFieldOptions.map((item, index) =>
+          {/* {MappingFieldOptions.map((item, index) => */}
+          {["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

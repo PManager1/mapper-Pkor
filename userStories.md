@@ -1,74 +1,76 @@
-Srini Dec 18 - 
 
-Login  / logout thing
+---------
 
+========================================
+i had a limit on my api, but i was debugging why the data/ new fields aren't  showing up ?
+========================================
+
+configuration what filed properties we wanna show for each client.
 --------
-configuration what filed properties we wanna show for each client. 
---------
-Each record will have seperate 
-can have Header,  
-can have Detail 
+Each record will have seperate
+can have Header,
+can have Detail
 can have Trail information.
 
-each field will have its own 
+each field will have its own
 
-Under records there will be number of fields. 
-Fields > Records. 
+Under records there will be number of fields.
+Fields > Records.
 
-Array of Arrays. 
+Array of Arrays.
 
 
-There will be the sequience for the Records and for the Fields. We'll be sorting it by sequence Number. 
+There will be the sequience for the Records and for the Fields. We'll be sorting it by sequence Number.
 
-Records and Fields will have their own Sequence Number. 
+Records and Fields will have their own Sequence Number.
 
 
 ===================
-Replace all 
-SampleInputAdornments  with their own components. 
+Replace all
+SampleInputAdornments  with their own components.
 ============================
-Ability to create propeties for each client. 
-Like i need padding/ i need right justification etc. 
+Ability to create propeties for each client.
+Like i need padding/ i need right justification etc.
 
 
 
 
 
 =============================
-List tempaltes that are 
+List tempaltes that are
 
-List of templates that are already available. 
-? dummy json file. 
+List of templates that are already available.
+? dummy json file.
 
-Filter from by type, by provider ( blackbaud), Client (), paygroup level, 
+Filter from by type, by provider ( blackbaud), Client (), paygroup level,
 =====================
-Tim mentioned abuot the unit tests. 
+Tim mentioned abuot the unit tests.
 
-create new rules. : trucate after 12 chars. 
+create new rules. : trucate after 12 chars.
 
-Do autocomplete to select which one is selecte and display on the UI. 
+Do autocomplete to select which one is selecte and display on the UI.
 =====================
-click on the selecton and show the Meat/ Template. 
+click on the selecton and show the Meat/ Template.
 
 =====================
-Create or CRUD new templates, based on available rules. 
+Create or CRUD new templates, based on available rules.
 =====================
-? Get list of rules. 
+? Get list of rules.
 
 
 
 ===========================
-Use expression bar to update the rules. 
+Use expression bar to update the rules.
 
 https://material-ui.com/components/expansion-panels/
 
 ===========================
 
 
-Get list of rules and requiremnts to be used. 
+Get list of rules and requiremnts to be used.
 ==================
-Rule selection on the right view. 
-it could be a dropdown. 
+Rule selection on the right view.
+it could be a dropdown.
 
 
 ===============
@@ -78,34 +80,34 @@ If have left gutter :
  ✓ Create from beginning,
 
 
-Right gutter: 
-  Will display the fields on the UI 
+Right gutter:
+  Will display the fields on the UI
 
-Butting below:  add more field, 
+Butting below:  add more field,
 Delete the field,
-Edit the field, 
-Create rules / validations on top of it. 
-Button - save as template. 
+Edit the field,
+Create rules / validations on top of it.
+Button - save as template.
 
 
 
-Provide dummy Json data example files. 
-Get the list of key values from Srini, 
+Provide dummy Json data example files.
+Get the list of key values from Srini,
 
 
-- get repo from Tim/ Srini. 
-- Provide the array of key value and properties to be fed to the dB. 
-- ? Download as csv file so they can do whatever with that. 
+- get repo from Tim/ Srini.
+- Provide the array of key value and properties to be fed to the dB.
+- ? Download as csv file so they can do whatever with that.
 
--  Button to import the final rows/properties?  
+-  Button to import the final rows/properties?
 - ? Would there be rules attached to that ?
-- Ability to create different name for the output file. 
-- 
+- Ability to create different name for the output file.
+-
 
 
-- 
-- Import the file from Pranay that have the fields list. 
-- And then Mapp them. 
+-
+- Import the file from Pranay that have the fields list.
+- And then Mapp them.
 
 Save the file with the Map ID.
 
@@ -118,7 +120,7 @@ Save the file with the Map ID.
 
 Get input and output files.
 
-Later- 
+Later-
 ? File version to test out the things
 ? Schedule run on schedule for the specific file.
 ? MAy wanna use the Virtualized List
@@ -127,8 +129,8 @@ Later-
 =================
 
 
-Search 
-inside the search , pick what category of search you want to do 
+Search
+inside the search , pick what category of search you want to do
 Title/ company name or what ?
 =================
 

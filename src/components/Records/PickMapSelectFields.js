@@ -35,7 +35,7 @@ console.log( '34-PickMapSelect MappedFieldName =', MappedFieldName);
 
   const selectedOption = props.values.MappedFieldName;
 
-  let itemIndex = 0 //MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
   // console.log( '  37  index  = ', itemIndex );
 
 

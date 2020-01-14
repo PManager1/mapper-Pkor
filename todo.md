@@ -1,5 +1,9 @@
 not receiving props inside the components/records/ pickmapselectRecords.js
 
+
+Make sure it works for crate new field.
+
+Make sure it works for crate new record.
 ========================================
 Dispatch the snackbar from action.
 or from the copmennot itself.

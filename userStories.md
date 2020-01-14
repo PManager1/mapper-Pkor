@@ -1,6 +1,6 @@
 
-
 ========================================
+
 i had a limit on my api, but i was debugging why the data/ new fields aren't  showing up ?
 
 =============
@@ -26,16 +26,10 @@ There will be the sequience for the Records and for the Fields. We'll be sorting
 
 Records and Fields will have their own Sequence Number.
 
-
 ===================
-Replace all
-SampleInputAdornments  with their own components.
 ============================
 Ability to create propeties for each client.
 Like i need padding/ i need right justification etc.
-
-
-
 
 
 =============================
@@ -129,7 +123,6 @@ Later-
 =================
 
 =================
-
 
 Search
 inside the search , pick what category of search you want to do

@@ -61,11 +61,13 @@ import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";
 import LoadingScreen from "./pages/Example/LoadingScreen.js";
 import StickyFooter from "./pages/Example/StickyFooter.js";
 
+import FieldOptions from "./pages/Example/FieldOptions/Index";
+
 
 const App = () => {
   return (
     <HashRouter>
-        <MainWrapper>
+        {/* <MainWrapper> */}
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
@@ -112,10 +114,12 @@ const App = () => {
           <Route exact path="/login" exact component={Login} />
           <Route exact path="/ls" exact component={LoadingScreen} />
           <Route exact path="/sfoo" exact component={StickyFooter} />
+          <Route exact path="/fo" exact component={FieldOptions} />
+
 
           <Route component={NotFound} />
           </Switch>
-        </MainWrapper>
+        {/* </MainWrapper> */}
     </HashRouter>
   );
 };

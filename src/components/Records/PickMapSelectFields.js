@@ -44,6 +44,7 @@ console.log( '34-PickMapSelect MappedFieldName =', MappedFieldName);
         setMap(event.target.value);
 
         props.values.MappedFieldName = MappingFieldOptions[event.target.value];
+
         dispatch(editField(props.values._id, props.values));
       };
 

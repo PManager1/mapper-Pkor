@@ -35,13 +35,13 @@ const useStyles = makeStyles(theme => ({
     console.log( '35 PickMapSelectRecords MappedRecordName =', MappedRecordName);
 
 
-    // console.log( '27 PickMapSelectRecords MappedRecordName =', MappedRecordName);
+    console.log( '27 PickMapSelectRecords MappedRecordName =', MappedRecordName);
 
-      // const selectedOption = props.values.MappedRecordName;
+      const selectedOption = props.values.MappedRecordName;
 
-    let itemIndex = 0 // MappingRecordOptions.findIndex(x => x === MappedRecordName);
+    let itemIndex = MappingRecordOptions.findIndex(x => x === MappedRecordName);
 
-    // console.log( '  37  index  = ', itemIndex );
+    console.log( '  37  index  = ', itemIndex );
 
 
     const handleSelectChange = event => {
@@ -49,6 +49,10 @@ const useStyles = makeStyles(theme => ({
         setMap(event.target.value);
 
         props.values.MappedRecordName = MappingRecordOptions[event.target.value];
+
+        console.log('53- handleSelectChange          props.values.MappedRecordName =', props.values.MappedRecordName );
+
+        console.log('57-  handleSelectChange  props.values  =', props.values );
 
         dispatch(editField(props.values._id, props.values));
       };
@@ -72,8 +76,8 @@ const useStyles = makeStyles(theme => ({
            <em>None</em>
           </MenuItem>
 
-          {/* {MappingRecordOptions.map((item, index) => */}
-          {  ["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
+          {MappingRecordOptions.map((item, index) =>
+          // {  ["Data-1", "Data-2", "Data-3"].map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

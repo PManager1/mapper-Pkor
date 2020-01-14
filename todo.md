@@ -1,9 +1,25 @@
+========================================
+To do :  on start typoing the field name, it should create the field
+so that we create it and save it and then we can populate the options.
+
+To do : Same do the above for creating a new record.
+
+
+TO do : it doesnt creat a new record from within the edit records route.
+========================================
+
+in edit records upon changing the dropdown we have to click save button to save actually ssave it but
+
+In fields dropdown we dont have to do that. WTF
+
+========================================
 not receiving props inside the components/records/ pickmapselectRecords.js
 
 
 Make sure it works for crate new field.
 
 Make sure it works for crate new record.
+
 ========================================
 Dispatch the snackbar from action.
 or from the copmennot itself.

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
@@ -32,16 +32,25 @@ export default function NewFields(props) {
   console.log ( '28 - NewField -  recordId= ',  recordId );
   console.log ( '31 - NewField - id= ',  id );
 
+  // new things
+
+  const [state, setState] = useState(true);
+
+  function toggle() {
+    console.log(' 40 - state  =', state );
+    setState(!state);
+  }
+
   return (
-    <div className={classes.root}>
-      <Typography variant="h5" component="h4" className={classes.title}>
-          Create New Field
-          </Typography>
-          <Typography variant="h5" component="h4" align="center" className={classes.title}>
-            <RadioSelectionComponent />
-          </Typography>
-      <RecordsFormOne recordId={recordId} id={id} />
-     </div>
+    <div className="App">
+      <h2 onClick={toggle}>
+        <p>Do you feel good today?</p>  </h2>
+        <div className="toggle">
+          {state ? <span>Yes! 👍</span> : <span>No! 👎</span>}
+          {/* {state ? <RecordsFormOne /> : <RecordsFormTwo />} */}
+
+        </div>
+    </div>
   );
 }
 

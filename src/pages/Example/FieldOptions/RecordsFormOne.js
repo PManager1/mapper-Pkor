@@ -63,7 +63,7 @@ class RecordsFormOne extends Component {
     return (
       <React.Fragment>
         <div className={classes.container} style={{width: '100%' }}>
-              <p>Rec One ( text ) </p>
+              <p>RecordsFormOne( text ) </p>
             <Formik
               render={props => <Form {...props} />}
               initialValues={values}

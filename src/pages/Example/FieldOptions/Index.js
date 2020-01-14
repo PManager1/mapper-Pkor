@@ -2,7 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import AlignmentRadioBtns  from '../../components/Inputs/AlignmentRadioBtns.js';
-import RecordsForm from './RecordsForm.js'
+import RecordsFormOne from './RecordsFormOne.js';
+import RecordsFormTwo from './RecordsFormTwo.js';
+
+import RadioSelectionComponent from './RadioSelectionComponent';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,7 +37,10 @@ export default function NewFields(props) {
       <Typography variant="h5" component="h4" className={classes.title}>
           Create New Field
           </Typography>
-      <RecordsForm recordId={recordId} id={id} />
+          <Typography variant="h5" component="h4" align="center" className={classes.title}>
+            <RadioSelectionComponent />
+          </Typography>
+      <RecordsFormOne recordId={recordId} id={id} />
      </div>
   );
 }

@@ -3,6 +3,9 @@ import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import Radio from "@material-ui/core/Radio";
 
+import Grid from '@material-ui/core/Grid';
+
+
 const GreenRadio = withStyles({
   root: {
     color: green[400],
@@ -13,10 +16,13 @@ const GreenRadio = withStyles({
   checked: {}
 })(props => <Radio color="default" {...props} />);
 
-export default function RadioSelectionComponent() {
+export default function RadioSelectionComponent(props) {
+  console.log('  17 RadioSelectionComponent -   props =', props );
+
   const [selectedValue, setSelectedValue] = React.useState("Text");
 
   const handleChange = event => {
+    props.parentMethod();
     setSelectedValue(event.target.value);
     console.log(' 21  - event.target.value = ', event.target.value);
   };

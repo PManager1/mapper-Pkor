@@ -37,7 +37,7 @@ export default function NewFields(props) {
   const [state, setState] = useState(true);
 
   function toggle() {
-    console.log(' 40 - state  =', state );
+    console.log(' 40 - state  toggle called =', state );
     setState(!state);
   }
 
@@ -45,6 +45,9 @@ export default function NewFields(props) {
     <div className="App">
       <h2 onClick={toggle}>
         <p>Do you feel good today?</p>  </h2>
+
+        <RadioSelectionComponent parentMethod={toggle} {...props}/>
+
         <div className="toggle">
           {/* {state ? <span>Yes! 👍</span> : <span>No! 👎</span>} */}
           {state ? <RecordsFormOne /> : <RecordsFormTwo />}

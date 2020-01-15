@@ -44,7 +44,7 @@ export default function NewFields(props) {
   return (
     <div className="App">
       <h2 onClick={toggle}>
-        <p>Do you feel good today?</p>  </h2>
+        Click here to toggle   </h2>
 
         <RadioSelectionComponent parentMethod={toggle} {...props}/>
 

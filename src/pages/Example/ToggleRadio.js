@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { green } from "@material-ui/core/colors";
 import Radio from "@material-ui/core/Radio";
@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 // new
-
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -22,8 +21,22 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const Component1 = () =>{
+  return (<div>
 
+      componet - 1
+  </div>
 
+  );
+}
+const Component2 = () =>{
+  return (<div>
+
+      componet - 2
+  </div>
+
+  );
+}
 export default function ToggleRadio(props) {
   console.log('  17 ToggleRadio -   props =', props );
 
@@ -38,50 +51,46 @@ export default function ToggleRadio(props) {
   //   setSelectedValue(event.target.value);
   //   console.log(' 21  - event.target.value = ', event.target.value);
   // };
-
   const handleChange = event => {
     setValue(event.target.value);
+    toggle();
   };
+
+  const [state, setState] = useState(true);
+
+  function toggle() {
+    console.log(' 40 - state  toggle called =', state );
+    setState(!state);
+  }
+
 
   return (
     <div>
 
-<Grid container spacing={3}>
-  <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3 </Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3 2.2</Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3.2 </Paper>
-        </Grid>
-        <Grid item xs={6} sm={3}>
-          <Paper className={classes.paper}>xs=6 sm=3</Paper>
-        </Grid>
-  </Grid>
-
-
   <FormControl component="fieldset">
       <FormLabel component="legend">labelPlacement</FormLabel>
-      <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
+        <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
 
         <FormControlLabel
           value="start"
           control={<Radio color="primary" />}
-          label="Start"
+          label="Numeric"
           labelPlacement="start"
         />
-
 
         <FormControlLabel
           value="end"
           control={<Radio color="primary" />}
-          label="End"
+          label="Static"
           labelPlacement="start"
         />
       </RadioGroup>
     </FormControl>
+
+    <Component1 />
+
+    {state ? <Component1 /> : <Component2 />}
+     {/* {state ? <span> Numeric! 👍</span> : <span> Static! 👎</span>} */}
 
     </div>
   );

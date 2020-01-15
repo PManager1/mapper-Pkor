@@ -33,7 +33,6 @@ export default function NewFields(props) {
   console.log ( '31 - NewField - id= ',  id );
 
 
-
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>

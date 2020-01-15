@@ -63,11 +63,16 @@ import StickyFooter from "./pages/Example/StickyFooter.js";
 
 import FieldOptions from "./pages/Example/FieldOptions/Index";
 
+import RadioSelectionComponent from "./pages/Example/FieldOptions/RadioSelectionComponent";
+
+import ToggleRadio from "./pages/Example/ToggleRadio.js";
+
+
 
 const App = () => {
   return (
     <HashRouter>
-        <MainWrapper>
+        {/* <MainWrapper> */}
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
@@ -115,10 +120,14 @@ const App = () => {
           <Route exact path="/ls" exact component={LoadingScreen} />
           <Route exact path="/sfoo" exact component={StickyFooter} />
           <Route exact path="/fo" exact component={FieldOptions} />
+          <Route exact path="/rsc" exact component={RadioSelectionComponent} />
+          <Route exact path="/tr" exact component={ToggleRadio} />
+
+
 
           <Route component={NotFound} />
           </Switch>
-        </MainWrapper>
+        {/* </MainWrapper> */}
     </HashRouter>
   );
 };

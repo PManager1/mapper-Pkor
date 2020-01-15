@@ -116,7 +116,6 @@ const App = () => {
           <Route exact path="/sfoo" exact component={StickyFooter} />
           <Route exact path="/fo" exact component={FieldOptions} />
 
-
           <Route component={NotFound} />
           </Switch>
         </MainWrapper>

@@ -67,7 +67,7 @@ import FieldOptions from "./pages/Example/FieldOptions/Index";
 const App = () => {
   return (
     <HashRouter>
-        {/* <MainWrapper> */}
+        <MainWrapper>
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
@@ -119,7 +119,7 @@ const App = () => {
 
           <Route component={NotFound} />
           </Switch>
-        {/* </MainWrapper> */}
+        </MainWrapper>
     </HashRouter>
   );
 };

@@ -79,7 +79,7 @@ export default function ToggleRadio(props) {
         <FormControlLabel
           value="start"
           control={<Radio color="primary" />}
-          label="Numeric"
+          label="Dynamic"
           labelPlacement="start"
         />
 

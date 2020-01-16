@@ -158,7 +158,8 @@ export const Form = props => {
       />
       <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
 
-      <FormLabel component="legend">Please Select Alignment </FormLabel>
+
+<FormLabel component="legend">Please Select Alignment </FormLabel>
       <RadioGroup
         aria-label="RadioValue"
         name="RadioValue"
@@ -185,6 +186,9 @@ export const Form = props => {
           labelPlacement="start"
         />
       </RadioGroup>
+
+
+
 
       <FormLabel component="legend">
         Select Left/ Right Padding Value{" "}

@@ -1,8 +1,17 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 const StaticInput  = () => {
-  const greeting = 'Hello Static  Component!';
-  return <h1>{greeting}</h1>;
+
+  return(<div> <h1>Static  Content</h1>
+
+       <TextField
+        id="standard-basic"
+        label="Input Value"
+        />
+    </div>);
 };
 
 export default StaticInput;

@@ -75,3 +75,6 @@ https://medium.com/@timmykko/deploying-create-react-app-with-nginx-and-ubuntu-e6
 update .config access : 
 https://stackoverflow.com/questions/27150926/unable-to-access-git-attributes
 
+
+deploy on github pages:
+https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f

@@ -10,7 +10,7 @@ import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
 import RightPadComponent from './RightPadComponent.js';
-import LeftPadComponent2 from './LeftPadComponent2.js';
+import LeftPadComponent from './LeftPadComponent.js';
 
 const PaddingSelection  = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("Text");
@@ -60,7 +60,7 @@ const PaddingSelection  = (props) => {
 
     </RadioGroup>
 
-    {state ? <RightPadComponent /> : <LeftPadComponent2 />}
+    {state ? <RightPadComponent /> : <LeftPadComponent />}
 
     </React.Fragment>);
 };

@@ -8,7 +8,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 
 
-const LeftPadComponent2  = () => {
+const LeftPadComponent  = () => {
 
   return (<div>
 
@@ -28,4 +28,4 @@ const LeftPadComponent2  = () => {
   );
 };
 
-export default LeftPadComponent2;
+export default LeftPadComponent;

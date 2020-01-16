@@ -1,3 +1,8 @@
+======================
+ show none for - left / Right padding on create new form
+ route.
+
+
 ========================================
 After creating a new map, route to the /records/23433232423
  so that on that screen user can click new Record or new Field.

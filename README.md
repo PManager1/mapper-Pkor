@@ -71,3 +71,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 Upload build files on to ubuntu :
 https://medium.com/@timmykko/deploying-create-react-app-with-nginx-and-ubuntu-e6fe83c5e9e7
+
+update .config access : 
+https://stackoverflow.com/questions/27150926/unable-to-access-git-attributes
+

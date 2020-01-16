@@ -65,7 +65,7 @@ import FieldOptions from "./pages/Example/FieldOptions/Index";
 
 import RadioSelectionComponent from "./pages/Example/FieldOptions/RadioSelectionComponent";
 
-import ToggleRadio from "./pages/Example/ToggleRadio.js";
+import ToggleRadio from "./pages/Example/ToggleRadio/ToggleRadio.js";
 
 
 

@@ -12,6 +12,12 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
+
+import StaticInput from './StaticInput.js';
+import DynamicInput from './DynamicInput.js';
+// import RadioSelectionComponent from '../RadioSelectionComponent';
+
+
 const useStyles = makeStyles(theme => ({
   firstRadio: {
     marginLeft: '200',
@@ -39,7 +45,6 @@ const Component2 = () =>{
 }
 export default function ToggleRadio(props) {
   console.log('  17 ToggleRadio -   props =', props );
-
   const classes = useStyles();
 
   const [value, setValue] = React.useState('female');
@@ -87,9 +92,8 @@ export default function ToggleRadio(props) {
       </RadioGroup>
     </FormControl>
 
-    <Component1 />
 
-    {state ? <Component1 /> : <Component2 />}
+    {state ? <StaticInput /> : <DynamicInput />}
      {/* {state ? <span> Numeric! 👍</span> : <span> Static! 👎</span>} */}
 
     </div>

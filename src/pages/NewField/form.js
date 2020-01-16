@@ -99,6 +99,7 @@ const Form = props => {
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
 
+
       <TextField
         name="MaxCharLength"
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
@@ -114,9 +115,6 @@ const Form = props => {
       <AttributeSelection {...props}/>
 
       <PaddingSelection {...props}/>
-
-
-
 
 
       <FormLabel component="legend"></FormLabel>

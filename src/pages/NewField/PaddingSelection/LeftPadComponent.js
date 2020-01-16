@@ -12,7 +12,7 @@ const LeftPadComponent  = () => {
 
   return (<div>
 
-    <FormLabel component="legend">Left Padding Value  </FormLabel>
+
     <TextField
       name="PaddingLeft"
       // helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const StaticInput  = () => {
 
-  return(<div> <p>Static  Content</p>
+  return(<div>
 
        <TextField
         id="standard-basic"

@@ -1,3 +1,5 @@
+
+
 {
 { "datasetName":  "blackbaud1",
 
@@ -7,10 +9,8 @@ array: [
  attribute-datatype:Text,
  attribute-length: 10 ,   }
  ]
-
+}
 }
 
 
-
-}
-
+type cahar

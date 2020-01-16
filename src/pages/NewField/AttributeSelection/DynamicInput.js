@@ -1,8 +1,12 @@
 import React from 'react';
+import PickMapSelect from '../../../components/Records/PickMapSelect.js';
 
 const DynamicInput  = () => {
 
-  return <p>Please pick __</p>;
+  return (
+  <PickMapSelect/>
+
+  );
 };
 
 export default DynamicInput;

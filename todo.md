@@ -1,4 +1,8 @@
 ========================================
+After creating a new map, route to the /records/23433232423
+ so that on that screen user can click new Record or new Field.
+
+========================================
 To do :  on start typoing the field name, it should create the field
 so that we create it and save it and then we can populate the options.
 

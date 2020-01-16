@@ -10,7 +10,7 @@ import FormControl from '@material-ui/core/FormControl';
 import { connect } from "react-redux";
 import { createField } from '../../actions';
 
-import PickMapSelect from '../../components/Records/PickMapSelect.js';
+// import PickMapSelect from '../../components/Records/PickMapSelect.js';
 import { useHistory } from "react-router-dom";
 import AttributeSelection from './AttributeSelection/AttributeSelection';
 
@@ -98,12 +98,6 @@ const Form = props => {
       <AttributeSelection {...props}/>
 
 
-
-
-
-
-      <PickMapSelect />
-
       <TextField
         name="MaxCharLength"
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
@@ -116,22 +110,23 @@ const Form = props => {
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
 
-
-
       <FormLabel component="legend">Please Select Alignment Value</FormLabel>
         <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
+
+        <FormControlLabel
+            value="None"
+            control={<Radio color="secondary" />}
+            label="None"
+            labelPlacement="start"
+          />
+
           <FormControlLabel
             value="LeftAligned"
             control={<Radio color="primary" />}
             label="LeftAligned"
             labelPlacement="start"
           />
-          <FormControlLabel
-            value="None"
-            control={<Radio color="secondary" />}
-            label="None"
-            labelPlacement="start"
-          />
+
           <FormControlLabel
             value="RightAligned"
             control={<Radio color="primary" />}
@@ -165,7 +160,6 @@ const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
-
 
 
       <Button  type="submit"

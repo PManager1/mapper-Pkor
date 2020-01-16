@@ -72,7 +72,7 @@ import ToggleRadio from "./pages/Example/ToggleRadio/ToggleRadio.js";
 const App = () => {
   return (
     <HashRouter>
-        {/* <MainWrapper> */}
+        <MainWrapper>
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
@@ -127,7 +127,7 @@ const App = () => {
 
           <Route component={NotFound} />
           </Switch>
-        {/* </MainWrapper> */}
+        </MainWrapper>
     </HashRouter>
   );
 };

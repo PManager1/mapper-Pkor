@@ -116,12 +116,56 @@ const Form = props => {
       <PaddingSelection {...props}/>
 
 
+      <FormLabel component="legend">Please Select Alignment Value</FormLabel>
+        <RadioGroup aria-label="RadioValue" name="RadioValue" value={RadioValue} onChange={handleChange} row>
+
+        <FormControlLabel
+            value="None"
+            control={<Radio color="secondary" />}
+            label="None"
+            labelPlacement="start"
+          />
+
+          <FormControlLabel
+            value="LeftAligned"
+            control={<Radio color="primary" />}
+            label="LeftAligned"
+            labelPlacement="start"
+          />
+
+          <FormControlLabel
+            value="RightAligned"
+            control={<Radio color="primary" />}
+            label="RightAligned"
+            labelPlacement="start"
+          />
+
+      </RadioGroup>
 
 
 
-      <FormLabel component="legend"></FormLabel>
+      <FormLabel component="legend">Select Left/ Right Padding  </FormLabel>
+      <TextField
+        name="PaddingLeft"
+        helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
+        error={Boolean(errors.PaddingLeft)}
+        label="Padding Left Value"
+        value={PaddingLeft}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingLeft) ? errors.PaddingLeft : ""}</div>
 
-
+      <TextField
+        name="PaddingRight"
+        helperText={touched.PaddingRight ? errors.PaddingRight : ""}
+        error={Boolean(errors.PaddingRight)}
+        label="Padding Right  Value"
+        value={PaddingRight}
+        onChange={handleChange}
+        fullWidth
+      />
+      <div>{Boolean(errors.PaddingRight) ? errors.PaddingRight : ""}</div>
 
 
       <Button  type="submit"

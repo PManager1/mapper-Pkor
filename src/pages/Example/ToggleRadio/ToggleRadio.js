@@ -94,7 +94,6 @@ export default function ToggleRadio(props) {
 
 
     {state ? <StaticInput /> : <DynamicInput />}
-     {/* {state ? <span> Numeric! 👍</span> : <span> Static! 👎</span>} */}
 
     </div>
   );

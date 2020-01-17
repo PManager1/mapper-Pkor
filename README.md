@@ -79,10 +79,37 @@ https://stackoverflow.com/questions/27150926/unable-to-access-git-attributes
 deploy on github pages:
 https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 
+
+Move files to location :
+
+yarn run build
+
+mv build build_final
+
+
+
+# /etc/nginx/sites-enabled/mysite.conf
+server {
+    server_name mydomain.example.com;
+    root /full/path/to/myproject/build_final;
+
+    location / {
+        try_files $uri /index.html;
+        add_header   Cache-Control public;
+        expires      1d;
+    }
+}
+
+
+
+
 nginx cmnds:
 https://stackoverflow.com/questions/35868976/nginx-job-for-nginx-service-failed-because-the-control-process-exited/51684856#51684856
 
+
 sudo /etc/init.d/apache2 stop
+
+
 sudo systemctl restart nginx
 
 

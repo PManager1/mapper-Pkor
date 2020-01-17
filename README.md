@@ -72,9 +72,17 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 Upload build files on to ubuntu :
 https://medium.com/@timmykko/deploying-create-react-app-with-nginx-and-ubuntu-e6fe83c5e9e7
 
-update .config access : 
+update .config access :
 https://stackoverflow.com/questions/27150926/unable-to-access-git-attributes
 
 
 deploy on github pages:
 https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+
+nginx cmnds:
+https://stackoverflow.com/questions/35868976/nginx-job-for-nginx-service-failed-because-the-control-process-exited/51684856#51684856
+
+sudo /etc/init.d/apache2 stop
+sudo systemctl restart nginx
+
+

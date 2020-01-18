@@ -109,7 +109,11 @@ https://stackoverflow.com/questions/35868976/nginx-job-for-nginx-service-failed-
 
 sudo /etc/init.d/apache2 stop
 
-
 sudo systemctl restart nginx
 
+==============
+ feathers 
+pm2 start src/
 
+pm2 mongo 
+https://stackoverflow.com/questions/55303828/how-to-run-mongodb-using-pm2

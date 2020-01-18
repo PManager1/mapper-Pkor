@@ -1,4 +1,32 @@
 comment sequence number for expander.
+======================
+Route the NEW RECORD
+---------------
+when the new mapId is created from inside the create a brand new map
+when the
+dispatch ({  type: 'CREATE_CLIENT',   payload: response.data });
+
+from the view i shoudl  route the NEW RECORD to /roecords/2389238034{newly created mampID}
+
+======================
+TOASTER  -
+
+We can dispatch teh toaster actions like here:
+
+https://react-redux.js.org/using-react-redux/connect-mapdispatch
+
+
+const mapDispatchToProps = dispatch => {
+  return {
+    // dispatching plain actions
+    increment: () => dispatch({ type: 'INCREMENT' }),
+    decrement: () => dispatch({ type: 'DECREMENT' }),
+    reset: () => dispatch({ type: 'RESET' })
+  }
+}
+
+
+
 
 ======================
  show none for - left / Right padding on create new form

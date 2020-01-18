@@ -27,6 +27,8 @@ export const createMap = (formValues) => async dispatch => {
     ls.set('current_MapName', response.data.mapName);
 
     dispatch ({  type: 'CREATE_CLIENT',   payload: response.data });
+
+    // route to  records/5e2349f732266ae2947db7e1
     };
 
 

@@ -24,24 +24,22 @@ const StaticInput  = (props) => {
 
   return(<div>
 
-<TextField
+      <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
         error={Boolean(errors.FieldName)}
         label="FieldName"
         value={FieldName}
         onChange={handleChange}
-        fullWidth
       />
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
 
-
-
-       <TextField
+      <TextField
         id="standard-basic"
         label="Input Value"
-        />
+      />
+
     </div>);
 };
 

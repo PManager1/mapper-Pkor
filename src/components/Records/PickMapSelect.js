@@ -29,7 +29,7 @@ console.log( '30 PickMapSelect Values =', props.values);
   let itemIndex = 2; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
 
     const handleSelectChange = event => {
-      console.log('40 -  handleSelectChange event.target.value =', event.target.value);
+      console.log('32 -  handleSelectChange event.target.value =', event.target.value);
 
        let selectedItem = MappingFieldOptions[event.target.value];
 
@@ -40,7 +40,8 @@ console.log( '30 PickMapSelect Values =', props.values);
         // console.log('47 -  Map  =', Map );
         console.log('48 -  props  =', props );
 
-        // props.values.MappedFieldName = MappingFieldOptions[event.target.value];
+        props.values.FieldName = selectedItem
+        //MappingFieldOptions[event.target.value];
 
         // dispatch(editField(props.values._id, props.values));
 
@@ -58,7 +59,7 @@ console.log( '30 PickMapSelect Values =', props.values);
     return (
         <React.Fragment>
         <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-filled-label">Data Attributes</InputLabel>
+        <InputLabel id="demo-simple-select-filled-label">Data Attribute</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"

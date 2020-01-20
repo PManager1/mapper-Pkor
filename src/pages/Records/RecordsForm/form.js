@@ -147,7 +147,7 @@ export const Form = props => {
       />
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
-      <TextField
+      {/* <TextField
         name="SequenceNumber"
         helperText={touched.SequenceNumber ? errors.SequenceNumber : ""}
         error={Boolean(errors.SequenceNumber)}
@@ -156,7 +156,7 @@ export const Form = props => {
         onChange={handleChange}
         fullWidth
       />
-      <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div>
+      <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div> */}
 
 
 <FormLabel component="legend">Please Select Alignment </FormLabel>

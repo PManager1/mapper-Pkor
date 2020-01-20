@@ -26,17 +26,7 @@ const PickMapSelect = (props)=>{
 const dispatch = useDispatch();
 console.log( '30 PickMapSelect Values =', props.values);
 
-// console.log( '30 PickMapSelect MappedFieldName =', props.values.MappedFieldName);
-
-// const { MappingFieldOptions, MappedFieldName } = props.values;
-// console.log( '26 PickMapSelect MappedFieldName =', MappingFieldOptions);
-// console.log( '27 PickMapSelect MappedFieldName =', MappedFieldName);
-
-  // const selectedOption = props.values.MappedFieldName;
-
   let itemIndex = 2; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  // console.log( '  38  itemIndex  == ', itemIndex );
-
 
     const handleSelectChange = event => {
       console.log('40 -  handleSelectChange event.target.value =', event.target.value);
@@ -62,13 +52,12 @@ console.log( '30 PickMapSelect Values =', props.values);
       };
 
     const classes = useStyles();
-    const [Map, setMap] = React.useState(itemIndex);
-
-    // setMap(itemIndex);
+    // const [Map, setMap] = React.useState('itemIndex');
+    const [Map, setMap] = React.useState('');
 
     return (
         <React.Fragment>
-              <FormControl className={classes.formControl}>
+        <FormControl className={classes.formControl}>
         <InputLabel id="demo-simple-select-filled-label">Data Attributes</InputLabel>
         <Select
           labelId="demo-simple-select-filled-label"

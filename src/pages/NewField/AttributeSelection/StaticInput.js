@@ -8,9 +8,25 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+}));
 
 
 const StaticInput  = (props) => {
+
+  const classes = useStyles();
 
   const {
     values:{ MapId, RecordId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
@@ -24,7 +40,9 @@ const StaticInput  = (props) => {
 
   return(<div>
 
-      <TextField
+<Grid container spacing={3}>
+  <Grid item xs={6} sm={3}>
+  <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
         error={Boolean(errors.FieldName)}
@@ -34,11 +52,22 @@ const StaticInput  = (props) => {
       />
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
+        </Grid>
+        <Grid item xs={6} sm={3}>
 
-      <TextField
+        <TextField
         id="standard-basic"
         label="Input Value"
       />
+
+
+        </Grid>
+</Grid>
+
+
+
+
+
 
     </div>);
 };

@@ -25,22 +25,22 @@ const PickMapSelect = (props)=>{
 const dispatch = useDispatch();
 console.log( '26-PickMapSelect Values =', props.values);
 
-console.log( '28-PickMapSelect MappedFieldName =', props.values.MappedFieldName);
+console.log( '28-PickMapSelectFields MappedFieldName =', props.values.MappedFieldName);
 
 const { MappingFieldOptions, MappedFieldName } = props.values;
 
-console.log( '32-PickMapSelect MappedFieldName =', MappingFieldOptions);
+console.log( '32-PickMapSelectFields MappedFieldName =', MappingFieldOptions);
 
-console.log( '34-PickMapSelect MappedFieldName =', MappedFieldName);
+console.log( '34-PickMapSelectFields MappedFieldName =', MappedFieldName);
 
   const selectedOption = props.values.MappedFieldName;
 
   let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  // console.log( '  37  index  = ', itemIndex );
+  console.log( '  39  itemIndex  = ', itemIndex );
 
 
     const handleSelectChange = event => {
-      // console.log('28 -  handleSelectChange =', event.target.value);
+      console.log('43 -  handleSelectChange =', event.target.value);
         setMap(event.target.value);
 
         props.values.MappedFieldName = MappingFieldOptions[event.target.value];

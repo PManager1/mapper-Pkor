@@ -19,6 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
+const MappingFieldOptions = ["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"];
 
 const PickMapSelect = (props)=>{
 
@@ -33,20 +34,28 @@ console.log( '30 PickMapSelect Values =', props.values);
 
   // const selectedOption = props.values.MappedFieldName;
 
-  let itemIndex = 0; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  console.log( '  37  index  == ', itemIndex );
+  let itemIndex = 2; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
+  // console.log( '  38  itemIndex  == ', itemIndex );
+
 
     const handleSelectChange = event => {
       console.log('40 -  handleSelectChange event.target.value =', event.target.value);
-        setMap(event.target.value);
 
-        console.log('43 -  props  =', props );
+       let selectedItem = MappingFieldOptions[event.target.value];
 
-        // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+       setMap(event.target.value);
+
+       console.log( '41   selectedItem  == ', selectedItem );
+
+        // console.log('47 -  Map  =', Map );
+        console.log('48 -  props  =', props );
+
+        // props.values.MappedFieldName = MappingFieldOptions[event.target.value];
+
+        // dispatch(editField(props.values._id, props.values));
 
 
         // props.values.FieldName = ""
-
 
         // props.values.MappedFieldName = MappingFieldOptions[event.target.value];
         // dispatch(editField(props.values._id, props.values));
@@ -72,7 +81,7 @@ console.log( '30 PickMapSelect Values =', props.values);
           </MenuItem>
 
           {/* {MappingFieldOptions.map((item, index) => */}
-          {["TYPE_CODE", "ACCOUNT_NUMBER", "POST_DATE", "ENCUMBRANCE", "JOURNAL", "AMOUNT", "D_UI_PROJECT_ID", "D_AMOUNT", "D_PERCENT"].map((item, index) =>
+          {MappingFieldOptions.map((item, index) =>
             <MenuItem key={index} value={index}> {item} </MenuItem>
           )}
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import PickMapSelect from '../../../components/Records/PickMapSelect.js';
 
-const DynamicInput  = () => {
+const DynamicInput  = (props) => {
 
   return (
-  <PickMapSelect/>
+  <PickMapSelect {...props}/>
 
   );
 };

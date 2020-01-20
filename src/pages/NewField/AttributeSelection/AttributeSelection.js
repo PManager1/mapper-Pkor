@@ -31,7 +31,7 @@ const AttributeSelection  = (props) => {
 
   return(<React.Fragment>
 
-      <FormLabel component="legend">Please Select Attribute Name </FormLabel>
+      {/* <FormLabel component="legend">Please Select Attribute Name </FormLabel> */}
       <RadioGroup aria-label="RadioValue" name="RadioValue" value={props.RadioValue}
       onChange={handleChange}
       row
@@ -52,7 +52,7 @@ const AttributeSelection  = (props) => {
 
     </RadioGroup>
 
-    {state ? <StaticInput /> : <DynamicInput />}
+    {state ? <StaticInput {...props} /> : <DynamicInput {...props} />}
 
     </React.Fragment>);
 };

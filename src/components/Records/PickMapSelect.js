@@ -34,11 +34,19 @@ console.log( '30 PickMapSelect Values =', props.values);
   // const selectedOption = props.values.MappedFieldName;
 
   let itemIndex = 0; // MappingFieldOptions.findIndex(x => x === MappedFieldName);
-  console.log( '  37  index  = ', itemIndex );
+  console.log( '  37  index  == ', itemIndex );
 
     const handleSelectChange = event => {
-      console.log('28 -  handleSelectChange =', event.target.value);
+      console.log('40 -  handleSelectChange event.target.value =', event.target.value);
         setMap(event.target.value);
+
+        console.log('43 -  props  =', props );
+
+        // let itemIndex = MappingFieldOptions.findIndex(x => x === MappedFieldName);
+
+
+        // props.values.FieldName = ""
+
 
         // props.values.MappedFieldName = MappingFieldOptions[event.target.value];
         // dispatch(editField(props.values._id, props.values));

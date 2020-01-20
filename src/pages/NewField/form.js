@@ -87,7 +87,7 @@ const Form = props => {
       <div>{Boolean(errors.RecordId) ? errors.RecordId : ""}</div> */}
 
 
-      <TextField
+      {/* <TextField
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
         error={Boolean(errors.FieldName)}
@@ -97,7 +97,12 @@ const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
+ */}
 
+
+
+
+      <AttributeSelection {...props}/>
 
 
       <TextField
@@ -111,8 +116,6 @@ const Form = props => {
       />
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
-
-      <AttributeSelection {...props}/>
 
       <PaddingSelection {...props}/>
 

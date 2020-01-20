@@ -40,14 +40,14 @@ const AttributeSelection  = (props) => {
           value="LeftAligned"
           control={<Radio color="primary" />}
           label="Pick Data Attribute"
-          labelPlacement="start"
+          labelPlacement="end"
         />
 
         <FormControlLabel
           value="RightAligned"
           control={<Radio color="primary" />}
           label="Add a static attribute"
-          labelPlacement="start"
+          labelPlacement="end"
         />
 
     </RadioGroup>

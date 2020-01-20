@@ -65,6 +65,7 @@ console.log( '30 PickMapSelect Values =', props.values);
           id="demo-simple-select-filled"
           value={Map}
           onChange={handleSelectChange}
+          labelPlacement="start"
         >
           <MenuItem value="">
            <em>None</em>

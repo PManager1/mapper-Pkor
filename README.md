@@ -1,5 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -112,8 +113,8 @@ sudo /etc/init.d/apache2 stop
 sudo systemctl restart nginx
 
 ==============
- feathers 
+ feathers
 pm2 start src/
 
-pm2 mongo 
+pm2 mongo
 https://stackoverflow.com/questions/55303828/how-to-run-mongodb-using-pm2

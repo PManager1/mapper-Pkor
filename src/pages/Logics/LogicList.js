@@ -12,6 +12,8 @@ import CommentIcon from '@material-ui/icons/Comment';
 import { connect } from "react-redux";
 import { fetchLogics } from '../../actions';
 import {useSelector, useDispatch} from 'react-redux';
+import BottomButtons from './BottomButtons';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,8 +26,8 @@ const useStyles = makeStyles(theme => ({
 function LogicList(props) {
 
   useEffect(() => {
-    props.fetchLogics(); 
-}, []); 
+    props.fetchLogics();
+}, []);
 
 
   const classes = useStyles();
@@ -45,6 +47,7 @@ function LogicList(props) {
   };
 
   return (
+    <>
     <List className={classes.root}>
       {[0, 1, 2, 3].map(value => {
         const labelId = `checkbox-list-label-${value}`;
@@ -60,7 +63,7 @@ function LogicList(props) {
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`Logic ${value + 1}`} />
+            <ListItemText id={labelId} primary={`Map ${value + 1}`} />
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
@@ -70,13 +73,16 @@ function LogicList(props) {
         );
       })}
     </List>
+
+<BottomButtons />
+</>
   );
 }
 
 
 const mapStateToProps = (state) =>{
-  console.log( '72 - AllRules  state =', state ); 
-  // return { records: state.records.data }; 
-}; 
+  console.log( '72 - AllRules  state =', state );
+  // return { records: state.records.data };
+};
 
 export default connect(mapStateToProps, { fetchLogics })(LogicList);

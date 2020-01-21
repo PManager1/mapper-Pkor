@@ -93,6 +93,7 @@ const App = () => {
           <Route exact path="/styledgrid" exact component={styledgrid} />
 
           <Route exact path="/settings" component={Settings} />
+
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}
           />

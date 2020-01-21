@@ -212,11 +212,11 @@ export default function MainWrapper(props) {
 
         <Divider />
         <List>
-          <ListItem button component={Link} to="/alllogic">
+          <ListItem button component={Link} to="/settings">
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
-            <ListItemText primary="All Logic" />
+            <ListItemText primary="Settings" />
           </ListItem>
 
           <ListItem button component={Link} to="/createlogic">

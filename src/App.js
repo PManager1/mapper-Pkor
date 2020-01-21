@@ -11,7 +11,7 @@ import NewRecord from "./pages/NewRecord/Index.js";
 import Search from "./pages/Search/Index.js";
 import MainWrapper from "./pages/Records/MainWrapper";
 
-import AllLogic from "./pages/Logics/Index";
+import Settings from "./pages/Logics/Index";
 import CreateLogic from "./pages/CreateNewLogic/Index";
 
 import CreateFromExistingTemplate from "./pages/Maps/CreateFromExistingTemplate/Index";
@@ -92,7 +92,7 @@ const App = () => {
           <Route exact path="/grid" exact component={FullWidthGrid} />
           <Route exact path="/styledgrid" exact component={styledgrid} />
 
-          <Route exact path="/AllLogic" component={AllLogic} />
+          <Route exact path="/settings" component={Settings} />
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}
           />

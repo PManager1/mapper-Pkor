@@ -1,3 +1,16 @@
+
+
+Just make etc map inactive, not delete it.
+
+Should still popup in the search results but
+
+Filter the search by filter active/ inactive.
+=========
+On pick Data Attribute :
+Still provide the Field Name.
+
+=======================
+======================
 comment sequence number for expander.
 ======================
 Route the NEW RECORD

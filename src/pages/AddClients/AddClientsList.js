@@ -63,7 +63,7 @@ function AddClientsList(props) {
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`Map ${value + 1}`} />
+            <ListItemText id={labelId} primary={`Client ${value + 1}`} />
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />

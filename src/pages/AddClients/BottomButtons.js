@@ -18,11 +18,11 @@ const BottomButtons = ()=>{
         <div >
              <Button
                 variant="contained"
-                color="secondary"
+                color="primary"
                 className={classes.button}
               >
 
-          Add Client/s
+          Save Changes
       </Button>
         </div>
     );

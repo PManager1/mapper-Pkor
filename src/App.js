@@ -25,7 +25,7 @@ import TemporaryDrawer from "./components/DrawerDemo.js";
 
 import ModalFormDialog from "./components/ModalFormDialog.js";
 import { selectClient } from "./actions";
-import OldRecords from "./pages/OldRecords/Index.js";
+
 import LinearIndeterminate from "./components/LinearProgress.js";
 
 import Later from "./pages/Later/Index.js";
@@ -109,7 +109,8 @@ const App = () => {
 
           <Route exact path="/fd" exact component={FullDialog} />
           <Route exact path="/loading" exact component={LoadingSpiner} />
-          <Route exact path="/oldrecords" exact component={OldRecords} />
+
+
           <Route exact path="/showsnack" exact component={ShowSnackbar} />
           <Route exact path="/withnoti" exact component={WithNotistack} />
           <Route exact path="/stepperoneET" exact component={StepperOneET} />

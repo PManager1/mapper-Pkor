@@ -30,9 +30,9 @@ const useStyles = makeStyles(theme => ({
 
 function MapsList(props) {
 
-  console.log( '33 -   props.maps =', props.maps );
-  const { maps } = props;
-  console.log( '33 -   maps =', maps );
+  console.log( '33 -   props.maps =', props.Maps );
+  const { Maps } = props;
+  console.log( '33 -   Maps =', Maps );
 
   useEffect(() => {
     props.fetchMaps();
@@ -59,7 +59,8 @@ function MapsList(props) {
 
     <>
     <List className={classes.root}>
-      {[0, 1, 2, 3].map(value => {
+      {top100Films.map(value => {
+
         const labelId = `checkbox-list-label-${value}`;
 
         return (
@@ -73,7 +74,7 @@ function MapsList(props) {
                 inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`Map ${value + 1}`} />
+            <ListItemText id={labelId} primary={` ${value.provider}`} />
             <ListItemSecondaryAction>
             <Tooltip title="Rename the map" aria-label="add">
                 <RenameDialog />
@@ -94,9 +95,32 @@ function MapsList(props) {
 const mapStateToProps = (state) =>{
   console.log( '91  - MapsList -   state =', state );
 
-  return { maps: state.clients.data };
+  return { Maps: state.clients.data };
 };
 
 export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(MapsList);
 
 // export default connect(mapStateToProps, { fetchLogics })(MapsList);
+
+
+const top100Films = [
+  { provider: 'BlackBaud', mapId: 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID'  },
+  { provider: 'Shawshank Redemption', year: 1972, client: 'Royal Dutch Shell', PayGroup: 'paygp'},
+  { provider: 'The Godfather: Part II', year: 1974, client: 'State Grid', PayGroup: 'paygp'  },
+  { provider: 'The Dark Knight', year: 2008, client: 'BP', PayGroup: 'paygp'  },
+  { provider: '12 Angry Men', year: 1957, client: 'Volkswagen', PayGroup: 'paygp'  },
+  { provider: "Schindler's List", year: 1993, client: 'Toyota', PayGroup: 'paygp'  },
+  { provider: 'Pulp Fiction', year: 1994, client: 'Berkshire Hathaway', PayGroup: 'paygp'  },
+  { provider: 'The Lord of the Rings: The Return of the King', year: 2003, client: 'Amazon', PayGroup: 'paygp'  },
+  { provider: 'The Good, the Bad and the Ugly', year: 1966, client: 	'UnitedHealth', PayGroup: 'paygp'  },
+  { provider: 'Fight Club', year: 1999, client: 'Samsung', PayGroup: 'paygp'  },
+  { provider: 'The Lord of the Rings: The Fellowship of the Ring', year: 2001, client: 'McKesson', PayGroup: 'paygp'  },
+  { provider: 'Star Wars: Episode V - The Empire Strikes Back', year: 1980, client: 'Daimler', PayGroup: 'paygp'  },
+  { provider: 'Forrest Gump', year: 1994, client: 'CVS Health', PayGroup: 'paygp'  },
+  { provider: 'Inception', year: 2010, client: 'Apple', PayGroup: 'paygp'  },
+  { provider: 'The Lord of the Rings: The Two Towers', year: 2002, client: 'Apple', PayGroup: 'paygp'  },
+  { provider: "One Flew Over the Cuckoo's Nest", year: 1975, client: 'Apple', PayGroup: 'paygp'  },
+  { provider: 'Goodfellas', year: 1990, client: 'Apple', PayGroup: 'paygp'  },
+  { provider: 'The Matrix', year: 1999, client: 'Banana', PayGroup: 'paygp'  },
+  { provider: 'Seven Samurai', year: 1954, client: 'Gap', PayGroup: 'paygp'  },
+];

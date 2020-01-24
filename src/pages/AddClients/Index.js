@@ -1,13 +1,13 @@
 import React from 'react';
-import LogicList from './LogicList'; 
+import AddClientsList from './AddClientsList';
 
 
 const AllRules = ()=>{
     return (
-        <div > 
-            <LogicList />
+        <div >
+            <AddClientsList />
         </div>
-    ); 
+    );
 }
 
-export default AllRules; 
+export default AllRules;

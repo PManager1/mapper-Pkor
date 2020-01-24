@@ -100,10 +100,7 @@ const Form = props => {
  */}
 
 
-
-
       <AttributeSelection {...props}/>
-
 
       <TextField
         name="MaxCharLength"

@@ -57,7 +57,7 @@ const StaticInput  = (props) => {
 
         <TextField
         id="standard-basic"
-        label="Input Value"
+        label="Input value"
       />
 
 

@@ -20,10 +20,9 @@ const BottomButtons = ()=>{
                 variant="contained"
                 color="secondary"
                 className={classes.button}
-                startIcon={<DeleteIcon />}
               >
 
-        Delete
+          InActive
       </Button>
         </div>
     );

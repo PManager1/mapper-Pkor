@@ -7,8 +7,7 @@ const AllRules = ()=>{
         <div >
             <Typography variant='h4' color="primary" align="left">
                     Add Clients to current Map
-                </Typography>
-
+            </Typography>
 
             <AddClientsList />
         </div>

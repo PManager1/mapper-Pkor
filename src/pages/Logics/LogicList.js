@@ -7,7 +7,8 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
-import CommentIcon from '@material-ui/icons/Comment';
+// import CommentIcon from '@material-ui/icons/Comment';
+import InfoIcon from '@material-ui/icons/Info';
 
 import { connect } from "react-redux";
 import { fetchLogics } from '../../actions';
@@ -66,7 +67,7 @@ function LogicList(props) {
             <ListItemText id={labelId} primary={`Map ${value + 1}`} />
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
-                <CommentIcon />
+                <InfoIcon />
               </IconButton>
             </ListItemSecondaryAction>
           </ListItem>

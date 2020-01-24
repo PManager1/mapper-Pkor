@@ -22,7 +22,7 @@ const BottomButtons = ()=>{
                 className={classes.button}
               >
 
-          Add a Client
+          Add Client/s
       </Button>
         </div>
     );

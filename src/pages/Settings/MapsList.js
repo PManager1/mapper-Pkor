@@ -11,11 +11,12 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 
 import { connect } from "react-redux";
-import { fetchLogics } from '../../actions';
+// import { fetchMaps } from '../../actions';
 import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
+import { fetchSingleMap, fetchMaps } from '../../actions';
 
 
 
@@ -29,8 +30,12 @@ const useStyles = makeStyles(theme => ({
 
 function MapsList(props) {
 
+  console.log( '33 -   props.maps =', props.maps );
+  const { maps } = props;
+  console.log( '33 -   maps =', maps );
+
   useEffect(() => {
-    props.fetchLogics();
+    props.fetchMaps();
 }, []);
 
 
@@ -51,6 +56,7 @@ function MapsList(props) {
   };
 
   return (
+
     <>
     <List className={classes.root}>
       {[0, 1, 2, 3].map(value => {
@@ -84,9 +90,13 @@ function MapsList(props) {
 }
 
 
+
 const mapStateToProps = (state) =>{
-  console.log( '72 - AllRules  state =', state );
-  // return { records: state.records.data };
+  console.log( '91  - MapsList -   state =', state );
+
+  return { maps: state.clients.data };
 };
 
-export default connect(mapStateToProps, { fetchLogics })(MapsList);
+export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(MapsList);
+
+// export default connect(mapStateToProps, { fetchLogics })(MapsList);

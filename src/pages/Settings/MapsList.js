@@ -15,6 +15,9 @@ import { fetchLogics } from '../../actions';
 import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
+import Tooltip from '@material-ui/core/Tooltip';
+
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,7 +69,9 @@ function MapsList(props) {
             </ListItemIcon>
             <ListItemText id={labelId} primary={`Map ${value + 1}`} />
             <ListItemSecondaryAction>
+            <Tooltip title="Rename the map" aria-label="add">
                 <RenameDialog />
+              </Tooltip>
             </ListItemSecondaryAction>
           </ListItem>
         );

@@ -6,7 +6,7 @@ const AllRules = ()=>{
     return (
         <React.Fragment>
             <Typography variant='h5' color="primary" align="left">
-                Activate/ DeActivate maps
+                Active/ InActive maps
             </Typography>
             <MapsList />
         </React.Fragment>

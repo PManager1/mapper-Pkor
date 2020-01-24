@@ -64,11 +64,6 @@ const StaticInput  = (props) => {
         </Grid>
 </Grid>
 
-
-
-
-
-
     </div>);
 };
 

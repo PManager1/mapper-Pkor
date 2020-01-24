@@ -5,7 +5,7 @@ import {
   Route,
   HashRouter
 } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import NewFields from "./pages/NewField/Index.js";
 import NewRecord from "./pages/NewRecord/Index.js";
 import Search from "./pages/Search/Index.js";
@@ -21,7 +21,6 @@ import CreateNewMap from "./pages/Maps/CreateNewMap/Index";
 import RecentlyCreatedTemplates from "./pages/RecentlyCreatedTemplates/Index";
 import Login from "./pages/Login/Index.js";
 import NotFound from "./pages/NotFound/Index.js";
-import TemporaryDrawer from "./components/DrawerDemo.js";
 
 import ModalFormDialog from "./components/ModalFormDialog.js";
 import { selectClient } from "./actions";
@@ -58,7 +57,6 @@ import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
 import AddClients from "./pages/AddClients/Index";
 
 
-// import PickMapped from './pages/Records/PickMapped';
 import Rebass from "./pages/Example/Rebass.js";
 import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";
 
@@ -71,13 +69,17 @@ import RadioSelectionComponent from "./pages/Example/FieldOptions/RadioSelection
 
 import ToggleRadio from "./pages/Example/ToggleRadio/ToggleRadio.js";
 
+// New
+import TemporaryDrawer from './TemporaryDrawer';
+// import MainWrapper from "./pages/Records/MainWrapper";
 
 
-const App = () => {
-  return (
-    <HashRouter>
-        <MainWrapper>
-        <Switch>
+
+  export default function App() {
+    return (
+      <HashRouter>
+          <MainWrapper>
+          <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/records" exact component={Records} />
@@ -124,7 +126,6 @@ const App = () => {
           <Route exact path="/rebass" exact component={Rebass} />
           <Route exact path="/pickmapselect" exact component={PickMapSelect} />
           <Route exact path="/ModalFormDialog" component={ModalFormDialog} />
-          <Route exact path="/drawer" exact component={TemporaryDrawer} />
           <Route exact path="/login" exact component={Login} />
           <Route exact path="/ls" exact component={LoadingScreen} />
           <Route exact path="/sfoo" exact component={StickyFooter} />
@@ -140,5 +141,3 @@ const App = () => {
     </HashRouter>
   );
 };
-
-export default App;

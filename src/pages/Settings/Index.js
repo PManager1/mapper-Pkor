@@ -1,12 +1,15 @@
 import React from 'react';
 import MapsList from './MapsList';
-
+import Typography from '@material-ui/core/Typography';
 
 const AllRules = ()=>{
     return (
-        <div >
+        <React.Fragment>
+            <Typography variant='h5' color="primary" align="left">
+                Activate/ DeActivate maps
+            </Typography>
             <MapsList />
-        </div>
+        </React.Fragment>
     );
 }
 

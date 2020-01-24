@@ -14,7 +14,7 @@ import { connect } from "react-redux";
 import { fetchLogics } from '../../actions';
 import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
-
+import RenameDialog from './RenameDialog.js';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -68,6 +68,7 @@ function MapsList(props) {
             <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
                 <InfoIcon />
+                <RenameDialog />
               </IconButton>
             </ListItemSecondaryAction>
           </ListItem>

@@ -63,15 +63,15 @@ function MapsList(props) {
 
         const labelId = `checkbox-list-label-${value}`;
 
-        return (
-          <ListItem key={value} role={undefined} dense button onClick={handleToggle(value)}>
+        return (  //key={value}
+          <ListItem  role={undefined} dense button onClick={handleToggle(value)}>
             <ListItemIcon>
               <Checkbox
                 edge="start"
                 checked={checked.indexOf(value) !== -1}
                 tabIndex={-1}
                 disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
+                // inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
             <ListItemText id={labelId} primary={` ${value.provider}`} />
@@ -104,9 +104,9 @@ export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(MapsList)
 
 
 const top100Films = [
-  { provider: 'BlackBaud', mapId: 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID'  },
-  { provider: 'Shawshank Redemption', year: 1972, client: 'Royal Dutch Shell', PayGroup: 'paygp'},
-  { provider: 'The Godfather: Part II', year: 1974, client: 'State Grid', PayGroup: 'paygp'  },
-  { provider: 'The Dark Knight', year: 2008, client: 'BP', PayGroup: 'paygp'  },
-  { provider: '12 Angry Men', year: 1957, client: 'Volkswagen', PayGroup: 'paygp'  }
+  { provider: 'BlackBaud', 'mapId': 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID'  },
+  { 'provider': 'Shawshank Redemption', year: 1972, 'client': 'Royal Dutch Shell', PayGroup: 'paygp'},
+  { 'provider': 'The Godfather: Part II', year: 1974, 'client': 'State Grid', PayGroup: 'paygp'  },
+  { 'provider': 'The Dark Knight', year: 2008, 'client': 'BP', PayGroup: 'paygp'  },
+  { 'provider': '12 Angry Men', year: 1957, 'client': 'Volkswagen', PayGroup: 'paygp'  }
 ];

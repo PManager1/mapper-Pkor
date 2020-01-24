@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function LogicList(props) {
+function MapsList(props) {
 
   useEffect(() => {
     props.fetchLogics();
@@ -86,4 +86,4 @@ const mapStateToProps = (state) =>{
   // return { records: state.records.data };
 };
 
-export default connect(mapStateToProps, { fetchLogics })(LogicList);
+export default connect(mapStateToProps, { fetchLogics })(MapsList);

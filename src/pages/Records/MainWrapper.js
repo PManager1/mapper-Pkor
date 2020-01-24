@@ -218,7 +218,7 @@ export default function MainWrapper(props) {
             <ListItemIcon>
               <SettingsIcon />
             </ListItemIcon>
-            <ListItemText primary="Settings" />
+            <ListItemText primary="Map-Settings" />
           </ListItem>
 
           <ListItem button component={Link} to="/AddClients">

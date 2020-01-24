@@ -22,7 +22,7 @@ const BottomButtons = ()=>{
                 className={classes.button}
               >
 
-          Save Changes
+          Save
       </Button>
         </div>
     );

@@ -20,6 +20,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import NoteAddIcon from "@material-ui/icons/NoteAdd";
 import RestoreIcon from "@material-ui/icons/Restore";
 import SettingsIcon from "@material-ui/icons/Settings";
+import SettingsInputCompositeIcon from '@material-ui/icons/SettingsInputComposite';
+
 import MailIcon from "@material-ui/icons/Mail";
 import { Link } from "react-router-dom";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -217,6 +219,13 @@ export default function MainWrapper(props) {
               <SettingsIcon />
             </ListItemIcon>
             <ListItemText primary="Settings" />
+          </ListItem>
+
+          <ListItem button component={Link} to="/AddClients">
+            <ListItemIcon>
+              <SettingsInputCompositeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Add Clients" />
           </ListItem>
 
           <ListItem button component={Link} to="/createlogic">

@@ -12,6 +12,7 @@ import Search from "./pages/Search/Index.js";
 import MainWrapper from "./pages/Records/MainWrapper";
 
 import Settings from "./pages/Logics/Index";
+
 import CreateLogic from "./pages/CreateNewLogic/Index";
 
 import CreateFromExistingTemplate from "./pages/Maps/CreateFromExistingTemplate/Index";
@@ -54,6 +55,9 @@ import StepperTwoNT from "./pages/Maps/CreateNewMap/Steps/StepperTwoNT.js";
 import StepperThreeNT from "./pages/Maps/CreateNewMap/Steps/StepperThreeNT.js";
 import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
 
+import AddClients from "./pages/AddClients/Index";
+
+
 // import PickMapped from './pages/Records/PickMapped';
 import Rebass from "./pages/Example/Rebass.js";
 import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";
@@ -93,6 +97,9 @@ const App = () => {
           <Route exact path="/styledgrid" exact component={styledgrid} />
 
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/AddClients" component={AddClients} />
+
+
 
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}

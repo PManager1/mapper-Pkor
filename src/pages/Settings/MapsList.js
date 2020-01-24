@@ -66,10 +66,7 @@ function MapsList(props) {
             </ListItemIcon>
             <ListItemText id={labelId} primary={`Map ${value + 1}`} />
             <ListItemSecondaryAction>
-              <IconButton edge="end" aria-label="comments">
-                <InfoIcon />
                 <RenameDialog />
-              </IconButton>
             </ListItemSecondaryAction>
           </ListItem>
         );

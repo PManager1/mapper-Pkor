@@ -11,7 +11,7 @@ import NewRecord from "./pages/NewRecord/Index.js";
 import Search from "./pages/Search/Index.js";
 import MainWrapper from "./pages/Records/MainWrapper";
 
-import Settings from "./pages/Logics/Index";
+import Settings from "./pages/Settings/Index";
 
 import CreateLogic from "./pages/CreateNewLogic/Index";
 

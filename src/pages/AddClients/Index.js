@@ -5,8 +5,8 @@ import AddClientsList from './AddClientsList';
 const AllRules = ()=>{
     return (
         <div >
-            <Typography variant='h4' color="primary" align="left">
-                    Add Clients to current Map
+            <Typography variant='h5' color="primary" align="left">
+                    Add clients to current Map
             </Typography>
 
             <AddClientsList />

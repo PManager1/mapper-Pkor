@@ -8,6 +8,10 @@ Filter the search by filter active/ inactive.
 ------------
 Show the option to pic active/ inactive when searching (save active or inactive mapId)
 =========
+After i rename the name of the map from the Map Settings,
+It doesnt update the name on the orange header bar.
+
+=========
 On pick Data Attribute :
 Still provide the Field Name.
 

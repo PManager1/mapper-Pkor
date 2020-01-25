@@ -17,6 +17,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from "react-router-dom";
+import Grid from '@material-ui/core/Grid';
 // new end
 // Pick the data set list.
 const useStyles = makeStyles(theme => ({
@@ -40,7 +41,7 @@ const Form = props => {
 
 
   const {
-    values:{ MapId, RecordName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    values: { MapId, RecordName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight },
     errors,
     touched,
     handleSubmit,
@@ -50,18 +51,18 @@ const Form = props => {
   } = props;
   // console.table(props);
 
-  console.log('27 -  final props in form.js = ' , props );
+  console.log('27 -  final props in form.js = ', props);
 
 
-  const handleSaveClick = () =>{
-    console.log('28 -  called handleSaveClick inside form.js ' );
+  const handleSaveClick = () => {
+    console.log('28 -  called handleSaveClick inside form.js ');
     props.createRecord(props.values);
     history.goBack();
   }
 
 
-  const handleCancelClick = () =>{
-    console.log('64 -  called handleCancelClick' );
+  const handleCancelClick = () => {
+    console.log('64 -  called handleCancelClick');
     // props.createRecord(props.values);
     history.goBack();
   }
@@ -88,7 +89,7 @@ const Form = props => {
     <form onSubmit={handleSubmit}>
 
 
-    {/* <TextField
+      {/* <TextField
         name="MapId"
         helperText={touched.MapId ? errors.MapId : ""}
         error={Boolean(errors.MapId)}
@@ -112,28 +113,86 @@ const Form = props => {
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
 
 
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={12}>
+          <FormControl className={classes.formControl}>
+            <InputLabel id="demo-simple-select-filled-label">Pick DataSet  </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+              value={age}
+              onChange={handleSelectChange}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>DataSet BB-1 </MenuItem>
+              <MenuItem value={20}>DataSet BB-2</MenuItem>
+              <MenuItem value={30}>DataSet BB-3</MenuItem>
+            </Select>
+          </FormControl>
 
-    <FormControl className={classes.formControl}>
-      <InputLabel id="demo-simple-select-filled-label">Pick DataSet</InputLabel>
-      <Select
-        labelId="demo-simple-select-filled-label"
-        id="demo-simple-select-filled"
-        value={age}
-        onChange={handleSelectChange}
-      >
-        <MenuItem value="">
-          <em>None</em>
-        </MenuItem>
-        <MenuItem value={10}>DataSet BB-1 </MenuItem>
-        <MenuItem value={20}>DataSet BB-2</MenuItem>
-        <MenuItem value={30}>DataSet BB-3</MenuItem>
-      </Select>
-    </FormControl>
+        </Grid>
+        </Grid>
 
-      <Button  type="submit"
+
+
+      <Grid container spacing={3}>
+        <Grid item xs={4} sm={4}>
+          <FormControl className={classes.formControl}>
+            <InputLabel id="demo-simple-select-filled-label">Output format  </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+              value={age}
+              onChange={handleSelectChange}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>JSON </MenuItem>
+              <MenuItem value={20}>Delimited ( show more options like comma / something ) </MenuItem>
+
+            </Select>
+          </FormControl>
+
+        </Grid>
+
+        <Grid item xs={6} sm={6}>
+          <FormControl className={classes.formControl}>
+            <InputLabel id="demo-simple-select-filled-label">Pick Delimiter  </InputLabel>
+            <Select
+              labelId="demo-simple-select-filled-label"
+              id="demo-simple-select-filled"
+              value={age}
+              onChange={handleSelectChange}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={10}>comma </MenuItem>
+              <MenuItem value={20}>Others </MenuItem>
+
+            </Select>
+          </FormControl>
+
+        </Grid>
+      </Grid>
+
+
+
+
+
+
+
+
+
+
+
+      <Button type="submit"
         fullWidth
         variant="contained"
-        onClick = {handleSaveClick}
+        onClick={handleSaveClick}
         color="primary"
       >
         Save
@@ -143,7 +202,7 @@ const Form = props => {
         fullWidth
         disableElevation
         variant="contained"
-        onClick = {handleCancelClick}
+        onClick={handleCancelClick}
         color="default"
       >
         Cancel
@@ -153,8 +212,8 @@ const Form = props => {
 };
 
 
-const mapStateToProps = (state) =>{
-  console.log( ' state =', state );
+const mapStateToProps = (state) => {
+  console.log(' state =', state);
 };
 
 export default connect(mapStateToProps, {

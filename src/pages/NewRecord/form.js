@@ -84,6 +84,14 @@ const Form = props => {
     setAge(event.target.value);
   };
 
+  const handleSelectChangeOutputFormat = event => {
+    setAge(event.target.value);
+  };
+
+  const handleSelectChangeDelimiter = event => {
+    setAge(event.target.value);
+  };
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -106,7 +114,7 @@ const Form = props => {
         helperText={touched.RecordName ? errors.RecordName : ""}
         error={Boolean(errors.RecordName)}
         label="RecordName"
-        value={RecordName}
+        // value={RecordName}
         onChange={handleChange}
         fullWidth
       />
@@ -120,7 +128,7 @@ const Form = props => {
             <Select
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
+              // value={age}
               onChange={handleSelectChange}
             >
               <MenuItem value="">
@@ -144,8 +152,8 @@ const Form = props => {
             <Select
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
-              onChange={handleSelectChange}
+              // value={age}
+              onChange={handleSelectChangeOutputFormat}
             >
               <MenuItem value="">
                 <em>None</em>
@@ -164,8 +172,8 @@ const Form = props => {
             <Select
               labelId="demo-simple-select-filled-label"
               id="demo-simple-select-filled"
-              value={age}
-              onChange={handleSelectChange}
+              // value={age}
+              onChange={handleSelectChangeDelimiter}
             >
               <MenuItem value="">
                 <em>None</em>

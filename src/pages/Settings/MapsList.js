@@ -20,7 +20,6 @@ import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
-// import { fetchMaps } from '../../actions';
 
 import { fetchSingleMap, fetchMaps } from '../../actions';
 
@@ -42,24 +41,23 @@ const MapsList = (props) => {
   console.log( ' 13 Maps = ', Maps );
 
 
-  const renderDescription = () => {
-    console.log( '17 - renderDescription props.Maps=', props.Maps );
+  // const renderDescription = () => {
+  //   console.log( '17 - renderDescription props.Maps=', props.Maps );
 
+  //   return (
+  //     <>
+  //       {[1,2,3,4].map((item, index) => (
+  //     // {Maps.map((item, index) => (
 
-    return (
-      <>
-        {[1,2,3,4].map((item, index) => (
-      // {Maps.map((item, index) => (
+  //           <li key={item}>
+  //             {item}
+  //           </li>
 
-            <li key={item}>
-              {item}
-            </li>
+  //       ))}
+  //     </>
+  //   )
 
-        ))}
-      </>
-    )
-
-  }
+  // }
 
 
 
@@ -79,6 +77,23 @@ const MapsList = (props) => {
   // }, [props]);
 }, []);
 
+
+
+const classes = useStyles();
+const [checked, setChecked] = React.useState([0]);
+
+const handleToggle = value => () => {
+  const currentIndex = checked.indexOf(value);
+  const newChecked = [...checked];
+
+  if (currentIndex === -1) {
+    newChecked.push(value);
+  } else {
+    newChecked.splice(currentIndex, 1);
+  }
+
+  setChecked(newChecked);
+};
   // console.log("22 - fetching fetchMaps =", props.Maps);
   // ****** END OF CHANGE ******
 
@@ -87,14 +102,35 @@ const MapsList = (props) => {
       <Spinner />
     ) : (
       <>
-      {/* {[1,2,3,4].map((item, index) => ( */}
-    {props.Maps.map((item, index) => (
-          <li >
-            {item.mapName}
-          </li>
+    <List className={classes.root}>
+      {top100Films.map(value => {
 
-      ))}
-    </>
+        const labelId = `checkbox-list-label-${value}`;
+
+        return (  //key={value}
+          <ListItem  role={undefined} dense button onClick={handleToggle(value)}>
+            <ListItemIcon>
+              <Checkbox
+                edge="start"
+                checked={checked.indexOf(value) !== -1}
+                tabIndex={-1}
+                disableRipple
+                // inputProps={{ 'aria-labelledby': labelId }}
+              />
+            </ListItemIcon>
+            <ListItemText id={labelId} primary={` ${value.provider}`} />
+            <ListItemSecondaryAction>
+            <Tooltip title="Rename the map" aria-label="add">
+                <RenameDialog />
+              </Tooltip>
+            </ListItemSecondaryAction>
+          </ListItem>
+        );
+      })}
+    </List>
+
+<BottomButtons />
+</>
     )}
     </div>);
 

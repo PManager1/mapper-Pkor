@@ -16,7 +16,7 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 
 
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -38,62 +38,39 @@ const MapsList = (props) => {
   const [records, setRecords] = useState([]);
 
   const { Maps } = props;
-  console.log( ' 13 Maps = ', Maps );
-
-
-  // const renderDescription = () => {
-  //   console.log( '17 - renderDescription props.Maps=', props.Maps );
-
-  //   return (
-  //     <>
-  //       {[1,2,3,4].map((item, index) => (
-  //     // {Maps.map((item, index) => (
-
-  //           <li key={item}>
-  //             {item}
-  //           </li>
-
-  //       ))}
-  //     </>
-  //   )
-
-  // }
+  console.log(' 13 Maps = ', Maps);
 
 
 
-
-
-
-
-  const callBackend = () =>{
-    console.log( '44 - callBackend() called props=', props );
+  const callBackend = () => {
+    console.log('44 - callBackend() called props=', props);
     props.fetchMaps();
   }
 
   useEffect((props) => {
-    console.log("47 - calling useEffect with props = ", props );
+    console.log("47 - calling useEffect with props = ", props);
     callBackend(props);
     console.log("49 - fetching fetchMaps =", props);
-  // }, [props]);
-}, []);
+    // }, [props]);
+  }, []);
 
 
 
-const classes = useStyles();
-const [checked, setChecked] = React.useState([0]);
+  const classes = useStyles();
+  const [checked, setChecked] = React.useState([0]);
 
-const handleToggle = value => () => {
-  const currentIndex = checked.indexOf(value);
-  const newChecked = [...checked];
+  const handleToggle = value => () => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
 
-  if (currentIndex === -1) {
-    newChecked.push(value);
-  } else {
-    newChecked.splice(currentIndex, 1);
-  }
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
 
-  setChecked(newChecked);
-};
+    setChecked(newChecked);
+  };
   // console.log("22 - fetching fetchMaps =", props.Maps);
   // ****** END OF CHANGE ******
 
@@ -101,44 +78,44 @@ const handleToggle = value => () => {
     {!props.Maps ? (
       <Spinner />
     ) : (
-      <>
-    <List className={classes.root}>
-      {top100Films.map(value => {
+        <>
+          <List className={classes.root}>
+            {Maps.map(value => {
 
-        const labelId = `checkbox-list-label-${value}`;
+              const labelId = `checkbox-list-label-${value}`;
 
-        return (  //key={value}
-          <ListItem  role={undefined} dense button onClick={handleToggle(value)}>
-            <ListItemIcon>
-              <Checkbox
-                edge="start"
-                checked={checked.indexOf(value) !== -1}
-                tabIndex={-1}
-                disableRipple
-                // inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemIcon>
-            <ListItemText id={labelId} primary={` ${value.provider}`} />
-            <ListItemSecondaryAction>
-            <Tooltip title="Rename the map" aria-label="add">
-                <RenameDialog />
-              </Tooltip>
-            </ListItemSecondaryAction>
-          </ListItem>
-        );
-      })}
-    </List>
+              return (  //key={value}
+                <ListItem role={undefined} dense button onClick={handleToggle(value)}>
+                  <ListItemIcon>
+                    <Checkbox
+                      edge="start"
+                      checked={checked.indexOf(value) !== -1}
+                      tabIndex={-1}
+                      disableRipple
+                    // inputProps={{ 'aria-labelledby': labelId }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText id={labelId} primary={` ${value.mapName}`} />
+                  <ListItemSecondaryAction>
+                    <Tooltip title="Rename the map" aria-label="add">
+                      <RenameDialog />
+                    </Tooltip>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              );
+            })}
+          </List>
 
-<BottomButtons />
-</>
-    )}
-    </div>);
+          <BottomButtons />
+        </>
+      )}
+  </div>);
 
 };
 
 
-const mapStateToProps = (state) =>{
-  console.log( '91  - MapsList -   state =', state );
+const mapStateToProps = (state) => {
+  console.log('91  - MapsList -   state =', state);
 
   return { Maps: state.clients.data };
 };
@@ -149,11 +126,11 @@ export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(MapsList)
 
 
 const top100Films = [
-  { provider: 'BlackBaud', 'mapId': 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID'  },
-  { 'provider': 'Shawshank Redemption', year: 1972, 'client': 'Royal Dutch Shell', PayGroup: 'paygp'},
-  { 'provider': 'The Godfather: Part II', year: 1974, 'client': 'State Grid', PayGroup: 'paygp'  },
-  { 'provider': 'The Dark Knight', year: 2008, 'client': 'BP', PayGroup: 'paygp'  },
-  { 'provider': '12 Angry Men', year: 1957, 'client': 'Volkswagen', PayGroup: 'paygp'  }
+  { provider: 'BlackBaud', 'mapId': 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID' },
+  { 'provider': 'Shawshank Redemption', year: 1972, 'client': 'Royal Dutch Shell', PayGroup: 'paygp' },
+  { 'provider': 'The Godfather: Part II', year: 1974, 'client': 'State Grid', PayGroup: 'paygp' },
+  { 'provider': 'The Dark Knight', year: 2008, 'client': 'BP', PayGroup: 'paygp' },
+  { 'provider': '12 Angry Men', year: 1957, 'client': 'Volkswagen', PayGroup: 'paygp' }
 ];
 
 

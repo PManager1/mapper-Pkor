@@ -1,4 +1,9 @@
-import React, { Component, useState, useEffect } from 'react';
+import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+
+import { Spinner } from "../../components/common/components/spinner/spinner.js";
+
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -10,14 +15,14 @@ import IconButton from '@material-ui/core/IconButton';
 // import CommentIcon from '@material-ui/icons/Comment';
 import InfoIcon from '@material-ui/icons/Info';
 
-import { connect } from "react-redux";
-// import { fetchMaps } from '../../actions';
+
 import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
-import { fetchSingleMap, fetchMaps } from '../../actions';
+// import { fetchMaps } from '../../actions';
 
+import { fetchSingleMap, fetchMaps } from '../../actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -28,68 +33,72 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function MapsList(props) {
+const MapsList = (props) => {
 
-  console.log( '33 -   props.maps =', props.Maps );
+  const [Loading, setLoading] = useState(true);
+  const [records, setRecords] = useState([]);
+
   const { Maps } = props;
-  console.log( '33 -   Maps =', Maps );
+  console.log( ' 13 Maps = ', Maps );
 
-  useEffect(() => {
+
+  const renderDescription = () => {
+    console.log( '17 - renderDescription props.Maps=', props.Maps );
+
+
+    return (
+      <>
+        {[1,2,3,4].map((item, index) => (
+      // {Maps.map((item, index) => (
+
+            <li key={item}>
+              {item}
+            </li>
+
+        ))}
+      </>
+    )
+
+  }
+
+
+
+
+
+
+
+  const callBackend = () =>{
+    console.log( '44 - callBackend() called props=', props );
     props.fetchMaps();
+  }
+
+  useEffect((props) => {
+    console.log("47 - calling useEffect with props = ", props );
+    callBackend(props);
+    console.log("49 - fetching fetchMaps =", props);
+  // }, [props]);
 }, []);
 
+  // console.log("22 - fetching fetchMaps =", props.Maps);
+  // ****** END OF CHANGE ******
 
-  const classes = useStyles();
-  const [checked, setChecked] = React.useState([0]);
+  return (<div>
+    {!props.Maps ? (
+      <Spinner />
+    ) : (
+      <>
+      {/* {[1,2,3,4].map((item, index) => ( */}
+    {props.Maps.map((item, index) => (
+          <li >
+            {item.mapName}
+          </li>
 
-  const handleToggle = value => () => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+      ))}
+    </>
+    )}
+    </div>);
 
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setChecked(newChecked);
-  };
-
-  return (
-
-    <>
-    <List className={classes.root}>
-      {top100Films.map(value => {
-
-        const labelId = `checkbox-list-label-${value}`;
-
-        return (  //key={value}
-          <ListItem  role={undefined} dense button onClick={handleToggle(value)}>
-            <ListItemIcon>
-              <Checkbox
-                edge="start"
-                checked={checked.indexOf(value) !== -1}
-                tabIndex={-1}
-                disableRipple
-                // inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemIcon>
-            <ListItemText id={labelId} primary={` ${value.provider}`} />
-            <ListItemSecondaryAction>
-            <Tooltip title="Rename the map" aria-label="add">
-                <RenameDialog />
-              </Tooltip>
-            </ListItemSecondaryAction>
-          </ListItem>
-        );
-      })}
-    </List>
-
-<BottomButtons />
-</>
-  );
-}
-
+};
 
 
 const mapStateToProps = (state) =>{
@@ -110,3 +119,9 @@ const top100Films = [
   { 'provider': 'The Dark Knight', year: 2008, 'client': 'BP', PayGroup: 'paygp'  },
   { 'provider': '12 Angry Men', year: 1957, 'client': 'Volkswagen', PayGroup: 'paygp'  }
 ];
+
+
+
+
+
+

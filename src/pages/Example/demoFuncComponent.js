@@ -1,3 +1,9 @@
+// Hooks here
+// https://stackoverflow.com/questions/53824116/react-hooks-usestate-array
+//  look into pages/records/index.js
+
+
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';

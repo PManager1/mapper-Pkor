@@ -49,8 +49,10 @@ const Test = props => {
     setTimeout(function() {
       setLoading(!Loading);
     }, 200);
-    console.log("58 - fetching records finished  see records =", props.records);
+    console.log("52 - fetching records finished  see records =", props.records);
   }, [records]);
+
+  console.log("55 - fetching records finished  see records =", props.records);
 
   const renderDescription = () => {
     return (

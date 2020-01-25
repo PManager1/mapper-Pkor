@@ -21,7 +21,7 @@ import BottomButtons from './BottomButtons';
 import RenameDialog from './RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
 
-import { fetchSingleMap, fetchMaps } from '../../actions';
+import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -98,7 +98,7 @@ const MapsList = (props) => {
                   <ListItemText id={labelId} primary={` ${value.mapName}`} />
                   <ListItemSecondaryAction>
                     <Tooltip title="Rename the map" aria-label="add">
-                      <RenameDialog />
+                      <RenameDialog mapInfo={value} />
                     </Tooltip>
                   </ListItemSecondaryAction>
                 </ListItem>
@@ -120,7 +120,7 @@ const mapStateToProps = (state) => {
   return { Maps: state.clients.data };
 };
 
-export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(MapsList);
+export default connect(mapStateToProps, { fetchSingleMap, fetchMaps, editMap })(MapsList);
 
 // export default connect(mapStateToProps, { fetchLogics })(MapsList);
 

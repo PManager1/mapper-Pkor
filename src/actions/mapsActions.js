@@ -55,3 +55,23 @@ export const createMap = (formValues) => async dispatch => {
           });
       }
   };
+
+
+  export const editMap = ( _id, mapName ) =>{
+
+    console.log('62-editMap-action ---  _id = ', _id );
+    console.log('63 ---  action editMap   mapName = ', mapName );
+
+
+    return async dispatch => {
+        const response = await clients.patch(`/clients/${_id}`, { mapName: mapName });
+
+// const response = await clients.post('/clients', { mapName: formValues } );
+
+        console.log('19 ---  action fetchSingleField  response = ', response.data );
+
+        dispatch ({  type: EDIT_MAP,   payload: response.data });
+        }
+
+
+    };

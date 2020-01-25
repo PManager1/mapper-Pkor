@@ -30,14 +30,15 @@ const DynamicInput = (props) => {
   return (<div>
       <Grid container spacing={3}>
         <Grid item xs={6} sm={3}>
-          <PickMapSelect {...props} />
-        </Grid>
-
-        <Grid item xs={6} sm={3}>
-          <TextField
+        <TextField
             id="standard-basic"
             label="Field Name"
           />
+
+        </Grid>
+
+        <Grid item xs={6} sm={3}>
+          <PickMapSelect {...props} />
         </Grid>
       </Grid>
 

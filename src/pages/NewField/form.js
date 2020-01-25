@@ -44,6 +44,13 @@ const Form = props => {
     history.goBack();
   }
 
+  const handleCancelClick = () =>{
+    console.log('64 -  called handleCancelClick' );
+    // props.createRecord(props.values);
+    history.goBack();
+  }
+
+
 
   const change = (name, e) => {
     e.preventDefault();
@@ -135,6 +142,7 @@ const Form = props => {
         fullWidth
         disableElevation
         variant="contained"
+        onClick = {handleCancelClick}
         color="default"
       >
         Cancel

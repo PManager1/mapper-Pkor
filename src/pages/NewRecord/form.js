@@ -8,8 +8,8 @@ import FormLabel from '@material-ui/core/FormLabel';
 import { connect } from "react-redux";
 import { createRecord } from '../../actions';
 
-// new 
-// new 
+// new
+// new
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -17,8 +17,8 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from "react-router-dom";
-// new end 
-// Pick the data set list. 
+// new end
+// Pick the data set list.
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
@@ -50,15 +50,21 @@ const Form = props => {
   } = props;
   // console.table(props);
 
-  console.log('27 -  final props in form.js = ' , props ); 
+  console.log('27 -  final props in form.js = ' , props );
 
 
   const handleSaveClick = () =>{
-    console.log('28 -  called handleSaveClick inside form.js ' ); 
-    props.createRecord(props.values);  
+    console.log('28 -  called handleSaveClick inside form.js ' );
+    props.createRecord(props.values);
     history.goBack();
   }
- 
+
+
+  const handleCancelClick = () =>{
+    console.log('64 -  called handleCancelClick' );
+    // props.createRecord(props.values);
+    history.goBack();
+  }
 
 
   const change = (name, e) => {
@@ -72,7 +78,7 @@ const Form = props => {
   //   setValue(event.target.value);
   // };
 
-    
+
   const handleSelectChange = event => {
     setAge(event.target.value);
   };
@@ -104,7 +110,7 @@ const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.RecordName) ? errors.RecordName : ""}</div>
-      
+
 
 
     <FormControl className={classes.formControl}>
@@ -123,10 +129,10 @@ const Form = props => {
         <MenuItem value={30}>DataSet BB-3</MenuItem>
       </Select>
     </FormControl>
-     
+
       <Button  type="submit"
         fullWidth
-        variant="contained" 
+        variant="contained"
         onClick = {handleSaveClick}
         color="primary"
       >
@@ -137,6 +143,7 @@ const Form = props => {
         fullWidth
         disableElevation
         variant="contained"
+        onClick = {handleCancelClick}
         color="default"
       >
         Cancel
@@ -147,11 +154,11 @@ const Form = props => {
 
 
 const mapStateToProps = (state) =>{
-  console.log( ' state =', state ); 
-}; 
+  console.log( ' state =', state );
+};
 
 export default connect(mapStateToProps, {
   createRecord
-})(Form); 
+})(Form);
 
 // export default Form

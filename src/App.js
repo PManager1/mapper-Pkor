@@ -39,16 +39,12 @@ import FullWidthGrid from "./pages/Example/Grid.js";
 import styledgrid from "./pages/Example/styledgrid.js";
 import LoadingSpiner from "./pages/Example/Loading.js";
 import RulePicker from "./pages/Records/RulePicker.js";
-
 import FullDialog from "./pages/Records/FullDialogInForm.js";
-
 import ShowSnackbar from "./pages/Example/ShowSnackbar.js";
-
 import WithNotistack from "./pages/Example/WithNotistack.js";
 
+
 import ColorlibStepIcon from './pages/Example/stepperExample.js';
-
-
 import StepperOneET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperOneET.js";
 import StepperTwoET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperTwoET.js";
 import StepperThreeET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperThreeET.js";
@@ -58,16 +54,16 @@ import StepperOneNT from "./pages/Maps/CreateNewMap/Steps/StepperOneNT.js";
 import StepperTwoNT from "./pages/Maps/CreateNewMap/Steps/StepperTwoNT.js";
 import StepperThreeNT from "./pages/Maps/CreateNewMap/Steps/StepperThreeNT.js";
 import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
-
-import CreateClient from "./pages/CreateClient/Index";
-
-// steppertwoNT
-import CreateClientStepperOneNT from "./pages/CreateClient/Steps/CreateClientStepperOneNT.js";
-
-import CreateClientStepperTwoNT from "./pages/CreateClient/Steps/CreateClientStepperTwoNT.js";
-
 import AddClientToMap from "./pages/AddClientToMap/Index";
 
+// CLIENTS
+import CreateClient from "./pages/CreateClient/Index";
+import CreateClientStepperOneNT from "./pages/CreateClient/Steps/CreateClientStepperOneNT.js";
+import CreateClientStepperTwoNT from "./pages/CreateClient/Steps/CreateClientStepperTwoNT.js";
+
+// import ClientsWithMaps
+
+{/* <Route exact path="/records/:id" component={Records} /> */}
 
 import Rebass from "./pages/Example/Rebass.js";
 import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";

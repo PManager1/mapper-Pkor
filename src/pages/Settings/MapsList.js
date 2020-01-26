@@ -117,7 +117,7 @@ const MapsList = (props) => {
 const mapStateToProps = (state) => {
   console.log('91  - MapsList -   state =', state);
 
-  return { Maps: state.clients.data };
+  return { Maps: state.maps.data };
 };
 
 export default connect(mapStateToProps, { fetchSingleMap, fetchMaps, editMap })(MapsList);

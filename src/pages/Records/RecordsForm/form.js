@@ -168,17 +168,19 @@ export const Form = props => {
         row
       >
         <FormControlLabel
+          value="None"
+          control={<Radio color="primary" />}
+          label="None"
+          labelPlacement="start"
+        />
+
+        <FormControlLabel
           value="LeftAligned"
           control={<Radio color="primary" />}
           label="LeftAligned"
           labelPlacement="start"
         />
-        <FormControlLabel
-          value="None"
-          control={<Radio color="secondary" />}
-          label="None"
-          labelPlacement="start"
-        />
+
         <FormControlLabel
           value="RightAligned"
           control={<Radio color="primary" />}

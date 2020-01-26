@@ -12,7 +12,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import RightPadComponent from './RightPadComponent.js';
 import LeftPadComponent from './LeftPadComponent.js';
 
-const PaddingSelection  = (props) => {
+const PaddingSelection = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("Text");
 
   const handleChange = event => {
@@ -23,46 +23,48 @@ const PaddingSelection  = (props) => {
 
 
   const [state, setState] = useState(true);
+  const [showLftRt, setShowLftRt] = useState(false);
 
   function toggle() {
-    console.log(' 40 - state  toggle called =', state );
+    console.log(' 40 - state  toggle called =', state);
     setState(!state);
   }
 
-  return(<React.Fragment>
+  return (<React.Fragment>
 
-      <FormLabel component="legend">Please Select Alignment </FormLabel>
-      <RadioGroup aria-label="RadioValue" name="RadioValue" value={props.RadioValue}
+    <FormLabel component="legend">Please Select Alignment </FormLabel>
+    <RadioGroup aria-label="RadioValue" name="RadioValue" value={props.RadioValue}
       onChange={handleChange}
       row
-      >
+    >
 
-        {/* <FormControlLabel
+      {/* <FormControlLabel
             value="None"
             control={<Radio color="secondary" />}
             label="None"
             labelPlacement="start"
           /> */}
 
-        <FormControlLabel
-          value="LeftAligned"
-          control={<Radio color="primary" />}
-          label="Left Aligned"
-          labelPlacement="start"
-        />
+      <FormControlLabel
+        value="LeftAligned"
+        control={<Radio color="primary" />}
+        label="Left Aligned"
+        labelPlacement="start"
+      />
 
-        <FormControlLabel
-          value="RightAligned"
-          control={<Radio color="primary" />}
-          label="Right Aligned"
-          labelPlacement="start"
-        />
+      <FormControlLabel
+        value="RightAligned"
+        control={<Radio color="primary" />}
+        label="Right Aligned"
+        labelPlacement="start"
+      />
 
     </RadioGroup>
 
-    {state ? <RightPadComponent /> : <LeftPadComponent />}
+    { state ? <RightPadComponent /> : <LeftPadComponent />}
 
-    </React.Fragment>);
+
+  </React.Fragment>);
 };
 
 export default PaddingSelection;

@@ -1,4 +1,12 @@
 
+show hide the left/ right column values using this
+
+
+https://stackoverflow.com/questions/24502898/show-or-hide-element-in-react
+
+Located in
+Components/ records/ PaddingSelection/ paddingselection/
+
 ====================
 Just make etc map inactive, not delete it.
 

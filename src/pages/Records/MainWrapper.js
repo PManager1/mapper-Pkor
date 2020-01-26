@@ -248,7 +248,7 @@ export default function MainWrapper(props) {
             <ListItemText primary="Search Clients" />
           </ListItem>
 
-          <ListItem button component={Link} to="/CreateClient">
+          <ListItem button component={Link} to="/CreateClientStepperOneNT">
             <ListItemIcon>
               <BusinessIcon />
             </ListItemIcon>

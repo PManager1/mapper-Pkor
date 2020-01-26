@@ -61,6 +61,16 @@ import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
 
 import CreateClient from "./pages/CreateClient/Index";
 
+// steppertwoNT
+import CreateClientStepperOneNT from "./pages/CreateClient/Steps/CreateClientStepperOneNT.js";
+
+
+import CreateClientStepperTwoNT from "./pages/CreateClient/Steps/CreateClientStepperTwoNT.js";
+
+
+
+
+
 import AddClientToMap from "./pages/AddClientToMap/Index";
 
 
@@ -110,6 +120,11 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/CreateClient" component={CreateClient} />
           <Route exact path="/AddClientToMap" component={AddClientToMap} />
+
+
+          <Route exact path="/CreateClientStepperOneNT" component={CreateClientStepperOneNT} />
+
+          <Route exact path="/CreateClientStepperTwoNT" component={CreateClientStepperTwoNT} />
 
 
           <Route exact path="/clientsearch" component={ClientSearch} />

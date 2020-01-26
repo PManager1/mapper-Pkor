@@ -1,17 +1,15 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import CreateClient from './CreateClient';
+import ClickableRows from './ClickableRows.js';
+import CreateClientStepperOneNT from './Steps/CreateClientStepperOneNT';
 
-const AllRules = ()=>{
+
+const CreateFromExistingTemplate = ()=>{
     return (
         <div >
-            <Typography variant='h5' color="primary" align="left">
-                    Add clients to current Map
-            </Typography>
+             <CreateClientStepperOneNT />
 
-            <CreateClient />
         </div>
     );
 }
 
-export default AllRules;
+export default CreateFromExistingTemplate;

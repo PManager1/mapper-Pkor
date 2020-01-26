@@ -9,10 +9,10 @@ import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
-import RightPadComponent from './RightPadComponent.js';
-import LeftPadComponent from './LeftPadComponent.js';
+import StaticInput from './StaticInput.js';
+import DynamicInput from './DynamicInput.js';
 
-const PaddingSelection  = (props) => {
+const AttributeSelection  = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("Text");
 
   const handleChange = event => {
@@ -31,41 +31,33 @@ const PaddingSelection  = (props) => {
 
   return(<React.Fragment>
 
-      <FormLabel component="legend">Please Select Alignment </FormLabel>
+      {/* <FormLabel component="legend">Please Select Attribute Name </FormLabel> */}
       <RadioGroup aria-label="RadioValue" name="RadioValue" value={props.RadioValue}
       onChange={handleChange}
       row
       >
-
-        {/* <FormControlLabel
-            value="None"
-            control={<Radio color="secondary" />}
-            label="None"
-            labelPlacement="start"
-          /> */}
-
         <FormControlLabel
           value="LeftAligned"
           control={<Radio color="primary" />}
-          label="Left Aligned"
-          labelPlacement="start"
+          label="Pick Data Attribute"
+          labelPlacement="end"
         />
 
         <FormControlLabel
           value="RightAligned"
           control={<Radio color="primary" />}
-          label="Right Aligned"
-          labelPlacement="start"
+          label="Add a static attribute"
+          labelPlacement="end"
         />
 
     </RadioGroup>
 
-    {state ? <RightPadComponent /> : <LeftPadComponent />}
+    {state ? <StaticInput {...props} /> : <DynamicInput {...props} />}
 
     </React.Fragment>);
 };
 
-export default PaddingSelection;
+export default AttributeSelection;
 
 
 

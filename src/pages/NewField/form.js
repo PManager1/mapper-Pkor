@@ -15,8 +15,8 @@ import { useHistory } from "react-router-dom";
 import AttributeSelection from './AttributeSelection/AttributeSelection';
 
 
-import PaddingSelection from './PaddingSelection/PaddingSelection';
 
+import PaddingSelection from '../../components/Records/PaddingSelection/PaddingSelection';
 
 const Form = props => {
 

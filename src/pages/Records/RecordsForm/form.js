@@ -18,6 +18,9 @@ import FullDialogInFormFields from "../../../components/Records/FullDialogInForm
 
 import PickMapSelectFields from "../../../components/Records/PickMapSelectFields.js";
 
+import PaddingSelection from '../../../components/Records/PaddingSelection/PaddingSelection';
+
+
 const useStyles = makeStyles(theme => ({
   formControl: {
     margin: theme.spacing(1),
@@ -136,6 +139,9 @@ export const Form = props => {
 
       <PickMapSelectFields  {...props} />
 
+      <FormLabel component="legend">
+      </FormLabel>
+
       <TextField
         name="MaxCharLength"
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
@@ -146,6 +152,10 @@ export const Form = props => {
         fullWidth
       />
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
+
+      <FormLabel component="legend">
+      </FormLabel>
+
 
       {/* <TextField
         name="SequenceNumber"
@@ -193,29 +203,11 @@ export const Form = props => {
 
 
       <FormLabel component="legend">
-        Select Left/ Right Padding Value{" "}
       </FormLabel>
-      <TextField
-        name="LeftPadding"
-        helperText={touched.LeftPadding ? errors.LeftPadding : ""}
-        error={Boolean(errors.LeftPadding)}
-        label="PaddingLeft Value"
-        value={LeftPadding}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.LeftPadding) ? errors.LeftPadding : ""}</div>
 
-      <TextField
-        name="RightPadding"
-        helperText={touched.RightPadding ? errors.RightPadding : ""}
-        error={Boolean(errors.RightPadding)}
-        label="PaddingRight Value"
-        value={RightPadding}
-        onChange={handleChange}
-        fullWidth
-      />
-      <div>{Boolean(errors.RightPadding) ? errors.RightPadding : ""}</div>
+
+
+      <PaddingSelection {...props} />
 
       <FullDialogInFormFields {...props} />
 

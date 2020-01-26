@@ -61,6 +61,8 @@ import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
 
 import CreateClient from "./pages/CreateClient/Index";
 
+import AddClientToMap from "./pages/AddClientToMap/Index";
+
 
 import Rebass from "./pages/Example/Rebass.js";
 import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";
@@ -107,6 +109,8 @@ import TemporaryDrawer from './TemporaryDrawer';
 
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/CreateClient" component={CreateClient} />
+          <Route exact path="/AddClientToMap" component={AddClientToMap} />
+
 
           <Route exact path="/clientsearch" component={ClientSearch} />
 

@@ -221,11 +221,11 @@ export default function MainWrapper(props) {
             <ListItemText primary="Map-Settings" />
           </ListItem>
 
-          <ListItem button component={Link} to="/AddClients">
+          <ListItem button component={Link} to="/AddClientToMap">
             <ListItemIcon>
               <SettingsInputCompositeIcon />
             </ListItemIcon>
-            <ListItemText primary="Add Clients" />
+            <ListItemText primary="Add Clients to map" />
           </ListItem>
 
           <ListItem button component={Link} to="/createlogic">

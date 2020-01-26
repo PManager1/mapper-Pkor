@@ -29,7 +29,7 @@ import Menu from "@material-ui/core/Menu";
 import LinearIndeterminate from "../../components/LinearProgress.js";
 import GoogleAuth from "../../components/GoogleAuth";
 import styled from "styled-components";
-
+import BusinessIcon from '@material-ui/icons/Business';
 
 const drawerWidth = 240;
 
@@ -250,9 +250,9 @@ export default function MainWrapper(props) {
 
           <ListItem button component={Link} to="/AddClients">
             <ListItemIcon>
-              <SettingsInputCompositeIcon />
+              <BusinessIcon />
             </ListItemIcon>
-            <ListItemText primary="Add Clients" />
+            <ListItemText primary="Create Client" />
           </ListItem>
 
         </List>

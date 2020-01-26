@@ -64,12 +64,7 @@ import CreateClient from "./pages/CreateClient/Index";
 // steppertwoNT
 import CreateClientStepperOneNT from "./pages/CreateClient/Steps/CreateClientStepperOneNT.js";
 
-
 import CreateClientStepperTwoNT from "./pages/CreateClient/Steps/CreateClientStepperTwoNT.js";
-
-
-
-
 
 import AddClientToMap from "./pages/AddClientToMap/Index";
 

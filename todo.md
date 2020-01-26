@@ -4,7 +4,7 @@ Just make etc map inactive, not delete it.
 
 Should still popup in the search results but
 
-Filter the search by filter active/ inactive.
+Filter the search by filter active/ Inactive.
 ------------
 Show the option to pic active/ inactive when searching (save active or inactive mapId)
 =========

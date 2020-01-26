@@ -11,6 +11,8 @@ import NewRecord from "./pages/NewRecord/Index.js";
 import Search from "./pages/Search/Index.js";
 import MainWrapper from "./pages/Records/MainWrapper";
 
+import ClientSearch from "./pages/Clients/Index.js";
+
 import Settings from "./pages/Settings/Index";
 
 import CreateLogic from "./pages/CreateNewLogic/Index";
@@ -85,6 +87,8 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
+
+
           <Route exact path="/records" exact component={Records} />
           <Route exact path="/records/:id" component={Records} />
 
@@ -104,6 +108,7 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/settings" component={Settings} />
           <Route exact path="/AddClients" component={AddClients} />
 
+          <Route exact path="/clientsearch" component={ClientSearch} />
 
 
           <Route exact path="/createlogic" component={CreateLogic} />

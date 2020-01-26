@@ -186,7 +186,7 @@ export default function MainWrapper(props) {
             <ListItemIcon>
               <SearchIcon />
             </ListItemIcon>
-            <ListItemText primary="Search" />
+            <ListItemText primary="Search Maps" />
           </ListItem>
 
           <ListItem button component={Link} to="/stepperoneET">
@@ -235,13 +235,29 @@ export default function MainWrapper(props) {
             <ListItemText primary="Create New Logic" />
           </ListItem>
 
-          <ListItem button>
-            <ListItemIcon>
-              <MailIcon />
-            </ListItemIcon>
-            <ListItemText primary="Later3" />
-          </ListItem>
+
         </List>
+
+
+        <Divider />
+        <List>
+          <ListItem button component={Link} to="/clientsearch">
+            <ListItemIcon>
+              <SearchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Search Clients" />
+          </ListItem>
+
+          <ListItem button component={Link} to="/AddClients">
+            <ListItemIcon>
+              <SettingsInputCompositeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Add Clients" />
+          </ListItem>
+
+        </List>
+
+
         <Divider />
       </Drawer>
       <main

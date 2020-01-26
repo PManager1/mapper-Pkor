@@ -1,4 +1,4 @@
-import clients from '../apis/clients';
+import clients from '../apis/local';
 import _ from 'lodash';
 
 import {

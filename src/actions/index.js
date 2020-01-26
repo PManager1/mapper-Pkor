@@ -1,12 +1,12 @@
-import clients from '../apis/clients';
+import clients from '../apis/local';
 //formValues
 
 export * from './recordsActions';
 export * from './authActions';
 export * from './fieldsActions';
 export * from './logicActions';
-export * from './clientsActions'; 
-export * from './mapsActions'; 
+export * from './clientsActions';
+export * from './mapsActions';
 
 
 // import { showLoading, hideLoading } from 'actions/index.js';

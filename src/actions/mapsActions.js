@@ -1,5 +1,5 @@
 import ls from 'local-storage';
-import clients from '../apis/clients';
+import clients from '../apis/local';
 import {
     CREATE_MAP,
     FETCH_MAPS,
@@ -18,7 +18,7 @@ export const createMap = (formValues) => async dispatch => {
     console.log('16-  fomrValues = ', formValues );
 
     // debugger;
-    const response = await clients.post('/clients', { mapName: formValues } );
+    const response = await clients.post('/maps', { mapName: formValues } );
 
     console.log('22 -  response from createMap = ', response.data );
 
@@ -34,7 +34,7 @@ export const createMap = (formValues) => async dispatch => {
 
     export const fetchMaps = () => {
       return async dispatch => {
-          const response = await clients.get('/clients');
+          const response = await clients.get('/maps');
           // console.log('7 ---  action fetchClients  response = ', response.data );
           dispatch({
               type: 'FETCH_CLIENTS',
@@ -47,7 +47,7 @@ export const createMap = (formValues) => async dispatch => {
   export const fetchSingleMap = (clientID) => {
       console.log('15 ---  action fetchSingleClient  clientID = ', clientID);
       return async dispatch => {
-          const response = await clients.get(`/clients/${clientID}`);
+          const response = await clients.get(`/maps/${clientID}`);
           // console.log('19 ---  action fetchClients  response = ', response.data );
           dispatch({
               type: 'FETCH_SINGLE_CLIENT',
@@ -64,9 +64,9 @@ export const createMap = (formValues) => async dispatch => {
 
 
     return async dispatch => {
-        const response = await clients.patch(`/clients/${_id}`, { mapName: mapName });
+        const response = await clients.patch(`/maps/${_id}`, { mapName: mapName });
 
-// const response = await clients.post('/clients', { mapName: formValues } );
+// const response = await clients.post('/maps', { mapName: formValues } );
 
         console.log('19 ---  action fetchSingleField  response = ', response.data );
 

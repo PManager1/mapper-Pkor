@@ -1,4 +1,6 @@
-import clients from '../apis/clients';
+import clients from '../apis/local';
+
+
 
 // export const createMap = (formValues) => async dispatch => {
 //     console.log('4 --- inside  action createClient  formValues = ', formValues);
@@ -15,25 +17,8 @@ import clients from '../apis/clients';
 
 
 
-export const editClient = (formValues, clientID) => async dispatch => {
-    // console.log('4 --- inside  action createClient  formValues = ', formValues);
-    const response = await clients.put(`/clients/${clientID}`, formValues);
-
-    dispatch({
-        type: 'EDIT_CLIENT',
-        payload: response.data
-    });
-};
 
 
-export const deleteClient = (clientID) => async dispatch => {
-    const response = await clients.delete(`/clients/${clientID}`);
-
-    dispatch({
-        type: 'DELETE_CLIENT',
-        payload: clientID
-    });
-};
 
 
 

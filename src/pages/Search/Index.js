@@ -69,7 +69,7 @@ function updateState(e) {
           id="disable-open-on-focus"
           disableOpenOnFocus
           renderInput={params => (
-            <TextField {...params} label="Search by MaprId/company Name/" margin="normal" fullWidth />
+            <TextField {...params} label="Search by Maps" margin="normal" fullWidth />
           )}
         />
 

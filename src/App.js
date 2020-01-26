@@ -11,7 +11,7 @@ import NewRecord from "./pages/NewRecord/Index.js";
 import Search from "./pages/Search/Index.js";
 import MainWrapper from "./pages/Records/MainWrapper";
 
-import ClientSearch from "./pages/Clients/Index.js";
+import ClientSearch from "./pages/ClientSearch/Index.js";
 
 import Settings from "./pages/Settings/Index";
 

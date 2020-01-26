@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return ['Give a Name', 'Create a map'];
+  return ['Give a Name', 'Create a client'];
 }
 
 function getStepContent(stepIndex) {
@@ -86,7 +86,7 @@ function CreateClientStepperTwoNT(props) {
 
       <br/> <br/>  <br/>
       <div className={classes.sectioncenter}>
-        <Typography variant='h4'>  You're going to create a Brand new client </Typography>
+        <Typography variant='h4'>  You're going to create a new client </Typography>
       </div>
       <br />
       <br/>

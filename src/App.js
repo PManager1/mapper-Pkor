@@ -61,9 +61,8 @@ import CreateClient from "./pages/CreateClient/Index";
 import CreateClientStepperOneNT from "./pages/CreateClient/Steps/CreateClientStepperOneNT.js";
 import CreateClientStepperTwoNT from "./pages/CreateClient/Steps/CreateClientStepperTwoNT.js";
 
-// import ClientsWithMaps
+import ClientsWithMaps from "./pages/ClientsWithMaps/ClientsWithMaps.js";
 
-{/* <Route exact path="/records/:id" component={Records} /> */}
 
 import Rebass from "./pages/Example/Rebass.js";
 import PickMapSelect from "./pages/Records/RecordsForm/PickMapSelect.js";
@@ -117,15 +116,15 @@ import TemporaryDrawer from './TemporaryDrawer';
 
           <Route exact path="/CreateClientStepperTwoNT" component={CreateClientStepperTwoNT} />
 
-
           <Route exact path="/clientsearch" component={ClientSearch} />
-
-
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}
           />
           <Route exact path="/RecentlyCreatedTemplates" component={RecentlyCreatedTemplates}
           />
+
+          <Route exact path="/ClientsWithMaps" component={ClientsWithMaps} />
+
 
           <Route exact path="/fd" exact component={FullDialog} />
           <Route exact path="/loading" exact component={LoadingSpiner} />

@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function AddClientsList(props) {
+function CreateClient(props) {
 
   useEffect(() => {
     props.fetchLogics();
@@ -86,4 +86,4 @@ const mapStateToProps = (state) =>{
   // return { records: state.records.data };
 };
 
-export default connect(mapStateToProps, { fetchLogics })(AddClientsList);
+export default connect(mapStateToProps, { fetchLogics })(CreateClient);

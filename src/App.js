@@ -59,7 +59,7 @@ import StepperTwoNT from "./pages/Maps/CreateNewMap/Steps/StepperTwoNT.js";
 import StepperThreeNT from "./pages/Maps/CreateNewMap/Steps/StepperThreeNT.js";
 import StepperFourNT from "./pages/Maps/CreateNewMap/Steps/StepperFourNT.js";
 
-import AddClients from "./pages/AddClients/Index";
+import CreateClient from "./pages/CreateClient/Index";
 
 
 import Rebass from "./pages/Example/Rebass.js";
@@ -106,7 +106,7 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/styledgrid" exact component={styledgrid} />
 
           <Route exact path="/settings" component={Settings} />
-          <Route exact path="/AddClients" component={AddClients} />
+          <Route exact path="/CreateClient" component={CreateClient} />
 
           <Route exact path="/clientsearch" component={ClientSearch} />
 

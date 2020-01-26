@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import AddClientsList from './AddClientsList';
+import CreateClient from './CreateClient';
 
 const AllRules = ()=>{
     return (
@@ -9,7 +9,7 @@ const AllRules = ()=>{
                     Add clients to current Map
             </Typography>
 
-            <AddClientsList />
+            <CreateClient />
         </div>
     );
 }

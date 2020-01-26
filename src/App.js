@@ -44,6 +44,9 @@ import ShowSnackbar from "./pages/Example/ShowSnackbar.js";
 
 import WithNotistack from "./pages/Example/WithNotistack.js";
 
+import ColorlibStepIcon from './pages/Example/stepperExample.js';
+
+
 import StepperOneET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperOneET.js";
 import StepperTwoET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperTwoET.js";
 import StepperThreeET from "./pages/Maps/CreateFromExistingTemplate/Steps/StepperThreeET.js";
@@ -132,6 +135,8 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/fo" exact component={FieldOptions} />
           <Route exact path="/rsc" exact component={RadioSelectionComponent} />
           <Route exact path="/tr" exact component={ToggleRadio} />
+
+          <Route exact path="/se" exact component={ColorlibStepIcon} />
 
 
 

@@ -179,7 +179,8 @@ const Form = props => {
                 <em>None</em>
               </MenuItem>
               <MenuItem value={10}>comma </MenuItem>
-              <MenuItem value={20}>Others </MenuItem>
+              <MenuItem value={20}>pipe </MenuItem>
+              <MenuItem value={20}>others </MenuItem>
 
             </Select>
           </FormControl>

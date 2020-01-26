@@ -2,37 +2,45 @@ import clients from '../apis/local';
 
 
 
-// export const createMap = (formValues) => async dispatch => {
-//     console.log('4 --- inside  action createClient  formValues = ', formValues);
+export const createClient = (formValues) => async dispatch => {
 
-//     const response = await clients.post('/clients', formValues);
+  console.log( ' 7 - createClient called with formValues= ', formValues );
 
-//     console.log('9 --- createClient   action response.data = ', response.data);
+  var obj = { clientName: formValues };
+  var myJSON = JSON.stringify(obj);
 
-//     dispatch({
-//         type: 'CREATE_CLIENT',
-//         payload: response.data
-//     });
-// };
+  console.log( ' createMap called wth myJSON = ', myJSON );
+  console.log('16-  fomrValues = ', formValues );
+
+  // debugger;
+  // const response = await clients.post('/maps', { mapName: formValues } );
+
+  // console.log('22 -  response from createMap = ', response.data );
+
+  // ls.clear();
+  // ls.set('current_MapId', response.data._id);
+  // ls.set('current_MapName', response.data.mapName);
+
+  // dispatch ({  type: 'CREATE_MAP',   payload: response.data });
+
+  // route to  records/5e2349f732266ae2947db7e1
+
+  };
 
 
 
 
-
-
-
-
-
-// export const fetchClients = () => {
-//     return async dispatch => {
-//         const response = await clients.get('/clients');
-//         // console.log('7 ---  action fetchClients  response = ', response.data );
-//         dispatch({
-//             type: 'FETCH_CLIENTS',
-//             payload: response.data
-//         });
-//     }
-// };
+export const fetchClients = () => {
+  console.log( '34 - fetchClients action  Called ' );
+    return async dispatch => {
+        const response = await clients.get('/clients');
+        console.log('37 ---  action fetchClients  response = ', response.data );
+        dispatch({
+            type: 'FETCH_CLIENTS',
+            payload: response.data
+        });
+    }
+};
 
 
 // export const fetchSingleClient = (clientID) => {

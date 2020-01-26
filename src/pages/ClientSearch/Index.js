@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from "react-redux";
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import { fetchSingleMap, fetchMaps } from '../../actions';
+import { fetchSingleMap, fetchClients } from '../../actions';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
@@ -16,7 +16,8 @@ const ClientSearch = (props) => {
 
   useEffect(() => {
     // code to run on component mount
-    props.fetchMaps();
+    console.log( '19 - useEffect(()  Called ' );
+    props.fetchClients();
   }, [])
 
     const defaultProps = {
@@ -79,12 +80,12 @@ function updateState(e) {
 
 
 const mapStateToProps = (state) =>{
-    console.log( '63 -  state =', state );
+    console.log( '82 -  state =', state );
 
     return { maps: state.clients };
 };
 
-export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(ClientSearch);
+export default connect(mapStateToProps, { fetchSingleMap, fetchClients })(ClientSearch);
 
 
 

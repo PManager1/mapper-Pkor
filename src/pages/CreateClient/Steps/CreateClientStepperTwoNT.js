@@ -10,7 +10,7 @@ import Divider from '@material-ui/core/Divider';
 import { Link } from 'react-router-dom';
 import ls from 'local-storage';
 import { connect } from "react-redux";
-import { createMap } from '../../../actions';
+import { createClient } from '../../../actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -58,7 +58,8 @@ function CreateClientStepperTwoNT(props) {
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
     let mapValue = ls.get('MapNameInputted')
-    props.createMap (mapValue);
+    // props.createClient (mapValue);
+    props.createClient ('client1');
 
     props.history.push(`/`);
   };
@@ -125,6 +126,6 @@ const mapStateToProps = (state) =>{
 };
 
 export default connect(mapStateToProps, {
-  createMap
+  createClient
 })(CreateClientStepperTwoNT);
 

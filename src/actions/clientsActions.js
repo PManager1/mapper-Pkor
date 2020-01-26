@@ -13,7 +13,7 @@ export const createClient = (formValues) => async dispatch => {
   console.log('16-  fomrValues = ', formValues );
 
   // debugger;
-  // const response = await clients.post('/maps', { mapName: formValues } );
+  const response = await clients.post('/clients', { clientName: formValues } );
 
   // console.log('22 -  response from createMap = ', response.data );
 
@@ -21,7 +21,7 @@ export const createClient = (formValues) => async dispatch => {
   // ls.set('current_MapId', response.data._id);
   // ls.set('current_MapName', response.data.mapName);
 
-  // dispatch ({  type: 'CREATE_MAP',   payload: response.data });
+  dispatch ({  type: 'CREATE_CLIENT',   payload: response.data });
 
   // route to  records/5e2349f732266ae2947db7e1
 

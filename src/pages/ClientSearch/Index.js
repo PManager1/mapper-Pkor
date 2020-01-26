@@ -24,7 +24,7 @@ const ClientSearch = (props) => {
       options:  props.maps.data,
       // getOptionLabel: option => 'clientId = '+option.clientId+' clientName = '+option.clientName+' mapid= '+option.mapId,
       // getOptionLabel: option => ' '+option.mapName+' '+' '+option._id,
-      getOptionLabel: option => option.mapName + ' ' + ' ' + option._id,
+      getOptionLabel: option => option.clientName + ' ' + ' ' + option._id,
     };
 
     const flatProps = {

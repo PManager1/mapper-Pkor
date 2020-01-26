@@ -6,8 +6,9 @@ Create a map from Faborite Template.
 copy maps for create a new client.
 
 =======================================
+After creating a client we should show them the maps under that client
 
-
+After clicking one map it shold go there,
 =======================================
 
 

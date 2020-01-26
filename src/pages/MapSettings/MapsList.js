@@ -18,7 +18,7 @@ import InfoIcon from '@material-ui/icons/Info';
 
 import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
-import RenameDialog from './RenameDialog.js';
+import RenameDialog from './RenameDialog.js.js';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';

@@ -13,7 +13,7 @@ import MainWrapper from "./pages/Records/MainWrapper";
 
 import ClientSearch from "./pages/ClientSearch/Index.js";
 
-import Settings from "./pages/Settings/Index";
+import Settings from "./pages/MapSettings/Index";
 
 import CreateLogic from "./pages/CreateNewLogic/Index";
 

@@ -79,9 +79,9 @@ function updateState(e) {
 
 
 const mapStateToProps = (state) =>{
-    console.log( '63 -  state =', state );
+    console.log( '82 - map search state =', state );
 
-    return { maps: state.clients };
+    return { maps: state.maps };
 };
 
 export default connect(mapStateToProps, { fetchSingleMap, fetchMaps })(Search);

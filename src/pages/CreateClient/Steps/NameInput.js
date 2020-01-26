@@ -18,14 +18,17 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function NameInput() {
+export default function NameInput( props ) {
+
+  console.log( '23 - insdie the NameInput = ', props );
+
   const classes = useStyles();
 
-  const onChange = event => { console.log('24-  event.target.value= ', event.target.value )
-  // setName(event.target.value);
+//   const onChange = event => { console.log('24-  event.target.value= ', event.target.value )
+//   // setName(event.target.value);
 
-  ls.set('MapNameInputted', event.target.value);
-}
+//   ls.set('MapNameInputted', event.target.value);
+// }
 
   return (
     <div className={classes.root}>
@@ -34,7 +37,7 @@ export default function NameInput() {
           id="standard-full-width"
           label="Client Name"
           style={{ margin: 8 }}
-          onChange={onChange}
+          onChange={props.onNameChange}
           placeholder="Client name"
           fullWidth
           margin="normal"

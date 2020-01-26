@@ -49,8 +49,6 @@ function RenameDialog(props) {
     setOpen(false);
 
     console.log('51 - handleSave ,  TxtMapName =',  TxtMapName);
-
-
     // dispatch(editMap(props.values._id, props.values));
     dispatch(editMap( mapInfo._id, TxtMapName));
   };

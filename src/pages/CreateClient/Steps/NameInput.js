@@ -37,7 +37,8 @@ export default function NameInput( props ) {
           id="standard-full-width"
           label="Client Name"
           style={{ margin: 8 }}
-          onChange={props.onNameChange}
+          // onChange={props.onNameChange}
+          onChange={e => props.onNameChange(e.target.value)}
           placeholder="Client name"
           fullWidth
           margin="normal"

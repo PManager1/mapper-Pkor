@@ -47,9 +47,9 @@ export default function CreateClientStepperOneNT(props) {
   const [clientName, setClientName] = useState('');
 
   const onNameChange = (e) => {
-    console.log( '50 - onNameChange called with props= ', e.target.value );
-    setClientName(e.target.value);
-
+    // console.log( '50 - onNameChange called with props= ', e.target.value );
+    console.log( '51 - onNameChange inside createClientStepperOneNY = ', e );
+    setClientName({clientName : e});
     console.log( '53 - clientName = ', clientName  );
   };
 

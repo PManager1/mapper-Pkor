@@ -22,7 +22,7 @@ const BottomButtons = ()=>{
                 className={classes.button}
               >
 
-          Save
+          Edit Selected Map
       </Button>
         </div>
     );

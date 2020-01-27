@@ -22,6 +22,10 @@ export default function ClickableRows() {
   const classes = useStyles();
   const [checked, setChecked] = React.useState([1]);
 
+  const handleOnClick = (value) =>{
+    console.log( '26 - handleOnClick value =', value );
+  }
+
   const handleToggle = value => () => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
@@ -38,7 +42,6 @@ export default function ClickableRows() {
   return (
     <List dense className={classes.root}>
 
-        
       {[0, 1, 2, 3].map(value => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
@@ -51,10 +54,10 @@ export default function ClickableRows() {
               />
             </ListItemAvatar>
             <ListItemText id={labelId} primary={`Template ID MappId = ${value + 1}`  } />
-          
-            <ListItemText id={labelId} primary={`Thursday 19 January 2010`} />
 
-            <Divider variant="inset" component="li" />            
+            <ListItemText id={labelId} onClick={handleOnClick} primary={`Thursday 19 January 2010`} />
+
+            <Divider variant="inset" component="li" />
 
           </ListItem>
         );

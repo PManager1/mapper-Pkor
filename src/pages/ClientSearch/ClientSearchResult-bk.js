@@ -16,6 +16,12 @@ import BottomButtons from './BottomButtons';
 
 import Tooltip from '@material-ui/core/Tooltip';
 import { useHistory } from "react-router-dom";
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+
+import Avatar from '@material-ui/core/Avatar';
+import Divider from '@material-ui/core/Divider';
+
+
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
 
 
@@ -42,7 +48,7 @@ const ClientSearchResult = (props) => {
   // props.match.params );
     // console.log( '34 - goToNewField(MapID) clicked props =', MapId );
     // history.push(`/newfield/${props.data.MapId}`)
-    history.push(`/records/${map._id}`);
+    // history.push(`/records/${map._id}`);
 
   }
 
@@ -84,33 +90,30 @@ const ClientSearchResult = (props) => {
       <Spinner />
     ) : (
         <>
-          <List className={classes.root}>
-            {Maps.map(value => {
+          <List dense className={classes.root}>
 
-              const labelId = `checkbox-list-label-${value}`;
+{/* {[0, 1, 2, 3].map(value => { */}
+  {Maps.map(value => {
+  const labelId = `checkbox-list-secondary-label-${value}`;
+  return (
+    <ListItem key={value} button>
 
-              return (  //key={value}
-                <ListItem role={undefined} dense button onClick={handleToggle(value)}>
-                  <ListItemIcon>
-                    <Checkbox
-                      edge="start"
-                      checked={checked.indexOf(value) !== -1}
-                      tabIndex={-1}
-                      disableRipple
-                      inputProps={{ 'aria-labelledby': labelId }}
-                    />
-                  </ListItemIcon>
-                  <ListItemText  id={labelId} primary={` ${value.mapName}`} />
-                  <ListItemSecondaryAction>
-                    {/* onClick={handleOnClick}  */}
-                    <Tooltip title="Rename the map" aria-label="add">
-                      <ArrowForwardIosIcon  onClick={() => { handleOnClick(value) }} mapInfo={value} />
-                    </Tooltip>
-                  </ListItemSecondaryAction>
-                </ListItem>
-              );
-            })}
-          </List>
+      <ListItemAvatar>
+        <Avatar
+          alt={`Avatar n°${value + 1}`}
+          src={`/static/images/avatar/${value + 1}.jpg`}
+        />
+      </ListItemAvatar>
+      <ListItemText id={labelId} primary={` ${value.mapName}`}   />
+
+      <ListItemText id={labelId} onClick={handleOnClick} primary={`Thursday 19 January 2010`} />
+
+      <Divider variant="inset" component="li" />
+
+    </ListItem>
+  );
+})}
+</List>
 
           <BottomButtons />
         </>

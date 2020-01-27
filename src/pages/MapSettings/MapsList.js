@@ -18,7 +18,8 @@ import InfoIcon from '@material-ui/icons/Info';
 
 import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
-import RenameDialog from './RenameDialog.js';
+// import RenameDialog from './RenameDialog.js';
+import RenameDialog from '../../components/common/RenameDialog.js';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
@@ -125,13 +126,6 @@ export default connect(mapStateToProps, { fetchSingleMap, fetchMaps, editMap })(
 // export default connect(mapStateToProps, { fetchLogics })(MapsList);
 
 
-const top100Films = [
-  { provider: 'BlackBaud', 'mapId': 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID' },
-  { 'provider': 'Shawshank Redemption', year: 1972, 'client': 'Royal Dutch Shell', PayGroup: 'paygp' },
-  { 'provider': 'The Godfather: Part II', year: 1974, 'client': 'State Grid', PayGroup: 'paygp' },
-  { 'provider': 'The Dark Knight', year: 2008, 'client': 'BP', PayGroup: 'paygp' },
-  { 'provider': '12 Angry Men', year: 1957, 'client': 'Volkswagen', PayGroup: 'paygp' }
-];
 
 
 

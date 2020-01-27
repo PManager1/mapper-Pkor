@@ -1,5 +1,7 @@
-import React, { Component, useState, useEffect } from 'react';
-import Typography from '@material-ui/core/Typography';
+import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { Spinner } from "../../components/common/components/spinner/spinner.js";
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -8,14 +10,13 @@ import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
-import CommentIcon from '@material-ui/icons/Comment';
-
-import { connect } from "react-redux";
-import {useSelector, useDispatch} from 'react-redux';
-import BottomButtons from './BottomButtons';
-import Tooltip from '@material-ui/core/Tooltip';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import { fetchLogics } from '../../actions';
+import { useSelector, useDispatch } from 'react-redux';
+import BottomButtons from './BottomButtons';
+
+import Tooltip from '@material-ui/core/Tooltip';
+import { useHistory } from "react-router-dom";
+import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
 
 
 const useStyles = makeStyles(theme => ({
@@ -26,12 +27,38 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function ClientSearchResult(props) {
-  console.log( '29 -   ClientSearchResult  &   props.match.params.id= ' , props.match.params.id );
+const ClientSearchResult = (props) => {
 
-  useEffect(() => {
-    props.fetchLogics();
-}, []);
+  let history = useHistory();
+  const [Loading, setLoading] = useState(true);
+  const [records, setRecords] = useState([]);
+
+  const { Maps } = props;
+  console.log(' 37 -  Maps = ', Maps);
+
+
+  const handleOnClick = (map) => {
+    console.log (' 41 - handleOnClick =', map );
+  // props.match.params );
+    // console.log( '34 - goToNewField(MapID) clicked props =', MapId );
+    // history.push(`/newfield/${props.data.MapId}`)
+    history.push(`/`);
+
+  }
+
+
+  const callBackend = () => {
+    console.log('44 - callBackend() called props=', props);
+    props.fetchMaps();
+  }
+
+  useEffect((props) => {
+    console.log("47 - calling useEffect with props = ", props);
+    callBackend(props);
+    console.log("49 - fetching fetchMaps =", props);
+    // }, [props]);
+  }, []);
+
 
 
   const classes = useStyles();
@@ -49,46 +76,63 @@ function ClientSearchResult(props) {
 
     setChecked(newChecked);
   };
+  // console.log("22 - fetching fetchMaps =", props.Maps);
+  // ****** END OF CHANGE ******
 
-  return (
-    <>
-    <Typography variant='h6'>Maps under the selected client :  abc client</Typography>
+  return (<div>
+    {!props.Maps ? (
+      <Spinner />
+    ) : (
+        <>
+          <List className={classes.root}>
+            {Maps.map(value => {
 
-    <List className={classes.root}>
-      {[0, 1, 2, 3].map(value => {
-        const labelId = `checkbox-list-label-${value}`;
+              const labelId = `checkbox-list-label-${value}`;
 
-        return (
-          <ListItem key={value} role={undefined} dense button onClick={handleToggle(value)}>
-            <ListItemIcon>
-              <Checkbox
-                edge="start"
-                checked={checked.indexOf(value) !== -1}
-                tabIndex={-1}
-                disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemIcon>
-            <ListItemText id={labelId} primary={`Map- ${value + 1}`} />
-            <ListItemSecondaryAction>
-              <IconButton edge="end" aria-label="comments">
-                <ArrowForwardIosIcon />
-              </IconButton>
-            </ListItemSecondaryAction>
-          </ListItem>
-        );
-      })}
-    </List>
+              return (  //key={value}
+                <ListItem role={undefined} dense button onClick={handleToggle(value)}>
+                  <ListItemIcon>
+                    <Checkbox
+                      edge="start"
+                      checked={checked.indexOf(value) !== -1}
+                      tabIndex={-1}
+                      disableRipple
+                    // inputProps={{ 'aria-labelledby': labelId }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText onClick={handleOnClick} id={labelId} primary={` ${value.mapName}`} />
+                  <ListItemSecondaryAction>
+                    <Tooltip title="Rename the map" aria-label="add">
+                      <ArrowForwardIosIcon  mapInfo={value} />
+                    </Tooltip>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              );
+            })}
+          </List>
 
-<BottomButtons />
-</>
-  );
-}
+          <BottomButtons />
+        </>
+      )}
+  </div>);
 
-
-const mapStateToProps = (state) =>{
-  console.log( '72 - AllRules  state =', state );
-  // return { records: state.records.data };
 };
 
-export default connect(mapStateToProps, { fetchLogics })(ClientSearchResult);
+
+const mapStateToProps = (state) => {
+  console.log('91  - ClientSearchResult -   state =', state);
+
+  return { Maps: state.maps.data };
+};
+
+export default connect(mapStateToProps, { fetchSingleMap, fetchMaps, editMap })(ClientSearchResult);
+
+// export default connect(mapStateToProps, { fetchLogics })(ClientSearchResult);
+
+
+
+
+
+
+
+

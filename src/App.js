@@ -13,6 +13,9 @@ import MainWrapper from "./pages/Records/MainWrapper";
 
 import ClientSearch from "./pages/ClientSearch/Index.js";
 
+import clientSearchResult from "./pages/ClientSearch/ClientSearchResult.js";
+
+
 import Settings from "./pages/MapSettings/Index";
 
 import CreateLogic from "./pages/CreateNewLogic/Index";
@@ -117,6 +120,9 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/CreateClientStepperTwoNT" component={CreateClientStepperTwoNT} />
 
           <Route exact path="/clientsearch" component={ClientSearch} />
+
+          <Route exact path="/clientsearchresult" component={clientSearchResult} />
+
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}
           />

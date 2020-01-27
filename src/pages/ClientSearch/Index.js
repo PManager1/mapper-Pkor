@@ -44,19 +44,20 @@ function updateState(e) {
 
         let str = e.target.textContent;
         let mapId = e.target.textContent.slice(-24);
-        console.log('42 -  mapId= ', mapId );
+        console.log('47 -  mapId= ', mapId );
 
         // let mapName = e.target.textContent.slice(-34);
 
           let mapName = str.substr(0, str.indexOf(' '));
-        console.log('48 -  mapName= ', mapName);
+        // console.log('52 -  mapName= ', mapName);
 
-  ls.clear();
-  ls.set('current_MapId', mapId);
-  ls.set('current_MapName', mapName);
+  // ls.clear();
+  // ls.set('current_MapId', mapId);
+  // ls.set('current_MapName', mapName);
 
-
-        props.history.push(`/records/${mapId}`);
+  // props.history.push(`/records/${mapId}`);
+  props.history.push(`/clientsearchresult`);
+        // props.history.push(`/clientsearchresult/${mapId}`);
 
       }
 

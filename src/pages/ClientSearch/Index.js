@@ -56,8 +56,8 @@ function updateState(e) {
   // ls.set('current_MapName', mapName);
 
   // props.history.push(`/records/${mapId}`);
-  props.history.push(`/clientsearchresult`);
-        // props.history.push(`/clientsearchresult/${mapId}`);
+  // props.history.push(`/clientsearchresult`);
+        props.history.push(`/clientsearchresult/${mapId}`);
 
       }
 

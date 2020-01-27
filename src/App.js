@@ -121,7 +121,7 @@ import TemporaryDrawer from './TemporaryDrawer';
 
           <Route exact path="/clientsearch" component={ClientSearch} />
 
-          <Route exact path="/clientsearchresult" component={clientSearchResult} />
+          <Route exact path="/clientsearchresult/:id" component={clientSearchResult} />
 
           <Route exact path="/createlogic" component={CreateLogic} />
           <Route exact path="/CreateFromExistingTemplate" component={CreateFromExistingTemplate}

@@ -55,8 +55,9 @@ export default function CreateClientStepperOneNT(props) {
 
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1);
+    console.log('58 -  clientName   =', clientName.clientName  );
 
-    props.history.push(`/CreateClientStepperTwoNT`);
+    props.history.push(`/CreateClientStepperTwoNT/${clientName.clientName}`);
   };
 
   const handleBack = () => {

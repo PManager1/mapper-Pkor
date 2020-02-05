@@ -117,7 +117,7 @@ import TemporaryDrawer from './TemporaryDrawer';
 
           <Route exact path="/CreateClientStepperOneNT" component={CreateClientStepperOneNT} />
 
-          <Route exact path="/CreateClientStepperTwoNT" component={CreateClientStepperTwoNT} />
+          <Route exact path="/CreateClientStepperTwoNT/:clientName" component={CreateClientStepperTwoNT} />
 
           <Route exact path="/clientsearch" component={ClientSearch} />
 

@@ -48,6 +48,8 @@ function getStepContent(stepIndex) {
 
 // export default
 function CreateClientStepperTwoNT(props) {
+  console.log ( '51 inside  CreateClientStepperTwoNT props = ', props.match.params.clientName );
+
   const classes = useStyles();
   const [activeStep, setActiveStep] = React.useState(1);
   const steps = getSteps();
@@ -60,7 +62,9 @@ function CreateClientStepperTwoNT(props) {
     let mapValue = ls.get('MapNameInputted')
     console.log( ' 61 - calling handleNext & mapValue =', mapValue);
     // props.createClient (mapValue);
-    props.createClient ('client3');
+    let param = props.match.params.clientName;
+    console.log( ' 66 - param =', param);
+    props.createClient (param);
 
     props.history.push(`/`);
   };
@@ -88,7 +92,7 @@ function CreateClientStepperTwoNT(props) {
 
       <br/> <br/>  <br/>
       <div className={classes.sectioncenter}>
-        <Typography variant='h4'>  You're going to create a new client </Typography>
+        <Typography variant='h4'>  You're going to create a new client:  {props.match.params.clientName} </Typography>
       </div>
       <br />
       <br/>

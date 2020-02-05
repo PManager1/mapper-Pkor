@@ -58,8 +58,9 @@ function CreateClientStepperTwoNT(props) {
   const handleNext = () => {
     // setActiveStep(prevActiveStep => prevActiveStep + 1);
     let mapValue = ls.get('MapNameInputted')
+    console.log( ' 61 - calling handleNext & mapValue =', mapValue);
     // props.createClient (mapValue);
-    props.createClient ('client1');
+    props.createClient ('client3');
 
     props.history.push(`/`);
   };

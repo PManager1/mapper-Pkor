@@ -1,8 +1,9 @@
+FIX IT - it always create client3 even if i type a new name for add new client.
+========================================
+
 active/ inactive = create a flag in teh backend
 which changes when clicked
 and on showing data list, only show the maps that are active.
-
-
 
 ==========
 show hide the left/ right column values using this

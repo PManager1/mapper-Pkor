@@ -5,9 +5,7 @@ import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import NameInput from './NameInput.js';
 import Divider from '@material-ui/core/Divider';
-import { Link } from 'react-router-dom';
 import ls from 'local-storage';
 import { connect } from "react-redux";
 import { createClient } from '../../../actions';
@@ -46,7 +44,6 @@ function getStepContent(stepIndex) {
   }
 }
 
-// export default
 function CreateClientStepperTwoNT(props) {
   console.log ( '51 inside  CreateClientStepperTwoNT props = ', props.match.params.clientName );
 
@@ -54,14 +51,10 @@ function CreateClientStepperTwoNT(props) {
   const [activeStep, setActiveStep] = React.useState(1);
   const steps = getSteps();
 
-  // const [value, setValue] = React.useState('');
-  // setValue('Aman');
 
   const handleNext = () => {
-    // setActiveStep(prevActiveStep => prevActiveStep + 1);
     let mapValue = ls.get('MapNameInputted')
     console.log( ' 61 - calling handleNext & mapValue =', mapValue);
-    // props.createClient (mapValue);
     let param = props.match.params.clientName;
     console.log( ' 66 - param =', param);
     props.createClient (param);

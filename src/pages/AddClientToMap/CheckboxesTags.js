@@ -29,10 +29,11 @@ function updateState(e) {
   console.log('48 -  clientName= ', clientName);
 
   // on here send the request to the backend to update the value.
-
 }
 
-function CheckboxesTags() {
+function CheckboxesTags(props) {
+  const { Clients } = props;
+
   return (
     <Autocomplete
       multiple
@@ -69,7 +70,7 @@ function CheckboxesTags() {
 const mapStateToProps = (state) => {
   console.log('91  - ClientSearchResult -   state =', state);
 
-  return { Maps: state.maps.data };
+  return { Clients: state.maps.data };
 };
 
 export default connect(mapStateToProps, { fetchClients, editMap })(CheckboxesTags);

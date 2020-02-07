@@ -37,12 +37,12 @@ const PaddingSelection  = (props) => {
       row
       >
 
-        {/* <FormControlLabel
+         <FormControlLabel
             value="None"
             control={<Radio color="secondary" />}
             label="None"
             labelPlacement="start"
-          /> */}
+          />
 
         <FormControlLabel
           value="LeftAligned"

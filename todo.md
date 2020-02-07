@@ -1,4 +1,9 @@
-FIX IT - it always create client3 even if i type a new name for add new client.
+========================================
+finish the padding this :
+none, left , right
+Use this :
+https://codesandbox.io/s/78w1e
+
 ========================================
 On update the clinets under the maps.
 save the value in here.
@@ -6,8 +11,7 @@ save the value in here.
 See in maps.model.js
 ClientIds: { type: Array, required: false },
 ========================================
-finish the padding this :
-none, left , right
+
 ========================================
 active/ inactive = create a flag in teh backend
 which changes when clicked

@@ -16,7 +16,7 @@ const PaddingSelection = (props) => {
   const [selectedValue, setSelectedValue] = React.useState("Text");
 
   const handleChange = event => {
-    console.log(' 19 clicked  onChange={handleChange}   ');
+    console.log(' 19 clicked  onChange={handleChange}   ', event);
     // setValue(event.target.value);
     toggle();
   };
@@ -38,12 +38,13 @@ const PaddingSelection = (props) => {
       row
     >
 
-      {/* <FormControlLabel
+       <FormControlLabel
             value="None"
             control={<Radio color="secondary" />}
+            onChange={handleChange(None)}
             label="None"
             labelPlacement="start"
-          /> */}
+          />
 
       <FormControlLabel
         value="LeftAligned"

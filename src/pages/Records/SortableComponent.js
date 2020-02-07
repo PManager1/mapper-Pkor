@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import _ from 'lodash';
 import {render} from 'react-dom';
-
-import './Item.css';
 import DragHandleIcon from '@material-ui/icons/DragHandle';
-
 import {
   sortableContainer,
   sortableElement,

@@ -7,8 +7,8 @@ import {
 } from 'react-sortable-hoc';
 import arrayMove from 'array-move';
 import { makeStyles } from '@material-ui/core/styles';
-import RecordComponent from './RecordComponent'; 
-import styles from './Item.css';
+import RecordComponent from './RecordComponent';
+// import styles from './Item.css';
 import Typography from '@material-ui/core/Typography';
 
 const DragHandle = sortableHandle(() => <span>::</span>);
@@ -29,19 +29,19 @@ export default class Later extends Component {
   state = {
     records: ['Header Record 1', 'Details Record', 'Trail Record'],
     items: ['Field 1', 'Field 2', 'Field 3']
-    
+
   };
 
 
   onSortEnd = ({oldIndex, newIndex}) => {
-    console.log( ' 34 - oldIndex  = ', oldIndex ); 
-    console.log( ' 35 - newIndex  = ', newIndex ); 
+    console.log( ' 34 - oldIndex  = ', oldIndex );
+    console.log( ' 35 - newIndex  = ', newIndex );
 
     this.setState(({items}) => ({
       items: arrayMove(items, oldIndex, newIndex),
     }));
 
-    console.log( ' 35 - this.state.items  = ', this.state.items ); 
+    console.log( ' 35 - this.state.items  = ', this.state.items );
   };
 
   pressDelay = () =>{

@@ -3,7 +3,6 @@ import axios from 'axios';
 import _ from 'lodash';
 import {render} from 'react-dom';
 
-import './Item.css';
 
 import {
   sortableContainer,

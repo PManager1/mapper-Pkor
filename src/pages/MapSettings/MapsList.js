@@ -18,8 +18,8 @@ import InfoIcon from '@material-ui/icons/Info';
 
 import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
-// import RenameDialog from './RenameDialog.js';
-import RenameDialog from '../../components/common/RenameDialog.js';
+// import RenameDialogMaps from './RenameDialogMaps.js';
+import RenameDialogMaps from '../../components/common/RenameDialogMaps.js';
 import Tooltip from '@material-ui/core/Tooltip';
 
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
@@ -99,7 +99,7 @@ const MapsList = (props) => {
                   <ListItemText id={labelId} primary={` ${value.mapName}`} />
                   <ListItemSecondaryAction>
                     <Tooltip title="Rename the map" aria-label="add">
-                      <RenameDialog mapInfo={value} />
+                      <RenameDialogMaps mapInfo={value} />
                     </Tooltip>
                   </ListItemSecondaryAction>
                 </ListItem>
@@ -116,7 +116,7 @@ const MapsList = (props) => {
 
 
 const mapStateToProps = (state) => {
-  console.log('91  - MapsList -   state =', state);
+  console.log('119  - MapsList -   state.maps.data =', state.maps.data);
 
   return { Maps: state.maps.data };
 };

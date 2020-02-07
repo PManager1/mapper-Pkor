@@ -1,6 +1,7 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import CreateClient from './CreateClient';
+import CheckboxesTags from './CheckboxesTags';
 
 const AllRules = ()=>{
     return (
@@ -9,6 +10,8 @@ const AllRules = ()=>{
                     Add clients to current Map
             </Typography>
 
+            <CheckboxesTags />
+                <br/><br/><br/>
             <CreateClient />
         </div>
     );

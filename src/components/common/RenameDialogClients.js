@@ -11,8 +11,8 @@ import {useSelector, useDispatch} from 'react-redux';
 import { editMap } from '../../actions';
 import { connect } from "react-redux";
 
-function RenameDialog(props) {
-  // console.log( '12 - RenameDialog props = ', props );
+function RenameDialogClilents(props) {
+  // console.log( '12 - RenameDialogClilents props = ', props );
   const [TxtMapName, setTxtMapName] = useState('');
 
   const onChangemapName = (e) =>{
@@ -30,8 +30,8 @@ function RenameDialog(props) {
 
   console.log( '19 - props  = ', props);
 
-  console.log( '  20- mapInfo  = ', mapInfo._id );
-  console.log( '  20- mapInfo  = ', mapInfo.mapName);
+  console.log( '  20- clientInfo  = ', mapInfo._id );
+  console.log( '  20- client Name  = ', mapInfo.clientName);
 
   const [open, setOpen] = React.useState(false);
 
@@ -98,4 +98,4 @@ const mapStateToProps = (state) =>{
   return { records: state.records.data };
 };
 
-export default connect(null, { editMap })(RenameDialog);
+export default connect(null, { editMap })(RenameDialogClilents);

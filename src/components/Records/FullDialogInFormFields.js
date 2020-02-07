@@ -71,7 +71,7 @@ export default function FullDialogInFormFields(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              More Information : {props.values.FieldName} (Fields)
+              More Information 5 : {props.values.FieldName} (Fields)
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
               save
@@ -79,9 +79,9 @@ export default function FullDialogInFormFields(props) {
           </Toolbar>
         </AppBar>
 
-        {/* <div className={classes.sectionRulePicker}>
+        <div className={classes.sectionRulePicker}>
               <MetaDataPicker />
-            </div> */}
+            </div>
         <br />
 
         <Divider />

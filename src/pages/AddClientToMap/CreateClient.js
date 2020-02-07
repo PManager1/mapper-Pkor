@@ -8,12 +8,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import CommentIcon from '@material-ui/icons/Comment';
-
+import { Spinner } from "../../components/common/components/spinner/spinner.js";
 import { connect } from "react-redux";
-import { fetchLogics } from '../../actions';
+import { fetchClients } from '../../actions';
 import {useSelector, useDispatch} from 'react-redux';
 import BottomButtons from './BottomButtons';
 import Tooltip from '@material-ui/core/Tooltip';
+import RenameDialogClients from '../../components/common/RenameDialogClients.js';
 
 
 const useStyles = makeStyles(theme => ({
@@ -24,10 +25,27 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const [clients, setClients] = [];
+
 function CreateClient(props) {
 
-  useEffect(() => {
-    props.fetchLogics();
+  const [Loading, setLoading] = useState(true);
+  const [records, setRecords] = useState([]);
+
+  const { Clients } = props;
+  console.log(' 13 Clients = ', Clients);
+
+
+const callBackend = () => {
+  console.log('44 - callBackend() called props=', props);
+  props.fetchClients();
+}
+
+useEffect((props) => {
+  console.log("47 - calling useEffect with props = ", props);
+  callBackend(props);
+  console.log("49 - fetching fetchMaps =", props);
+  // }, [props]);
 }, []);
 
 
@@ -49,31 +67,38 @@ function CreateClient(props) {
 
   return (
     <>
-    <List className={classes.root}>
-      {[0, 1, 2, 3].map(value => {
-        const labelId = `checkbox-list-label-${value}`;
+    {!props.Clients ? (
+      <Spinner />
+    ) : (
+        <>
+          <List className={classes.root}>
+            {Clients.map(value => {
 
-        return (
-          <ListItem key={value} role={undefined} dense button onClick={handleToggle(value)}>
-            <ListItemIcon>
-              <Checkbox
-                edge="start"
-                checked={checked.indexOf(value) !== -1}
-                tabIndex={-1}
-                disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
-            </ListItemIcon>
-            <ListItemText id={labelId} primary={`Client ${value + 1}`} />
-            <ListItemSecondaryAction>
-              <IconButton edge="end" aria-label="comments">
-                <CommentIcon />
-              </IconButton>
-            </ListItemSecondaryAction>
-          </ListItem>
-        );
-      })}
-    </List>
+              const labelId = `checkbox-list-label-${value}`;
+
+              return (  //key={value}
+                <ListItem role={undefined} dense button onClick={handleToggle(value)}>
+                  <ListItemIcon>
+                    <Checkbox
+                      edge="start"
+                      checked={checked.indexOf(value) !== -1}
+                      tabIndex={-1}
+                      disableRipple
+                    // inputProps={{ 'aria-labelledby': labelId }}
+                    />
+                  </ListItemIcon>
+                  <ListItemText id={labelId} primary={` ${value.clientName}`} />
+                  <ListItemSecondaryAction>
+                    <Tooltip title="Rename the map" aria-label="add">
+                      <RenameDialogClients mapInfo={value} />
+                    </Tooltip>
+                  </ListItemSecondaryAction>
+                </ListItem>
+              );
+            })}
+          </List>
+        </>
+      )}
 
 <BottomButtons />
 </>
@@ -84,6 +109,7 @@ function CreateClient(props) {
 const mapStateToProps = (state) =>{
   console.log( '72 - AllRules  state =', state );
   // return { records: state.records.data };
+  return { Clients: state.clients.data };
 };
 
-export default connect(mapStateToProps, { fetchLogics })(CreateClient);
+export default connect(mapStateToProps, { fetchClients })(CreateClient);

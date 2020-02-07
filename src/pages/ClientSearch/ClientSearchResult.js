@@ -65,6 +65,8 @@ const ClientSearchResult = (props) => {
   const [checked, setChecked] = React.useState([0]);
 
   const handleToggle = value => () => {
+    console.log(" 25- value =", value);
+
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
 

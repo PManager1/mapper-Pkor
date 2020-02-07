@@ -1,11 +1,13 @@
 /* eslint-disable no-use-before-define */
+import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
 
-import React from 'react';
 import Checkbox from '@material-ui/core/Checkbox';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
+import { fetchSingleMap, fetchClients, editMap } from '../../actions';
 
 const icon = <CheckBoxOutlineBlankIcon fontSize="small" />;
 const checkedIcon = <CheckBoxIcon fontSize="small" />;
@@ -30,7 +32,7 @@ function updateState(e) {
 
 }
 
-export default function CheckboxesTags() {
+function CheckboxesTags() {
   return (
     <Autocomplete
       multiple
@@ -63,6 +65,15 @@ export default function CheckboxesTags() {
     />
   );
 }
+
+const mapStateToProps = (state) => {
+  console.log('91  - ClientSearchResult -   state =', state);
+
+  return { Maps: state.maps.data };
+};
+
+export default connect(mapStateToProps, { fetchClients, editMap })(CheckboxesTags);
+
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [

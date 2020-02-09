@@ -13,16 +13,21 @@ import RightPadComponent from './RightPadComponent.js';
 import LeftPadComponent from './LeftPadComponent.js';
 
 
-const renderPaddComponents = () =>{
-  if (false) {
+const renderPaddComponents = (selectedValue) =>{
+  console.log( '17 -  selectedValue = ', selectedValue );
+  if (selectedValue === 'LeftAligned' ) {
     return (<>
-          <RightPadComponent />
+          <LeftPadComponent />
         </>);
 }
-//on same day webinar starting in less than 15 minutes
+else if (selectedValue === 'RightAligned' ) {
+  return (<>
+        <LeftPadComponent />
+      </>);
+}
   else {
       return (<>
-        <LeftPadComponent />
+              Null
       </>);
     }
 
@@ -76,7 +81,7 @@ const PaddingSelectionTest = (props) => {
 
 {/* { state ? <RightPadComponent /> : <LeftPadComponent />} */}
 
-{renderPaddComponents()}
+{renderPaddComponents(selectedValue)}
 
 
 

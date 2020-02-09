@@ -20,6 +20,10 @@ import PickMapSelectFields from "../../../components/Records/PickMapSelectFields
 
 import PaddingSelection from '../../../components/Records/PaddingSelection/PaddingSelection';
 
+import PaddingSelectionTest from '../../../components/Records/PaddingSelection/PaddingSelectionTest';
+
+
+
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -169,7 +173,7 @@ export const Form = props => {
       <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div> */}
 
 
-<FormLabel component="legend">Please Select Alignment </FormLabel>
+<FormLabel component="legend">Please Select Alignment1 </FormLabel>
       <RadioGroup
         aria-label="RadioValue"
         name="RadioValue"
@@ -200,14 +204,15 @@ export const Form = props => {
       </RadioGroup>
 
 
-
-
       <FormLabel component="legend">
       </FormLabel>
 
 
 
       <PaddingSelection {...props} />
+
+
+      <PaddingSelectionTest {...props} />
 
       <FullDialogInFormFields {...props} />
 

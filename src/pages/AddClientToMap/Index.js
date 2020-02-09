@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import CreateClient from './CreateClient';
 import CheckboxesTags from './CheckboxesTags';
+import SearchAppBar from './SearchAppBar';
 
 const AllRules = ()=>{
     return (
@@ -10,9 +11,12 @@ const AllRules = ()=>{
                     Add clients to current Map
             </Typography>
 
-            <CheckboxesTags />
-                <br/><br/><br/>
+            <SearchAppBar />
             <CreateClient />
+            <br/><br/><br/>
+                <br/><br/><br/>
+
+            <CheckboxesTags />
         </div>
     );
 }

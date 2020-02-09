@@ -41,7 +41,7 @@ const PaddingSelection = (props) => {
        <FormControlLabel
             value="None"
             control={<Radio color="secondary" />}
-            onChange={handleChange(None)}
+            // onChange={handleChange(None)}
             label="None"
             labelPlacement="start"
           />
@@ -62,7 +62,6 @@ const PaddingSelection = (props) => {
 
     </RadioGroup>
 
-    { state ? <RightPadComponent /> : <LeftPadComponent />}
 
 
   </React.Fragment>);

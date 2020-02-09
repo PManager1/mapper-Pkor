@@ -173,36 +173,7 @@ export const Form = props => {
       <div>{Boolean(errors.SequenceNumber) ? errors.SequenceNumber : ""}</div> */}
 
 
-<FormLabel component="legend">Please Select Alignment1 </FormLabel>
-      <RadioGroup
-        aria-label="RadioValue"
-        name="RadioValue"
-        value={RadioValue}
-        onChange={handleChange}
-        row
-      >
-        <FormControlLabel
-          value="None"
-          control={<Radio color="primary" />}
-          label="None"
-          labelPlacement="start"
-        />
-
-        <FormControlLabel
-          value="LeftAligned"
-          control={<Radio color="primary" />}
-          label="LeftAligned"
-          labelPlacement="start"
-        />
-
-        <FormControlLabel
-          value="RightAligned"
-          control={<Radio color="primary" />}
-          label="RightAligned"
-          labelPlacement="start"
-        />
-      </RadioGroup>
-
+      <FormLabel component="legend"></FormLabel>
 
       <FormLabel component="legend">
       </FormLabel>
@@ -211,8 +182,6 @@ export const Form = props => {
 
       <PaddingSelection {...props} />
 
-
-      <PaddingSelectionTest {...props} />
 
       <FullDialogInFormFields {...props} />
 

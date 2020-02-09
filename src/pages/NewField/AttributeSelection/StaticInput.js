@@ -46,7 +46,7 @@ const StaticInput  = (props) => {
         name="FieldName"
         helperText={touched.FieldName ? errors.FieldName : ""}
         error={Boolean(errors.FieldName)}
-        label="FieldName"
+        label="Field Name"
         value={FieldName}
         onChange={handleChange}
       />

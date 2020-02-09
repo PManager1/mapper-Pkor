@@ -20,9 +20,6 @@ import PickMapSelectFields from "../../../components/Records/PickMapSelectFields
 
 import PaddingSelection from '../../../components/Records/PaddingSelection/PaddingSelection';
 
-import PaddingSelectionTest from '../../../components/Records/PaddingSelection/PaddingSelectionTest';
-
-
 
 
 const useStyles = makeStyles(theme => ({

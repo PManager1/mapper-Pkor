@@ -13,24 +13,23 @@ import RightPadComponent from './RightPadComponent.js';
 import LeftPadComponent from './LeftPadComponent.js';
 
 
-const renderPaddComponents = (selectedValue) =>{
-  console.log( '17 -  selectedValue = ', selectedValue );
-  if (selectedValue === 'LeftAligned' ) {
+const renderPaddComponents = (selectedValue) => {
+  console.log('17 -  selectedValue = ', selectedValue);
+  if (selectedValue === 'LeftAligned') {
     return (<>
-          <LeftPadComponent />
-        </>);
-}
-else if (selectedValue === 'RightAligned' ) {
-  return (<>
-        <LeftPadComponent />
-      </>);
-}
+      <LeftPadComponent />
+    </>);
+  }
+  else if (selectedValue === 'RightAligned') {
+    return (<>
+      <RightPadComponent />
+    </>);
+  }
   else {
-      return (<>
-              Null
+    return (<>
+      Null
       </>);
-    }
-
+  }
 
 }
 
@@ -39,51 +38,47 @@ const PaddingSelection = (props) => {
   const [selectedValue, setSelectedValue] = React.useState('a');
 
   const handleChange = event => {
-    console.log( '21-handleChange event.target.value = ', event.target.value );
+    console.log('21-handleChange event.target.value = ', event.target.value);
     setSelectedValue(event.target.value);
   };
 
 
   return (<React.Fragment>
 
-    <FormLabel component="legend">Please Select Alignment Test </FormLabel>
+    <FormLabel component="legend">Please Select Alignment</FormLabel>
 
     <FormControlLabel
-            checked={selectedValue === 'None'}
-            onChange={handleChange}
-            value="None"
-            control={<Radio color="secondary" />}
-            // onChange={handleChange(None)}
-            label="None"
-            labelPlacement="start"
-          />
+      checked={selectedValue === 'None'}
+      onChange={handleChange}
+      value="None"
+      control={<Radio color="secondary" />}
+      // onChange={handleChange(None)}
+      label="None"
+      labelPlacement="start"
+    />
 
-<FormControlLabel
-            checked={selectedValue === 'LeftAligned'}
-            onChange={handleChange}
-            value="LeftAligned"
-            control={<Radio color="secondary" />}
-            // onChange={handleChange(None)}
-            label="LeftAligned"
-            labelPlacement="start"
-          />
-
-
-<FormControlLabel
-            checked={selectedValue === 'RightAligned'}
-            onChange={handleChange}
-            value="RightAligned"
-            control={<Radio color="secondary" />}
-            // onChange={handleChange(None)}
-            label="RightAligned"
-            labelPlacement="start"
-          />
-
-{/* { state ? <RightPadComponent /> : <LeftPadComponent />} */}
-
-{renderPaddComponents(selectedValue)}
+    <FormControlLabel
+      checked={selectedValue === 'LeftAligned'}
+      onChange={handleChange}
+      value="LeftAligned"
+      control={<Radio color="secondary" />}
+      // onChange={handleChange(None)}
+      label="LeftAligned"
+      labelPlacement="start"
+    />
 
 
+    <FormControlLabel
+      checked={selectedValue === 'RightAligned'}
+      onChange={handleChange}
+      value="RightAligned"
+      control={<Radio color="secondary" />}
+      // onChange={handleChange(None)}
+      label="RightAligned"
+      labelPlacement="start"
+    />
+
+    {renderPaddComponents(selectedValue)}
 
   </React.Fragment>);
 };

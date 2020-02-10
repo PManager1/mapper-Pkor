@@ -1,10 +1,11 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import CreateClient from './CreateClient';
 import CheckboxesTags from './CheckboxesTags';
 import SearchAppBar from './SearchAppBar';
+import RecentlyEditedClients from  './RecentlyEditedClients';
+import FullWidthDialog from './FullWidthDialog';
 
-const AllRules = ()=>{
+const AllRules = (props)=>{
     return (
         <div >
             <Typography variant='h5' color="primary" align="left">
@@ -12,7 +13,12 @@ const AllRules = ()=>{
             </Typography>
 
             <SearchAppBar />
-            <CreateClient />
+
+
+            {/* <FullWidthDialog {...props} /> */}
+
+            <RecentlyEditedClients />
+
             <br/><br/><br/>
                 <br/><br/><br/>
 

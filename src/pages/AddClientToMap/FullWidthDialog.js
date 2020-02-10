@@ -9,13 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import RulePicker from './RulePicker';
-// import MetaDataPicker from './MetaDataPicker';
-// import FreeSolo from './FreeSolo';
-
-
-import DeleteBtn from './common/DeleteBtn.js';
-// import PickSingleMapped from './common/PickSingleMapped';
+import SearchAppBar from './SearchAppBar';
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -35,14 +29,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullDialogInForm(props) {
+export default function FullWidthDialog(props) {
   // console.log ( '38 -  FullDialog  props.Info._id = ', props.fieldInfo._id );
-  console.log('40- FullDialogInForm  props =', props );
+  console.log('40- FullWidthDialog  props =', props );
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
+    console.log( '40 - handleClick open ');
     setOpen(true);
   };
 
@@ -52,9 +47,14 @@ export default function FullDialogInForm(props) {
 
   return (
     <div>
-      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        More FDIF -56 in records
+
+      <SearchAppBar  onChange={handleClickOpen}> Search
+      </SearchAppBar>
+        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
+        Search
       </Button>
+
+
 
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
         <AppBar className={classes.appBar}>
@@ -63,7 +63,7 @@ export default function FullDialogInForm(props) {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              More Information -
+              Search for clients
             </Typography>
             <Button autoFocus color="inherit" onClick={handleClose}>
               save
@@ -90,7 +90,7 @@ export default function FullDialogInForm(props) {
             <Divider />
 
             <div className={classes.sectionRulePicker}>
-                <DeleteBtn {...props} />
+                {/* <DeleteBtn {...props} /> */}
             </div>
 
 

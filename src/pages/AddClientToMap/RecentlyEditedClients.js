@@ -1,4 +1,5 @@
 import React, { Component, useState, useEffect } from 'react';
+import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -27,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 
 const [clients, setClients] = [];
 
-function CreateClient(props) {
+function RecentlyEditedClients(props) {
 
   const [Loading, setLoading] = useState(true);
   const [records, setRecords] = useState([]);
@@ -67,6 +68,10 @@ useEffect((props) => {
 
   return (
     <>
+     <Typography variant='p' color="primary" align="left">
+                    Recently edited clients
+            </Typography>
+
     {!props.Clients ? (
       <Spinner />
     ) : (
@@ -112,4 +117,4 @@ const mapStateToProps = (state) =>{
   return { Clients: state.clients.data };
 };
 
-export default connect(mapStateToProps, { fetchClients })(CreateClient);
+export default connect(mapStateToProps, { fetchClients })(RecentlyEditedClients);

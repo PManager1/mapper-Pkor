@@ -26,8 +26,8 @@ import { Link } from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 
-import  LinearIndeterminate from '../../components/LinearProgress.js'; 
-import GoogleAuth from '../../components/GoogleAuth'; 
+import  LinearIndeterminate from '../../components/LinearProgress.js';
+import GoogleAuth from '../../components/GoogleAuth';
 
 
 const drawerWidth = 240;
@@ -126,7 +126,7 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }} >
-            Paycor Data Mapper
+            Pkor Data Mapper
           </Typography>
 
 
@@ -176,8 +176,8 @@ export default function MainWrapper(props) {
                   <ListItemText primary="Search" />
             </ListItem>
 
-            <ListItem button component={Link} to="/stepperoneET" >  
-                  <ListItemIcon>  
+            <ListItem button component={Link} to="/stepperoneET" >
+                  <ListItemIcon>
                     <NoteAddIcon />
                   </ListItemIcon>
                   <ListItemText primary="Create from Existing-Template" />
@@ -185,14 +185,14 @@ export default function MainWrapper(props) {
 
 
 
-            <ListItem button component={Link} to="/" >  
-                  <ListItemIcon>  
+            <ListItem button component={Link} to="/" >
+                  <ListItemIcon>
                     <NoteAddIcon />
                   </ListItemIcon>
                   <ListItemText primary="Create a new Blank Map" />
             </ListItem>
 
-            <ListItem button component={Link} to="/RecentlyCreatedTemplates" >  
+            <ListItem button component={Link} to="/RecentlyCreatedTemplates" >
                   <ListItemIcon>
                     <RestoreIcon />
                   </ListItemIcon>
@@ -234,8 +234,8 @@ export default function MainWrapper(props) {
         })}
       >
         <div className={classes.drawerHeader} />
-        
-        {props.children}        
+
+        {props.children}
       </main>
     </div>
   );

@@ -23,7 +23,7 @@ import SettingsIcon from '@material-ui/icons/Settings';
 import MailIcon from '@material-ui/icons/Mail';
 import { Link } from 'react-router-dom';
 
-import  LinearIndeterminate from '../../components/LinearProgress.js'; 
+import  LinearIndeterminate from '../../components/LinearProgress.js';
 
 
 
@@ -120,14 +120,14 @@ export default function CurrentMenu(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
-            Current Paycor Data Mapper
+            Current Pkor Data Mapper
           </Typography>
         </Toolbar>
 
 
 
       </AppBar>
-      
+
       <Drawer
         className={classes.drawer}
         variant="persistent"
@@ -151,15 +151,15 @@ export default function CurrentMenu(props) {
                   <ListItemText primary="Search" />
             </ListItem>
 
-            <ListItem button component={Link} to="/stepperoneET" >  
-                  <ListItemIcon>  
+            <ListItem button component={Link} to="/stepperoneET" >
+                  <ListItemIcon>
                     <NoteAddIcon />
                   </ListItemIcon>
                   <ListItemText primary="Create from Existing-Template" />
             </ListItem>
 
 
-            <ListItem button component={Link} to="/RecentlyCreatedTemplates" >  
+            <ListItem button component={Link} to="/RecentlyCreatedTemplates" >
                   <ListItemIcon>
                     <RestoreIcon />
                   </ListItemIcon>
@@ -204,7 +204,7 @@ export default function CurrentMenu(props) {
         <div className={classes.drawerHeader} />
         <LinearIndeterminate />
 
-        {props.children}        
+        {props.children}
       </main>
     </div>
   );

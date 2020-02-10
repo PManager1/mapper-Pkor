@@ -9,7 +9,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import SearchAppBar from './SearchAppBar';
+
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -48,8 +48,7 @@ export default function FullWidthDialog(props) {
   return (
     <div>
 
-      <SearchAppBar  onChange={handleClickOpen}> Search
-      </SearchAppBar>
+
         <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Search
       </Button>

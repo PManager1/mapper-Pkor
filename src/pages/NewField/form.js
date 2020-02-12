@@ -12,7 +12,10 @@ import { createField } from '../../actions';
 
 // import PickMapSelect from '../../components/Records/PickMapSelect.js';
 import { useHistory } from "react-router-dom";
+
 import AttributeSelection from './AttributeSelection/AttributeSelection';
+
+import AttributeSelectionNew from './AttributeSelectionNew';
 
 
 
@@ -108,6 +111,8 @@ const Form = props => {
 
 
       <AttributeSelection {...props}/>
+
+      <AttributeSelectionNew {...props}/>
 
       <TextField
         name="MaxCharLength"

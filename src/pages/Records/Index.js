@@ -22,7 +22,19 @@ import { Spinner } from "../../components/common/components/spinner/spinner.js";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ls from "local-storage";
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 import { fetchRecords } from "../../actions";
+
+const theme = createMuiTheme({
+  palette: {
+    secondary: {
+        main: '#BEC3CC'
+      }
+    }
+  },
+)
+
 
 const renderLoader = () => <p>Loading</p>;
 const useStyles = makeStyles(theme => ({
@@ -35,6 +47,7 @@ const useStyles = makeStyles(theme => ({
     color: theme.palette.text.secondary
   }
 }));
+
 
 // props.records.data
 const Test = props => {
@@ -96,6 +109,7 @@ const Test = props => {
                 </Fab>
               </Tooltip>
             </Grid>
+            <MuiThemeProvider theme={theme}>
             <Grid item xs={6} sm={2}>
               <Typography paragraph align="right">
                 <Tooltip title="Add New Record" aria-label="add">
@@ -105,6 +119,7 @@ const Test = props => {
                 </Tooltip>
               </Typography>
             </Grid>
+            </MuiThemeProvider>
           </Grid>
 
           {renderDescription()}

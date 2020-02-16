@@ -15,7 +15,7 @@ import { useHistory } from "react-router-dom";
 
 import AttributeSelection from './AttributeSelection/AttributeSelection';
 
-import AttributeSelectionNew from './AttributeSelectionNew';
+import AttributeSelectionNew from './AttributeSelectionNew/Index';
 
 
 

@@ -98,10 +98,6 @@ export default connect(mapStateToProps, { fetchSingleMap, fetchClients })(Client
 
 
 
-
-
-
-
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [
   { provider: 'BlackBaud', mapId: 'BlackClientId-123423994', clientName: 'Apple', PayGroup: 'project-ID' },

@@ -105,7 +105,7 @@ useEffect((props) => {
         </>
       )}
 
-<BottomButtons />
+{/* <BottomButtons /> */}
 </>
   );
 }

@@ -4,16 +4,10 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
-import FormControl from '@material-ui/core/FormControl';
-
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 
-import RightPadComponent from './RightPadComponent.js';
-import LeftPadComponent from './LeftPadComponent.js';
-
-
-import StaticInput from './StaticInput.js';
+import StaticInputComponent from './StaticInputComponent.js';
 import DynamicInput from './DynamicInput.js';
 
 const renderPaddComponents = (selectedValue) => {
@@ -25,7 +19,7 @@ const renderPaddComponents = (selectedValue) => {
   }
   else if (selectedValue === 'PickAStaticAttribute') {
     return (<>
-      <RightPadComponent />
+      <StaticInputComponent />
     </>);
   }
   else {

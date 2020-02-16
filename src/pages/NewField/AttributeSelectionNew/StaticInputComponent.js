@@ -1,7 +1,6 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
-
 import Button from "@material-ui/core/Button";
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -24,12 +23,12 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const StaticInput  = (props) => {
+const StaticInputComponent  = (props) => {
 
   const classes = useStyles();
 
   const {
-    values:{ FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
+    // values:{ FieldName, MappedFieldName, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
     errors,
     touched,
     handleSubmit,
@@ -44,13 +43,12 @@ const StaticInput  = (props) => {
   <Grid item xs={6} sm={3}>
   <TextField
         name="FieldName"
-        helperText={touched.FieldName ? errors.FieldName : ""}
-        error={Boolean(errors.FieldName)}
+        // helperText={touched.FieldName ? errors.FieldName : ""}
+        // error={Boolean(errors.FieldName)}
         label="Field Name"
-        value={FieldName}
+        // value={FieldName}
         onChange={handleChange}
       />
-      <div>{Boolean(errors.FieldName) ? errors.FieldName : ""}</div>
 
         </Grid>
         <Grid item xs={6} sm={3}>
@@ -67,4 +65,4 @@ const StaticInput  = (props) => {
     </div>);
 };
 
-export default StaticInput;
+export default StaticInputComponent;

@@ -77,7 +77,7 @@ const AllRules = (props)=>{
             <br/><br/><br/>
                 <br/><br/><br/>
 
-            <CheckboxesTags />
+            {/* <CheckboxesTags /> */}
         </div>
     );
 }

@@ -139,7 +139,7 @@ export default function MainWrapper(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flex: 1 }}>
-            Pakor Data Mapper - Map : {value}
+            Paycor Data Mapper - Map : {value}
             {/* P */}
           </Typography>
 

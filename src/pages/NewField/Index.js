@@ -32,7 +32,7 @@ export default function NewFields(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>
-            Create New Field
+            Create a new field
           </Typography>
       <RecordsForm recordId={recordId} id={id} />
      </div>

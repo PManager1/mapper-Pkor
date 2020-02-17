@@ -25,11 +25,6 @@ const renderPaddComponents = (selectedValue) => {
       <RightPadComponent />
     </>);
   }
-  else {
-    return (<>
-      Null
-      </>);
-  }
 
 }
 

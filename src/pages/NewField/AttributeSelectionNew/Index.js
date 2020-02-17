@@ -11,6 +11,7 @@ import StaticInputComponent from './StaticInputComponent.js';
 import DynamicInput from './DynamicInput.js';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
 const theme = createMuiTheme({
   palette: {
     secondary: {
@@ -21,16 +22,16 @@ const theme = createMuiTheme({
 )
 
 
-const renderPaddComponents = (selectedValue) => {
+const renderPaddComponents = ({...props}, selectedValue) => {
   console.log('17 -  selectedValue = ', selectedValue);
   if (selectedValue === 'PickDataAttribute') {
     return (<>
-      <DynamicInput />
+      <DynamicInput {...props} />
     </>);
   }
   else if (selectedValue === 'PickAStaticAttribute') {
     return (<>
-      <StaticInputComponent />
+      <StaticInputComponent {...props} />
     </>);
   }
   else {
@@ -52,7 +53,7 @@ const AttributeSelectionNew = (props) => {
 
   return (<React.Fragment>
   <MuiThemeProvider theme={theme}>
-    <FormLabel component="legend">Please Select Alignment</FormLabel>
+    <FormLabel component="legend">Please select attribute</FormLabel>
 
     {/* <FormControlLabel
       checked={selectedValue === 'None'}
@@ -70,7 +71,7 @@ const AttributeSelectionNew = (props) => {
       value="PickDataAttribute"
       control={<Radio color="secondary" />}
       // onChange={handleChange(None)}
-      label="Pick Data Attribute-2"
+      label="Pick a data attribute"
       labelPlacement="start"
     />
 
@@ -81,11 +82,11 @@ const AttributeSelectionNew = (props) => {
       value="PickAStaticAttribute"
       control={<Radio color="secondary" />}
       // onChange={handleChange(None)}
-      label="Pick A Static Attribute"
+      label="Pick a static attribute"
       labelPlacement="start"
     />
 
-    {renderPaddComponents(selectedValue)}
+    {renderPaddComponents( {...props}  ,selectedValue)}
     </MuiThemeProvider>
   </React.Fragment>);
 };

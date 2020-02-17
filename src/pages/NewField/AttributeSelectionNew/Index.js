@@ -15,14 +15,14 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     secondary: {
-        main: '#00B3F0'
-      }
+      main: '#00B3F0'
     }
-  },
+  }
+},
 )
 
 
-const renderPaddComponents = ({...props}, selectedValue) => {
+const renderPaddComponents = ({ ...props }, selectedValue) => {
   console.log('17 -  selectedValue = ', selectedValue);
   if (selectedValue === 'PickDataAttribute') {
     return (<>
@@ -36,7 +36,7 @@ const renderPaddComponents = ({...props}, selectedValue) => {
   }
   else {
     return (<>
-      </>);
+    </>);
   }
 
 }
@@ -52,10 +52,10 @@ const AttributeSelectionNew = (props) => {
 
 
   return (<React.Fragment>
-  <MuiThemeProvider theme={theme}>
-    <FormLabel component="legend">Please select attribute</FormLabel>
+    <MuiThemeProvider theme={theme}>
+      <FormLabel component="legend">Please select attribute-3</FormLabel>
 
-    {/* <FormControlLabel
+      {/* <FormControlLabel
       checked={selectedValue === 'None'}
       onChange={handleChange}
       value="None"
@@ -65,28 +65,32 @@ const AttributeSelectionNew = (props) => {
       labelPlacement="start"
     /> */}
 
-    <FormControlLabel
-      checked={selectedValue === 'PickDataAttribute'}
-      onChange={handleChange}
-      value="PickDataAttribute"
-      control={<Radio color="secondary" />}
-      // onChange={handleChange(None)}
-      label="Pick a data attribute"
-      labelPlacement="start"
-    />
+      <MuiThemeProvider theme={theme}>
+        <FormControlLabel
+          checked={selectedValue === 'PickDataAttribute'}
+          onChange={handleChange}
+          value="PickDataAttribute"
+          control={<Radio color="secondary" />}
+          // onChange={handleChange(None)}
+          label="Pick a data attribute"
+          labelPlacement="start"
+        />
 
 
-    <FormControlLabel
-      checked={selectedValue === 'PickAStaticAttribute'}
-      onChange={handleChange}
-      value="PickAStaticAttribute"
-      control={<Radio color="secondary" />}
-      // onChange={handleChange(None)}
-      label="Pick a static attribute"
-      labelPlacement="start"
-    />
 
-    {renderPaddComponents( {...props}  ,selectedValue)}
+        <FormControlLabel
+          checked={selectedValue === 'PickAStaticAttribute'}
+          onChange={handleChange}
+          value="PickAStaticAttribute"
+          control={<Radio color="secondary" />}
+          // onChange={handleChange(None)}
+          label="Pick a static attribute"
+          labelPlacement="start"
+        />
+
+      </MuiThemeProvider>
+
+      {renderPaddComponents({ ...props }, selectedValue)}
     </MuiThemeProvider>
   </React.Fragment>);
 };

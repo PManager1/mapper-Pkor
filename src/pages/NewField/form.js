@@ -6,17 +6,10 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
-
 import { connect } from "react-redux";
 import { createField } from '../../actions';
-
-// import PickMapSelect from '../../components/Records/PickMapSelect.js';
 import { useHistory } from "react-router-dom";
-
-
 import AttributeSelectionNew from './AttributeSelectionNew/Index';
-
-
 
 import PaddingSelection from '../../components/Records/PaddingSelection/PaddingSelection';
 

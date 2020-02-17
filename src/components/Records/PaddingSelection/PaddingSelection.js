@@ -12,6 +12,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import RightPadComponent from './RightPadComponent.js';
 import LeftPadComponent from './LeftPadComponent.js';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: '#00B3F0'
+    }
+  }
+},
+)
 
 const renderPaddComponents = (selectedValue) => {
   console.log('17 -  selectedValue = ', selectedValue);
@@ -39,6 +49,7 @@ const PaddingSelection = (props) => {
 
 
   return (<React.Fragment>
+    <MuiThemeProvider theme={theme}>
 
     <FormLabel component="legend">Please Select Alignment</FormLabel>
 
@@ -74,7 +85,7 @@ const PaddingSelection = (props) => {
     />
 
     {renderPaddComponents(selectedValue)}
-
+    </MuiThemeProvider>
   </React.Fragment>);
 };
 

@@ -38,7 +38,7 @@ const AttributeSelection  = (props) => {
         <FormControlLabel
           value="LeftAligned"
           control={<Radio color="primary" />}
-          label="Pick Data Attribute"
+          label="Pick Data Attribute-1"
           labelPlacement="end"
         />
 

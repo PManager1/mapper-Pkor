@@ -60,7 +60,7 @@ const PaddingSelection = (props) => {
       control={<Radio color="secondary" />}
       // onChange={handleChange(None)}
       label="None"
-      labelPlacement="start"
+      labelPlacement="end"
     />
 
     <FormControlLabel
@@ -70,7 +70,7 @@ const PaddingSelection = (props) => {
       control={<Radio color="secondary" />}
       // onChange={handleChange(None)}
       label="LeftAligned"
-      labelPlacement="start"
+      labelPlacement="end"
     />
 
 
@@ -81,7 +81,7 @@ const PaddingSelection = (props) => {
       control={<Radio color="secondary" />}
       // onChange={handleChange(None)}
       label="RightAligned"
-      labelPlacement="start"
+      labelPlacement="end"
     />
 
     {renderPaddComponents(selectedValue)}

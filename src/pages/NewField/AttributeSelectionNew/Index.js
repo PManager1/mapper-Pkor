@@ -53,7 +53,7 @@ const AttributeSelectionNew = (props) => {
 
   return (<React.Fragment>
     <MuiThemeProvider theme={theme}>
-      <FormLabel component="legend">Please select attribute-3</FormLabel>
+      <FormLabel component="legend">Please select attribute</FormLabel>
 
       {/* <FormControlLabel
       checked={selectedValue === 'None'}
@@ -73,7 +73,7 @@ const AttributeSelectionNew = (props) => {
           control={<Radio color="secondary" />}
           // onChange={handleChange(None)}
           label="Pick a data attribute"
-          labelPlacement="start"
+          labelPlacement="end"
         />
 
 
@@ -85,7 +85,7 @@ const AttributeSelectionNew = (props) => {
           control={<Radio color="secondary" />}
           // onChange={handleChange(None)}
           label="Pick a static attribute"
-          labelPlacement="start"
+          labelPlacement="end"
         />
 
       </MuiThemeProvider>

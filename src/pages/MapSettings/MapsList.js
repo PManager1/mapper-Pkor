@@ -28,7 +28,7 @@ import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    maxWidth: 1200,
+    flex: 1,
     backgroundColor: theme.palette.background.paper,
   },
 }));

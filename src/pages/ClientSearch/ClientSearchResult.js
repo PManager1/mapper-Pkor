@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
-
+import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import { useHistory } from "react-router-dom";
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
@@ -81,11 +81,20 @@ const ClientSearchResult = (props) => {
   // console.log("22 - fetching fetchMaps =", props.Maps);
   // ****** END OF CHANGE ******
 
+
+
+
   return (<div>
     {!props.Maps ? (
       <Spinner />
     ) : (
         <>
+
+      <Typography variant='h4' color="primary" align="left">
+          Available maps to select for this client: (client name)
+        </Typography>
+
+
           <List className={classes.root}>
             {Maps.map(value => {
 
@@ -114,7 +123,7 @@ const ClientSearchResult = (props) => {
             })}
           </List>
 
-          <BottomButtons />
+          {/* <BottomButtons /> */}
         </>
       )}
   </div>);

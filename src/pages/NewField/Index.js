@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     flexGrow: 1,
     color: theme.palette.text.secondary,
+    marginBottom: 15,
   },
 }));
 

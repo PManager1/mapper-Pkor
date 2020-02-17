@@ -212,7 +212,6 @@ export default function MainWrapper(props) {
         </List>
         <Divider />
 
-        <Divider />
         <List>
           <ListItem button component={Link} to="/settings">
             <ListItemIcon>
@@ -227,16 +226,8 @@ export default function MainWrapper(props) {
             </ListItemIcon>
             <ListItemText primary="Add Clients to map" />
           </ListItem>
-
-          <ListItem button component={Link} to="/createlogic">
-            <ListItemIcon>
-              <InboxIcon />
-            </ListItemIcon>
-            <ListItemText primary="Create New Logic" />
-          </ListItem>
-
-
         </List>
+
 
 
         <Divider />
@@ -254,11 +245,23 @@ export default function MainWrapper(props) {
             </ListItemIcon>
             <ListItemText primary="Create Client" />
           </ListItem>
+        </List>
+        <Divider />
+
+
+        <List>
+         <ListItem button component={Link} to="/createlogic">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Create New Logic" />
+          </ListItem>
+
 
         </List>
-
-
         <Divider />
+
+
       </Drawer>
       <main
         className={clsx(classes.content, {

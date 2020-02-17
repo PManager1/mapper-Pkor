@@ -59,7 +59,7 @@ function updateState(e) {
 
       }
 
-
+      // flex: 1,
     return (
       <div style={{ width: 950, marginLeft: 20  }}>
         <Autocomplete

@@ -95,7 +95,7 @@ const Test = props => {
       ) : (
         <React.Fragment>
           <Typography variant="h4" color="primary" align="left">
-            All Records
+            All Records - map name
           </Typography>
 
           <Grid container spacing={3}>

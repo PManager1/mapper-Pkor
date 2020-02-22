@@ -35,6 +35,7 @@ export default function NewFields(props) {
             Create a new field
           </Typography>
       <RecordsForm recordId={recordId} id={id} />
+
      </div>
   );
 }

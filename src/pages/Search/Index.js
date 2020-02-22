@@ -54,7 +54,6 @@ function updateState(e) {
   ls.set('current_MapId', mapId);
   ls.set('current_MapName', mapName);
 
-
         props.history.push(`/records/${mapId}`);
 
       }

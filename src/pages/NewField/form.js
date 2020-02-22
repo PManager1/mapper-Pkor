@@ -13,6 +13,18 @@ import AttributeSelectionNew from './AttributeSelectionNew/Index';
 
 import PaddingSelection from '../../components/Records/PaddingSelection/PaddingSelection';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  palette: {
+    secondary: {
+      main: '#00B3F0'
+    }
+  }
+},
+)
+
+
 const Form = props => {
 
   let history = useHistory();
@@ -126,14 +138,16 @@ const Form = props => {
 
 
 
-      <Button  type="submit"
-        fullWidth
-        variant="contained"
-        onClick = {handleSaveClick}
-        color="primary"
-      >
-        Save
+      <MuiThemeProvider theme={theme}>
+        <Button  type="submit"
+          fullWidth
+          // variant="contained"
+          onClick = {handleSaveClick}
+          color="secondary"
+        >
+          Save
       </Button>
+      </MuiThemeProvider>
 
       <Button
         fullWidth

@@ -90,10 +90,22 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function MainWrapper(props) {
+  console.log( '93-inside the MainWrapper  props = ', props );
+
   const classes = useStyles();
   const theme = useTheme();
 
   const [value, setValue] = React.useState("");
+
+//START grabbing the map ID name
+  const [color, setColor] = React.useState('');
+
+  function handleChildClick(color) {
+    console.log ( ' 101 - handleChildClick color=', color );
+    setColor(color);
+  }
+
+//END grabbing the map ID name
 
   React.useEffect(() => {
     console.log("  99 -useEffect  Called ");
@@ -271,15 +283,8 @@ export default function MainWrapper(props) {
         <div className={classes.drawerHeader} />
         {props.children}
 
-
-
       </main>
 
-
-
-
     </div>
-
-
   );
 }

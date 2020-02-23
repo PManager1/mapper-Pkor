@@ -7,6 +7,8 @@ put the common/button/CancelDeleteButton.js
 Able to save the info from one component to another.
 
 
+Provide the client name on this location from search Client to next screen.
+
 ========================================
 On update the clinets under the maps.
 save the value in here.

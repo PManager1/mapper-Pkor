@@ -86,14 +86,13 @@ import TemporaryDrawer from './TemporaryDrawer';
 // import MainWrapper from "./pages/Records/MainWrapper";
 
 
-  export default function App() {
-    return (
-      <HashRouter>
-          <MainWrapper>
-          <Switch>
+export default function App() {
+  return (
+    <HashRouter>
+      <MainWrapper>
+        <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/search" component={Search} />
-
 
           <Route exact path="/records" exact component={Records} />
           <Route exact path="/records/:id" component={Records} />
@@ -132,10 +131,8 @@ import TemporaryDrawer from './TemporaryDrawer';
 
           <Route exact path="/ClientsWithMaps" component={ClientsWithMaps} />
 
-
           <Route exact path="/fd" exact component={FullDialog} />
           <Route exact path="/loading" exact component={LoadingSpiner} />
-
 
           <Route exact path="/showsnack" exact component={ShowSnackbar} />
           <Route exact path="/withnoti" exact component={WithNotistack} />
@@ -160,10 +157,9 @@ import TemporaryDrawer from './TemporaryDrawer';
           <Route exact path="/se" exact component={ColorlibStepIcon} />
 
 
-
           <Route component={NotFound} />
-          </Switch>
-        </MainWrapper>
+        </Switch>
+      </MainWrapper>
     </HashRouter>
   );
 };

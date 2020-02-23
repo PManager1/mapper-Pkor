@@ -1,4 +1,5 @@
 import React from "react";
+import Divider from '@material-ui/core/Divider';
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import Radio from '@material-ui/core/Radio';
@@ -10,8 +11,9 @@ import { connect } from "react-redux";
 import { createField } from '../../actions';
 import { useHistory } from "react-router-dom";
 import AttributeSelectionNew from './AttributeSelectionNew/Index';
-
 import PaddingSelection from '../../components/Records/PaddingSelection/PaddingSelection';
+
+import CancelDeleteButtons from '../../components/Buttons/CancelDeleteButtons';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
@@ -23,6 +25,11 @@ const theme = createMuiTheme({
   }
 },
 )
+
+
+
+
+
 
 
 const Form = props => {
@@ -158,6 +165,10 @@ const Form = props => {
       >
         Cancel
       </Button>
+
+      <Divider />
+      {/* <CancelDeleteButtons /> */}
+
     </form>
   );
 };

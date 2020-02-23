@@ -25,6 +25,8 @@ import ls from "local-storage";
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 import { fetchRecords } from "../../actions";
+import ContainedButtons2 from './buttons2-del';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -51,6 +53,17 @@ const useStyles = makeStyles(theme => ({
 
 // props.records.data
 const Test = props => {
+  console.log( '54 - Test.js -   props.match.params   = ', props.match.params );
+
+  const { search } = props.location;
+  console.log( '57 - Test.js -   props.match.params   = ', props );
+  console.log( '58 - Test.js -   props  = ', props );
+  console.log( '60 - Test.js -   mapName  = ', search );
+
+  let mapString  = search;
+  mapString =  mapString.substr(1,mapString.length);
+
+
   const { id } = props.match.params;
   // const [ resources, setResources ] = useState([]);
   const [Loading, setLoading] = useState(true);
@@ -95,7 +108,7 @@ const Test = props => {
       ) : (
         <React.Fragment>
           <Typography variant="h4" color="primary" align="left">
-            All Records - map name
+            {mapString}
           </Typography>
 
           <Grid container spacing={3}>
@@ -121,6 +134,12 @@ const Test = props => {
             </Grid>
             </MuiThemeProvider>
           </Grid>
+
+
+
+          <br/>  <br/>
+
+          <ContainedButtons2 />
 
           {renderDescription()}
         </React.Fragment>

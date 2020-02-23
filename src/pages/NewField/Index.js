@@ -2,6 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import RecordsForm from './RecordsForm.js'
+import Divider from '@material-ui/core/Divider';
+
+import CancelDeleteButtons from '../../components/Buttons/CancelDeleteButtons';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,6 +38,10 @@ export default function NewFields(props) {
             Create a new field
           </Typography>
       <RecordsForm recordId={recordId} id={id} />
+
+<br/><br/>
+      <Divider />
+      <CancelDeleteButtons />
 
      </div>
   );

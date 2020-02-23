@@ -86,7 +86,6 @@ import TemporaryDrawer from './TemporaryDrawer';
 // import MainWrapper from "./pages/Records/MainWrapper";
 
 
-
   export default function App() {
     return (
       <HashRouter>

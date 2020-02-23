@@ -50,7 +50,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-
 export default function CancelDeleteButtons() {
   const classes = useStyles();
 

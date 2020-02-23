@@ -18,14 +18,10 @@ import { Link } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Spinner } from "../../components/common/components/spinner/spinner.js";
-
 import CircularProgress from "@material-ui/core/CircularProgress";
 import ls from "local-storage";
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
 import { fetchRecords } from "../../actions";
-import ContainedButtons2 from './buttons2-del';
 
 
 const theme = createMuiTheme({
@@ -134,13 +130,7 @@ const Test = props => {
             </Grid>
             </MuiThemeProvider>
           </Grid>
-
-
-
           <br/>  <br/>
-
-          <ContainedButtons2 />
-
           {renderDescription()}
         </React.Fragment>
       )}

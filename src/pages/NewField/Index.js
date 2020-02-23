@@ -39,10 +39,6 @@ export default function NewFields(props) {
           </Typography>
       <RecordsForm recordId={recordId} id={id} />
 
-<br/><br/>
-      <Divider />
-      <CancelDeleteButtons />
-
      </div>
   );
 }

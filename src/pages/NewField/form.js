@@ -15,7 +15,7 @@ import PaddingSelection from '../../components/Records/PaddingSelection/PaddingS
 
 import CancelDeleteButtons from '../../components/Buttons/CancelDeleteButtons';
 
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { MuiThemeProvider, createMuiTheme, makeStyles } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
@@ -26,6 +26,49 @@ const theme = createMuiTheme({
 },
 )
 
+const useStyles = makeStyles(theme => ({
+  margin: {
+    margin: theme.spacing(1),
+    backgroundColor: '#00B3F0',
+    '&:hover': {
+      backgroundColor: '#00B3F0',
+      borderColor: '#00B3F0',
+      boxShadow: 'none',
+    },
+    '&:active': {
+      boxShadow: 'none',
+      backgroundColor: '#00B3F0',
+      borderColor: '#00B3F0',
+    },
+    '&:focus': {
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+    },
+  },
+  parent: {
+    display: 'flex',
+  },
+  child: {
+    marginLeft: 'auto',
+    order: '2',
+    marginRight: 10,
+  },
+  saveCancelBtn: {
+    marginLeft: 'auto',
+    marginRight: 40,
+    color: '#F15A29',
+  },
+  cancelBtn: {
+    marginLeft: 'auto',
+    marginRight: 40,
+    color: '#00B3F0',
+  },
+  deleteBtn: {
+    marginLeft: 'auto',
+    marginRight: 40,
+    color: '#F15A29',
+  },
+}));
+
 
 
 
@@ -33,7 +76,7 @@ const theme = createMuiTheme({
 
 
 const Form = props => {
-
+  const classes = useStyles();
   let history = useHistory();
 
   const {
@@ -136,38 +179,23 @@ const Form = props => {
       />
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
-
       <PaddingSelection {...props}/>
-
 
       <FormLabel component="legend"></FormLabel>
 
-
-
-
-      <MuiThemeProvider theme={theme}>
-        <Button  type="submit"
-          fullWidth
-          // variant="contained"
-          onClick = {handleSaveClick}
-          color="secondary"
-        >
-          Save
-      </Button>
-      </MuiThemeProvider>
-
-      <Button
-        fullWidth
-        disableElevation
-        variant="contained"
-        onClick = {handleCancelClick}
-        color="default"
-      >
-        Cancel
-      </Button>
-
+      <br/>
       <Divider />
-      {/* <CancelDeleteButtons /> */}
+
+      <div className={classes.parent}>
+      <br />
+      <div className={classes.child}>
+        <Button className={classes.cancelBtn}onClick = {handleCancelClick}>Cancel</Button>
+        <Button className={classes.deleteBtn} >Delete</Button>
+        <Button variant="contained" color="primary" className={classes.margin} onClick = {handleSaveClick}>
+          Save
+            </Button>
+      </div>
+    </div>
 
     </form>
   );

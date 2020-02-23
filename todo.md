@@ -1,12 +1,12 @@
 on server :  data not loding from mongodb.
 
-========================================
-finish the padding this :
-none, left , right
-Use this :
-https://codesandbox.io/s/78w1e
+first make pass the map value up to the MainWrapper form Records.
 
-already working on edit fields Expndable.
+Then make the save / cancel buttons like in => create new form
+put the common/button/CancelDeleteButton.js
+Able to save the info from one component to another.
+
+
 ========================================
 On update the clinets under the maps.
 save the value in here.

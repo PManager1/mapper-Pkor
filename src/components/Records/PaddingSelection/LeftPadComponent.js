@@ -12,12 +12,11 @@ const LeftPadComponent  = () => {
 
   return (<div>
 
-
     <TextField
       name="PaddingLeft"
       // helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
       // error={Boolean(errors.PaddingLeft)}
-      label="Left Pad value"
+      label="Left Padding value"
       // value={PaddingLeft}
       // onChange={handleChange}
       fullWidth

@@ -67,6 +67,9 @@ const useStyles = makeStyles(theme => ({
     marginRight: 40,
     color: '#F15A29',
   },
+  paddingBtwElements:{
+    marginTop: 20,
+  }
 }));
 
 
@@ -74,6 +77,7 @@ const useStyles = makeStyles(theme => ({
 const Form = props => {
   const classes = useStyles();
   let history = useHistory();
+
 
   const {
     values:{ MapId, RecordId, FieldName, MappedFieldName, MaxCharLength, SequenceNumber, RadioValue, PaddingLeft, PaddingRight},
@@ -99,7 +103,6 @@ const Form = props => {
 
   const handleCancelClick = () =>{
     console.log('64 -  called handleCancelClick' );
-    // props.createRecord(props.values);
     history.goBack();
   }
 
@@ -164,12 +167,11 @@ const Form = props => {
  */}
 
 
-      {/* <AttributeSelection {...props}/> */}
-
-      <AttributeSelectionNew {...props}/>
+      <AttributeSelectionNew className={classes.paddingBtwElements} {...props}/>
 
       <TextField
         name="MaxCharLength"
+        className={classes.paddingBtwElements}
         helperText={touched.MaxCharLength ? errors.MaxCharLength : ""}
         error={Boolean(errors.MaxCharLength)}
         label="MaxCharLength"
@@ -179,10 +181,9 @@ const Form = props => {
       />
       <div>{Boolean(errors.MaxCharLength) ? errors.MaxCharLength : ""}</div>
 
-      <PaddingSelection {...props}/>
+      <PaddingSelection className={classes.paddingBtwElements} {...props}/>
 
       <FormLabel component="legend"></FormLabel>
-
       <br/>
       <Divider />
 

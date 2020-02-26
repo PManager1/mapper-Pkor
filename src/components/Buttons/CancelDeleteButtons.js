@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 const useStyles = makeStyles(theme => ({
   margin: {
     margin: theme.spacing(1),
+    textTransform: 'none',
     backgroundColor: '#00B3F0',
     '&:hover': {
       backgroundColor: '#00B3F0',
@@ -39,12 +40,14 @@ const useStyles = makeStyles(theme => ({
   cancelBtn: {
     marginLeft: 'auto',
     marginRight: 40,
-    color: '#00B3F0',
+    color: '#007BB5',
+    textTransform: 'none',
   },
   deleteBtn: {
     marginLeft: 'auto',
     marginRight: 40,
     color: '#F15A29',
+    textTransform: 'none',
   },
 }));
 
@@ -62,7 +65,7 @@ export default function CancelDeleteButtons(props) {
         <Button className={classes.cancelBtn}
                 onClick={(e) => props.handleCancelClick()}>Cancel</Button>
         <Button className={classes.deleteBtn}
-                onClick={(e) => props.deleteBtn()}> Delete</Button>
+                onClick={(e) => props.handleDeleteBtn()}> Delete</Button>
         <Button variant="contained" color="primary" className={classes.margin}
                 onClick={(e) => props.handleSaveClick()}>Save</Button>
       </div>

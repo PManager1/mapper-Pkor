@@ -30,7 +30,7 @@ export default function NewRecord(props) {
   return (
     <div className={classes.root}>
       <Typography variant="h5" component="h4" className={classes.title}>
-          Create New Record & Or ( Associate with a DataSet )
+          Create New Record
           </Typography>
       <RecordsForm id={id} />
      </div>

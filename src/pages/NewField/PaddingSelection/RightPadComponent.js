@@ -17,7 +17,7 @@ const LeftPadComponent  = () => {
       name="PaddingRight"
       // helperText={touched.PaddingLeft ? errors.PaddingLeft : ""}
       // error={Boolean(errors.PaddingLeft)}
-      label="Right Pad value"
+      label="Right Padding value"
       // value={PaddingLeft}
       // onChange={handleChange}
       fullWidth

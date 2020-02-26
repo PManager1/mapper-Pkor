@@ -71,10 +71,6 @@ const useStyles = makeStyles(theme => ({
 
 
 
-
-
-
-
 const Form = props => {
   const classes = useStyles();
   let history = useHistory();
@@ -105,6 +101,10 @@ const Form = props => {
     console.log('64 -  called handleCancelClick' );
     // props.createRecord(props.values);
     history.goBack();
+  }
+
+  const handleDeleteBtn = () =>{
+    console.log('107 -  calling handleDeleteBtn' );
   }
 
 
@@ -186,16 +186,12 @@ const Form = props => {
       <br/>
       <Divider />
 
-      <div className={classes.parent}>
-      <br />
-      <div className={classes.child}>
-        <Button className={classes.cancelBtn}onClick = {handleCancelClick}>Cancel</Button>
-        <Button className={classes.deleteBtn} >Delete</Button>
-        <Button variant="contained" color="primary" className={classes.margin} onClick = {handleSaveClick}>
-          Save
-            </Button>
-      </div>
-    </div>
+
+      <CancelDeleteButtons  handleCancelClick={handleCancelClick}
+                            handleDeleteBtn={handleDeleteBtn}
+                            handleSaveClick={handleSaveClick}
+
+      />
 
     </form>
   );

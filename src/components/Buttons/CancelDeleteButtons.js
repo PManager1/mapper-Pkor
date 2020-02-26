@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { green, purple, red } from '@material-ui/core/colors';
-
+import { useHistory } from "react-router-dom";
 
 
 const useStyles = makeStyles(theme => ({
@@ -50,18 +49,22 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function CancelDeleteButtons() {
+export default function CancelDeleteButtons(props) {
   const classes = useStyles();
+  let history = useHistory();
+  console.log(' 55 - CancelDeleteBussons props = ', props);
+
 
   return (
     <div className={classes.parent}>
       <br />
       <div className={classes.child}>
-        <Button className={classes.cancelBtn}>Cancel</Button>
-        <Button className={classes.deleteBtn}>Delete</Button>
-        <Button variant="contained" color="primary" className={classes.margin}>
-          Save
-            </Button>
+        <Button className={classes.cancelBtn}
+                onClick={(e) => props.handleCancelClick()}>Cancel</Button>
+        <Button className={classes.deleteBtn}
+                onClick={(e) => props.deleteBtn()}> Delete</Button>
+        <Button variant="contained" color="primary" className={classes.margin}
+                onClick={(e) => props.handleSaveClick()}>Save</Button>
       </div>
     </div>
 

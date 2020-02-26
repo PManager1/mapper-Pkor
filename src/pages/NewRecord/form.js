@@ -9,7 +9,6 @@ import { connect } from "react-redux";
 import { createRecord } from '../../actions';
 
 // new
-// new
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -18,6 +17,8 @@ import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
 import { useHistory } from "react-router-dom";
 import Grid from '@material-ui/core/Grid';
+import CancelDeleteButtons from '../../components/Buttons/CancelDeleteButtons';
+
 // new end
 // Pick the data set list.
 const useStyles = makeStyles(theme => ({
@@ -60,13 +61,15 @@ const Form = props => {
     history.goBack();
   }
 
-
   const handleCancelClick = () => {
     console.log('64 -  called handleCancelClick');
     // props.createRecord(props.values);
     history.goBack();
   }
 
+  const handleDeleteBtn = () =>{
+    console.log('107 -  calling handleDeleteBtn' );
+  }
 
   const change = (name, e) => {
     e.persist();
@@ -189,33 +192,12 @@ const Form = props => {
       </Grid>
 
 
+      <CancelDeleteButtons  handleCancelClick={handleCancelClick}
+                            handleDeleteBtn={handleDeleteBtn}
+                            handleSaveClick={handleSaveClick}
 
+      />
 
-
-
-
-
-
-
-
-      <Button type="submit"
-        fullWidth
-        variant="contained"
-        onClick={handleSaveClick}
-        color="primary"
-      >
-        Save
-      </Button>
-
-      <Button
-        fullWidth
-        disableElevation
-        variant="contained"
-        onClick={handleCancelClick}
-        color="default"
-      >
-        Cancel
-      </Button>
     </form>
   );
 };

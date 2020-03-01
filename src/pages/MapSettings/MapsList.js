@@ -14,13 +14,12 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 // import CommentIcon from '@material-ui/icons/Comment';
 import InfoIcon from '@material-ui/icons/Info';
-
-
 import { useSelector, useDispatch } from 'react-redux';
 import BottomButtons from './BottomButtons';
 // import RenameDialogMaps from './RenameDialogMaps.js';
 import RenameDialogMaps from '../../components/common/RenameDialogMaps.js';
 import Tooltip from '@material-ui/core/Tooltip';
+import Switch from '@material-ui/core/Switch';
 
 import { fetchSingleMap, fetchMaps, editMap } from '../../actions';
 
@@ -88,13 +87,16 @@ const MapsList = (props) => {
               return (  //key={value}
                 <ListItem role={undefined} dense button onClick={handleToggle(value)}>
                   <ListItemIcon>
-                    <Checkbox
+                    {/* <Checkbox
                       edge="start"
                       checked={checked.indexOf(value) !== -1}
                       tabIndex={-1}
                       disableRipple
                     // inputProps={{ 'aria-labelledby': labelId }}
-                    />
+                    /> */}
+{/* onChange={handleChange} */}
+<Switch checked={true}  aria-label="login switch" />
+
                   </ListItemIcon>
                   <ListItemText id={labelId} primary={` ${value.mapName}`} />
                   <ListItemSecondaryAction>

@@ -50,7 +50,6 @@ const useStyles = makeStyles(theme => ({
 // props.records.data
 const Test = props => {
   console.log( '54 - Test.js -   props.match.params   = ', props.match.params );
-
   const { search } = props.location;
   console.log( '57 - Test.js -   props.match.params   = ', props );
   console.log( '58 - Test.js -   props  = ', props );
@@ -91,9 +90,17 @@ const Test = props => {
     props.history.push(`/newrecord/${props.match.params.id}`);
   };
   const handleEditRecordsBtn = () => {
-    console.log("72 -  handleEditRecordsBtn clicked ");
-    props.history.push(`/editrecords/${id}`);
+    console.log("93 -  handleEditRecordsBtn clicked  {mapString} ");
+    // props.history.push(`/editrecords/${id}`);
+
+    props.history.push({
+      pathname: `/editrecords/${id}`,
+      search: `${mapString}`
+    })
+
   };
+
+
 
   const classes = useStyles();
 

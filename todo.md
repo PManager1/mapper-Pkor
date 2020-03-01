@@ -1,13 +1,6 @@
-on server :  data not loding from mongodb.
-
-first make pass the map value up to the MainWrapper form Records.
-
-Then make the save / cancel buttons like in => create new form
-put the common/button/CancelDeleteButton.js
-Able to save the info from one component to another.
 
 
-Provide the client name on this location from search Client to next screen.
+
 
 ========================================
 On update the clinets under the maps.
@@ -25,7 +18,6 @@ and on showing data list, only show the maps that are active.
 ==========
 show hide the left/ right column values using this
 
-
 https://stackoverflow.com/questions/24502898/show-or-hide-element-in-react
 
 Located in
@@ -42,7 +34,6 @@ Show the option to pic active/ inactive when searching (save active or inactive 
 =========
 After i rename the name of the map from the Map Settings,
 It doesnt update the name on the orange header bar.
-
 =========
 On pick Data Attribute :
 Still provide the Field Name.

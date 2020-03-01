@@ -5,7 +5,7 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import { fetchSingleMap, fetchMaps } from '../../actions';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-
+import Switch from '@material-ui/core/Switch';
 import ls from 'local-storage';
 
 
@@ -74,6 +74,8 @@ function updateState(e) {
           disableOpenOnFocus
           renderInput={params => (
             <TextField {...params} label="Search by Maps" margin="normal" fullWidth />
+            // <Switch checked={auth} onChange={handleChange} aria-label="login switch" />
+
           )}
         />
 

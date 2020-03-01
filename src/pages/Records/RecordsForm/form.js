@@ -12,13 +12,12 @@ import { useSnackbar } from "notistack";
 import { useHistory } from "react-router-dom";
 // new
 import { makeStyles } from "@material-ui/core/styles";
-import FullDialogInFormFields from "../../../components/Records/FullDialogInFormFields.js";
 
 // import PickMapSelectRecords from "../../../components/Records/PickMapSelectRecords.js";
-
 import PickMapSelectFields from "../../../components/Records/PickMapSelectFields.js";
-
 import PaddingSelection from '../../../components/Records/PaddingSelection/PaddingSelection';
+
+import CancelDeleteButtons from '../../../components/Buttons/CancelDeleteButtons';
 
 
 
@@ -100,6 +99,10 @@ export const Form = props => {
     // location.reload();
   };
 
+  const handleDeleteBtn = () =>{
+    console.log('107 -  calling handleDeleteBtn' );
+  }
+
   const [value, setValue] = React.useState("female");
 
   return (
@@ -175,31 +178,18 @@ export const Form = props => {
       <FormLabel component="legend">
       </FormLabel>
 
-
-
       <PaddingSelection {...props} />
 
+      <CancelDeleteButtons
+                            handleSaveClick={handleClickVariant("success")}
+                            handleCancelClick={handleClickCancel}
+                            handleDeleteBtn={handleDeleteBtn}
 
-      <FullDialogInFormFields {...props} />
 
-      <Button
-        onClick={handleClickVariant("success")}
-        type="submit"
-        fullWidth
-        variant="contained"
-        color="primary"
-      >
-        Save
-      </Button>
+      />
 
-      <Button
-        onClick={handleClickCancel}
-        fullWidth
-        variant="contained"
-        color="default"
-      >
-        Cancel
-      </Button>
+
+
     </form>
   );
 };

@@ -1,0 +1,234 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
+import { notInterestedIn as notInterestedInAction } from 'state-management/actions/profileRefinementCard';
+
+import { SOURCE, TOPIC } from 'components/ProfileRefinementCard/profileRefinementCardTypes';
+import ProfileRefinementCard from 'components/ProfileRefinementCard/ProfileRefinementCard';
+import { toggleSourceFollow } from './../../../state-management/actions/sources';
+import { toggleTopicFollow } from './../../../state-management/actions/followTopic';
+import NudgeCard from './../../../components/atomics/molecules/NudgeCard/NudgeCard';
+import * as analytics from 'utils/adobeAnalytics';
+import storage from 'utils/store';
+import { MOBILE_APP_NOTIFICATION } from 'containers/MobileAppNotification/MobileAppNotification';
+import { getIsAppInstalled, setIsAppInstalled } from 'state-management/actions/basicProfile';
+import {
+    EVENT_ACTION_FOLLOW_SOURCE,
+    EVENT_ACTION_FOLLOW_TOPIC,
+    EVENT_ACTION_NOT_INTERESTED_SOURCE,
+    EVENT_ACTION_NOT_INTERESTED_TOPIC,
+    EVENT_ACTION_UNFOLLOW_SOURCE,
+    EVENT_ACTION_UNFOLLOW_TOPIC,
+    PAGE_NAME_NEWS,
+    SITE_SECTION_NEWS,
+} from 'utils/analyticsConstants';
+import { TYPE_TESTFLIGHT } from '../../../components/atomics/molecules/NudgeCard/NudgeCard';
+
+class ProfileRefinementCardContainer extends React.Component {
+    state = {
+        followed: false,
+    };
+
+    getTheme = () => (this.props.profileRefinementCard.type === TOPIC ? 'dark' : 'light');
+
+    getTopic = (id, topicCategories) => {
+        let suggestedTopic;
+
+        topicCategories.forEach(category => category.topics.forEach((topic) => {
+            if (topic.id === id) {
+                suggestedTopic = topic;
+            }
+        }));
+
+        return suggestedTopic;
+    };
+
+    handleSkip = () => {
+        const { notInterestedIn, profileRefinementCard } = this.props;
+
+        notInterestedIn(profileRefinementCard);
+
+        analytics.dispatchPageActionTrigger(
+            PAGE_NAME_NEWS,
+            SITE_SECTION_NEWS,
+            profileRefinementCard.type === SOURCE
+                ? EVENT_ACTION_NOT_INTERESTED_SOURCE
+                : EVENT_ACTION_NOT_INTERESTED_TOPIC,
+            profileRefinementCard.id,
+            profileRefinementCard.title,
+        );
+    };
+
+    /**
+     * Handle final dismiss of app install profile card, and ensure the fetch of new data happens via not interested action.
+     */
+    handleTestflightDismiss = () => {
+        this.props.setAppInstalled();
+        this.props.notInterestedIn(this.props.profileRefinementCard);
+    }
+
+    handleFollow = () => {
+        const { profileRefinementCard } = this.props;
+
+        if (profileRefinementCard.type === SOURCE) {
+            this.props.toggleFollowSource(this.props.profileRefinementCard.id, this.state.followed, profileRefinementCard.type);
+        } else {
+            this.props.toggleFollowTopic(this.props.profileRefinementCard.id, this.state.followed, profileRefinementCard.type);
+        }
+
+        this.setState(prevState => ({
+            followed: !prevState.followed,
+        }));
+
+        let eventName = '';
+
+        if (profileRefinementCard.type === SOURCE) {
+            eventName = this.state.followed
+                ? EVENT_ACTION_UNFOLLOW_SOURCE
+                : EVENT_ACTION_FOLLOW_SOURCE;
+        } else {
+            eventName = this.state.followed
+                ? EVENT_ACTION_UNFOLLOW_TOPIC
+                : EVENT_ACTION_FOLLOW_TOPIC;
+        }
+
+        analytics.dispatchPageActionTrigger(
+            PAGE_NAME_NEWS,
+            SITE_SECTION_NEWS,
+            eventName,
+            profileRefinementCard.id,
+            profileRefinementCard.title,
+        );
+    };
+
+    formatCardData = (props) => {
+        const { profileRefinementCard, sources, topicCategories } = props;
+        const { id, type, status } = profileRefinementCard;
+
+        if (type === SOURCE) {
+            const source = sources.find(s => s.id === id);
+
+            return {
+                id,
+                title: source.name,
+                image: source.imageName,
+                type,
+                status,
+            };
+        }
+
+        const topic = this.getTopic(id, topicCategories);
+
+        return {
+            id,
+            title: topic ? topic.name : '',
+            image: topic ? topic.smallImage : '',
+            type,
+            status,
+        };
+    };
+
+    componentDidMount(){
+        console.log('134-ProfileRefinmentCardContainer this.props.appInstalled   ', this.props.appInstalled );
+
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        let newData = this.formatCardData(this.props);
+        let oldData = this.formatCardData(prevProps);
+        if(newData.id != oldData.id){
+            this.setState({followed: false})
+        }
+    }
+
+    render() {
+
+
+        const { index, isLoaded, profileRefinementCard } = this.props;
+        const data = this.formatCardData(this.props);
+
+console.log('151-this.props =', this.props );
+// console.log('151-this.props =', this.props.getAppInstalled );
+
+
+        let showDismiss = false;
+
+        const noteData = storage.get(MOBILE_APP_NOTIFICATION);
+        const noteParsedData = noteData != null ? JSON.parse(noteData) : null;
+        if (noteParsedData) {
+            if (noteParsedData.showAlternate) {
+                showDismiss = true;
+            }
+        }
+
+        if (profileRefinementCard && profileRefinementCard.hasSuggestion) {
+            if (data.type === TYPE_TESTFLIGHT) {
+                return (
+                    <NudgeCard
+                        data={data}
+                        type={data.type}
+                        index={index}
+                        onClick={this.handleTestflightDismiss}
+                        showTestflightDismiss={noteParsedData.hasOwnProperty('hideLumen') && noteParsedData.hideLumen }
+                    />
+                );
+            } else {
+                return (
+                    <NudgeCard
+                        data={data}
+                        imageUrl={data.image}
+                        type={data.type}
+                        description={data.title}
+                        index={index}
+                        isFollowed={this.state.followed}
+                        isLoaded={isLoaded}
+                        onClick={this.handleFollow}
+                        onDismiss={this.handleSkip}
+                    />
+                );
+            }
+        }
+
+        return null;
+    }
+}
+
+ProfileRefinementCardContainer.propTypes = {
+    index: PropTypes.number.isRequired,
+    isLoaded: PropTypes.bool.isRequired,
+    notInterestedIn: PropTypes.func.isRequired,
+    toggleFollowSource: PropTypes.func.isRequired,
+    toggleFollowTopic: PropTypes.func.isRequired,
+    sources: PropTypes.arrayOf(PropTypes.object).isRequired,
+    topicCategories: PropTypes.arrayOf(PropTypes.object).isRequired,
+    profileRefinementCard: PropTypes.shape({
+        id: PropTypes.number,
+        type: PropTypes.string,
+        hasSuggestion: PropTypes.bool,
+        title: PropTypes.string,
+    }).isRequired,
+};
+
+const mapStateToProps = state => ({
+    sources: state.sources.sources,
+    topicCategories: state.topics.all.categories,
+    profileRefinementCard: state.profileRefinementCard,
+    appInstalled: state.basicProfile.isiOSAppInstalled,
+});
+
+const mapDispatchToProps = dispatch => ({
+    notInterestedIn: data => dispatch(notInterestedInAction(data)),
+    toggleFollowSource: (sourceId, isFollowing, type = null) => (
+        dispatch(toggleSourceFollow(sourceId, isFollowing, type, false))
+    ),
+    toggleFollowTopic: (sourceId, isFollowing, typeValue = null) => (
+        dispatch(toggleTopicFollow(sourceId, isFollowing, typeValue, false))
+    ),
+    setAppInstalled: () => dispatch(setIsAppInstalled()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)
+(ProfileRefinementCardContainer);
+
+export const ProfileRefinementContainer = ProfileRefinementCardContainer;

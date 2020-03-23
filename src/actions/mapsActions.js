@@ -1,5 +1,6 @@
 import ls from 'local-storage';
-import clients from '../apis/local';
+// import clients from '../apis/local';
+import clients from '../apis/paycor';
 import {
     CREATE_MAP,
     FETCH_MAPS,
@@ -20,7 +21,7 @@ export const createMap = (formValues) => async dispatch => {
     // debugger;
     const response = await clients.post('/maps', { mapName: formValues } );
 
-    console.log('22 -  response from createMap = ', response.data );
+    console.log('24 -  response from createMap = ', response );
 
     ls.clear();
     ls.set('current_MapId', response.data._id);
@@ -33,10 +34,10 @@ export const createMap = (formValues) => async dispatch => {
 
 
     export const fetchMaps = () => {
-        console.log('36 ---  action fetchMaps  ');
+        console.log('36 ---  action fetchMaps /maps   ');
 
       return async dispatch => {
-          const response = await clients.get('/maps');
+          const response = await clients.get('/mapping');
           console.log('38 ---  action fetchClients  response = ', response.data );
 
           dispatch({
@@ -62,16 +63,21 @@ export const createMap = (formValues) => async dispatch => {
 
   export const editMap = ( _id, mapName ) =>{
 
-    console.log('62-editMap-action ---  _id = ', _id );
-    console.log('63 ---  action editMap   mapName = ', mapName );
+    console.log('66-editMap-action ---  _id = ', _id );
+    console.log('67 ---  action editMap   mapName = ', mapName );
 
 
     return async dispatch => {
-        const response = await clients.patch(`/maps/${_id}`, { mapName: mapName });
+        const response = await clients.patch(`/maps/${_id}`, [
+            { "op": "replace",
+       "path": "/mapName",
+       "value" : mapName }
+    ]
+    );
 
 // const response = await clients.post('/maps', { mapName: formValues } );
 
-        console.log('19 ---  action fetchSingleField  response = ', response.data );
+        console.log('77 ---  action fetchSingleField  response = ', response.data );
 
         dispatch ({  type: EDIT_MAP,   payload: response.data });
         }

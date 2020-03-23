@@ -1,4 +1,4 @@
-
+ability to handle map names with  seperation / spaces, currently it only picks the first non seperated mapName.
 
 
 

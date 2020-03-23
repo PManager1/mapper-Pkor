@@ -8,13 +8,27 @@ import { withRouter } from 'react-router-dom';
 import Switch from '@material-ui/core/Switch';
 import ls from 'local-storage';
 
+import axios from 'axios';
 
 const Search = (props) => {
 
-  console.log( '11 - this.props ', props  );
-  console.log( '12 - props.maps.data ', props.maps.data  );
+  console.log( '11 SI- this.props ', props  );
+  console.log( '12 SI- props.maps.data ', props.maps.data  );
 
   useEffect(() => {
+
+    console.log('inside the useEffect on search page - 20');
+
+    axios.get('https://dchapi.azurewebsites.net/api/mapping')
+    .then((response) => {
+    console.log('in search page - axios.get=', response);
+    })
+    .catch(error => {
+      console.log('axios error=',error)
+    })
+
+
+
     // code to run on component mount
     props.fetchMaps();
   }, [])
